@@ -175,9 +175,12 @@ There are other methods / approaches for matrix factorization, include:
 - Generalized Low Rank Models
 - Fast ALS
 
-### Papers
+
+### References
 - This is a very helpful paper by Yehuda Koren, Robert Bell and Chris Volinsky, AT&T Labs—Research (MATRIX FACTORIZATION TECHNIQUES FOR RECOMMENDER SYSTEMS) **[Recommender-Systems-Netflix](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf)**
 - CME 323: Distributed Algorithms and Optimization, Spring 2015, Instructor: Reza Zadeh, Databricks and Stanford. **[Matrix Completion via Alternating Least Square(ALS)](https://stanford.edu/~rezab/classes/cme323/S15/notes/lec14.pdf)**
+- Probabilistic Matrix Factorization by Ruslan Salakhutdinov and Andriy Mnih. **[Probabilistic Matrix Factorization](https://proceedings.neurips.cc/paper_files/paper/2007/file/d7322ed717dedf1eb4e6e52a37ea7bcd-Paper.pdf)**
+
 
 ### Helpful videos
 1. Recommendation Engines Using ALS in PySpark (MovieLens Dataset)
