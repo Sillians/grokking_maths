@@ -177,7 +177,7 @@ There are other methods / approaches for matrix factorization, include:
 
 ### Papers
 - This is a very helpful paper by Yehuda Koren, Robert Bell and Chris Volinsky, AT&T Labs—Research (MATRIX FACTORIZATION TECHNIQUES FOR RECOMMENDER SYSTEMS) **[Recommender-Systems-Netflix](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf)**
-- 
+- CME 323: Distributed Algorithms and Optimization, Spring 2015, Instructor: Reza Zadeh, Databricks and Stanford. **[Matrix Completion via Alternating Least Square(ALS)](https://stanford.edu/~rezab/classes/cme323/S15/notes/lec14.pdf)**
 
 ### Helpful videos
 1. Recommendation Engines Using ALS in PySpark (MovieLens Dataset)
