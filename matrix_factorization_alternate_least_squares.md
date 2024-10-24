@@ -175,6 +175,9 @@ There are other methods / approaches for matrix factorization, include:
 - Generalized Low Rank Models
 - Fast ALS
 
+### Papers
+- This is a very helpful paper by Yehuda Koren, Robert Bell and Chris Volinsky, AT&T Labs—Research (MATRIX FACTORIZATION TECHNIQUES FOR RECOMMENDER SYSTEMS) **[Recommender-Systems-Netflix](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf)**
+- 
 
 ### Helpful videos
 1. Recommendation Engines Using ALS in PySpark (MovieLens Dataset)
