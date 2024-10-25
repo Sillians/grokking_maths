@@ -193,7 +193,9 @@ There are other methods / approaches for matrix factorization, include:
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/GIcuSNAAa4g/0.jpg)](http://www.youtube.com/watch?v=GIcuSNAAa4g-Y?t2255 "Recommender Systems | ML-005 Lecture 16 | Stanford University | Andrew Ng)")
 
 
+3. Recommender Systems: Basics, Types, and Design Consideration
 
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/Ams4sEn50cw/0.jpg)](http://www.youtube.com/watch?v=Ams4sEn50cw "Recommender Systems: Basics, Types, and Design Consideration")
 
 
 
