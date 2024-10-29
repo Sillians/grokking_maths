@@ -1,4 +1,5 @@
 # Implementation using the Laplace Expansion (Cofactor Expansion)
+# Time Complexity: This recursive approach has a time complexity of 𝑂(𝑁!), which grows factorially with the matrix size, making it inefficient for large matrices.
 
 from typing import List
 
@@ -28,7 +29,14 @@ def determinant(matrix: List[list]) -> float:
 
         Returns:
             float: The determinant of the matrix.
+
+        Raises:
+        ValueError: If the input matrix is not square (NxN).
     """
+    # Check if the matrix is square
+    if not all(len(row) == len(matrix) for row in matrix):
+        raise ValueError("The matrix must be square (NxN) to calculate the determinant.")
+
     # Base case for 1x1 matrix
     if len(matrix) == 1:
         return matrix[0][0]
@@ -58,4 +66,31 @@ matrix = [
     [7, 8, 9, 2],
     [10, 11, 7, 12]
 ]
+
+
 print("Determinant:", determinant(matrix))
+
+
+
+q = [[2, 3, 4],
+     [5, 3, 8]]
+
+
+def determinant_value(M: List[list]) -> float:
+    # Base case of recursive function: 1x1 matrix
+    if len(M) == 1:
+        return M[0][0]
+
+    # Base case of recursive function: 2x2 matrix
+    if len(M) == 2:
+        return M[0][0] * M[1][1] - M[0][1] * M[1][0]
+
+    total = 0
+    for column, element in enumerate(M[0]):
+        # Exclude first row and current column.
+        K = [x[:column] + x[column + 1 :] for x in M[1:]]
+        s = 1 if column % 2 == 0 else -1
+        total += s * element * determinant(K)
+    return total
+
+print(determinant_value(q))
