@@ -43,13 +43,20 @@ via the `ith` and `jth` column of $A$. This generalization is quite easier to un
 However, let's first discuss the simplest computation: 
 1. **2x2 Matrix**: 
 
-Let $A$ be a `2x2` matrix $A = \begin{bmatrix} a & b \\
-                                    c & d
-                                    \end{bmatrix}$
+Let $A$ be a `2x2` matrix 
+
+```math
+A = \begin{bmatrix} a & b \\
+                    c & d
+                    \end{bmatrix}$
+```
+
 
 We compute the determinant of a `2x2` matrix by finding the difference of the main diagonal and the counter diagonal.
 
-$det(A)$ = $det(\begin{bmatrix} a & b \\  c & d  \end{bmatrix})$ =  $ad - bc$
+```math
+det(A)$ = $det(\begin{bmatrix} a & b \\  c & d  \end{bmatrix})$ =  $ad - bc
+```
 
 The sub-matrices in the Laplace expansion can be reduced to the `2x2` case. This can be visualized as the area of a parallelogram spanned by two vectors (formed by the rows and columns).
 
@@ -58,12 +65,18 @@ The sub-matrices in the Laplace expansion can be reduced to the `2x2` case. This
 
 Let $A$ be a `3x3` matrix
 
-$A = \begin{bmatrix} a & b & c \\ d & e & f \\  g & h & i  \end{bmatrix}$
+```math
+A = \begin{bmatrix} a & b & c \\ d & e & f \\  g & h & i  \end{bmatrix}
+```
 
-$det(A)$ = $det(\begin{bmatrix} a & b & c \\ d & e & f \\  g & h & i  \end{bmatrix})$ = a $det (\begin{bmatrix} e & f \\  h & i  \end{bmatrix})$ - 
-b $det (\begin{bmatrix} d & f \\  g & i  \end{bmatrix})$ + c $det (\begin{bmatrix} d & e \\  g & h  \end{bmatrix})$
+```math
+det(A)$ = $det(\begin{bmatrix} a & b & c \\ d & e & f \\  g & h & i  \end{bmatrix})$ = a $det (\begin{bmatrix} e & f \\  h & i  \end{bmatrix})$ - 
+b $det (\begin{bmatrix} d & f \\  g & i  \end{bmatrix})$ + c $det (\begin{bmatrix} d & e \\  g & h  \end{bmatrix})
+```
 
-$det(A) = a(ei - fh) - b(di - fg) + c(dh - eg)$
+```math
+det(A) = a(ei - fh) - b(di - fg) + c(dh - eg)
+```
 
 Notice that the `3x3` case is a direct application of the Laplace expansion. We hold the top row fixed (but it could be any row or column), which act as
 the multipliers, and reduce the primary matrix down into `2x2` sub-matrices. Since we can easily compute the determinant of a `2x2` sub-matrix, the computation
