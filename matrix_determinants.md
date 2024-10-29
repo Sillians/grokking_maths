@@ -70,8 +70,8 @@ A = \begin{bmatrix} a & b & c \\ d & e & f \\  g & h & i  \end{bmatrix}
 ```
 
 ```math
-det(A)$ = $det(\begin{bmatrix} a & b & c \\ d & e & f \\  g & h & i  \end{bmatrix})$ = a $det (\begin{bmatrix} e & f \\  h & i  \end{bmatrix})$ - 
-b $det (\begin{bmatrix} d & f \\  g & i  \end{bmatrix})$ + c $det (\begin{bmatrix} d & e \\  g & h  \end{bmatrix})
+det(A) = det(\begin{bmatrix} a & b & c \\ d & e & f \\  g & h & i  \end{bmatrix}) = a det (\begin{bmatrix} e & f \\  h & i  \end{bmatrix}) - 
+b det (\begin{bmatrix} d & f \\  g & i  \end{bmatrix}) + c det (\begin{bmatrix} d & e \\  g & h  \end{bmatrix})
 ```
 
 ```math
@@ -133,7 +133,7 @@ For Larger matrices, determinants are computed using methods like:
 - `Row Reduction`: Transforming the matrix to an upper triangular form using row operations, where the determinant is the product of the diagonal elements.
 - `Laplace Expansion`: Expanding along rows or columns using minors and cofactors, though this is computationally expensive for large matrices.
 - `LU Decomposition`: This method is efficient for computation. It decomposes $A$ into lower and upper triangular matrices, $A = LU$, and then 
-$det(A) = det(L) x det(U)$, with $det(L)$ typically being `1` for matrices transformed into a standard form. 
+$det(A) = det(L) \times det(U)$, with $det(L)$ typically being `1` for matrices transformed into a standard form. 
 
 
 ### Application of Determinants
@@ -149,33 +149,37 @@ by matrix $A$, the volume of any region transformed by $T$ is scaled by $| det(A
 ### Example Calculation
 Consider a `3x3` matrix:
 
-$A = \begin{bmatrix}
+```math
+A = \begin{bmatrix}
 2 & 3 & 1 \\ 
 4 & 5 & 6 \\
 7 & 8 & 9
-\end{bmatrix}$,
+\end{bmatrix},
+```
 
 using cofactor expansion along the first row;
 
-$\det(A) = 2 \begin{vmatrix} 5 & 6 \\ 8 & 9 \end{vmatrix} - 3 \begin{vmatrix} 4 & 6 \\ 7 & 9 \end{vmatrix} + 1 \begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix}$
+```math
+\det(A) = 2 \begin{vmatrix} 5 & 6 \\ 8 & 9 \end{vmatrix} - 3 \begin{vmatrix} 4 & 6 \\ 7 & 9 \end{vmatrix} + 1 \begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix}
+```
 
 Calculating each minor determinant:
-$
+```math
 = 2(5 \cdot 9 - 6 \cdot 8) - 3(4 \cdot 9 - 6 \cdot 7) + 1(4 \cdot 8 - 5 \cdot 7)
-$
+```
 
-$
+```math
 = 2(-3) - 3(-6) + 1(-3)
-$
+```
 
-$
+```math
 = -6 + 18 - 3 = 9
-$
+```
 
 Thus, the determinant of \( A \) is:
-$
+```math
 \det(A) = 9
-$
+```
 
 
 ### Summary
