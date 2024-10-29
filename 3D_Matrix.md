@@ -52,18 +52,21 @@ In this matrix:
 
 **Notations:**
 
-The notation $A \in \mathbb{C}^{m \times m \times s} $ typically represents a **3D complex matrix** with dimensions $ m \times m \times s $ 
-where $\mathbb{C}$ denotes the set of complex numbers. Here’s what each part means:
+The notation 
+```math
+A \in \mathbb{C}^{m \times m \times s}
+``` 
+typically represents a **3D complex matrix** with dimensions $m \times m \times s$ where $\mathbb{C}$ denotes the set of complex numbers. Here’s what each part means:
 
-- **$ \mathbb{C} $**: Indicates that the elements of $ A $ are complex numbers.
-- **$ m \times m $**: Represents the number of rows and columns in each `2D` matrix "slice" of $ A $.
-- **$ s $**: Represents the number of such 2D slices or layers in the third dimension.
+- $\mathbb{C}$: Indicates that the elements of $A$ are complex numbers.
+- $m \times m$: Represents the number of rows and columns in each `2D` matrix "slice" of $A$.
+- $s$: Represents the number of such 2D slices or layers in the third dimension.
 
-In other words, $ A \in \mathbb{C}^{m \times m \times s} $ means that $ A $ is a **3D array of complex numbers** with $ s $ matrices, 
-each of which has $ m $ rows and $ m $ columns.
+In other words, $A \in \mathbb{C}^{m \times m \times s}$ means that $A$ is a **3D array of complex numbers** with $s$ matrices, 
+each of which has $m$ rows and $m$ columns.
 
 
-A `3D` maatrix can be written in as $ A = \bigcup_{k=1}^s A_k $ means that $A$ is the **union of the sets $A_{k}$ from $k = 1$ to $s$. Each $A_{k}$ is a subset or component
+A `3D` maatrix can be written in as $A = \bigcup_{k=1}^s A_k$ means that $A$ is the **union of the sets $A_{k}$ from $k = 1$ to $s$. Each $A_{k}$ is a subset or component
 of the set $A$, and the union symbol $\cup$ indicates that $A$ includes all elements from each $A_{k}$.
 
 
