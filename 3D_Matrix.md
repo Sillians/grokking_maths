@@ -12,7 +12,7 @@ and machine learning.
 
 **Example:**
 
-consider a `3D` matrix $A$ of dimensions $2 x 2 x 3$. This means we have `2 layers` (or depth), each containing a `2x3` matrix.
+Consider a `3D` matrix $A$ of dimensions $2 x 2 x 3$. This means we have `2 layers` (or depth), each containing a `2x3` matrix.
 
 ```math
 A = 
@@ -32,7 +32,7 @@ a_{221} & a_{222} & a_{223} \\
 
 In this matrix:
 
-- **Layer 1** (or $ i=1 $) is:
+- **Layer 1** (or $i=1$) is:
 ```math
   \begin{bmatrix}
   a_{111} & a_{112} & a_{113} \\
@@ -66,7 +66,12 @@ In other words, $A \in \mathbb{C}^{m \times m \times s}$ means that $A$ is a **3
 each of which has $m$ rows and $m$ columns.
 
 
-A `3D` maatrix can be written in as $A = \bigcup_{k=1}^s A_k$ means that $A$ is the **union of the sets $A_{k}$ from $k = 1$ to $s$. Each $A_{k}$ is a subset or component
+A `3D` maatrix can be written in as 
+```math
+A = \bigcup_{k=1}^s A_k$ 
+```
+
+means that $A$ is the **union** of the sets $A_{k}$ from $k = 1$ to $s$. Each $A_{k}$ is a subset or component
 of the set $A$, and the union symbol $\cup$ indicates that $A$ includes all elements from each $A_{k}$.
 
 
