@@ -48,14 +48,14 @@ Let $A$ be a `2x2` matrix
 ```math
 A = \begin{bmatrix} a & b \\
                     c & d
-                    \end{bmatrix}$
+                    \end{bmatrix}
 ```
 
 
 We compute the determinant of a `2x2` matrix by finding the difference of the main diagonal and the counter diagonal.
 
 ```math
-det(A)$ = $det(\begin{bmatrix} a & b \\  c & d  \end{bmatrix})$ =  $ad - bc
+det(A) = det(\begin{bmatrix} a & b \\  c & d  \end{bmatrix}) =  ad - bc
 ```
 
 The sub-matrices in the Laplace expansion can be reduced to the `2x2` case. This can be visualized as the area of a parallelogram spanned by two vectors (formed by the rows and columns).
@@ -70,8 +70,8 @@ A = \begin{bmatrix} a & b & c \\ d & e & f \\  g & h & i  \end{bmatrix}
 ```
 
 ```math
-det(A) = det(\begin{bmatrix} a & b & c \\ d & e & f \\  g & h & i  \end{bmatrix}) = a det (\begin{bmatrix} e & f \\  h & i  \end{bmatrix}) - 
-b det (\begin{bmatrix} d & f \\  g & i  \end{bmatrix}) + c det (\begin{bmatrix} d & e \\  g & h  \end{bmatrix})
+det(A) = det(\begin{bmatrix} a & b & c \\ d & e & f \\  g & h & i  \end{bmatrix}) = a * det (\begin{bmatrix} e & f \\  h & i  \end{bmatrix}) - 
+b * det (\begin{bmatrix} d & f \\  g & i  \end{bmatrix}) + c * det (\begin{bmatrix} d & e \\  g & h  \end{bmatrix})
 ```
 
 ```math
@@ -117,7 +117,7 @@ three dimensions, but the fundamentals remain the same; we are calculating the s
 
 ### Properties of Determinants 
 Determinants have several fundamental properties
-- `Multiplicative`: For square matrices $A$ and $B$, $det(AB) = det(A) * det(B)$.
+- `Multiplicative`: For square matrices $A$ and $B$, $det(AB) = det(A) \times det(B)$.
 - `Transpose`: $det(A) = det(A^{T})$. The transpose of $A$ has the same determinant as $A$.
 - `Inverse`: For an invertible matrix $A$, $det(A^{-1}) = 1/det(A)$.
 - `Row Operations`:
