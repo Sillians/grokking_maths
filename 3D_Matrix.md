@@ -70,7 +70,7 @@ A `3D` maatrix can be written in as $A = \bigcup_{k=1}^s A_k$ means that $A$ is 
 of the set $A$, and the union symbol $\cup$ indicates that $A$ includes all elements from each $A_{k}$.
 
 
-In words, this notation describes $A$ as being composed of the elements in $ A_1, A_2, \ldots, A_s $.
+In words, this notation describes $A$ as being composed of the elements in $A_1, A_2, \ldots, A_s$.
 
 - $A_k$ refers to each 2D "slice" or layer in the `3D` matrix.
 - Thus, $A$ as the union of $A_k$ would mean that it consists of all these slices combined to form the entire structure.
@@ -82,7 +82,7 @@ or layers labeled from $A_1$ to $A_s$.
 
 
 ### Basic Definitions for 3-D Matrices
-- **Determinant Vector:** Let $A \in \mathbb{C}^{m \times m \times s} $ be a $3-D$ matrix and $det(A^{k})$ be the determinant of the $k^{th}$ section of $A$.
+- **Determinant Vector:** Let $A \in \mathbb{C}^{m \times m \times s}$ be a `3-D` matrix and $det(A^{k})$ be the determinant of the $k^{th}$ section of $A$.
 The vector $det(A) \in \mathbb{C}^{1 \times 1 \times s}$ is called the determinant vector of the 3-dimensional matrix $A$ whose entries are
 $det(A^{k})$, where $k = 1,...,s$.
 
@@ -91,14 +91,14 @@ $det(A^{k})$, where $k = 1,...,s$.
 $k = 1,...,s$. On the other hand, the matrix $A$ is called almost singular if $det(A^{k})$ = 0 for countable $k$.
 
 
-- **Identity Matrix:** Let $I \in \mathbb{C}^{m \times m \times s} $ be a 3-dimensional matrix whose entries, for all $k$, are $a^{k}_{ij} =  1$ whenever
+- **Identity Matrix:** Let $I \in \mathbb{C}^{m \times m \times s}$ be a 3-dimensional matrix whose entries, for all $k$, are $a^{k}_{ij} =  1$ whenever
 $i = j$, and $a^{k}_{ij} =  0$ while $i \neq j$. Then the matrix $I$ is the 3-dimensional identity matrix.
 
 
-- **Inverse Matrix:** Let $A \in \mathbb{C}^{m \times m \times s} $ be a 3-dimensional matrix. Then, $A^{-1}$ is called inverse matrix of $A$ when
+- **Inverse Matrix:** Let $A \in \mathbb{C}^{m \times m \times s}$ be a 3-dimensional matrix. Then, $A^{-1}$ is called inverse matrix of $A$ when
 $AA^{-1} = \bigcup_{k=1}^s (A^{k})(A^{k})^{-1} = I$ where $I$ is the 3-dimensional identity matrix.
 
-- **Transpose:** Let $A \in \mathbb{C}^{m \times m \times s} $ be a 3-dimensional matrix and $A^{*} = \bigcup_{k=1}^s (A^{k})^{*}$. Then the matrix 
+- **Transpose:** Let $A \in \mathbb{C}^{m \times m \times s}$ be a 3-dimensional matrix and $A^{*} = \bigcup_{k=1}^s (A^{k})^{*}$. Then the matrix 
 $A^{*} \in \mathbb{C}^{m \times m \times s} $ is called the conjugate transpose of the matrix $A$.
 
   
