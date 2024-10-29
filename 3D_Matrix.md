@@ -115,8 +115,9 @@ $A^{*} \in \mathbb{C}^{m \times m \times s} $ is called the conjugate transpose 
 - **Machine Learning**: Feeding 3D data into neural networks, especially in convolutional neural networks (CNNs), where spatial data may be represented in 3D form.
 
 
-
-  
+### References:
+- Concept of 3D Matrice (Researchgate) [Concept of 3D Matrices](https://www.researchgate.net/publication/326670617_Fundamental_concept_of_3-D_matrices)
+- Intro. to Matrix [Introduction to Matrix](https://gamemath.com/book/matrixintro.html)
 
 
 
