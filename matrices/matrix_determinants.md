@@ -91,7 +91,7 @@ or other methods (LU decomposition or row reduction).
 The algebraic interpretation of a determinant is great at providing a basis for computing a determinant. it does not, however, provide an intuitive 
 understanding of determinants. it makes it seem like the determinant is merely a product of numbers. 
 
-![2x2 Geographic interpretation](assests/Untitled-2024-09-14-1236.png)
+![2x2 Geographic interpretation](/assests/Untitled-2024-09-14-1236.png)
 
 The `2x2` depiction of matrix $A$ is seen above. The above parallelogram is constructed by recognizing that the matrix $A$ forms two linear maps:
 - one that maps the standard basis vectors to the rows of $A$ and
