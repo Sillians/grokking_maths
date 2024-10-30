@@ -259,7 +259,7 @@ The identity matrix essentially acts as a "neutral element" in matrix multiplica
 
 
 ## Determinants 
-Refer to this [Matrix Determinants](matrices/matrix_determinants.md)
+Refer to this [Matrix Determinants](matrix_determinants.md)
 
 [//]: # (matrices/matrix_determinants.md)
 
