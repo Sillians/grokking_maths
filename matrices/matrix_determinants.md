@@ -187,9 +187,14 @@ Determinants are powerful tools in matrix algebra, with broad applications from 
 efficient calculation methods allow for understanding linear transformations and their impact on space. 
 
 
-### Reference Links:
+### Reference:
 
 - Laplace expansion (Wikipedia): [Laplace expansion](https://en.wikipedia.org/wiki/Laplace_expansion)
+
+
+- The determinant | Chapter 6, Essence of linear algebra (3Blue1Brown)
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/Ip3X9LOh2dk/0.jpg)](http://www.youtube.com/watch?v=Ip3X9LOh2dk "The determinant | Chapter 6, Essence of linear algebra")
 
 
 
