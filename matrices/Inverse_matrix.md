@@ -6,6 +6,7 @@ meaning its determinant is non-zero, i.e., $`det(A) \neq 0`$. The general formul
 ### 1. **The Adjugate Method**
 
 For a matrix $A = [a_{ij}]$, the inverse $A^{-1}$ can be computed using the formula:
+
 $`A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)`$
 
 where:
@@ -35,18 +36,28 @@ where:
 ### Example: Inverse of a 2x2 Matrix
 For a $2 \times 2$ matrix: $`A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}`$
 
-If $`\det(A) = ad - bc \neq 0`$, then: $`A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}`$
+If $`\det(A) = ad - bc \neq 0`$, 
 
-For the matrix $`A = \begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix}`$
+then: 
 
-The inverse is calculated as; $`A^{-1} = \frac{1}{1 \times 2 - 1 \times 1} \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}`$
+$`A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}`$
+
+For the matrix 
+
+$`A = \begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix}`$
+
+The inverse is calculated as; 
+
+$`A^{-1} = \frac{1}{1 \times 2 - 1 \times 1} \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}`$
 
 $`A^{-1} = \frac{1}{1} \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}  = \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}`$
 
 
 
 ### Example: Inverse of a 3x3 Matrix
-For a $`3 \times 3`$ matrix: $`A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}`$
+For a 
+
+$`3 \times 3`$ matrix: $`A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}`$
 
 1. Compute $`\det(A)`$ using cofactor expansion.
 2. Find the cofactor matrix and its transpose (adjugate).
@@ -56,7 +67,9 @@ For a $`3 \times 3`$ matrix: $`A = \begin{pmatrix} a & b & c \\ d & e & f \\ g &
 
 **For Example** 
 
-Let matrix,  $`A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}`$
+Let matrix,  
+
+$`A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}`$
 
 1. **Computing the matrix of `minors` and `cofactors` as thus**;
 
@@ -72,9 +85,12 @@ Let matrix,  $`A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pma
 
 
 2. **Construct the Cofactor Matrix**:
-The `matrix` of cofactors is  $`\begin{pmatrix} -1 & -5 & 2 \\ -1 & 5 & -3 \\ 2 & 5 & -4 \end{pmatrix}`$
+The `matrix` of cofactors is  
+
+$`\begin{pmatrix} -1 & -5 & 2 \\ -1 & 5 & -3 \\ 2 & 5 & -4 \end{pmatrix}`$
 
 3. **Transpose the Cofactor Matrix** to get the adjugate:
+
 The `adjugate` is the transpose of the matrix of cofactors
 
 $`\begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}`$
@@ -86,13 +102,17 @@ $`A^{-1} = \frac{1}{\det(A)} \text{adj}(A)`$
 
 **EXAMPLE**
 
-For the $`3 \times 3`$ case example matrix; $`A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}`$ has $`det(A) = -5`$. (Refer to [Matrix Determinants](matrix_determinants.md) for more on matrix determinant)
+For the $`3 \times 3`$ case example matrix; 
+
+$`A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}`$ has $`det(A) = -5`$. (Refer to [Matrix Determinants](matrix_determinants.md) for more on matrix determinant)
 
 The inverse of $A$ therefore exists and is equal to 
 
 $`A^{-1} = -\frac{1}{5} \begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}`$
 
-Can also be written as; $`A^{-1} =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & -1 \\ -\frac{2}{5} & \frac{3}{5} & \frac{4}{5} \end{pmatrix}`$
+Can also be written as; 
+
+$`A^{-1} =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & -1 \\ -\frac{2}{5} & \frac{3}{5} & \frac{4}{5} \end{pmatrix}`$
 
 
 This method scales for larger matrices but becomes computationally expensive, so algorithmic or numerical approaches are typically used for matrices larger than $`3 \times 3`$.
