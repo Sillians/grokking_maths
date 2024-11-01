@@ -18,34 +18,43 @@ The formula for finding the inverse of a matrix $A$, if $A$ is invertible (i.e.,
 ## Steps to Find the Adjugate Matrix
 
 ### The $2 \times 2$ matrix case:
+
 Let  $`A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}`$
 
 We construct the adjugate as follows;
 
 - Replace each entry $a_{ij}$ of $A$ by the element remaining when the $ith$ row and $jth$ column are crossed
+
 $`\begin{pmatrix} d & c \\ b & a \end{pmatrix}.`$
 
 - Use the following matrix of signs
+
 $`\begin{pmatrix} + & - \\ - & + \end{pmatrix},`$
 
 where the entry in row $i$ and column $j$ is the sign of $(-1)^{i+j}$, to get 
+
 $`\begin{pmatrix} d & -c \\ -b & a \end{pmatrix}.`$
 
 - Take the transpose of this matrix to get the adjugate of $A$
+
 $`adj(A) = \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}.`$
 
 - Observe that
 
 $A adj(A) = det(A)I = adj(A)A$.
 
-**Example** Let  $`A = \begin{pmatrix} 1 & 2 \\ 3 & 1 \end{pmatrix}.`$
+**Example** Let  
+
+$`A = \begin{pmatrix} 1 & 2 \\ 3 & 1 \end{pmatrix}.`$
 
 - $M_{11} = 1$
 - $M_{12} = -3$
 - $M_{21} = -2$
 - $M_{22} = 1$
 
-This becomes; $`A = \begin{pmatrix} 1 & -3 \\ -2 & 1 \end{pmatrix}.`$
+This becomes; 
+
+$`A = \begin{pmatrix} 1 & -3 \\ -2 & 1 \end{pmatrix}.`$
 
 
 Then, taking the `Transpose`, we get
@@ -61,9 +70,11 @@ $`adj(A) = \begin{pmatrix} 1 & -2 \\ -3 & 1 \end{pmatrix}.`$
 - The **minor** $M_{ij}$ of an element $a_{ij}$ is the determinant of the `submatrix` that remains after removing the $i$-th row and $j$-th column from $A$.
 
 - For example, if $A$ is a $3 \times 3$ matrix:
+
 $`A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}`$
    
 then the minor $M_{11}$ of element $a_{11} = a$ is:
+
 $`M_{11} = \det\begin{pmatrix} e & f \\ h & i \end{pmatrix} = ei - fh`$
 
 2. **Apply Cofactor Signs**:
@@ -79,11 +90,13 @@ $`C_{ij} = (-1)^{i+j} M_{ij}`$
 
 3. **Construct the Cofactor Matrix**:
 - Organize all calculated cofactors $C_{ij}$ into a matrix with the same dimensions as $A$:
+
 $`C = \begin{pmatrix} C_{11} & C_{12} & \dots & C_{1n} \\ C_{21} & C_{22} & \dots & C_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ C_{n1} & C_{n2} & \dots & C_{nn} \end{pmatrix}`$
 
 
 4. **Transpose the Cofactor Matrix**:
 - Finally, the adjugate matrix $`\text{adj}(A)`$ is the transpose of the cofactor matrix $C$:
+
 $`\text{adj}(A) = C^{T}`$
 
 - This means we swap rows and columns of $C$ to obtain $`\text{adj}(A)`$.
@@ -128,10 +141,12 @@ Let  $`A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}`$
 
 
 2. **Construct the Cofactor Matrix**:
-The `matrix` of cofactors is $`\begin{pmatrix} -1 & -5 & 2 \\ -1 & 5 & -3 \\ 2 & 5 & -4 \end{pmatrix}`$
+The `matrix` of cofactors is 
+$`\begin{pmatrix} -1 & -5 & 2 \\ -1 & 5 & -3 \\ 2 & 5 & -4 \end{pmatrix}`$
 
 3. **Transpose the Cofactor Matrix** to get the adjugate:
 The `adjugate` is the transpose of the matrix of cofactors
+
 $`\begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}`$
 
 
@@ -146,10 +161,13 @@ For the $3 \times 3$ case example matrix;
 $`A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}`$ has $`det(A) = -5.`$ (Refer to [Matrix Determinants](matrix_determinants.md) for more on matrix determinant)
 
 The inverse of $A$ therefore exists and is equal to 
+
 $`A^{-1} = -\frac{1}{5} \begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}`$
 
 
-Can also be written as; $`A^{-1} =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & -1 \\ -\frac{2}{5} & \frac{3}{5} & \frac{4}{5} \end{pmatrix}`$
+Can also be written as; 
+
+$`A^{-1} =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & -1 \\ -\frac{2}{5} & \frac{3}{5} & \frac{4}{5} \end{pmatrix}`$
 
 
 ### Note: IMPORTANT THEOREM
@@ -164,6 +182,7 @@ $`A^{-1}A =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 
 ### Properties of the Adjugate Matrix
 
 1. **Inverse Calculation**: If $A$ is invertible, then:
+
 $`A^{-1} = \frac{1}{\det(A)} \text{adj}(A)`$
 
 2. **Self-Adjugate Property**: If $A$ is already a diagonal matrix, then $`\text{adj}(A)`$ will also be diagonal.
