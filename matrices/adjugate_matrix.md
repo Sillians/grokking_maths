@@ -122,92 +122,46 @@ C = \begin{pmatrix} C_{11} & C_{12} & \dots & C_{1n} \\ C_{21} & C_{22} & \dots 
 
 #### Can also be stated as;
 
-Let $A$ be an $n \times n$ matrix with entries $a_{ij}$. We define its adjugate as the result of the following sequence of operations.
+Let $A$ be an $`n \times n`$ matrix with entries $`a_{ij}`$. We define its adjugate as the result of the following sequence of operations.
 
-- Choose an entry $a_{ij}$, in the matrix $A$.
+- Choose an entry $`a_{ij}`$, in the matrix $A$.
 
-- Crossing out the entries in row $i$ and column $j$, an $(n - 1) \times (n - 1)$ matrix is constructed, denoted by $M(A)_{ij}$, and called a **submatrix**.
+- Crossing out the entries in row $i$ and column $j$, an $`(n - 1) \times (n - 1)`$ matrix is constructed, denoted by $`M(A)_{ij}`$, and called a **submatrix**.
 
 - The determinant $`det(M(A)_{ij})`$ is called the **minor** of the element $a_{ij}$.
 
-- If 
-```math
-- $det(M(A)_{ij})
-```
-is multiplied by the corresponding sign, we get the `cofactor` 
-```math
-c_{ij} = (-1)^{i+j} det(M(A)_{ij})
-```
-of the element $a_{ij}$.
+- If $`det(M(A)_{ij})`$ is multiplied by the corresponding sign, we get the `cofactor` $`c_{ij} = (-1)^{i+j} det(M(A)_{ij})`$ of the element $a_{ij}$.
 
-- Replace each element $a_{ij}$ by its cofactor to obtain the matrix $C(A)$ of cofactors of $A$.
+- Replace each element $`a_{ij}`$ by its cofactor to obtain the matrix $`C(A)`$ of cofactors of $A$.
 
-- The transpose of the matrix of cofactors $C(A)$ is the adjugate.
+- The transpose of the matrix of cofactors $`C(A)`$ is the adjugate.
 
 ---
 
 
 **Example** 
 
-Let 
-
-```math
-A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}
-```
+Let  $`A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}`$
 
 1. **Computing the matrix of `minors` and `cofactors` as thus**;
 
-- 
-```math
-M_{11} = (-1)^{1+1} \begin{pmatrix} 0 & 1 \\ 1 & 2 \end{pmatrix} = -1
-```
-- 
-```math
-M_{12} = (1)^{1+2} \begin{pmatrix} 2 & 1 \\ -1 & 2 \end{pmatrix} = -5
-```
-- 
-```math
-M_{13} = (-1)^{1+3} \begin{pmatrix} 2 & 0 \\ -1 & 1 \end{pmatrix} = 2
-```
-- 
-```math
-M_{21} = (-1)^{2+1} \begin{pmatrix} 2 & 3 \\ 1 & 2 \end{pmatrix} = -1
-```
-- 
-```math
-M_{22} = (-1)^{2+2} \begin{pmatrix} 1 & 3 \\ -1 & 2 \end{pmatrix} = 5
-```
-- 
-```math
-M_{23} = (-1)^{2+3} \begin{pmatrix} 1 & 2 \\ -1 & 1 \end{pmatrix} = -3
-```
-- 
-```math
-M_{31} = (-1)^{3+1} \begin{pmatrix} 2 & 3 \\ 0 & 1 \end{pmatrix} = 2
-```
-- 
-```math
-M_{32} = (-1)^{3+2} \begin{pmatrix} 1 & 3 \\ 2 & 1 \end{pmatrix} = 5
-```
-- 
-```math
-M_{33} = (-1)^{3+3} \begin{pmatrix} 1 & 2 \\ 2 & 0 \end{pmatrix} = -4
-```
+- $`M_{11} = (-1)^{1+1} \begin{pmatrix} 0 & 1 \\ 1 & 2 \end{pmatrix} = -1`$
+- $`M_{12} = (1)^{1+2} \begin{pmatrix} 2 & 1 \\ -1 & 2 \end{pmatrix} = -5`$
+- $`M_{13} = (-1)^{1+3} \begin{pmatrix} 2 & 0 \\ -1 & 1 \end{pmatrix} = 2`$
+- $`M_{21} = (-1)^{2+1} \begin{pmatrix} 2 & 3 \\ 1 & 2 \end{pmatrix} = -1`$
+- $`M_{22} = (-1)^{2+2} \begin{pmatrix} 1 & 3 \\ -1 & 2 \end{pmatrix} = 5`$
+- $`M_{23} = (-1)^{2+3} \begin{pmatrix} 1 & 2 \\ -1 & 1 \end{pmatrix} = -3`$
+- $`M_{31} = (-1)^{3+1} \begin{pmatrix} 2 & 3 \\ 0 & 1 \end{pmatrix} = 2`$
+- $`M_{32} = (-1)^{3+2} \begin{pmatrix} 1 & 3 \\ 2 & 1 \end{pmatrix} = 5`$
+- $`M_{33} = (-1)^{3+3} \begin{pmatrix} 1 & 2 \\ 2 & 0 \end{pmatrix} = -4`$
 
 
 2. **Construct the Cofactor Matrix**:
-The `matrix` of cofactors is 
-
-```math
-\begin{pmatrix} -1 & -5 & 2 \\ -1 & 5 & -3 \\ 2 & 5 & -4 \end{pmatrix}
-```
+The `matrix` of cofactors is $`\begin{pmatrix} -1 & -5 & 2 \\ -1 & 5 & -3 \\ 2 & 5 & -4 \end{pmatrix}`$
 
 3. **Transpose the Cofactor Matrix** to get the adjugate:
 The `adjugate` is the transpose of the matrix of cofactors
-
-```math
-\begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}
-```
+$`\begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}`$
 
 
 **THEOREM** A square matrix $A$ is invertible if and only if $det(A) /neq 0$. If $det(A) /neq 0$ then the inverse of $A$ is given by
