@@ -128,11 +128,7 @@ Let $A$ be an $n \times n$ matrix with entries $a_{ij}$. We define its adjugate 
 
 - Crossing out the entries in row $i$ and column $j$, an $(n - 1) \times (n - 1)$ matrix is constructed, denoted by $M(A)_{ij}$, and called a **submatrix**.
 
-- The determinant 
-```math
-det(M(A)_{ij})
-````
- is called the **minor** of the element $a_{ij}$.
+- The determinant $`det(M(A)_{ij})`$ is called the **minor** of the element $a_{ij}$.
 
 - If 
 ```math
