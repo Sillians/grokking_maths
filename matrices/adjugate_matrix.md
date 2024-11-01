@@ -125,10 +125,27 @@ C = \begin{pmatrix} C_{11} & C_{12} & \dots & C_{1n} \\ C_{21} & C_{22} & \dots 
 Let $A$ be an $n \times n$ matrix with entries $a_{ij}$. We define its adjugate as the result of the following sequence of operations.
 
 - Choose an entry $a_{ij}$, in the matrix $A$.
+
 - Crossing out the entries in row $i$ and column $j$, an $(n - 1) \times (n - 1)$ matrix is constructed, denoted by $M(A)_{ij}$, and called a **submatrix**.
-- The determinant $det(M(A)_{ij})$ is called the **minor** of the element $a_{ij}$.
-- If $det(M(A)_{ij})$ is multiplied by the corresponding sign, we get the `cofactor` $c_{ij} = (-1)^{i+j} det(M(A)_{ij})$ of the element $a_{ij}$.
+
+- The determinant 
+```math
+det(M(A)_{ij})
+````
+ is called the **minor** of the element $a_{ij}$.
+
+- If 
+```math
+- $det(M(A)_{ij})
+```
+is multiplied by the corresponding sign, we get the `cofactor` 
+```math
+c_{ij} = (-1)^{i+j} det(M(A)_{ij})
+```
+of the element $a_{ij}$.
+
 - Replace each element $a_{ij}$ by its cofactor to obtain the matrix $C(A)$ of cofactors of $A$.
+
 - The transpose of the matrix of cofactors $C(A)$ is the adjugate.
 
 ---
