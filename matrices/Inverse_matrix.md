@@ -1,135 +1,101 @@
 # Inverse Matrices
 
 For an $n \times n$ square matrix $A$, the inverse $A^{-1}$ exists if and only if the matrix is *non-singular*, 
-meaning its determinant is non-zero. The general formula for computing the inverse of a matrix \( A \) involves:
+meaning its determinant is non-zero, i.e., $`det(A) \neq 0`$. The general formula for computing the inverse of a matrix $A$ involves:
 
 ### 1. **The Adjugate Method**
 
 For a matrix $A = [a_{ij}]$, the inverse $A^{-1}$ can be computed using the formula:
-```math
-A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)
-```
+$`A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)`$
 
 where:
-- $det(A)$ is the determinant of $A$.
-- $\text{adj}(A)$ is the adjugate (or adjoint) of $A$, which is the transpose of the cofactor matrix of $A$.
+- $`det(A)`$ is the determinant of $A$.
+- $`\text{adj}(A)`$ is the adjugate (or adjoint) of $A$, which is the transpose of the cofactor matrix of $A$.
+- (Refer to [Adjugate Matrix](adjugate_matrix.md) for more on Adjugate matrix)
 
 ### 2. **Steps to Compute the Inverse Using the Adjugate Method**
 
 1. **Calculate the Determinant** of $A$:
    - For a $2 \times 2$ matrix:
-     ```math
-     A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}
-     ```
-     ```math
-     \det(A) = ad - bc
-     ```
-   - For a $3 \times 3$ matrix, the determinant is calculated using cofactor expansion, and so on for larger matrices.
+     $`A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}`$,  $`\det(A) = ad - bc`$
+   
+   - For a $`3 \times 3`$ matrix, the determinant is calculated using cofactor expansion, and so on for larger matrices.
 
 2. **Find the Matrix of Minors**:
-   - The minor of an element $a_{ij}$ is the determinant of the submatrix formed by removing the $i$-th row and $j$-th column.
+   - The minor of an element $`a_{ij}`$ is the determinant of the submatrix formed by removing the $`i`$-th row and $`j`$-th column.
 
 3. **Create the Cofactor Matrix**:
-   - Apply a checkerboard pattern of signs $(+/-)$ to the matrix of minors to obtain the cofactor matrix.
+   - Apply a checkerboard pattern of signs $`(+/-)`$ to the matrix of minors to obtain the cofactor matrix.
 
 4. **Transpose the Cofactor Matrix** to get the Adjugate (Adjoint) Matrix.
 
 5. **Divide by the Determinant**:
-   - Multiply each element of the adjugate matrix by $\frac{1}{\det(A)}$.
+   - Multiply each element of the adjugate matrix by $`\frac{1}{\det(A)}`$.
 
 ### Example: Inverse of a 2x2 Matrix
-For a $2 \times 2$ matrix:
-```math
-A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}
-```
+For a $2 \times 2$ matrix: $`A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}`$
 
-If $\det(A) = ad - bc \neq 0$, then:
+If $`\det(A) = ad - bc \neq 0`$, then: $`A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}`$
 
-```math
-A^{-1} = \frac{1}{ad - bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
-```
+For the matrix $`A = \begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix}`$
 
-For the matrix $A = \begin{pmatrix} 1 & 1 \\ 1 & 2 \end{pmatrix}$
+The inverse is calculated as; $`A^{-1} = \frac{1}{1 \times 2 - 1 \times 1} \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}`$
 
-The inverse is calculated as; $A^{-1} = \frac{1}{1 \times 2 - 1 \times 1} \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}$
-
-$A^{-1} = \frac{1}{1} \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}  = \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}$
+$`A^{-1} = \frac{1}{1} \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}  = \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}`$
 
 
 
 ### Example: Inverse of a 3x3 Matrix
-For a $3 \times 3$ matrix:
+For a $`3 \times 3`$ matrix: $`A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}`$
 
-```math
-A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}
-```
-
-1. Compute $\det(A)$ using cofactor expansion.
+1. Compute $`\det(A)`$ using cofactor expansion.
 2. Find the cofactor matrix and its transpose (adjugate).
-3. Multiply the adjugate by $\frac{1}{\det(A)}$ to get $A^{-1}$.
+3. Multiply the adjugate by $`\frac{1}{\det(A)}`$ to get $`A^{-1}`$.
 
 
 
 **For Example** 
 
-Let matrix,
-
-```math
-A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}
-```
+Let matrix,  $`A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}`$
 
 1. **Computing the matrix of `minors` and `cofactors` as thus**;
 
-- $M_{11} = (-1)^{1+1} \begin{pmatrix} 0 & 1 \\ 1 & 2 \end{pmatrix} = -1$
-- $M_{12} = (1)^{1+2} \begin{pmatrix} 2 & 1 \\ -1 & 2 \end{pmatrix} = -5$
-- $M_{13} = (-1)^{1+3} \begin{pmatrix} 2 & 0 \\ -1 & 1 \end{pmatrix} = 2$
-- $M_{21} = (-1)^{2+1} \begin{pmatrix} 2 & 3 \\ 1 & 2 \end{pmatrix} = -1$
-- $M_{22} = (-1)^{2+2} \begin{pmatrix} 1 & 3 \\ -1 & 2 \end{pmatrix} = 5$
-- $M_{23} = (-1)^{2+3} \begin{pmatrix} 1 & 2 \\ -1 & 1 \end{pmatrix} = -3$
-- $M_{31} = (-1)^{3+1} \begin{pmatrix} 2 & 3 \\ 0 & 1 \end{pmatrix} = 2$
-- $M_{32} = (-1)^{3+2} \begin{pmatrix} 1 & 3 \\ 2 & 1 \end{pmatrix} = 5$
-- $M_{33} = (-1)^{3+3} \begin{pmatrix} 1 & 2 \\ 2 & 0 \end{pmatrix} = -4$
+- $`M_{11} = (-1)^{1+1} \begin{pmatrix} 0 & 1 \\ 1 & 2 \end{pmatrix} = -1`$
+- $`M_{12} = (1)^{1+2} \begin{pmatrix} 2 & 1 \\ -1 & 2 \end{pmatrix} = -5`$
+- $`M_{13} = (-1)^{1+3} \begin{pmatrix} 2 & 0 \\ -1 & 1 \end{pmatrix} = 2`$
+- $`M_{21} = (-1)^{2+1} \begin{pmatrix} 2 & 3 \\ 1 & 2 \end{pmatrix} = -1`$
+- $`M_{22} = (-1)^{2+2} \begin{pmatrix} 1 & 3 \\ -1 & 2 \end{pmatrix} = 5`$
+- $`M_{23} = (-1)^{2+3} \begin{pmatrix} 1 & 2 \\ -1 & 1 \end{pmatrix} = -3`$
+- $`M_{31} = (-1)^{3+1} \begin{pmatrix} 2 & 3 \\ 0 & 1 \end{pmatrix} = 2`$
+- $`M_{32} = (-1)^{3+2} \begin{pmatrix} 1 & 3 \\ 2 & 1 \end{pmatrix} = 5`$
+- $`M_{33} = (-1)^{3+3} \begin{pmatrix} 1 & 2 \\ 2 & 0 \end{pmatrix} = -4`$
 
 
 2. **Construct the Cofactor Matrix**:
-The `matrix` of cofactors is 
-
-```math
-\begin{pmatrix} -1 & -5 & 2 \\ -1 & 5 & -3 \\ 2 & 5 & -4 \end{pmatrix}
-```
+The `matrix` of cofactors is  $`\begin{pmatrix} -1 & -5 & 2 \\ -1 & 5 & -3 \\ 2 & 5 & -4 \end{pmatrix}`$
 
 3. **Transpose the Cofactor Matrix** to get the adjugate:
 The `adjugate` is the transpose of the matrix of cofactors
 
-```math
-\begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}
-```
+$`\begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}`$
 
 
-**THEOREM** A square matrix $A$ is invertible if and only if $det(A) /neq 0$. If $det(A) /neq 0$ then the inverse of $A$ is given by
+**THEOREM** A square matrix $A$ is invertible if and only if $`det(A) \neq 0`$. If $`det(A) \neq 0`$ then the inverse of $A$ is given by
 
-```math
-A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
-```
+$`A^{-1} = \frac{1}{\det(A)} \text{adj}(A)`$
 
 **EXAMPLE**
 
-For the $3 \times 3$ case example matrix; $A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}$ has $det(A) = -5$. (Refer to [Matrix Determinants](matrix_determinants.md) for more on matrix determinant)
+For the $`3 \times 3`$ case example matrix; $`A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}`$ has $`det(A) = -5`$. (Refer to [Matrix Determinants](matrix_determinants.md) for more on matrix determinant)
 
 The inverse of $A$ therefore exists and is equal to 
 
-```math
-A^{-1} = -\frac{1}{5} \begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}
-```
+$`A^{-1} = -\frac{1}{5} \begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}`$
 
-Can also be written as;
-
-```math
-A^{-1} =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & -1 \\ -\frac{2}{5} & \frac{3}{5} & \frac{4}{5} \end{pmatrix}
-```
+Can also be written as; $`A^{-1} =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & -1 \\ -\frac{2}{5} & \frac{3}{5} & \frac{4}{5} \end{pmatrix}`$
 
 
-This method scales for larger matrices but becomes computationally expensive, so algorithmic or numerical approaches are typically used for matrices larger than $3 \times 3$.
+This method scales for larger matrices but becomes computationally expensive, so algorithmic or numerical approaches are typically used for matrices larger than $`3 \times 3`$.
 
 
 
