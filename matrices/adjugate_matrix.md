@@ -19,11 +19,14 @@ A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
 ## Steps to Find the Adjugate Matrix
 
 ### The $2 \times 2$ matrix case:
-Let $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$
+Let 
+```math
+A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}
+```
 
 We construct the adjugate as follows;
 
-- Replace each entry $a_{ij}$ of $A$ by the element remaining when the $i$th row and $j$th column are crossed
+- Replace each entry $a_{ij}$ of $A$ by the element remaining when the $ith$ row and $jth$ column are crossed
 ```math
 \begin{pmatrix} d & c \\ b & a \end{pmatrix}.
 ```
@@ -48,18 +51,26 @@ adj(A) = \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}.
 $A adj(A) = det(A)I = adj(A)A$.
 
 **Example** Let 
-$A = \begin{pmatrix} 1 & 2 \\ 3 & 1 \end{pmatrix}$.
+```math
+A = \begin{pmatrix} 1 & 2 \\ 3 & 1 \end{pmatrix}.
+```
 
 - $M_{11} = 1$
 - $M_{12} = -3$
 - $M_{21} = -2$
 - $M_{22} = 1$
 
-This becomes; $A = \begin{pmatrix} 1 & -3 \\ -2 & 1 \end{pmatrix}$.
+This becomes; 
+```math
+A = \begin{pmatrix} 1 & -3 \\ -2 & 1 \end{pmatrix}.
+```
+
 
 Then, taking the `Transpose`, we get
 
-$adj(A) = \begin{pmatrix} 1 & -2 \\ -3 & 1 \end{pmatrix}$.
+```math
+adj(A) = \begin{pmatrix} 1 & -2 \\ -3 & 1 \end{pmatrix}.
+```
 
 
 
@@ -67,44 +78,44 @@ $adj(A) = \begin{pmatrix} 1 & -2 \\ -3 & 1 \end{pmatrix}$.
 ### The $3 \times 3$ matrix case:
 
 1. **Calculate the Minor of Each Element**:
-   - The **minor** $M_{ij}$ of an element $a_{ij}$ is the determinant of the `submatrix` that remains after removing the $i$-th row and $j$-th column from $A$.
+- The **minor** $M_{ij}$ of an element $a_{ij}$ is the determinant of the `submatrix` that remains after removing the $i$-th row and $j$-th column from $A$.
 
-   - For example, if $A$ is a $3 \times 3$ matrix:
-     ```math
-     A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}
-     ```
+- For example, if $A$ is a $3 \times 3$ matrix:
+```math
+A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}
+```
    
-     then the minor $M_{11}$ of element $a_{11} = a$ is:
-     ```math
-     M_{11} = \det\begin{pmatrix} e & f \\ h & i \end{pmatrix} = ei - fh
-     ```
+then the minor $M_{11}$ of element $a_{11} = a$ is:
+```math
+M_{11} = \det\begin{pmatrix} e & f \\ h & i \end{pmatrix} = ei - fh
+```
 
 2. **Apply Cofactor Signs**:
-   - Each minor $M_{ij}$ is assigned a **cofactor sign** $(-1)^{i+j}$ based on its position in the matrix. The cofactor $C_{ij}$ for each element $a_{ij}$ is:
-     ```math
-     C_{ij} = (-1)^{i+j} M_{ij}
-     ```
+- Each minor $M_{ij}$ is assigned a **cofactor sign** $(-1)^{i+j}$ based on its position in the matrix. The cofactor $C_{ij}$ for each element $a_{ij}$ is:
+  ```math
+  C_{ij} = (-1)^{i+j} M_{ij}
+  ```
 
-   - For example, for the $3 \times 3$ matrix above:
-     - The cofactor of $a_{11}$ is $C_{11} = M_{11}$,
-     - The cofactor of $a_{12}$ is $C_{12} = -M_{12}$, and so on.
+- For example, for the $3 \times 3$ matrix above:
+  - The cofactor of $a_{11}$ is $C_{11} = M_{11}$,
+  - The cofactor of $a_{12}$ is $C_{12} = -M_{12}$, and so on.
 
-   - Applying these signs creates the **cofactor matrix** $C$.
+- Applying these signs creates the **cofactor matrix** $C$.
 
 
 3. **Construct the Cofactor Matrix**:
-   - Organize all calculated cofactors $C_{ij}$ into a matrix with the same dimensions as $A$:
-     ```math
-     C = \begin{pmatrix} C_{11} & C_{12} & \dots & C_{1n} \\ C_{21} & C_{22} & \dots & C_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ C_{n1} & C_{n2} & \dots & C_{nn} \end{pmatrix}
-     ```
+- Organize all calculated cofactors $C_{ij}$ into a matrix with the same dimensions as $A$:
+  ```math
+  C = \begin{pmatrix} C_{11} & C_{12} & \dots & C_{1n} \\ C_{21} & C_{22} & \dots & C_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ C_{n1} & C_{n2} & \dots & C_{nn} \end{pmatrix}
+  ```
 
 
 4. **Transpose the Cofactor Matrix**:
-   - Finally, the adjugate matrix $\text{adj}(A)$ is the transpose of the cofactor matrix $C$:
-     ```math
-     \text{adj}(A) = C^{T}
-     ```
-   - This means we swap rows and columns of $C$ to obtain $\text{adj}(A)$.
+- Finally, the adjugate matrix $\text{adj}(A)$ is the transpose of the cofactor matrix $C$:
+  ```math
+  \text{adj}(A) = C^{T}
+  ```
+- This means we swap rows and columns of $C$ to obtain $\text{adj}(A)$.
 
 ---
 
@@ -133,8 +144,8 @@ $
 
 1. **Computing the matrix of `minors` and `cofactors` as thus**;
 
-- $M_{11} = (-1)^{1+1} \begin{pmatrix} 0 & 1 \\ 1 & 2 \end{pmatrix} = -1$
-- $M_{12} = (1)^{1+2} \begin{pmatrix} 2 & 1 \\ -1 & 2 \end{pmatrix} = -5$
+- ```mathM_{11} = (-1)^{1+1} \begin{pmatrix} 0 & 1 \\ 1 & 2 \end{pmatrix} = -1```
+- ```mathM_{12} = (1)^{1+2} \begin{pmatrix} 2 & 1 \\ -1 & 2 \end{pmatrix} = -5$
 - $M_{13} = (-1)^{1+3} \begin{pmatrix} 2 & 0 \\ -1 & 1 \end{pmatrix} = 2$
 - $M_{21} = (-1)^{2+1} \begin{pmatrix} 2 & 3 \\ 1 & 2 \end{pmatrix} = -1$
 - $M_{22} = (-1)^{2+2} \begin{pmatrix} 1 & 3 \\ -1 & 2 \end{pmatrix} = 5$
