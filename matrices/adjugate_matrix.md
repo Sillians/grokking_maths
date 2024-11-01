@@ -92,9 +92,9 @@ M_{11} = \det\begin{pmatrix} e & f \\ h & i \end{pmatrix} = ei - fh
 
 2. **Apply Cofactor Signs**:
 - Each minor $M_{ij}$ is assigned a **cofactor sign** $(-1)^{i+j}$ based on its position in the matrix. The cofactor $C_{ij}$ for each element $a_{ij}$ is:
-  ```math
-  C_{ij} = (-1)^{i+j} M_{ij}
-  ```
+```math
+C_{ij} = (-1)^{i+j} M_{ij}
+```
 
 - For example, for the $3 \times 3$ matrix above:
   - The cofactor of $a_{11}$ is $C_{11} = M_{11}$,
@@ -105,16 +105,16 @@ M_{11} = \det\begin{pmatrix} e & f \\ h & i \end{pmatrix} = ei - fh
 
 3. **Construct the Cofactor Matrix**:
 - Organize all calculated cofactors $C_{ij}$ into a matrix with the same dimensions as $A$:
-  ```math
-  C = \begin{pmatrix} C_{11} & C_{12} & \dots & C_{1n} \\ C_{21} & C_{22} & \dots & C_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ C_{n1} & C_{n2} & \dots & C_{nn} \end{pmatrix}
-  ```
+```math
+C = \begin{pmatrix} C_{11} & C_{12} & \dots & C_{1n} \\ C_{21} & C_{22} & \dots & C_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ C_{n1} & C_{n2} & \dots & C_{nn} \end{pmatrix}
+```
 
 
 4. **Transpose the Cofactor Matrix**:
 - Finally, the adjugate matrix $\text{adj}(A)$ is the transpose of the cofactor matrix $C$:
-  ```math
-  \text{adj}(A) = C^{T}
-  ```
+```math
+\text{adj}(A) = C^{T}
+```
 - This means we swap rows and columns of $C$ to obtain $\text{adj}(A)$.
 
 ---
@@ -138,21 +138,48 @@ Let $A$ be an $n \times n$ matrix with entries $a_{ij}$. We define its adjugate 
 
 Let 
 
-$
+```math
 A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}
-$
+```
 
 1. **Computing the matrix of `minors` and `cofactors` as thus**;
 
-- ```mathM_{11} = (-1)^{1+1} \begin{pmatrix} 0 & 1 \\ 1 & 2 \end{pmatrix} = -1```
-- ```mathM_{12} = (1)^{1+2} \begin{pmatrix} 2 & 1 \\ -1 & 2 \end{pmatrix} = -5$
-- $M_{13} = (-1)^{1+3} \begin{pmatrix} 2 & 0 \\ -1 & 1 \end{pmatrix} = 2$
-- $M_{21} = (-1)^{2+1} \begin{pmatrix} 2 & 3 \\ 1 & 2 \end{pmatrix} = -1$
-- $M_{22} = (-1)^{2+2} \begin{pmatrix} 1 & 3 \\ -1 & 2 \end{pmatrix} = 5$
-- $M_{23} = (-1)^{2+3} \begin{pmatrix} 1 & 2 \\ -1 & 1 \end{pmatrix} = -3$
-- $M_{31} = (-1)^{3+1} \begin{pmatrix} 2 & 3 \\ 0 & 1 \end{pmatrix} = 2$
-- $M_{32} = (-1)^{3+2} \begin{pmatrix} 1 & 3 \\ 2 & 1 \end{pmatrix} = 5$
-- $M_{33} = (-1)^{3+3} \begin{pmatrix} 1 & 2 \\ 2 & 0 \end{pmatrix} = -4$
+- 
+```math
+M_{11} = (-1)^{1+1} \begin{pmatrix} 0 & 1 \\ 1 & 2 \end{pmatrix} = -1
+```
+- 
+```math
+M_{12} = (1)^{1+2} \begin{pmatrix} 2 & 1 \\ -1 & 2 \end{pmatrix} = -5
+```
+- 
+```math
+M_{13} = (-1)^{1+3} \begin{pmatrix} 2 & 0 \\ -1 & 1 \end{pmatrix} = 2
+```
+- 
+```math
+M_{21} = (-1)^{2+1} \begin{pmatrix} 2 & 3 \\ 1 & 2 \end{pmatrix} = -1
+```
+- 
+```math
+M_{22} = (-1)^{2+2} \begin{pmatrix} 1 & 3 \\ -1 & 2 \end{pmatrix} = 5
+```
+- 
+```math
+M_{23} = (-1)^{2+3} \begin{pmatrix} 1 & 2 \\ -1 & 1 \end{pmatrix} = -3
+```
+- 
+```math
+M_{31} = (-1)^{3+1} \begin{pmatrix} 2 & 3 \\ 0 & 1 \end{pmatrix} = 2
+```
+- 
+```math
+M_{32} = (-1)^{3+2} \begin{pmatrix} 1 & 3 \\ 2 & 1 \end{pmatrix} = 5
+```
+- 
+```math
+M_{33} = (-1)^{3+3} \begin{pmatrix} 1 & 2 \\ 2 & 0 \end{pmatrix} = -4
+```
 
 
 2. **Construct the Cofactor Matrix**:
@@ -178,7 +205,11 @@ A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
 
 **EXAMPLE**
 
-For the $3 \times 3$ case example matrix; $A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}$ has $det(A) = -5$. (Refer to [Matrix Determinants](matrix_determinants.md) for more on matrix determinant)
+For the $3 \times 3$ case example matrix; 
+```math
+A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}$ has $det(A) = -5.
+``` 
+(Refer to [Matrix Determinants](matrix_determinants.md) for more on matrix determinant)
 
 The inverse of $A$ therefore exists and is equal to 
 
@@ -208,9 +239,9 @@ A^{-1}A =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & 
 ### Properties of the Adjugate Matrix
 
 1. **Inverse Calculation**: If $A$ is invertible, then:
-   ```math
-   A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
-   ```
+```math
+A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
+```
 2. **Self-Adjugate Property**: If $A$ is already a diagonal matrix, then $\text{adj}(A)$ will also be diagonal.
 3. **Zero Determinant**: If $\det(A) = 0$, the matrix $A$ is not invertible, so $\text{adj}(A)$ cannot be used to find an inverse.
 
