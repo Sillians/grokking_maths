@@ -3,74 +3,54 @@
 The adjoint of a matrix (also called the adjugate of a matrix) is defined as the transpose of the cofactor matrix of that particular matrix.
 For a matrix $A$, the adjoint is denoted as $adj(A)$. The **adjugate matrix** is an essential tool in matrix algebra, particularly in finding the inverse of a matrix.
 
-The adjugate matrix is created by following a series of steps involving cofactors and transposition.
+The adjugate matrix is created by following a series of steps involving `cofactors` and `transposition`.
 
 ### Definition of the Adjugate Matrix
 
 For an $n \times n$ matrix $A = [a_{ij}]$, the **adjugate** (or **adjoint**) matrix, denoted as $\text{adj}(A)$, is the **transpose of the cofactor matrix** of $A$.
 
 The formula for finding the inverse of a matrix $A$, if $A$ is invertible (i.e., $\det(A) \neq 0$), involves the adjugate:
-```math
-A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
-```
+
+  $`A^{-1} = \frac{1}{\det(A)} \text{adj}(A)`$
 
 ---
 
 ## Steps to Find the Adjugate Matrix
 
 ### The $2 \times 2$ matrix case:
-Let 
-```math
-A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}
-```
+Let  $`A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}`$
 
 We construct the adjugate as follows;
 
 - Replace each entry $a_{ij}$ of $A$ by the element remaining when the $ith$ row and $jth$ column are crossed
-```math
-\begin{pmatrix} d & c \\ b & a \end{pmatrix}.
-```
+$`\begin{pmatrix} d & c \\ b & a \end{pmatrix}.`$
 
 - Use the following matrix of signs
-```math
-\begin{pmatrix} + & - \\ - & + \end{pmatrix},
-```
+$`\begin{pmatrix} + & - \\ - & + \end{pmatrix},`$
 
 where the entry in row $i$ and column $j$ is the sign of $(-1)^{i+j}$, to get 
-```math
-\begin{pmatrix} d & -c \\ -b & a \end{pmatrix}.
-```
+$`\begin{pmatrix} d & -c \\ -b & a \end{pmatrix}.`$
 
 - Take the transpose of this matrix to get the adjugate of $A$
-```math
-adj(A) = \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}.
-```
+$`adj(A) = \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}.`$
 
 - Observe that
 
 $A adj(A) = det(A)I = adj(A)A$.
 
-**Example** Let 
-```math
-A = \begin{pmatrix} 1 & 2 \\ 3 & 1 \end{pmatrix}.
-```
+**Example** Let  $`A = \begin{pmatrix} 1 & 2 \\ 3 & 1 \end{pmatrix}.`$
 
 - $M_{11} = 1$
 - $M_{12} = -3$
 - $M_{21} = -2$
 - $M_{22} = 1$
 
-This becomes; 
-```math
-A = \begin{pmatrix} 1 & -3 \\ -2 & 1 \end{pmatrix}.
-```
+This becomes; $`A = \begin{pmatrix} 1 & -3 \\ -2 & 1 \end{pmatrix}.`$
 
 
 Then, taking the `Transpose`, we get
 
-```math
-adj(A) = \begin{pmatrix} 1 & -2 \\ -3 & 1 \end{pmatrix}.
-```
+$`adj(A) = \begin{pmatrix} 1 & -2 \\ -3 & 1 \end{pmatrix}.`$
 
 
 
@@ -81,20 +61,14 @@ adj(A) = \begin{pmatrix} 1 & -2 \\ -3 & 1 \end{pmatrix}.
 - The **minor** $M_{ij}$ of an element $a_{ij}$ is the determinant of the `submatrix` that remains after removing the $i$-th row and $j$-th column from $A$.
 
 - For example, if $A$ is a $3 \times 3$ matrix:
-```math
-A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}
-```
+$`A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}`$
    
 then the minor $M_{11}$ of element $a_{11} = a$ is:
-```math
-M_{11} = \det\begin{pmatrix} e & f \\ h & i \end{pmatrix} = ei - fh
-```
+$`M_{11} = \det\begin{pmatrix} e & f \\ h & i \end{pmatrix} = ei - fh`$
 
 2. **Apply Cofactor Signs**:
 - Each minor $M_{ij}$ is assigned a **cofactor sign** $(-1)^{i+j}$ based on its position in the matrix. The cofactor $C_{ij}$ for each element $a_{ij}$ is:
-```math
-C_{ij} = (-1)^{i+j} M_{ij}
-```
+$`C_{ij} = (-1)^{i+j} M_{ij}`$
 
 - For example, for the $3 \times 3$ matrix above:
   - The cofactor of $a_{11}$ is $C_{11} = M_{11}$,
@@ -105,17 +79,14 @@ C_{ij} = (-1)^{i+j} M_{ij}
 
 3. **Construct the Cofactor Matrix**:
 - Organize all calculated cofactors $C_{ij}$ into a matrix with the same dimensions as $A$:
-```math
-C = \begin{pmatrix} C_{11} & C_{12} & \dots & C_{1n} \\ C_{21} & C_{22} & \dots & C_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ C_{n1} & C_{n2} & \dots & C_{nn} \end{pmatrix}
-```
+$`C = \begin{pmatrix} C_{11} & C_{12} & \dots & C_{1n} \\ C_{21} & C_{22} & \dots & C_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ C_{n1} & C_{n2} & \dots & C_{nn} \end{pmatrix}`$
 
 
 4. **Transpose the Cofactor Matrix**:
-- Finally, the adjugate matrix $\text{adj}(A)$ is the transpose of the cofactor matrix $C$:
-```math
-\text{adj}(A) = C^{T}
-```
-- This means we swap rows and columns of $C$ to obtain $\text{adj}(A)$.
+- Finally, the adjugate matrix $`\text{adj}(A)`$ is the transpose of the cofactor matrix $C$:
+$`\text{adj}(A) = C^{T}`$
+
+- This means we swap rows and columns of $C$ to obtain $`\text{adj}(A)`$.
 
 ---
 
@@ -130,7 +101,7 @@ Let $A$ be an $`n \times n`$ matrix with entries $`a_{ij}`$. We define its adjug
 
 - The determinant $`det(M(A)_{ij})`$ is called the **minor** of the element $a_{ij}$.
 
-- If $`det(M(A)_{ij})`$ is multiplied by the corresponding sign, we get the `cofactor` $`c_{ij} = (-1)^{i+j} det(M(A)_{ij})`$ of the element $a_{ij}$.
+- If $`det(M(A)_{ij})`$ is multiplied by the corresponding sign, we get the `cofactor` $`c_{ij} = (-1)^{i+j} det(M(A)_{ij})`$ of the element $`a_{ij}`$.
 
 - Replace each element $`a_{ij}`$ by its cofactor to obtain the matrix $`C(A)`$ of cofactors of $A$.
 
@@ -164,41 +135,28 @@ The `adjugate` is the transpose of the matrix of cofactors
 $`\begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}`$
 
 
-**THEOREM** A square matrix $A$ is invertible if and only if $det(A) /neq 0$. If $det(A) /neq 0$ then the inverse of $A$ is given by
+**THEOREM** A square matrix $A$ is invertible if and only if $`det(A) \neq 0`$. If $`det(A) \neq 0`$ then the inverse of $A$ is given by
 
-```math
-A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
-```
+$`A^{-1} = \frac{1}{\det(A)} \text{adj}(A)`$
 
 **EXAMPLE**
 
 For the $3 \times 3$ case example matrix; 
-```math
-A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}$ has $det(A) = -5.
-``` 
-(Refer to [Matrix Determinants](matrix_determinants.md) for more on matrix determinant)
+
+$`A = \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix}`$ has $`det(A) = -5.`$ (Refer to [Matrix Determinants](matrix_determinants.md) for more on matrix determinant)
 
 The inverse of $A$ therefore exists and is equal to 
+$`A^{-1} = -\frac{1}{5} \begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}`$
 
-```math
-A^{-1} = -\frac{1}{5} \begin{pmatrix} -1 & -1 & 2 \\ -5 & 5 & 5 \\ 2 & -3 & -4 \end{pmatrix}
-```
 
-Can also be written as;
-
-```math
-A^{-1} =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & -1 \\ -\frac{2}{5} & \frac{3}{5} & \frac{4}{5} \end{pmatrix}
-```
+Can also be written as; $`A^{-1} =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & -1 \\ -\frac{2}{5} & \frac{3}{5} & \frac{4}{5} \end{pmatrix}`$
 
 
 ### Note: IMPORTANT THEOREM
 
 Remember that $A^{-1}A = I$ , matrix multiplication of the matrix $A$ and its inverse $A^{-1}$ = $I$ the Identity matrix. 
 
-```math
-A^{-1}A =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & -1 \\ -\frac{2}{5} & \frac{3}{5} & \frac{4}{5} \end{pmatrix} \times 
-\begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix} = I \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}
-```
+$`A^{-1}A =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & -1 \\ -\frac{2}{5} & \frac{3}{5} & \frac{4}{5} \end{pmatrix} \times \begin{pmatrix} 1 & 2 & 3 \\ 2 & 0 & 1 \\ -1 & 1 & 2 \end{pmatrix} = I \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}`$
 
 
 
@@ -206,11 +164,10 @@ A^{-1}A =  \begin{pmatrix} \frac{1}{5} & \frac{1}{5} & -\frac{2}{5} \\ 1 & -1 & 
 ### Properties of the Adjugate Matrix
 
 1. **Inverse Calculation**: If $A$ is invertible, then:
-```math
-A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
-```
-2. **Self-Adjugate Property**: If $A$ is already a diagonal matrix, then $\text{adj}(A)$ will also be diagonal.
-3. **Zero Determinant**: If $\det(A) = 0$, the matrix $A$ is not invertible, so $\text{adj}(A)$ cannot be used to find an inverse.
+$`A^{-1} = \frac{1}{\det(A)} \text{adj}(A)`$
+
+2. **Self-Adjugate Property**: If $A$ is already a diagonal matrix, then $`\text{adj}(A)`$ will also be diagonal.
+3. **Zero Determinant**: If $`\det(A) = 0`$, the matrix $A$ is not invertible, so $`\text{adj}(A)`$ cannot be used to find an inverse.
 
 The adjugate is a powerful tool, especially in theoretical linear algebra and matrix computations, helping establish properties related to inverses, determinants, and eigenvalues.
 
