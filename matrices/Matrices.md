@@ -262,7 +262,7 @@ The identity matrix essentially acts as a "neutral element" in matrix multiplica
 For more on Matrix determinants refer to: [Matrix Determinants](matrix_determinants.md)
 
 
-## Inverses
+## Inverses 
 
 **Definition:** A matrix $I$ which has $1’s$ on the diagonal and $0’s$ everywhere else is called the `identity matrix`. This matrix has the property that $AI = A$.
 
@@ -475,6 +475,8 @@ $
 This is the inverse of the matrix $A$.
 
 
+Also refer to [Matrix Determinants](Inverse_matrix.md) for a bit more details on Matrix Inverse.
+
 
 ## Eigenvalues and Eigenvectors and Diagonalization
 
@@ -603,6 +605,7 @@ Once we have $\lambda$, we can substitute it back into $(A - \lambda I) \vec{x} 
 
 # Reference
 
+- Matrices : https://byjus.com/jee/matrices/
 
 
 
@@ -612,9 +615,9 @@ Once we have $\lambda$, we can substitute it back into $(A - \lambda I) \vec{x} 
 
 - Inverse matrices, column space and null space | Chapter 7, Essence of linear algebra (3Blue1Brown) : https://www.youtube.com/watch?v=uQhTuRlWMxw&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
 
-
-
-
+---
+- Gil Strang's Final 18.06 Linear Algebra Lecture (MIT OpenCourseWare)  : https://www.youtube.com/watch?v=lUUte2o2Sn8
+---
 
 
 
