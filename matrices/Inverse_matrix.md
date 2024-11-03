@@ -34,7 +34,9 @@ where:
    - Multiply each element of the adjugate matrix by $`\frac{1}{\det(A)}`$.
 
 ### Example: Inverse of a 2x2 Matrix
-For a $2 \times 2$ matrix: $`A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}`$
+For a $2 \times 2$ matrix: 
+
+$`A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}`$
 
 If $`\det(A) = ad - bc \neq 0`$, 
 
@@ -55,9 +57,9 @@ $`A^{-1} = \frac{1}{1} \begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}  = \begin{
 
 
 ### Example: Inverse of a 3x3 Matrix
-For a 
+For a $`3 \times 3`$ matrix: 
 
-$`3 \times 3`$ matrix: $`A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}`$
+$`A = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}`$
 
 1. Compute $`\det(A)`$ using cofactor expansion.
 2. Find the cofactor matrix and its transpose (adjugate).

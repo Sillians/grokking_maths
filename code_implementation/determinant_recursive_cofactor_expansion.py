@@ -3,6 +3,7 @@
 
 from typing import List
 
+# Approach 1
 def get_minor(matrix, row: int, col: int) -> List[list]:
     """
         Returns the minor matrix after removing the specified row and column.
@@ -59,23 +60,23 @@ def determinant(matrix: List[list]) -> float:
     return det
 
 
+## Approach 2
+def get_determinant(matrix: List[list]):
+    """Recursively calculate the determinant of an n x n matrix."""
+    n = len(matrix)
+    if n == 1:
+        return matrix[0][0]
+    if n == 2:
+        return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
 
-matrix = [
-    [1, 2, 3, 5],
-    [4, 5, 6, 3],
-    [7, 8, 9, 2],
-    [10, 11, 7, 12]
-]
+    det = 0
+    for j in range(n):
+        minor = [row[:j] + row[j+1:] for row in matrix[1:]]
+        det += ((-1) ** j) * matrix[0][j] * determinant(minor)
+    return det
 
 
-print("Determinant:", determinant(matrix))
-
-
-
-q = [[2, 3, 4],
-     [5, 3, 8]]
-
-
+## Approach 3
 def determinant_value(M: List[list]) -> float:
     # Base case of recursive function: 1x1 matrix
     if len(M) == 1:
@@ -93,4 +94,26 @@ def determinant_value(M: List[list]) -> float:
         total += s * element * determinant(K)
     return total
 
-print(determinant_value(q))
+
+
+matrix = [
+    [1, 2, 3, 5],
+    [4, 5, 6, 3],
+    [7, 8, 9, 2],
+    [10, 11, 7, 12]
+]
+
+A = [[1, 2, -1],
+     [-2, 0, 1],
+     [1, -1, 0]]
+
+print("Determinant:", determinant(A))
+
+
+
+q = [[2, 3, 4],
+     [5, 3, 8]]
+
+
+
+print(determinant_value(matrix))
