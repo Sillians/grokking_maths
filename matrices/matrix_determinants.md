@@ -197,6 +197,7 @@ efficient calculation methods allow for understanding linear transformations and
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/Ip3X9LOh2dk/0.jpg)](http://www.youtube.com/watch?v=Ip3X9LOh2dk "The determinant | Chapter 6, Essence of linear algebra")
 
 
-
+### Code implementation from scratch (using python)
+- [Matrix Determinant from scratch python](../code_implementation/determinant_recursive_cofactor_expansion.py)
 
 
