@@ -488,67 +488,53 @@ then $\vec{x}$ is called an **eigenvector** of $A$, and the scalar $\lambda$ is 
 Suppose that $A$ is an $n \times n$ square matrix. Suppose that $\vec{x}$ is a non-zero vector in $\mathbb{R}^n$ and that $\lambda$ is 
 a scalar so that,
 
-$
-A \vec{x} = \lambda \vec{x}
-$
+$`A \vec{x} = \lambda \vec{x}`$
 
 We then call $\vec{x}$ an eigenvector of $A$ and $\lambda$ an eigenvalue of $A$.
 
 Note:
 - $A$ is an  $n \times n$ matrix,
-- $\vec{x}$ is a non-zero vector in $\mathbb{R}^n$,
-- $\lambda$ is a scalar.
+- $`\vec{x}`$ is a non-zero vector in $`\mathbb{R}^n`$,
+- $`\lambda`$ is a scalar.
 
 
-The goal is to find such vectors $\vec{x}$ and corresponding values $\lambda$ for a given matrix $A$.
+The goal is to find such vectors $`\vec{x}`$ and corresponding values $`\lambda`$ for a given matrix $A$.
 
 
 ### Example
 
 Let’s consider the matrix:
-$
-A = \begin{pmatrix} 4 & 2 \\ 1 & 3 \end{pmatrix}
-$
+$`A = \begin{pmatrix} 4 & 2 \\ 1 & 3 \end{pmatrix}`$
 
 
 1. **First Eigenvector and Eigenvalue**:
    - Take the vector $\vec{x} = \begin{pmatrix} 2 \\ 1 \end{pmatrix}$.
    - Multiply $A$ by $\vec{x}$:
-     $
-     A \vec{x} = \begin{pmatrix} 4 & 2 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} 2 \\ 1 \end{pmatrix} = \begin{pmatrix} 10 \\ 5 \end{pmatrix} = 5 \begin{pmatrix} 2 \\ 1 \end{pmatrix}
-     $
+     $`A \vec{x} = \begin{pmatrix} 4 & 2 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} 2 \\ 1 \end{pmatrix} = \begin{pmatrix} 10 \\ 5 \end{pmatrix} = 5 \begin{pmatrix} 2 \\ 1 \end{pmatrix}`$
    - Since $A \vec{x} = 5 \vec{x}$, $\lambda = 5$ is an eigenvalue of $A$, and $\vec{x} = \begin{pmatrix} 2 \\ 1 \end{pmatrix}$ is the associated eigenvector.
 
 
 2. **Second Eigenvector and Eigenvalue**:
    - Now, take the vector $\vec{x} = \begin{pmatrix} -1 \\ 1 \end{pmatrix}$.
    - Multiply $A$ by $\vec{x}$:
-     $
-     A \vec{x} = \begin{pmatrix} 4 & 2 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} -1 \\ 1 \end{pmatrix} = \begin{pmatrix} -2 \\ 2 \end{pmatrix} = 2 \begin{pmatrix} -1 \\ 1 \end{pmatrix}
-     $
-   - Since $A \vec{x} = 2 \vec{x}$, $\lambda = 2$ is another eigenvalue of $A$, and $\vec{x} = \begin{pmatrix} -1 \\ 1 \end{pmatrix}$ is the associated eigenvector.
+     $`A \vec{x} = \begin{pmatrix} 4 & 2 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} -1 \\ 1 \end{pmatrix} = \begin{pmatrix} -2 \\ 2 \end{pmatrix} = 2 \begin{pmatrix} -1 \\ 1 \end{pmatrix}`$
+   - Since $`A \vec{x} = 2 \vec{x}`$, $`\lambda = 2`$ is another eigenvalue of $A$, and $`\vec{x} = \begin{pmatrix} -1 \\ 1 \end{pmatrix}`$ is the associated eigenvector.
 
 
 ###  Method to find eigenvalues and eigenvectors
 
-We start with $A \vec{x} = \lambda \vec{x}$ and rewrite it as follows,
+We start with $`A \vec{x} = \lambda \vec{x}`$ and rewrite it as follows,
 
-$
-A \vec{x} = \lambda I \vec{x}
-$
+$`A \vec{x} = \lambda I \vec{x}`$
 
-$
-\lambda I \vec{x} - A \vec{x} = 0
-$
+$`\lambda I \vec{x} - A \vec{x} = 0`$
 
-$
-(\lambda I - A) \vec{x} = 0
-$
+$`(\lambda I - A) \vec{x} = 0`$
 
-**THEOREM:** $\lambda$ is an eigenvalue of $A$ if and only if $\lambda I - A$ is not invertible if and only it $det (\lambda I - A) = 0$.
+**THEOREM:** $`\lambda`$ is an eigenvalue of $A$ if and only if $`\lambda I - A`$ is not invertible if and only it $`det (\lambda I - A) = 0`$.
 
-where $I$ is the identity matrix of the same dimension as $A$. Solving this equation gives the possible values for $\lambda$. 
-Once we have $\lambda$, we can substitute it back into $(A - \lambda I) \vec{x} = 0$ to find the corresponding eigenvectors $\vec{x}$.
+where $I$ is the identity matrix of the same dimension as $A$. Solving this equation gives the possible values for $`\lambda`$. 
+Once we have $`\lambda`$, we can substitute it back into $`(A - \lambda I) \vec{x} = 0`$ to find the corresponding eigenvectors $`\vec{x}`$.
 
 
 
