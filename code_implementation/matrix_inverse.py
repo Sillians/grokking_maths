@@ -21,9 +21,9 @@ def matrixDeterminant(matrix: List[list]) -> float:
     for column, element in enumerate(matrix[0]):
         # Exclude first row and current column.
         K = [x[:column] + x[column + 1:] for x in matrix[1:]]
-        s = 1 if column % 2 == 0 else -1
-        determinant += s * element * matrixDeterminant(K)
+        determinant += ((-1) ** column) * element * matrixDeterminant(K)
     return determinant
+
 
 def matrixInverse(matrix: List[list]) -> List[list]:
     determinant = matrixDeterminant(matrix)
