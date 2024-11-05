@@ -372,7 +372,7 @@ $`A^{-1} = \begin{pmatrix} 3 & -3 & 1 \\ -2 & 2 & -1 \\ -4 & 5 & -2 \end{pmatrix
 This is the inverse of the matrix $A$.
 
 
-Also refer to [Matrix Determinants](Inverse_matrix.md) for a bit more details on Matrix Inverse.
+Also refer to [Matrix Inverse](Inverse_matrix.md) for a bit more details on Matrix Inverse.
 
 
 ## Eigenvalues and Eigenvectors and Diagonalization
@@ -428,14 +428,107 @@ $`\lambda I \vec{x} - A \vec{x} = 0`$
 
 $`(\lambda I - A) \vec{x} = 0`$
 
-**THEOREM:** $`\lambda`$ is an eigenvalue of $A$ if and only if $`\lambda I - A`$ is not invertible if and only it $`det (\lambda I - A) = 0`$.
-
-where $I$ is the identity matrix of the same dimension as $A$. Solving this equation gives the possible values for $`\lambda`$. 
+**THEOREM:** $`\lambda`$ is an eigenvalue of $A$ if and only if $`\lambda I - A`$ is not invertible if and only it $`det (\lambda I - A) = 0`$. where $I$ is the identity matrix of the same dimension as $A$. Solving this equation gives the possible values for $`\lambda`$. 
 Once we have $`\lambda`$, we can substitute it back into $`(A - \lambda I) \vec{x} = 0`$ to find the corresponding eigenvectors $`\vec{x}`$.
 
 
 
 ### Steps to find eigenvalues and eigenvectors:
+1. Form the characteristic equation
+$`det (\lambda I - A) = 0`$
+
+2. To find all the `eigenvalues` of $A$, solve the characteristic equation.
+
+3. For each `eigenvalue` $`\lambda`$, to find the corresponding set of eigenvectors, solve the linear system of equations
+$`(\lambda I - A)\vec{x} = 0`$
+
+
+**Example 1:**
+
+For the matrix $`A = \begin{pmatrix} 4 & 2 \\ 1 & 3 \end{pmatrix}`$. Find the eigenvalues and eigenvectors of $A$.
+
+**Solution**
+
+### 1. Find the Characteristic Equation:
+To find the eigenvalues, we need to solve for $`\lambda`$ in the characteristic equation $`\det(\lambda I - A) = 0`$.
+
+- $`A = \begin{bmatrix} 4 & 2 \\ 1 & 3 \end{bmatrix}`$
+- $`\lambda I = \begin{bmatrix} \lambda & 0 \\ 0 & \lambda \end{bmatrix}`$
+
+$`\lambda I - A = \begin{bmatrix} \lambda & 0 \\ 0 & \lambda \end{bmatrix} - \begin{bmatrix} 4 & 2 \\ 1 & 3 \end{bmatrix} = \begin{bmatrix} \lambda - 4 & -2 \\ -1 & \lambda - 3 \end{bmatrix}`$
+
+
+### 2. Compute the Determinant:
+Calculate $`\det(\lambda I - A)`$ and set it to 0:
+
+$`\det(\lambda I - A) = (\lambda - 4)(\lambda - 3) - (-2)(-1) = (\lambda - 4)(\lambda - 3) - 2 = 0`$
+
+Expand and simplify:
+
+$`(\lambda - 4)(\lambda - 3) - 2 = \lambda^2 - 7\lambda + 12 - 2 = \lambda^2 - 7\lambda + 10 = 0`$
+
+
+### 3. Solve for Eigenvalues:
+Solve the quadratic equation $`\lambda^2 - 7\lambda + 10 = 0`$:
+
+$`(\lambda - 5)(\lambda - 2) = 0`$
+
+So, the eigenvalues are:
+
+$`\lambda_1 = 2, \quad \lambda_2 = 5`$
+
+`Note:` You can use the quadratic formula to get the respective values of $`\lambda`$. (Refer to [Quadratic Equation](https://www.sciencedirect.com/topics/mathematics/quadratic-equation#:~:text=A%20quadratic%20equation%20is%20a,numbers%20and%20a%E2%89%A00.))
+
+
+### 4. Find Eigenvectors:
+For each eigenvalue, solve $`(\lambda I - A)\vec{x} = 0`$.
+
+#### Case (i) $`\lambda_1 = 2`$:
+
+$`2I - A = \begin{bmatrix} 2 - 4 & -2 \\ -1 & 2 - 3 \end{bmatrix} = \begin{bmatrix} -2 & -2 \\ -1 & -1 \end{bmatrix}`$
+
+Solve $`\begin{bmatrix} -2 & -2 \\ -1 & -1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}`$.
+
+Equations:
+1. $`-2x_1 - 2x_2 = 0`$
+2. $`-x_1 - x_2 = 0`$
+
+This simplifies to $`x_1 = -x_2`$. The eigenvectors for $`\lambda = 2`$ are:
+
+$`\mathbf{x} = x_2 \begin{bmatrix} -1 \\ 1 \end{bmatrix} \quad \text{(where \( x_2 \) is any real number)}`$
+
+A sample eigenvector is:
+
+$`\mathbf{x} = \begin{bmatrix} -1 \\ 1 \end{bmatrix}`$
+
+
+
+#### Case (ii) $` \lambda_2 = 5 `$:
+
+$`5I - A = \begin{bmatrix} 5 - 4 & -2 \\ -1 & 5 - 3 \end{bmatrix} = \begin{bmatrix} 1 & -2 \\ -1 & 2 \end{bmatrix}`$
+
+Solve $`\begin{bmatrix} 1 & -2 \\ -1 & 2 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}`$.
+
+Equations:
+1. $`x_1 - 2x_2 = 0`$
+2. $`-x_1 + 2x_2 = 0`$
+
+This simplifies to $`x_1 = 2x_2`$. The eigenvectors for $`\lambda = 5`$ are:
+
+$`\mathbf{x} = x_2 \begin{bmatrix} 2 \\ 1 \end{bmatrix} \quad \text{(where \( x_2 \) is any real number)}`$
+
+A sample eigenvector is:
+
+$`\mathbf{x} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}`$
+
+### Summary:
+- Eigenvalues: $`\lambda_1 = 2, \lambda_2 = 5`$
+
+- Eigenvectors:
+
+  - For $` \lambda_1 = 2 : \begin{bmatrix} -1 \\ 1 \end{bmatrix}`$
+
+  - For $` \lambda_2 = 5 : \begin{bmatrix} 2 \\ 1 \end{bmatrix}`$
 
 
 
@@ -444,69 +537,39 @@ Once we have $`\lambda`$, we can substitute it back into $`(A - \lambda I) \vec{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
 
 
 
 
 # Reference
 
-- Matrices : https://byjus.com/jee/matrices/
+- Introduction to Matrices: [Matrices (Introduction)](https://www.ucl.ac.uk/~ucahmdl/LessonPlans/Lesson11.pdf)
 
+- Matrices : [Matrices](https://byjus.com/jee/matrices/)
+
+- Elements of Matrix Algebra: [Elements of Matrix Algebra](https://www.schmidheiny.name/teaching/matrixalgebra.pdf)
 
 
 #### Videos
 
-- Inverse of a 3x3 Matrix  : https://www.youtube.com/watch?v=Fg7_mv3izR0
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/Fg7_mv3izR0/0.jpg)](http://www.youtube.com/watch?v=Fg7_mv3izR0 "Inverse of a 3x3 Matrix")
 
-- Inverse matrices, column space and null space | Chapter 7, Essence of linear algebra (3Blue1Brown) : https://www.youtube.com/watch?v=uQhTuRlWMxw&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
 
-- Eigenvalues and Eigenvectors : https://www.youtube.com/watch?v=BWvx4wUSGdA&t=493s
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/uQhTuRlWMxw/0.jpg)](http://www.youtube.com/watch?v=uQhTuRlWMxw "Inverse matrices, column space and null space | Chapter 7, Essence of linear algebra (3Blue1Brown)")
 
-- 3 x 3 eigenvalues and eigenvectors : https://www.youtube.com/watch?v=qa9fI6qvUQY
 
-- Eigenvectors and eigenvalues | Chapter 14, Essence of linear algebra : https://www.youtube.com/watch?v=PFDu9oVAE-g
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/BWvx4wUSGdA/0.jpg)](http://www.youtube.com/watch?v=BWvx4wUSGdA "Eigenvalues and Eigenvectors")
+
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/qa9fI6qvUQY/0.jpg)](http://www.youtube.com/watch?v=qa9fI6qvUQY "3 x 3 eigenvalues and eigenvectors")
+
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/PFDu9oVAE-g/0.jpg)](http://www.youtube.com/watch?v=PFDu9oVAE-g "Eigenvectors and eigenvalues | Chapter 14, Essence of linear algebra")
 
 
 ---
-- Gil Strang's Final 18.06 Linear Algebra Lecture (MIT OpenCourseWare)  : https://www.youtube.com/watch?v=lUUte2o2Sn8
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/lUUte2o2Sn8/0.jpg)](http://www.youtube.com/watch?v=lUUte2o2Sn8 "Gil Strang's Final 18.06 Linear Algebra Lecture (MIT OpenCourseWare)")
 ---
 
 
