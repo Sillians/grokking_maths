@@ -190,15 +190,13 @@ Eigenvalues and eigenvectors, in summary, enable meaningful decompositions, tran
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/BWvx4wUSGdA/0.jpg)](http://www.youtube.com/watch?v=BWvx4wUSGdA "Eigenvalues and Eigenvectors")
 
-
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/qa9fI6qvUQY/0.jpg)](http://www.youtube.com/watch?v=qa9fI6qvUQY "3 x 3 eigenvalues and eigenvectors")
-
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/PFDu9oVAE-g/0.jpg)](http://www.youtube.com/watch?v=PFDu9oVAE-g "Eigenvectors and eigenvalues | Chapter 14, Essence of linear algebra")
 
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/cdZnhQjJu4I/0.jpg)](http://www.youtube.com/watch?v=cdZnhQjJu4I "21. Eigenvalues and Eigenvectors (MIT OpenCourseWare)")
 
-
-
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/k095NdrHxY4/0.jpg)](http://www.youtube.com/watch?v=k095NdrHxY4 "4. Eigenvalues and Eigenvectors (MIT OpenCourseWare)")
 
 
 
