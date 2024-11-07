@@ -189,12 +189,32 @@ efficient calculation methods allow for understanding linear transformations and
 
 ### Reference:
 
+- Determinants (MIT Spring17) : [Determinants](https://web.mit.edu/18.06/www/Spring17/Determinants.pdf)
+
+- Lecture 18: Properties of determinants (MIT Fall 2011): [Lecture 18: Properties of determinants](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/5dd3f8ec0a398fd74264fef3fd591f81_MIT18_06SCF11_Ses2.5sum.pdf)
+
+- Determinant formulas and cofactors (MIT Fall 2011): [Determinant formulas and cofactors](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/cc79f04d92ee282758780bac2ec5e403_MIT18_06SCF11_Ses2.6sum.pdf)
+
 - Laplace expansion (Wikipedia): [Laplace expansion](https://en.wikipedia.org/wiki/Laplace_expansion)
 
+- Determinants (math.mit.edu/~dyatlov/18.03/lectures/Section7-3.): [Determinants ~dyatlov](https://math.mit.edu/~dyatlov/18.03/lectures/Section7-3.pdf)
+
+
+### Videos
 
 - The determinant | Chapter 6, Essence of linear algebra (3Blue1Brown)
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/Ip3X9LOh2dk/0.jpg)](http://www.youtube.com/watch?v=Ip3X9LOh2dk "The determinant | Chapter 6, Essence of linear algebra")
+
+- (19. Determinant Formulas and Cofactors (MIT OpenCourseWare)
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/23LLB9mNJvc/0.jpg)](http://www.youtube.com/watch?v=23LLB9mNJvc "19. Determinant Formulas and Cofactors (MIT OpenCourseWare)")
+
+- (18. Properties of Determinants (MIT OpenCourseWare))
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/srxexLishgY/0.jpg)](http://www.youtube.com/watch?v=srxexLishgY "18. Properties of Determinants (MIT OpenCourseWare)")
+
+
 
 
 ### Code implementation from scratch (using python)
