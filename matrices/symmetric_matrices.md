@@ -412,6 +412,7 @@ This completes the verification. The decomposition confirms that $`A = P D P^T`$
 
 
 
+### Key Insights into the structure and properties of spectral decomposition
 
 The spectral decomposition of a symmetric matrix provides key insights into its structure and properties. Here are the main conclusions:
 
@@ -455,11 +456,20 @@ and other fields where orthogonal transformations and dimensionality reduction a
 
 ### Videos
 
-Symmetric Matrices, Real Eigenvalues, Orthogonal Eigenvectors (MIT OpenCourseWare) : https://www.youtube.com/watch?v=ZTNniGvY5IQ
+- `Symmetric Matrices, Real Eigenvalues, Orthogonal Eigenvectors (MIT OpenCourseWare)`
 
-25. Symmetric Matrices and Positive Definiteness (MIT OpenCourseWare) : https://www.youtube.com/watch?v=UCc9q_cAhho
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/ZTNniGvY5IQ/0.jpg)](http://www.youtube.com/watch?v=ZTNniGvY5IQ "Symmetric Matrices, Real Eigenvalues, Orthogonal Eigenvectors (MIT OpenCourseWare)")
 
-Visualize Spectral Decomposition | SEE Matrix, Chapter 2: https://www.youtube.com/watch?v=mhy-ZKSARxI
+
+- `25. Symmetric Matrices and Positive Definiteness (MIT OpenCourseWare)`
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/UCc9q_cAhho/0.jpg)](http://www.youtube.com/watch?v=UCc9q_cAhho "25. Symmetric Matrices and Positive Definiteness (MIT OpenCourseWare)")
+
+
+- `Visualize Spectral Decomposition | SEE Matrix, Chapter 2`
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/mhy-ZKSARxI/0.jpg)](http://www.youtube.com/watch?v=mhy-ZKSARxI "Visualize Spectral Decomposition | SEE Matrix, Chapter 2")
+
 
 
 

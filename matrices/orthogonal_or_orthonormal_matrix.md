@@ -9,7 +9,8 @@ $`Q^T Q = Q Q^T = I`$
 where $`Q^T`$ is the transpose of $Q$, and $I$ is the identity matrix. This means the transpose of $Q$ is also its inverse, i.e., $`Q^{-1} = Q^T`$.
 
 
-- **Orthonormal Matrix**: An orthogonal matrix is also called orthonormal if its rows and columns are not only orthogonal but also have unit length (norm equals 1). Thus, every orthogonal matrix is also orthonormal by this definition.
+- **Orthonormal Matrix**: An orthogonal matrix is also called orthonormal if its rows and columns are not only orthogonal but also have unit length (norm equals 1). 
+Thus, every orthogonal matrix is also orthonormal by this definition.
 
 
 
@@ -136,7 +137,48 @@ Understanding orthogonal and orthonormal matrices is crucial for working with tr
 
 ### Videos 
 
+- `Symmetric Matrices, Real Eigenvalues, Orthogonal Eigenvectors (MIT OpenCourseWare)`
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/ZTNniGvY5IQ/0.jpg)](http://www.youtube.com/watch?v=ZTNniGvY5IQ "Symmetric Matrices, Real Eigenvalues, Orthogonal Eigenvectors (MIT OpenCourseWare)")
+
+
 17. Orthogonal Matrices and Gram-Schmidt : https://www.youtube.com/watch?v=0MtwqhIwdrI
+
+
+Orthogonality and Orthonormality: https://www.youtube.com/watch?v=6nqMegdbxik
+
+The Gram-Schmidt Process: https://www.youtube.com/watch?v=zHbfZWZJTGc
+
+Orthogonal Matrices : https://www.youtube.com/watch?v=JfqZdTVsvso
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
