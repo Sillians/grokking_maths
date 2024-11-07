@@ -136,6 +136,14 @@ This method scales for larger matrices but becomes computationally expensive, so
 - Introduction to Linear Algebra, 5th Edition : [Inverse Matrices](https://math.mit.edu/~gs/linearalgebra/ila5/linearalgebra5_2-5.pdf)
 
 
+### Videos
+
+Lec 3: Matrices; inverse matrices | MIT 18.02 Multivariable Calculus, Fall 2007 : https://www.youtube.com/watch?v=bHdzkFrgRcA
+
+20. Cramer's Rule, Inverse Matrix, and Volume : https://www.youtube.com/watch?v=QNpj-gOXW9M
+
+Inverse matrices, column space and null space | Chapter 7, Essence of linear algebra : https://www.youtube.com/watch?v=uQhTuRlWMxw&t=1s
+
 ### Code implementation from Scratch (using python)
 
 - [Matrix Inverse from scratch python](../code_implementation/matrix_inverse.py)

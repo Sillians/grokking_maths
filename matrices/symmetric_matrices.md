@@ -180,6 +180,8 @@ For a detailed orthogonal diagonalization, you would find:
 ---
 
 
+### Example 5:
+
 Let's walk through this diagonalization of the symmetric matrix $`A = \begin{bmatrix} 3 & 1 \\ 1 & 3 \end{bmatrix}`$, 
 finding its eigenvalues, eigenvectors, and verifying that the diagonalization $`A = P D P^T`$ holds.
 
@@ -285,6 +287,179 @@ $`A = P D P^T = \begin{bmatrix} 3 & 1 \\ 1 & 3 \end{bmatrix}`$
 Thus, $`A = P D P^T`$, confirming the diagonalization, which matches our original matrix $A$.
 
 
+---
+
+### Example 6:
+
+Let's go through this example carefully to diagonalize $A$ and verify the matrix decomposition.
+
+### Step 1: Given Matrix and Eigenvalues
+We have:
+
+$`A = \begin{pmatrix} 1 & 1 & 3 \\ 1 & 3 & 1 \\ 3 & 1 & 1 \end{pmatrix}`$
+
+Since $A$ is symmetric, it is guaranteed to be diagonalizable. We begin by finding the eigenvalues by solving the characteristic polynomial, $`\det(A - \lambda I) = 0`$.
+
+$`\left| \begin{matrix} 1 - \lambda & 1 & 3 \\ 1 & 3 - \lambda & 1 \\ 3 & 1 & 1 - \lambda \end{matrix} \right|`$ = $`(1 - \lambda) \left| \begin{matrix} 3 - \lambda & 1 \\ 1 & 1 - \lambda \end{matrix} \right| - \left| \begin{matrix} 1 & 1 \\ 3 & 1 - \lambda \end{matrix} \right| + 3 \left| \begin{matrix} 1 & 3 - \lambda \\ 3 & 1 \end{matrix} \right|`$ 
+
+= $`(1 - \lambda)(3 - \lambda)(1 - \lambda) - (1 - \lambda) - (1 - \lambda) + 3 + 3 - 9(3 - \lambda)`$
+
+After calculating, we get the characteristic polynomial:
+
+= $`-\lambda^{3} + 5\lambda^{2} + 4\lambda - 20`$
+
+= $`-(\lambda - 2)(\lambda + 2)(\lambda - 5).`$
+
+The roots of this polynomial, and hence the eigenvalues of $A$, are $`\lambda_1 = 2`$, $`\lambda_2 = -2`$, and $`\lambda_3 = 5`$.
+
+
+### Step 2: Finding Eigenvectors for Each Eigenvalue
+
+1. **Eigenvalue $`\lambda = 2`$:**
+
+   For $`\lambda = 2`$, we solve $`(A - 2I)\mathbf{v} = 0`$, where:
+
+   $`A - 2I = \begin{pmatrix} -1 & 1 & 3 \\ 1 & 1 & 1 \\ 3 & 1 & -1 \end{pmatrix}`$
+
+   After performing Gaussian elimination, we find the eigenvector:
+   $`\mathbf{v}_1 = (1, -2, 1)`$
+
+2. **Eigenvalue $`\lambda = -2`$:**
+   For $`\lambda = -2`$, we solve $`(A + 2I)\mathbf{v} = 0`$, where:
+   
+   $`A + 2I = \begin{pmatrix} 3 & 1 & 3 \\ 1 & 5 & 1 \\ 3 & 1 & 3 \end{pmatrix}`$
+
+   After performing Gaussian elimination, we find the eigenvector:
+   $`\mathbf{v}_2 = (-1, 0, 1)`$
+
+3. **Eigenvalue $`\lambda = 5`$:**
+   For $`\lambda = 5`$, we solve $`(A - 5I)\mathbf{v} = 0`$, where:
+
+   $`A - 5I = \begin{pmatrix} -4 & 1 & 3 \\ 1 & -2 & 1 \\ 3 & 1 & -4 \end{pmatrix}`$
+
+   After performing Gaussian elimination, we find the eigenvector:
+   $`\mathbf{v}_3 = (1, 1, 1)`$
+
+
+### Step 3: Normalize the Eigenvectors to Form Matrix \( P \)
+
+Let’s normalize the eigenvectors $`\mathbf{v}_1 = (1, -2, 1)`$, $`\mathbf{v}_2 = (-1, 0, 1)`$, and $`\mathbf{v}_3 = (1, 1, 1)`$.
+
+The normalized eigenvectors are:
+
+$`\mathbf{u}_1 = \frac{1}{\sqrt{6}}(1, -2, 1), \quad \mathbf{u}_2 = \frac{1}{\sqrt{2}}(-1, 0, 1), \quad \mathbf{u}_3 = \frac{1}{\sqrt{3}}(1, 1, 1)`$
+
+Thus, matrix $P$, whose columns are these normalized eigenvectors, is:
+
+$`P = \begin{pmatrix} \frac{1}{\sqrt{6}} & -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{3}} \\ -\frac{2}{\sqrt{6}} & 0 & \frac{1}{\sqrt{3}} \\ \frac{1}{\sqrt{6}} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{3}} \end{pmatrix}`$
+
+
+### Step 4: Diagonal Matrix \( D \)
+
+The matrix $D$, which contains the eigenvalues on the diagonal, is:
+
+$`D = \begin{pmatrix} 2 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & 5 \end{pmatrix}`$
+
+
+### Step 5: Verify $`A = P D P^T`$
+
+To confirm, we calculate $`P D P^T`$ and check if it equals $A$.
+
+Now, Let's go through the verification of $`A = P D P^T`$ by computing $`P D P^T`$ with the matrices we've identified.
+
+### Matrices Recap
+
+1. **Matrix $A$:**
+
+   $`A = \begin{pmatrix} 1 & 1 & 3 \\ 1 & 3 & 1 \\ 3 & 1 & 1 \end{pmatrix}`$
+
+2. **Matrix $P$:**
+
+   $`P = \begin{pmatrix} \frac{1}{\sqrt{6}} & -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{3}} \\ -\frac{2}{\sqrt{6}} & 0 & \frac{1}{\sqrt{3}} \\ \frac{1}{\sqrt{6}} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{3}} \end{pmatrix}`$
+
+
+3. **Diagonal Matrix $D$:**
+
+   $`D = \begin{pmatrix} 2 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & 5 \end{pmatrix}`$
+
+### Step-by-Step Calculation of $`P D P^T`$
+
+1. **Compute $P D$:**
+   To multiply $P$ and $D$, we scale each column of $P$ by the corresponding eigenvalue in $D$:
+   
+   $`P D = \begin{pmatrix} \frac{1}{\sqrt{6}} \cdot 2 & -\frac{1}{\sqrt{2}} \cdot (-2) & \frac{1}{\sqrt{3}} \cdot 5 \\ -\frac{2}{\sqrt{6}} \cdot 2 & 0 \cdot (-2) & \frac{1}{\sqrt{3}} \cdot 5 \\ \frac{1}{\sqrt{6}} \cdot 2 & \frac{1}{\sqrt{2}} \cdot (-2) & \frac{1}{\sqrt{3}} \cdot 5 \end{pmatrix}`$
+
+   Simplifying, we get:
+
+   $`P D = \begin{pmatrix} \frac{2}{\sqrt{6}} & \frac{2}{\sqrt{2}} & \frac{5}{\sqrt{3}} \\ -\frac{4}{\sqrt{6}} & 0 & \frac{5}{\sqrt{3}} \\ \frac{2}{\sqrt{6}} & -\frac{2}{\sqrt{2}} & \frac{5}{\sqrt{3}} \end{pmatrix}`$
+
+
+2. **Compute $`P D P^T`$:**
+   Now, multiply $P D$ by $P^T$. We transpose $P$, switching rows and columns:
+   
+   $`P^T = \begin{pmatrix} \frac{1}{\sqrt{6}} & -\frac{2}{\sqrt{6}} & \frac{1}{\sqrt{6}} \\ -\frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} \end{pmatrix}`$
+
+   Now, we calculate the product $`P D P^T`$ by performing matrix multiplication:
+
+   $`P D P^T = \begin{pmatrix} \frac{2}{\sqrt{6}} & \frac{2}{\sqrt{2}} & \frac{5}{\sqrt{3}} \\ -\frac{4}{\sqrt{6}} & 0 & \frac{5}{\sqrt{3}} \\ \frac{2}{\sqrt{6}} & -\frac{2}{\sqrt{2}} & \frac{5}{\sqrt{3}} \end{pmatrix} \times \begin{pmatrix} \frac{1}{\sqrt{6}} & -\frac{2}{\sqrt{6}} & \frac{1}{\sqrt{6}} \\ -\frac{1}{\sqrt{2}} & 0 & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{3}} \end{pmatrix}`$
+
+Performing this matrix multiplication will yield:
+
+$`P D P^T = A = \begin{pmatrix} 1 & 1 & 3 \\ 1 & 3 & 1 \\ 3 & 1 & 1 \end{pmatrix}`$
+
+This completes the verification. The decomposition confirms that $`A = P D P^T`$, and we have successfully diagonalized $A$ as expected.
+
+
+
+
+
+The spectral decomposition of a symmetric matrix provides key insights into its structure and properties. Here are the main conclusions:
+
+1. **Diagonalizability**: Every symmetric matrix can be diagonalized. This means that for a symmetric matrix $A$, 
+there exists an orthogonal matrix $P$ (a matrix with orthonormal columns) and a diagonal matrix $D$ such that $`A = P D P^T`$. 
+The diagonal elements of $D$ are the eigenvalues of $A$, and the columns of $P$ are the corresponding orthonormal eigenvectors.
+
+2. **Real Eigenvalues**: A symmetric matrix always has real eigenvalues. This is particularly useful for applications in real-valued systems, as complex eigenvalues are avoided.
+
+3. **Orthogonal Eigenvectors**: The eigenvectors of a symmetric matrix corresponding to distinct eigenvalues are orthogonal. 
+This orthogonality is valuable in applications, especially in data science and machine learning, as it enables dimensionality reduction and other transformations without loss of information.
+
+4. **Decomposition into Rank-1 Matrices**: Spectral decomposition represents a symmetric matrix as a sum of rank-1 matrices. 
+Specifically, $`A = \sum_{i=1}^{n} \lambda_i u_i u_i^T`$, where $`\lambda_i`$ are eigenvalues, and $u_i$ are the orthonormal eigenvectors. 
+This representation reveals the matrix's influence along different directions in its vector space.
+
+5. **Projection Interpretation**: Each term $`\lambda_i u_i u_i^T`$ in the spectral decomposition can be viewed as a projection of $A$ 
+onto the subspace spanned by the eigenvector $u_i$, scaled by the eigenvalue $`\lambda_i`$. This interpretation is particularly useful 
+in understanding principal component analysis `(PCA)` and other dimensionality reduction techniques.
+
+In summary, the spectral decomposition of symmetric matrices makes them highly tractable and interpretable, 
+making symmetric matrices ideal for a wide range of applications in data science, physics, engineering, 
+and other fields where orthogonal transformations and dimensionality reduction are essential.
+
+
+
+
+### Reference
+
+- Symmetric Matrices: [MAthweb Symmetric Matrices](https://mathweb.ucsd.edu/~jmckerna/Teaching/14-15/Autumn/20F/l_28.pdf)
+
+- Symmetric Matrices (Diagonalization of Symmetric Matrices): [Diagonalization of Symmetric Matrices](https://math.berkeley.edu/~arash/54/notes/7_1.pdf)
+
+- Real Symmetric Matrices: [Applications (Real Symmetric Matrices)](https://sites.math.northwestern.edu/~len/LinAlg/chap3.pdf)
+
+- CPSC 536N: Randomized Algorithms, Notes on Symmetric Matrices: [Symmetric Matrices](https://www.cs.ubc.ca/~nickhar/W12/NotesMatrices.pdf)
+
+- Real Symmetric Matrices;  Special properties of real symmetric matrices: [Real Symmetric Matrices](https://maths.nuigalway.ie/~rquinlan/linearalgebra/section2-1.pdf)
+
+
+
+### Videos
+
+Symmetric Matrices, Real Eigenvalues, Orthogonal Eigenvectors (MIT OpenCourseWare) : https://www.youtube.com/watch?v=ZTNniGvY5IQ
+
+25. Symmetric Matrices and Positive Definiteness (MIT OpenCourseWare) : https://www.youtube.com/watch?v=UCc9q_cAhho
+
+Visualize Spectral Decomposition | SEE Matrix, Chapter 2: https://www.youtube.com/watch?v=mhy-ZKSARxI
 
 
 
@@ -292,15 +467,6 @@ Thus, $`A = P D P^T`$, confirming the diagonalization, which matches our origina
 
 
 
-
-
-
-
-
-
-### Summary
-- Symmetric matrices have orthogonal eigenvectors corresponding to distinct eigenvalues.
-- Symmetric matrices can always be orthogonally diagonalized.
 
 
 
