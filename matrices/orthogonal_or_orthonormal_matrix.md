@@ -160,7 +160,7 @@ Orthonormal columns simplify matrix operations significantly. Here’s why they�
    $`P = Q Q^T`$
 
    Here’s why this works:
-   - In general, the projection matrix is defined as $`P = Q^T (Q^T Q)^{-1} Q^T`$.
+   - In general, the projection matrix is defined as $`P = Q (Q^T Q)^{-1} Q^T`$.
    - When $Q$ has orthonormal columns, $`Q^T Q = I`$, so $`(Q^T Q)^{-1} = I`$. Thus, $P$ simplifies to $`Q Q^T`$.
 
 2. **Special Case with Square Orthonormal Matrices:** If $Q$ is a square matrix with orthonormal columns (making it an orthogonal matrix), 
