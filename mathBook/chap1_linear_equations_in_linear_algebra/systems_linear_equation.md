@@ -125,7 +125,19 @@ Three basic operations simplify a linear system:
 These operations preserve the solution set of the system and help transform the system into a more solvable form.
 
 
+**Elementary Row Operations** are fundamental manipulations performed on the rows of a matrix to simplify solving linear systems. 
+These operations do not alter the solution set of the system. The three operations are:
 
+1. **Replacement**: Replace a row with the sum of itself and a multiple of another row.
+   - Example: $`R_2 \to R_2 + 3R_1`$.
+
+2. **Interchange**: Swap two rows.
+   - Example: $`R_1 \leftrightarrow R_3`$.
+
+3. **Scaling**: Multiply all entries in a row by a nonzero constant.
+   - Example: $`R_3 \to 2R_3`$.
+
+These operations are essential for techniques like **Gaussian elimination** and **row-reduction** to solving systems of linear equations or finding the rank of a matrix.
 
 
 

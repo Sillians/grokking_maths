@@ -81,7 +81,12 @@ OR
 - The Slope-Intercept Formula: $`y = mx + b`$
 
 
+### Congruent Polygons
+Two polygons are congruent if they have the same shape. This means that
 
+- they have the same number of sides,
+- all corresponding sides are congruent, and
+- all corresponding interior angles are congruent.
 
 
 
