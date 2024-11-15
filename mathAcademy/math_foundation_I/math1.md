@@ -55,7 +55,6 @@ For instance, let's look at the following function:
 
 $`f(x) = 3x + 1`$
 
-
 In this example,
 
 - $f$ is the name of the function,
@@ -64,8 +63,41 @@ In this example,
 
 
 
+### Equations of Lines in Slope Intercept
+
+The slope intercept formula $`y = mx + b`$ is used when you know the slope of the line to be examined and the point given is also the $y$ intercept (0, b). 
+In the formula, $b$ represents the $y$ value of the $y$ intercept point.
+
+To determine the equation of a line, you may use two variations of the general form of a line.
+
+These formulas are:
+
+- The Point-Slope Formula:  $`(y – y_{1}) = m(x – x_{1})`$
+
+OR
+
+- we calculate the slope $m$ using the given points: $`m = \frac {(y_2 - y_1)}{(x_2 - X_1)}`$
+
+- The Slope-Intercept Formula: $`y = mx + b`$
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Additional Resource
+
+- [Slope-Intercept and Point-Slope Forms of a Linear Equation](https://www.alamo.edu/contentassets/ab5b70d70f264cec9097745e8f30ca0a/graphing/math0303-equations-of-a-line.pdf)
 
 
 
