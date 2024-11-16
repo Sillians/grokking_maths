@@ -74,8 +74,6 @@ These formulas are:
 
 - The Point-Slope Formula:  $`(y – y_{1}) = m(x – x_{1})`$
 
-OR
-
 - we calculate the slope $m$ using the given points: $`m = \frac {(y_2 - y_1)}{(x_2 - X_1)}`$
 
 - The Slope-Intercept Formula: $`y = mx + b`$
@@ -89,7 +87,48 @@ Two polygons are congruent if they have the same shape. This means that
 - all corresponding interior angles are congruent.
 
 
+### Rules of Absolute Value
+Absolute value represents the distance of a number from 0 on the number line, regardless of direction. It is always non-negative.
 
+#### **Notation**
+The absolute value of $x$ is written as $`|x|`$.
+
+#### **Rules for Computation**
+1. **If $`x \geq 0`$:**
+   
+   $`|x| = x`$
+
+2. **If $x < 0$:**
+   
+   $`|x| = -x`$
+
+   (The negative sign makes it positive.)
+
+---
+
+#### **Examples**
+1. $|5| = 5$ (positive remains unchanged).
+2. $|-3| = 3$ (negative becomes positive).
+3. $|0| = 0$ (zero is its own absolute value).
+
+
+#### **Properties of Absolute Value**
+1. **Non-Negativity:** $`|x| \geq 0`$.
+2. **Identity Property:** $`|x| = 0`$ if and only if $x = 0$.
+3. **Multiplicative Property:** $`|ab| = |a| \cdot |b|`$.
+4. **Triangle Inequality:** $`|a + b| \leq |a| + |b|`$.
+
+
+#### **Applications**
+1. **Solving Absolute Value Equations:**
+   - Example: Solve $`|x - 2| = 5`$.
+     - Case 1: $`x - 2 = 5`$ → $x = 7$.
+     - Case 2: $`x - 2 = -5`$ → $x = -3$.
+
+2. **Solving Absolute Value Inequalities:**
+   - Example: Solve $`|x - 3| \leq 4`$.
+     - Rewrite as $`-4 \leq x - 3 \leq 4`$.
+     - Solve: $`-1 \leq x \leq 7`$.
 
 
 
