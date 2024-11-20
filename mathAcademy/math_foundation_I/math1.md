@@ -275,6 +275,153 @@ $`A = \pi r^2`$
 3. Always ensure $r$ is in the same unit as the desired area for consistency.
 
 
+## Area of a composite polygon
+The **area of a composite polygon** can be found by dividing the polygon into simpler shapes (like rectangles, triangles, circles, or trapezoids), 
+calculating the area of each shape, and then summing or subtracting these areas as necessary.
+
+### Steps to Find the Area:
+1. **Divide the Polygon**:
+   Break the composite polygon into smaller, manageable shapes (triangles, rectangles, etc.).
+   
+2. **Calculate Each Area**:
+   Use the appropriate formula for each shape:
+   - Triangle: $`A = \frac{1}{2} \cdot \text{base} \cdot \text{height}`$
+   - Rectangle: $`A = \text{length} \cdot \text{width}`$
+   - Trapezoid: $`A = \frac{1}{2} \cdot (\text{base}_1 + \text{base}_2) \cdot \text{height}`$
+   - Circle segment (if applicable): $`A = \pi r^2 \cdot \frac{\theta}{360^\circ}`$
+
+3. **Sum or Subtract Areas**:
+   - Add the areas of all the parts that make up the polygon.
+   - Subtract the areas of any internal holes or gaps.
+
+4. **Combine the Results**:
+   Ensure all areas are in the same unit before summing.
+
+### Example:
+For a composite polygon shaped like an "L":
+- Divide it into two rectangles.
+- Calculate the area of each rectangle using $`A = \text{length} \cdot \text{width}`$.
+- Add the two areas together.
+
+This systematic approach works for any composite polygon.
+
+
+
+## Perimeter of a composite polygon
+The **perimeter of a composite polygon** is the sum of the lengths of all its outer sides.
+
+### Steps to Calculate the Perimeter:
+1. **Identify the Outer Edges**:
+   - Locate all the edges that form the outer boundary of the composite polygon. Exclude any internal edges or shared sides within the shape.
+
+2. **Measure or Calculate Each Side**:
+   - If side lengths are given, list them.
+   - If not, use geometry or the distance formula $`d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}`$ for sides on a coordinate plane.
+
+3. **Sum the Lengths**:
+   - Add the lengths of all the identified outer edges.
+
+### Example:
+For an "L"-shaped composite polygon:
+- Identify all the outer sides of the "L" (ignore the internal shared side).
+- Suppose the side lengths are 4 m, 3 m, 2 m, 3 m, 2 m, and 4 m.
+- Add them: $`4 + 3 + 2 + 3 + 2 + 4 = 18, {m}`$.
+
+Thus, the **perimeter** of the composite polygon is the total length of its boundary.
+
+
+## Speed of a moving Object
+The **speed** of a moving object is calculated as the distance traveled divided by the time it takes to travel 
+that distance. The formula for speed is:
+
+$`\text{Speed} = \frac{\text{Distance}}{\text{Time}}`$
+
+### Units:
+- Speed is typically measured in units like meters per second (m/s), kilometers per hour (km/h), 
+or miles per hour (mph).
+
+### Example:
+If an object travels 120 kilometers in 2 hours, the speed is:
+
+$`\text{Speed} = \frac{120 \, \text{km}}{2 \, \text{hours}} = 60 \, \text{km/h}.`$
+
+### Key Notes:
+- Speed is a scalar quantity (it has magnitude only).
+- If direction is included, it becomes **velocity**, a vector quantity.
+
+
+### Graphing a Piecewise Step Function
+
+A **piecewise step function** is a type of function that is defined by different constant values over different intervals of the domain. These intervals are often indicated using inequalities.
+
+---
+
+### Steps to Graph a Piecewise Step Function:
+
+1. **Understand the Definition**:
+   A step function is typically written in the form:
+   
+   $`f(x) = \begin{cases} c_1, & a_1 \leq x < a_2 \\ c_2, & a_2 \leq x < a_3 \\ \vdots & \vdots \\ c_n, & a_{n-1} \leq x \leq a_n  \end{cases}`$
+
+   Here, $`c_1, c_2, \dots, c_n`$ are constants, and $`a_1, a_2, \dots, a_n`$ define the intervals.
+
+2. **Break Down the Domain**:
+   Divide the $x$-axis into intervals based on the given piecewise definition.
+
+3. **Plot Constant Values**:
+   For each interval:
+   - Plot a horizontal line at the corresponding constant $c_i$ value.
+   - Use **open circles** to indicate excluded endpoints and **closed circles** for included endpoints.
+
+4. **Connect or Break Steps**:
+   Steps are generally disconnected because the function jumps from one value to another at the interval boundaries.
+
+5. **Mark Key Points**:
+   Clearly label the domain boundaries where the steps change, and ensure that each interval is properly represented.
+
+---
+
+### Example: 
+Graph the step function:
+$`f(x) = \begin{cases} 2, & 0 \leq x < 2 \\ 5, & 2 \leq x < 4 \\ -1, & 4 \leq x \leq 5  \end{cases}`$
+
+- **Interval 1**: From $x = 0$ to $x = 2$, $f(x) = 2$. Plot a horizontal line at $y = 2$ with a closed circle at $x = 0$ and an open circle at $x = 2$.
+- **Interval 2**: From $x = 2$ to $x = 4$, $f(x) = 5$. Plot a horizontal line at $y = 5$ with a closed circle at $x = 2$ and an open circle at $x = 4$.
+- **Interval 3**: From $x = 4$ to $x = 5$, $f(x) = -1$. Plot a horizontal line at $y = -1$ with a closed circle at $x = 4$ and $x = 5$.
+
+---
+
+### Key Graph Features:
+- Discrete jumps (no diagonal connections between steps).
+- Open and closed circles represent inclusivity/exclusivity at boundaries.
+- Each step is constant across its interval.
+
+
+## The Quotient Rule for Radicals
+The **Quotient Rule for Radicals** states that the square root of a quotient is equal to the quotient of the square roots, provided the denominator is not zero.
+
+### Rule:
+
+$`\sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}}, \quad b \neq 0`$
+
+### Example 1:
+Simplify $`\sqrt{\frac{16}{25}}`$:
+
+$`\sqrt{\frac{16}{25}} = \frac{\sqrt{16}}{\sqrt{25}} = \frac{4}{5}.`$
+
+### Generalization for Other Roots:
+For any $n-th$ root:
+
+$`\sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}}, \quad b \neq 0.`$
+
+### Important Notes:
+- This rule applies to non-negative values of $a$ and $b$ when working with real numbers.
+- If negative values are included, ensure the result is defined in the real number system (e.g., square roots of negative numbers are not real).
+
+
+
+
+
 
 
 
