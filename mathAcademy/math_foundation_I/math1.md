@@ -421,6 +421,132 @@ $`\sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}}, \quad b \neq 0.`$
 
 
 
+## Constant of Proportionality
+The **constant of proportionality** is a constant value that relates two variables in a proportional relationship. 
+
+### Types of Proportionality:
+
+1. **Direct Proportionality**:
+   - Two variables $x$ and $y$ are directly proportional if:
+   
+     $y = kx$
+   
+     where $k$ is the constant of proportionality.
+   - Example: If $`y = 5x`$, then $k = 5$.
+
+2. **Inverse Proportionality**:
+   - Two variables $x$ and $y$ are inversely proportional if:
+     
+     $y = \frac{k}{x}$
+     
+     where $k$ is the constant of proportionality.
+   - Example: If $`y = \frac{12}{x}`$, then $k = 12$.
+
+### How to Find $k$:
+To determine the constant of proportionality:
+- For direct proportionality: Divide $y$ by $x$: 
+  
+  $k = \frac{y}{x}$
+
+- For inverse proportionality: Multiply $x$ and $y$: 
+  
+  $k = xy$
+
+### Applications:
+The constant of proportionality is widely used in:
+- Physics (e.g., Hooke's Law: ($`F = kx`$).
+- Economics (e.g., supply and demand relationships).
+- Mathematics (e.g., slope of a line in a direct variation).
+
+
+
+## Direct variation equation
+To write a **direct variation equation** from a graph, follow these steps:
+
+---
+
+### 1. **Recognize the Form of Direct Variation**
+A direct variation equation is of the form:
+
+$y = kx$
+
+where:
+- $k$ is the constant of proportionality (or slope).
+- The graph of the equation passes through the origin $(0, 0)$.
+
+---
+
+### 2. **Pick a Point on the Graph**
+Choose any point $(x, y)$ on the graph (other than $(0, 0))$.
+
+---
+
+### 3. **Calculate the Constant $k$**
+The constant $k$ is the ratio of $y$ to $x$:
+
+$`k = \frac{y}{x}`$
+
+---
+
+### 4. **Write the Equation**
+Substitute the value of $k$ into the equation $y = kx$.
+
+---
+
+### Example
+Suppose the graph passes through $(2, 6)$. 
+
+1. The direct variation equation is of the form $y = kx$.
+2. Using the point $(2, 6)$, calculate $k$:
+   
+   $`k = \frac{6}{2} = 3`$
+
+3. The equation is:
+   $y = 3x$
+
+---
+
+### Verification
+Check if other points on the graph satisfy $y = 3x$. For example, $(4, 12)$:
+$y = 3(4) = 12$
+
+The equation holds true.
+
+
+
+## Pythagorean Theorem
+The **Pythagorean Theorem** is a fundamental principle in geometry that applies to right-angled triangles. It states:
+
+$`a^2 + b^2 = c^2`$
+
+Where:
+- $a$ and $b$ are the lengths of the two legs (sides forming the right angle),
+- $c$ is the length of the hypotenuse (the side opposite the right angle).
+
+---
+
+### Applications:
+1. **Find the Hypotenuse**:
+   If $a = 3$ and $b = 4$, then:
+   $`c = \sqrt{a^2 + b^2} = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5`$
+
+
+2. **Find a Leg**:
+   If $c = 10$ and $a = 6$, then:
+   $`b = \sqrt{c^2 - a^2} = \sqrt{10^2 - 6^2} = \sqrt{100 - 36} = \sqrt{64} = 8`$
+
+---
+
+### Key Points:
+- Only applies to right-angled triangles.
+- Useful for calculating distances in coordinate geometry.
+- Forms the basis of many geometric and algebraic concepts.
+
+
+
+
+
+
 
 
 
