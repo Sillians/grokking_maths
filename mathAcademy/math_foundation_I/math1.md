@@ -544,6 +544,266 @@ Where:
 
 
 
+## Calculating Acceleration from a Speed-Time Graph
+
+Acceleration is the **rate of change of velocity with respect to time**. When working with a speed-time graph, the acceleration can be determined from the **slope** of the graph.
+
+---
+
+### Formula:
+$`a = \frac{\Delta v}{\Delta t}`$
+
+Where:
+- $a$ = acceleration $(m/s²)$,
+- $\Delta v$ = change in speed (final speed $v_f$ minus initial speed $v_i$) in m/s,
+- $`\Delta t`$ = change in time (final time $t_f$ minus initial time $t_i$) in seconds.
+
+---
+
+### Steps:
+1. Identify two points on the speed-time graph.
+   - Point 1: $`(t_1, v_1)`$,
+   - Point 2: $`(t_2, v_2)`$.
+
+2. Use the formula for the slope:
+   $`a = \frac{v_2 - v_1}{t_2 - t_1}`$
+
+3. Interpret the slope:
+   - Positive slope = Positive acceleration (speeding up),
+   - Negative slope = Negative acceleration (slowing down, also called deceleration),
+   - Zero slope = No acceleration (constant speed).
+
+---
+
+### Example:
+Given the following points from a speed-time graph:
+- At $`t = 2 {s}, v = 4 {m/s}`$,
+- At $`t = 6{s}, v = 12{m/s}`$,
+
+Calculate acceleration:
+$`a = \frac{v_2 - v_1}{t_2 - t_1} = \frac{12 - 4}{6 - 2} = \frac{8}{4} = 2 \, \text{m/s}^2`$
+
+The acceleration is $`2 {m/s}^2`$.
+
+---
+
+### Key Points:
+- The slope of the graph gives the acceleration.
+- Acceleration is uniform if the slope is constant.
+- Curved graphs indicate non-uniform acceleration, requiring calculus for precise values.
+
+
+
+## 30-60-90 triangle
+A **30-60-90 triangle** is a special right triangle with angles of $30^\circ$, $60^\circ$, and $90^\circ$. 
+Its side lengths have a consistent ratio: 
+
+$`1 : \sqrt{3} : 2`$
+
+This ratio corresponds to:
+- The side opposite the $30^\circ$ angle (shortest side) = $x$,
+- The side opposite the $60^\circ$ angle (longer leg) = $x\sqrt{3}$,
+- The hypotenuse (opposite the $90^\circ$ angle) = $2x$.
+
+### Calculations:
+If given one side, the others can be found using the ratio:
+
+1. **Given the hypotenuse $(h)$**:
+   - Shortest side $`(x) = \frac{h}{2}`$,
+   - Longer leg = $`x\sqrt{3} = \frac{h\sqrt{3}}{2}`$.
+
+2. **Given the shorter leg $(x)$**:
+   - Hypotenuse = $2x$,
+   - Longer leg = $`x\sqrt{3}`$.
+
+3. **Given the longer leg $(l)$**:
+   - Shortest side = $`\frac{l}{\sqrt{3}}`$,
+   - Hypotenuse = $`2 \times \frac{l}{\sqrt{3}} = \frac{2l}{\sqrt{3}}`$.
+
+### Example:
+If the shortest side $(x) = 5$:
+- Hypotenuse = $2 \times 5 = 10$,
+- Longer leg = $5\sqrt{3} \approx 8.66$.
+
+This consistent ratio makes the 30-60-90 triangle simple to work with.
+
+
+
+## linear equations with unknown coefficients by factoring
+To solve **linear equations with unknown coefficients by factoring**, follow these steps:
+
+### Example Equation:
+$`ax + b = 0`$
+
+### Steps:
+1. **Isolate the linear term:**
+   Move constants to the other side:
+   $`ax = -b`$
+
+2. **Factor out the coefficient of \(x\):**
+   If the coefficient $a$ is an unknown, treat it as a variable:
+   
+   $`x = -\frac{b}{a}`$
+
+3. **Check constraints:**
+   - Ensure $`a \neq 0`$, as division by zero is undefined.
+
+### Extension to Factoring Multiple Linear Expressions:
+If the equation is expressed in a factored form, such as:
+
+$`(ax + b)(cx + d) = 0`$
+
+Apply the **Zero Product Property**:
+
+$`(ax + b) = 0 \quad \text{or} \quad (cx + d) = 0`$
+
+Solve each:
+1. From $`ax + b = 0`$:
+
+   $`x = -\frac{b}{a}`$
+
+2. From $`cx + d = 0`$:
+
+   $`x = -\frac{d}{c}`$
+
+The solutions are:
+
+$`x = -\frac{b}{a} \quad \text{and} \quad x = -\frac{d}{c}`$
+
+### Example:
+Solve:
+$`2x + 3 = 0`$
+
+- Isolate $x$:
+  $`2x = -3`$
+
+- Solve for $x$:
+  $`x = -\frac{3}{2}`$
+
+If coefficients $a, b, c, d$ are not numeric, the steps are the same but retain the symbolic coefficients in the solution.
+
+
+
+## Equations of Lines in Standard Form
+The **standard form of the equation of a line** is expressed as:
+
+$`Ax + By = C`$
+
+Where:
+- $A$, $B$, and $C$ are integers (preferably with $`A \geq 0`$).
+- $A$ and $B$ are not both zero $`((A, B) \neq (0, 0))`$.
+
+### Steps to Write a Line in Standard Form:
+1. Rearrange the given equation to move $x$- and $$-terms to the left side.
+2. Ensure coefficients are integers by multiplying through by an appropriate factor if fractions are present.
+3. Normalize the equation (e.g., ensure $A$ is positive).
+
+---
+
+### Example 1: Convert $y = 3x + 5$ to Standard Form
+1. Rearrange terms:
+   $`-3x + y = 5`$
+
+2. Multiply by $-1$ to make $A$ positive:
+   
+   $`3x - y = -5`$
+
+### Example 2: Convert $`y = \frac{1}{2}x - 4`$ to Standard Form
+1. Eliminate the fraction by multiplying through by 2:
+   $`2y = x - 8`$
+
+2. Rearrange terms:
+   $`-x + 2y = -8`$
+
+3. Multiply by $-1$ to ensure $A > 0$:
+   $`x - 2y = 8`$
+
+### Key Notes:
+- **Slope $(m)$**: Can be derived from standard form as $`m = -\frac{A}{B}`$.
+- **Y-intercept $(c)$**: Can be derived as $`c = \frac{C}{B}`$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
