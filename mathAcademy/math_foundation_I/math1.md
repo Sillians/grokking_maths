@@ -723,13 +723,488 @@ Where:
 - **Y-intercept $(c)$**: Can be derived as $`c = \frac{C}{B}`$.
 
 
+## Solving equations with odd exponents using the Nth Root Method
+To solve equations with **odd exponents** using the **Nth Root Method**, follow these steps:
+
+### General Form:
+The equation takes the form:
+
+$x^n = a$
+
+where:
+- $n$ is an **odd integer** $`(n = 3, 5, 7, \dots)`$,
+- $a$ is a real number.
+
+### Steps:
+1. **Apply the Nth Root:**
+   Take the $n$-th root of both sides:
+   
+   $`x = \sqrt[n]{a}`$
+
+   Since $n$ is odd, the root is unique and real for all real $a$.
+
+2. **Simplify the Solution:**
+   - If $a > 0$, $x > 0$.
+   - If $a < 0$, $x < 0$.
+   - If $a = 0$, $x = 0$.
+
+---
+
+### Example 1: Solve $`x^3 = 27`$
+1. Take the cube root $`(n = 3)`$:
+   
+   $`x = \sqrt[3]{27} = 3`$
+
+### Example 2: Solve $`x^5 = -32`$
+1. Take the fifth root $`(n = 5)`$:
+   
+   $`x = \sqrt[5]{-32} = -2`$
+
+---
+
+### Key Notes:
+1. **Odd Exponents and Negative Numbers:**
+   Odd roots of negative numbers are defined. For example:
+   
+   $`\sqrt[3]{-8} = -2`$
+
+   This is because $`(-2)^3 = -8`$.
+
+2. **Contrast with Even Exponents:**
+   For even $n$, negative $a$ leads to no real solution (e.g., $`x^2 = -1`$).
+
+---
+
+### Example 3: Solve $`3x^3 = 81`$
+1. Isolate $x^3$:
+   
+   $`x^3 = \frac{81}{3} = 27`$
+
+2. Take the cube root:
+   
+   $`x = \sqrt[3]{27} = 3`$
+
+### Example 4: Solve $-2x^5 = -64$
+1. Isolate $x^5$:
+   
+   $`x^5 = \frac{-64}{-2} = 32`$
+
+2. Take the fifth root:
+   
+   $`x = \sqrt[5]{32} = 2`$
+
+This method guarantees a unique real solution for equations with odd exponents.
 
 
 
+## Constant of Variation
+The **constant of variation** is a fixed value that describes the relationship between two variables in a proportional relationship. 
+Depending on the type of variation, the constant governs how one variable changes in response to another.
+
+---
+
+### Types of Variation:
+
+#### 1. **Direct Variation**
+- When one variable increases or decreases directly with another, their relationship is:
+  
+  $y = kx$
+
+  Where:
+  - $k$: Constant of variation.
+  - $x$: Independent variable.
+  - $y$: Dependent variable.
+
+**To find $k$**:
+
+$k = \frac{y}{x}$
+
+**Example**:
+If $y = 12$ when $x = 4$, find $k$:
+
+$`k = \frac{y}{x} = \frac{12}{4} = 3`$
+
+---
+
+#### 2. **Inverse Variation**
+- When one variable increases as the other decreases, their relationship is:
+  
+  $`y = \frac{k}{x}`$
+
+  Where:
+  - $k$: Constant of variation.
+
+**To find $k$**:
+
+$`k = x \cdot y`$
+
+**Example**:
+If $y = 5$ when $x = 8$, find $k$:
+
+$`k = x \cdot y = 8 \cdot 5 = 40`$
+
+---
+
+#### 3. **Joint Variation**
+- When a variable depends on the product of two or more variables, the relationship is:
+  
+  $y = kxz$
+
+  Where:
+  - $k$: Constant of variation.
+  - $x, z$: Independent variables.
+
+**To find $k$**:
+
+$`k = \frac{y}{xz}`$
+
+**Example**:
+If $y = 24$ when $x = 3$ and $z = 4$, find $k$:
+
+$`k = \frac{y}{xz} = \frac{24}{3 \cdot 4} = 2`$
+
+---
+
+#### 4. **Combined Variation**
+- Involves both direct and inverse variation:
+  
+  $`y = \frac{kx}{z}`$
+
+  Where:
+  - $y$ varies directly with $x$ and inversely with $z$.
+
+**To find $k$**:
+
+$`k = \frac{yz}{x}`$
+
+**Example**:
+If $y = 6$, $x = 2$, and $z = 4$, find $k$:
+
+$`k = \frac{yz}{x} = \frac{6 \cdot 4}{2} = 12`$
+
+---
+
+### Key Points:
+- The **constant of variation** $(k)$ remains unchanged for a given relationship, regardless of the specific values of the variables.
+- Identifying the type of variation helps determine how the variables are related and how to compute $k$.
+
+
+## Calculating distance from a Speed-time Graph
+To calculate the **distance** traveled from a **speed-time graph**, the key is to recognize that the area under the graph represents the distance. 
+Depending on the shape of the graph, different methods are used to find this area.
+
+---
+
+### General Formula:
+The relationship is:
+
+$`\text{Distance} = \text{Area under the speed-time graph}`$
+
+The graph's shape determines how to calculate the area. Here are common scenarios:
+
+---
+
+### 1. **Constant Speed (Rectangle)**:
+If the speed is constant, the graph is a horizontal line.
+
+**Formula**:
+
+$`\text{Distance} = \text{Speed} \times \text{Time}`$
+
+**Example**:
+A car travels at 60 m/s for 10 seconds. Find the distance.
+
+
+$`\text{Distance} = 60 \times 10 = 600 \, \text{m}`$
+
+---
+
+### 2. **Uniform Acceleration (Triangle)**:
+If the speed increases uniformly from 0, the graph forms a right triangle.
+
+**Formula**:
+
+$`\text{Distance} = \frac{1}{2} \times \text{Base} \times \text{Height}`$
+
+where:
+- Base = time interval,
+- Height = maximum speed.
+
+**Example**:
+A car accelerates from 0 to 20 m/s over 5 seconds. Find the distance.
+
+
+$`\text{Distance} = \frac{1}{2} \times 5 \times 20 = 50 \, \text{m}`$
+
+---
+
+### 3. **Variable Speed (Trapezium)**:
+If the speed increases or decreases linearly, the graph forms a trapezium.
+
+**Formula**:
+
+$`\text{Distance} = \frac{1}{2} \times (\text{Sum of Parallel Sides}) \times \text{Height}`$
+
+where:
+- Parallel sides = initial and final speeds,
+- Height = time interval.
+
+**Example**:
+A car accelerates from 10 m/s to 30 m/s over 4 seconds. Find the distance.
+
+
+$`\text{Distance} = \frac{1}{2} \times (10 + 30) \times 4 = \frac{1}{2} \times 40 \times 4 = 80 \, \text{m}`$
+
+---
+
+### 4. **Irregular Graph (Non-Linear)**:
+For a speed-time graph with a non-linear shape, divide the graph into smaller sections (triangles, rectangles, trapeziums), 
+calculate the area of each section, and sum them up.
+
+**Example**:
+If the graph is irregular, divide it into manageable segments like:
+- A rectangle $`(\text{Distance}_1 = \text{Speed}_1 \times \text{Time}_1)`$,
+- A triangle $`(\text{Distance}_2 = \frac{1}{2} \times \text{Base} \times \text{Height})`$.
+
+Add the areas:
+
+$`\text{Total Distance} = \text{Distance}_1 + \text{Distance}_2 + \dots`$
+
+---
+
+### Key Points:
+1. The area under the curve in a speed-time graph always represents the total distance.
+2. Use integration to calculate distance for a continuous, curved graph:
+   
+   $`\text{Distance} = \int v(t) \, dt`$
+
+   where $`v(t)`$ is the speed as a function of time.
+3. Units of distance depend on the units of speed and time.
 
 
 
+## Modeling with Inverse Variation
+**Modeling with Inverse Variation** involves describing a relationship where one variable increases as the other decreases, and their product remains constant. 
+This relationship is mathematically expressed as:
 
+$`y = \frac{k}{x}`$
+
+Where:
+- $y$: Dependent variable,
+- $x$: Independent variable,
+- $k$: Constant of variation $(k > 0)$.
+
+---
+
+### Key Characteristics of Inverse Variation
+1. **Hyperbolic Relationship**:
+   The graph of $`y = \frac{k}{x}`$ forms a hyperbola with two branches (one in the first quadrant and one in the third for positive $k$).
+
+2. **Constant Product**:
+   For all $x$ and $y$:
+   
+   $`x \cdot y = k`$
+
+3. **No $x = 0$**:
+   Since division by zero is undefined, $x = 0$ is not in the domain.
+
+---
+
+### Steps for Modeling Inverse Variation
+
+1. **Identify the Relationship**:
+   Verify that $x \cdot y$ is constant for a set of values. If so, it is an inverse variation.
+
+2. **Find the Constant $k$**:
+   Use known values of $x$ and $y$ to compute $k$:
+   
+   $`k = x \cdot y`$
+
+
+3. **Write the Model**:
+   Substitute $k$ into the inverse variation formula:
+   
+   $`y = \frac{k}{x}`$
+
+
+4. **Predict or Solve**:
+   Use the equation to predict $y$ for a given $x$, or vice versa.
+
+---
+
+### Example Problems
+
+#### 1. **Basic Inverse Variation**
+**Problem**: If $y = 8$ when $x = 5$, find the equation of the relationship.
+
+**Solution**:
+1. Compute $k$:
+   
+   $`k = x \cdot y = 5 \cdot 8 = 40`$
+
+2. Write the equation:
+   
+   $`y = \frac{40}{x}`$
+
+
+#### 2. **Predicting Values**
+**Problem**: Using the model $`y = \frac{40}{x}`$, find $y$ when $x = 10$.
+
+**Solution**:
+Substitute $x = 10$:
+
+$`y = \frac{40}{10} = 4`$
+
+---
+
+#### 3. **Real-World Example**
+**Problem**: The time $t$ to complete a task varies inversely with the number of workers $w$. 
+If 4 workers complete a task in 6 hours, how long will it take 8 workers?
+
+**Solution**:
+1. Use the inverse variation formula:
+   
+   $`t = \frac{k}{w}`$
+
+2. Find $k$ using $w = 4, t = 6$:
+   
+   $`k = t \cdot w = 6 \cdot 4 = 24`$
+
+3. Write the model:
+   
+   $`t = \frac{24}{w}`$
+
+4. Find $t$ for $w = 8$:
+   
+   $`t = \frac{24}{8} = 3 \, \text{hours}`$
+
+---
+
+### Graphical Representation
+- The graph of $`y = \frac{k}{x}`$ approaches the axes but never touches them $`(x \neq 0, y \neq 0)`$.
+- The curve gets closer to the x-axis as $x$ increases and closer to the y-axis as $x$ decreases.
+
+---
+
+### Applications of Inverse Variation
+1. **Physics**:
+   - Intensity of light inversely varies with the square of the distance $`(I = \frac{k}{r^2})`$.
+2. **Economics**:
+   - Price per item varies inversely with the number of items purchased.
+3. **Work Problems**:
+   - Time to complete a task varies inversely with the number of workers. 
+
+Inverse variation models are essential in many real-world scenarios involving trade-offs and proportional adjustments.
+
+
+
+## Inverse Square Laws
+The **Inverse Square Law** describes a relationship where a physical quantity's intensity is inversely proportional to the square of the distance from its source. 
+It applies to phenomena like gravity, light, sound, and electromagnetism. The general form is:
+
+
+$`I = \frac{k}{r^2}`$
+
+Where:
+- $I$: Intensity of the physical quantity (e.g., brightness, gravitational force).
+- $k$: Proportionality constant, dependent on the source and system.
+- $r$: Distance from the source.
+
+---
+
+### Key Features of the Inverse Square Law:
+1. **Intensity Decreases Rapidly**:
+   As the distance $(r)$ increases, the intensity $(I)$ decreases proportionally to $`1/r^2`$.
+   
+2. **Spread Over an Area**:
+   The law reflects how a quantity spreads over the surface of a sphere as the distance increases. The surface area of a sphere is $`4\pi r^2`$, 
+   causing the intensity to decrease with $r^2$.
+
+3. **Universal Application**:
+   Many physical systems adhere to this principle due to the geometric nature of spreading in three-dimensional space.
+
+---
+
+### Examples of Inverse Square Laws:
+
+#### 1. **Light Intensity**:
+The brightness of light decreases as you move away from the source:
+
+$`I = \frac{P}{4\pi r^2}`$
+
+Where:
+- $P$: Power of the light source (in watts),
+- $r$: Distance from the source.
+
+**Example**:
+If a light source emits 100 W and you measure the intensity at 2 m:
+
+$`I = \frac{100}{4\pi (2)^2} = \frac{100}{16\pi} \approx 1.99 \, \text{W/m}^2`$
+
+---
+
+#### 2. **Gravitational Force**:
+Newton's Law of Gravitation states:
+
+$`F = \frac{G m_1 m_2}{r^2}`$
+
+Where:
+- $F$: Gravitational force,
+- $G$: Gravitational constant $`(6.674 \times 10^{-11} \, \text{N·m}^2/\text{kg}^2)`$,
+- $`m_1, m_2`$: Masses of the objects,
+- $r$: Distance between the masses.
+
+
+**Example**:
+If two masses of 10 kg each are separated by 2 m:
+
+$`F = \frac{6.674 \times 10^{-11} \cdot 10 \cdot 10}{2^2} = 1.67 \times 10^{-10} \, \text{N}`$
+
+---
+
+#### 3. **Sound Intensity**:
+Sound spreads out spherically from its source:
+
+$`I = \frac{P}{4\pi r^2}`$
+
+Where:
+- $P$: Power of the sound source,
+- $r$: Distance from the source.
+
+**Example**:
+If a speaker emits 50 W of sound at 3 m:
+
+$`I = \frac{50}{4\pi (3)^2} = \frac{50}{36\pi} \approx 0.44 \, \text{W/m}^2`$
+
+---
+
+#### 4. **Electric Field Intensity**:
+The strength of an electric field generated by a point charge:
+
+$`E = \frac{k_e q}{r^2}`$
+
+Where:
+- $E$: Electric field strength,
+- $k_e$: Coulomb constant $`(8.99 \times 10^9 \, \text{N·m}^2/\text{C}^2)`$,
+- $q$: Charge,
+- $r$: Distance from the charge.
+
+---
+
+### Visual Representation:
+The inverse square relationship can be visualized with concentric spheres:
+- As $r$ increases, the same quantity is spread over a larger area $`(4\pi r^2)`$.
+- The graph of $I$ vs. $r$ is hyperbolic, showing steep decreases at small distances and gradual decreases at larger distances.
+
+---
+
+### Applications of Inverse Square Law:
+1. **Physics**: Gravitational, electric, and magnetic forces.
+2. **Astronomy**: Brightness of stars.
+3. **Acoustics**: Sound intensity.
+4. **Radiation**: Intensity of emitted particles or waves.
+
+Understanding inverse square laws is crucial for analyzing phenomena that spread outward uniformly from a central source.
 
 
 
