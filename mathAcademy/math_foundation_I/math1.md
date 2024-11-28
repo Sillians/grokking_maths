@@ -898,7 +898,10 @@ Depending on the shape of the graph, different methods are used to find this are
 ### General Formula:
 The relationship is:
 
-$`\text{Distance} = \text{Area under the speed-time graph}`$
+$`\text{
+
+
+} = \text{Area under the speed-time graph}`$
 
 The graph's shape determines how to calculate the area. Here are common scenarios:
 
@@ -1207,9 +1210,243 @@ The inverse square relationship can be visualized with concentric spheres:
 Understanding inverse square laws is crucial for analyzing phenomena that spread outward uniformly from a central source.
 
 
+## Difference of Square Formula
+The **Difference of Squares Formula** is a fundamental algebraic identity that allows the factorization of 
+expressions involving the difference between two squared terms. The formula is:
+
+$`a^2 - b^2 = (a + b)(a - b)`$
+
+Where:
+- $a^2$ and $b^2$ are perfect squares,
+- $(a + b)$ and $(a - b)$ are the factors.
+
+---
+
+### Why It Works:
+The formula comes from the distributive property (expansion of $`(a + b)(a - b)`$):
+
+$`(a + b)(a - b) = a^2 - ab + ab - b^2 = a^2 - b^2`$
+
+---
+
+### Applications of the Difference of Squares Formula:
+
+#### 1. **Factoring Expressions**:
+If an expression is in the form $`a^2 - b^2`$, it can be quickly factored.
+
+**Example**:
+
+$`x^2 - 9 = (x + 3)(x - 3)`$
+
+#### 2. **Simplifying Calculations**:
+The formula simplifies computations of large numbers by expressing them as a difference of squares.
+
+**Example**:
+Calculate $`102^2 - 98^2`$:
+
+$`102^2 - 98^2 = (102 + 98)(102 - 98) = 200 \cdot 4 = 800`$
+
+#### 3. **Solving Quadratic Equations**:
+The formula is used to solve equations of the form $`a^2 - b^2 = 0`$.
+
+**Example**:
+Solve $`x^2 - 16 = 0`$:
+
+$`x^2 - 16 = (x + 4)(x - 4) = 0`$
 
 
+$`x + 4 = 0 \, \text{or} \, x - 4 = 0 \implies x = -4, 4`$
 
+#### 4. **Geometric Applications**:
+In geometry, the difference of squares formula can simplify problems involving areas, such as finding the 
+difference between two square areas.
+
+---
+
+### Recognizing a Difference of Squares:
+An expression is a difference of squares if:
+1. Both terms are perfect squares (e.g., $`x^2, 9, 4y^2`$).
+2. There is a subtraction sign $(-)$ between the terms.
+
+**Examples**:
+- $`4x^2 - 25 = (2x + 5)(2x - 5)`$,
+- $`49 - y^2 = (7 + y)(7 - y)`$.
+
+---
+
+### Generalizations:
+The difference of squares formula can also be extended to higher dimensions or applied with variables:
+- For polynomials: $`x^4 - y^4 = (x^2 + y^2)(x^2 - y^2)`$,
+- For expressions with binomials: $`(p + q)^2 - (r + s)^2 = [(p + q) + (r + s)][(p + q) - (r + s)]`$.
+
+The difference of squares formula is a versatile tool for simplifying and solving algebraic expressions efficiently.
+
+
+## 45, 45, 90 degrees triangles
+A **45-45-90 triangle** is a special type of right triangle that has two 45-degree angles and one 90-degree angle. 
+This type of triangle is **isosceles**, meaning the two legs are of equal length.
+
+---
+
+### Key Properties:
+1. **Angle Measures**:
+   - Two angles of $`45^\circ`$,
+   - One right angle $`(90^\circ)`$.
+
+2. **Sides' Relationship**:
+   If the length of each leg is $x$, the hypotenuse is:
+   
+   $`\text{Hypotenuse} = x\sqrt{2}`$
+
+   This results from the **Pythagorean Theorem**:
+   
+   $`x^2 + x^2 = (\text{Hypotenuse})^2`$
+
+   
+   $`2x^2 = (\text{Hypotenuse})^2 \implies \text{Hypotenuse} = x\sqrt{2}`$
+
+
+3. **Ratios of the Sides**:
+   - Leg : Leg : Hypotenuse = $`1 : 1 : \sqrt{2}`$.
+
+---
+
+### Example Problems:
+
+#### **1. Find the Hypotenuse**
+**Problem**: A 45-45-90 triangle has legs of length $5$. Find the hypotenuse.
+
+**Solution**:
+Use the relationship:
+
+$`\text{Hypotenuse} = x\sqrt{2} = 5\sqrt{2}`$
+
+#### **2. Find the Leg Length**
+**Problem**: The hypotenuse of a 45-45-90 triangle is $12$. Find the length of each leg.
+
+**Solution**:
+Use the relationship:
+
+$`\text{Hypotenuse} = x\sqrt{2}`$
+
+
+$`12 = x\sqrt{2} \implies x = \frac{12}{\sqrt{2}} = 6\sqrt{2} \, \text{(simplified as rationalized form)}.`$
+
+#### **3. Real-World Example**
+**Problem**: A square has a diagonal of $10$. Find the side length of the square.
+
+**Solution**:
+The diagonal of a square divides it into two 45-45-90 triangles. Using the hypotenuse relationship:
+
+$`\text{Diagonal} = x\sqrt{2}`$
+
+
+$`10 = x\sqrt{2} \implies x = \frac{10}{\sqrt{2}} = 5\sqrt{2}`$
+
+Thus, the side length of the square is $`5\sqrt{2}`$.
+
+---
+
+### Applications:
+1. **Geometry**:
+   - Diagonals of squares.
+   - Simplifying trigonometric problems.
+
+2. **Trigonometry**:
+   - Relationships: $`\sin(45^\circ) = \cos(45^\circ) = \frac{\sqrt{2}}{2}`$.
+
+3. **Engineering and Design**:
+   - Constructing isosceles right triangles for structures or patterns.
+
+The symmetry and simple side ratios make 45-45-90 triangles a cornerstone of geometry and trigonometry.
+
+
+## Systems of linear equations with factorial coefficients
+**Systems of linear equations with factorial coefficients** involve solving equations where the coefficients 
+are factorials. Factorials, denoted by $n!$, represent the product of all positive integers up to $n$: 
+
+
+$`n! = n \cdot (n-1) \cdot (n-2) \cdots 1, \quad \text{and by convention, } 0! = 1.`$
+
+These systems can be solved using substitution, elimination, or matrix methods like Gaussian elimination. 
+However, the presence of factorial coefficients requires careful simplifications due to their rapid growth.
+
+---
+
+### Example: Solving a System with Factorial Coefficients
+Solve:
+
+$`2!x + 3!y = 14 \tag{1}`$
+
+
+$`4!x - 2!y = 44 \tag{2}`$
+
+#### Step 1: Simplify Factorial Terms
+
+$`2! = 2, \quad 3! = 6, \quad 4! = 24`$
+
+Substitute these values into the equations:
+
+$`2x + 6y = 14 \tag{3}`$
+
+
+$`24x - 2y = 44 \tag{4}`$
+
+#### Step 2: Eliminate One Variable
+From Equation (3), divide through by 2 to simplify:
+
+$`x + 3y = 7 \tag{5}`$
+
+From Equation (4):
+
+$`24x - 2y = 44 \implies 12x - y = 22 \tag{6}`$
+
+Multiply Equation (5) by 2:
+
+$`2x + 6y = 14 \tag{7}`$
+
+#### Step 3: Solve the System
+From Equations (6) and (7), use elimination or substitution:
+
+$`12x - y = 22 \quad \text{(6)}`$
+
+
+$`2x + 6y = 14 \quad \text{(7)}`$
+
+Multiply Equation (6) by 6 to align $y$:
+
+$`72x - 6y = 132 \tag{8}`$
+
+Add Equations (7) and (8):
+
+$`(72x - 6y) + (2x + 6y) = 132 + 14`$
+
+
+$`74x = 146 \implies x = \frac{146}{74} = 2`$
+
+#### Step 4: Solve for $y$
+Substitute $x = 2$ into Equation (5):
+
+$`2 + 3y = 7 \implies 3y = 5 \implies y = \frac{5}{3}`$
+
+---
+
+### Final Solution:
+
+$`x = 2, \quad y = \frac{5}{3}`$
+
+---
+
+### General Tips for Solving Systems with Factorials:
+1. **Simplify Factorials**: Replace $n!$ with numerical values to simplify the equations.
+2. **Choose Methods Wisely**: Use substitution or elimination after simplifying factorial coefficients.
+3. **Check for Special Cases**: Factorial growth can lead to unique scenarios or large coefficients that may require numerical methods for verification.
+4. **Validate the Solution**: Always substitute the values back into the original system to ensure correctness.
+
+Factorial systems, though rare, are excellent for testing problem-solving techniques and handling rapid-growth terms systematically.
+
+
+## 
 
 
 

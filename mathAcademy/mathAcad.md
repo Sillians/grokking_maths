@@ -1,6 +1,7 @@
 ## Math Academy
 
 
+
 For more Details about Math Academy:
 
 - [mathacademy.com](https://mathacademy.com/learn)
