@@ -898,10 +898,7 @@ Depending on the shape of the graph, different methods are used to find this are
 ### General Formula:
 The relationship is:
 
-$`\text{
-
-
-} = \text{Area under the speed-time graph}`$
+$`\text{} = \text{Area under the speed-time graph}`$
 
 The graph's shape determines how to calculate the area. Here are common scenarios:
 
@@ -1444,6 +1441,98 @@ $`x = 2, \quad y = \frac{5}{3}`$
 4. **Validate the Solution**: Always substitute the values back into the original system to ensure correctness.
 
 Factorial systems, though rare, are excellent for testing problem-solving techniques and handling rapid-growth terms systematically.
+
+
+## Systems of Equations with No Solutions and Infinitely Many Solutions
+**Systems of equations** can have **no solution**, **one solution**, or **infinitely many solutions**. Here's how to identify and understand the cases where there are no solutions or infinitely many solutions.
+
+---
+
+### 1. **No Solution**: Inconsistent Systems
+A system has no solution when the equations represent parallel lines that never intersect.
+
+#### Conditions:
+- The slopes of the equations are the same (parallel lines),
+- The $y$-intercepts (or constants) are different.
+
+#### Example:
+
+$`y = 2x + 3 \tag{1}`$
+
+$`y = 2x - 4 \tag{2}`$
+
+- Both equations have a slope of $2$, so the lines are parallel.
+- Different $y$-intercepts $(3)$ and $(-4)$ mean they never meet.
+
+**Conclusion**: The system is inconsistent, and there is **no solution**.
+
+---
+
+### 2. **Infinitely Many Solutions**: Dependent Systems
+A system has infinitely many solutions when the equations represent the same line.
+
+#### Conditions:
+- The equations are proportional (one equation can be obtained by multiplying or dividing the other by a constant).
+
+#### Example:
+
+$`2x + y = 6 \tag{1}`$
+
+
+$`4x + 2y = 12 \tag{2}`$
+
+- Dividing the second equation by $2$:
+
+$`2x + y = 6`$
+
+- The two equations are identical, so they represent the same line.
+
+**Conclusion**: The system is dependent, and there are **infinitely many solutions**.
+
+---
+
+### General Procedure to Identify the Solution Type:
+
+1. **Write equations in slope-intercept form $`(y = mx + b)`$**:
+   - Compare slopes $(m)$:
+     - If slopes are different: One solution (lines intersect).
+     - If slopes are the same:
+       - Compare $y$-intercepts $(b)$:
+         - Different $b$: No solution (parallel lines).
+         - Same $b$: Infinitely many solutions (same line).
+
+2. **Use the elimination method**:
+   - Combine equations to eliminate one variable.
+   - If a false statement results (e.g., $0 = 5$): No solution.
+   - If a true statement results (e.g., $0 = 0$): Infinitely many solutions.
+
+---
+
+### Example: Analyze a System
+
+
+$`x + y = 4 \tag{1}`$
+
+
+$`2x + 2y = 8 \tag{2}`$
+
+
+#### Step 1: Simplify the equations
+Divide Equation $(2)$ by $2$:
+
+$`x + y = 4 \tag{3}`$
+
+Equations (1) and (3) are identical, so the system represents the same line.
+
+**Conclusion**: Infinitely many solutions.
+
+---
+
+### Key Points to Remember:
+
+- **No Solution**: Parallel lines $`(m_1 = m_2), (b_1 \neq b_2)`$.
+- **Infinitely Many Solutions**: Identical lines $`(m_1 = m_2), (b_1 = b_2)`$.
+- **Test using substitution or elimination**: Check for contradictions or identities.
 
 
 ## 
