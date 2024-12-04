@@ -1535,21 +1535,244 @@ Equations (1) and (3) are identical, so the system represents the same line.
 - **Test using substitution or elimination**: Check for contradictions or identities.
 
 
-## 
+## piecewise function
+A **piecewise function** is a function that is defined by different expressions or formulas over different
+parts of its domain. It is useful for modeling situations where the behavior of the function changes depending 
+on the input.
+
+---
+
+### **Definition**
+A piecewise function $f(x)$ is expressed as:
+
+$`f(x) = \begin{cases} f_1(x) & \text{if } x \in D_1 \\ f_2(x) & \text{if } x \in D_2 \\ \vdots \\ f_n(x) & \text{if } x \in D_n  \end{cases}`$
+
+where:
+- $`f_1(x), f_2(x), \dots, f_n(x)`$ are the individual expressions (rules),
+- $`D_1, D_2, \dots, D_n`$ are the corresponding domains (intervals or subsets of the input domain).
+
+---
+
+### **Example 1: Absolute Value Function**
+The absolute value function is a classic example of a piecewise function:
+
+$`f(x) = \begin{cases} x & \text{if } x \geq 0 \\ -x & \text{if } x < 0  \end{cases}`$
+
+#### Explanation:
+- If $`x \geq 0`$, the function outputs $x$ (positive).
+- If $`x < 0`$, the function outputs $-x$ (its positive counterpart).
+
+---
+
+### **Example 2: Tax Rate**
+A tax function based on income might be defined as:
+
+$`T(x) = \begin{cases} 0 & \text{if } x \leq 10000 \\ 0.1x & \text{if } 10000 < x \leq 50000 \\ 0.2x - 4000 & \text{if } x > 50000  \end{cases}`$
+
+#### Explanation:
+- No tax for incomes up to $10,000.
+- A 10% tax rate for incomes between $10,000 and $50,000.
+- A higher tax rate (with adjustment) for incomes above $50,000.
+
+---
+
+### **Key Concepts**
+1. **Continuity**: A piecewise function can be continuous if there are no abrupt "jumps" between the pieces, i.e., 
+     the boundaries of the domains match the outputs.
+   - Example: $`\sin(x)`$ defined differently over periodic intervals.
+2. **Discontinuity**: If the outputs do not match at the domain boundaries, the function is discontinuous.
+   - Example: A step function like the Heaviside function.
+
+---
+
+### **Graphing Piecewise Functions**
+1. Break the domain into intervals based on the rules.
+2. Plot each rule within its corresponding domain.
+3. Use open or closed circles to indicate whether endpoints are included.
+
+---
+
+### **Applications**
+1. **Physics**: Modeling systems with different behaviors in different ranges (e.g., material stress-strain curves).
+2. **Economics**: Representing tax brackets, discounts, or tiered pricing.
+3. **Computer Science**: Decision-making processes or algorithms with multiple conditions.
+
+Piecewise functions provide flexibility to model complex systems in mathematics and real-world applications.
 
 
 
 
+## **Absolute Value Graphs**
+
+The graph of an absolute value function is shaped like a "V" and represents the absolute value of a variable 
+or expression. These graphs have distinct features, including a vertex and symmetry.
+
+---
+
+### **Definition**
+
+The absolute value function is given by:
+
+$`f(x) = |x| = \begin{cases}  x & \text{if } x \geq 0, \\ -x & \text{if } x < 0.  \end{cases}`$
+
+---
+
+### **Key Features of the Basic Graph $`f(x) = |x|`$**
+
+1. **Shape**: The graph is a "V" that opens upwards.
+2. **Vertex**: The lowest point is at the origin $(0, 0)$.
+3. **Symmetry**: The graph is symmetric about the $y$-axis.
+4. **Domain**: The domain is all real numbers, $`\mathbb{R}`$.
+5. **Range**: The range is $`[0, \infty)`$, as absolute values are non-negative.
+
+---
+
+### **Transformations**
+
+Absolute value graphs can be transformed using changes to the equation:
+
+1. **Vertical Shift**: 
+   
+   $`f(x) = |x| + c`$
+
+   - Shifts the graph **up** by $c$ if $c > 0$, or **down** by $c < 0$.
+
+2. **Horizontal Shift**:
+   
+   $`f(x) = |x - h|`$
+
+   - Shifts the graph **right** by $h > 0$ or **left** by $h < 0$.
+
+3. **Vertical Stretch/Compression**:
+   
+   $`f(x) = a|x|`$
+
+   - Stretches the graph if $|a| > 1$.
+   - Compresses the graph if $`0 < |a| < 1`$.
+   - Flips the graph upside down if $a < 0$.
+
+4. **Horizontal Stretch/Compression**:
+   
+   $`f(x) = |bx|`$
+
+   - Compresses horizontally if $`|b| > 1`$.
+   - Stretches horizontally if $`0 < |b| < 1`$.
+
+5. **Combined Transformations**:
+   For $`f(x) = a|x - h| + k`$:
+   - $h$: Horizontal shift.
+   - $k$: Vertical shift.
+   - $a$: Stretch, compression, or reflection.
+
+---
+
+### **Example 1: Simple Transformation**
+Graph $`f(x) = |x - 2| + 3`$:
+- Shifts the basic $`f(x) = |x|`$ graph **right by 2** and **up by 3**.
+- Vertex is at $(2, 3)$.
+
+---
+
+### **Example 2: Reflection and Stretch**
+Graph $`f(x) = -2|x| + 4`$:
+- Reflects the graph **downward** because of the negative sign.
+- Stretches vertically by a factor of 2.
+- Shifts **up by 4**.
+
+---
+
+### **Applications**
+1. **Distance**: Absolute value graphs can model real-world distances, as distance is always non-negative.
+2. **Optimization**: In economics and engineering, absolute values are used to minimize deviations or errors.
+3. **Piecewise Representation**: Absolute value graphs are often analyzed as piecewise functions for advanced computations.
+
+These graphs visually represent how absolute values behave and their transformations can model various 
+real-world scenarios.
 
 
 
 
+## **Vertical and Horizontal Asymptotes**
 
+Asymptotes are lines that a graph approaches but never touches or crosses (in most cases) as $x$ or $y$
+moves toward infinity or a specific value. Vertical and horizontal asymptotes describe the long-term behavior 
+or boundary limits of a function.
 
+---
 
+### **Vertical Asymptotes**
 
+#### **Definition**:
+A vertical asymptote occurs when a function approaches infinity $`(\infty)`$ or negative infinity $`(-\infty)`$ 
+as the input $x$ approaches a specific value $x = a$.
 
+#### **Mathematical Expression**:
+For a function $f(x)$:
 
+$`\lim_{x \to a^+} f(x) = \infty \quad \text{or} \quad \lim_{x \to a^-} f(x) = \infty,`$
+
+or vice versa with $-\infty$.
+
+#### **How to Find Vertical Asymptotes**:
+1. **Rational Functions**:
+   - For $`f(x) = \frac{P(x)}{Q(x)}`$, vertical asymptotes occur where the denominator $`Q(x) = 0`$ and the 
+     numerator $P(x)$ is nonzero.
+   - Example: For $`f(x) = \frac{1}{x - 2}`$, the vertical asymptote is $x = 2$ because the denominator becomes zero when \(x = 2\).
+
+2. **Logarithmic Functions**:
+   - For $`f(x) = \ln(x)`$, the vertical asymptote is $x = 0$, since the natural logarithm is undefined 
+     for $`x \leq 0`$.
+
+---
+
+### **Horizontal Asymptotes**
+
+#### **Definition**:
+A horizontal asymptote occurs when a function approaches a specific constant value $`y = b`$ as $x$
+moves toward infinity $(\infty)$ or negative infinity $(-\infty)$.
+
+#### **Mathematical Expression**:
+For a function $f(x)$:
+
+$`\lim_{x \to \infty} f(x) = b \quad \text{or} \quad \lim_{x \to -\infty} f(x) = b.`$
+
+#### **How to Find Horizontal Asymptotes**:
+1. **Rational Functions**:
+   - For $`f(x) = \frac{P(x)}{Q(x)}`$, compare the degrees of the numerator $`(P(x))`$ and denominator $`(Q(x))`$:
+     - **Degree of $(P(x)$ < Degree of $Q(x)$**: Horizontal asymptote at $y = 0$.
+     - **Degree of $P(x)$ = Degree of $Q(x)$**: Horizontal asymptote at $`y = \frac{\text{leading coefficient of } P(x)}{\text{leading coefficient of } Q(x)}`$.
+     - **Degree of $P(x)$ > Degree of $Q(x)$**: No horizontal asymptote; the function diverges.
+
+2. **Exponential Functions**:
+   - For $`f(x) = e^{-x}`$, as $`x \to \infty`$, $f(x) \to 0$, so the horizontal asymptote is $y = 0$.
+
+---
+
+### **Graphical Interpretation**
+- **Vertical Asymptotes**: The graph rises or falls steeply near $x = a$.
+- **Horizontal Asymptotes**: The graph levels off to a constant value as $x$ moves far left or right.
+
+---
+
+### **Examples**
+1. **Rational Function**: $`f(x) = \frac{2x + 3}{x - 1}`$
+   - Vertical asymptote: $x = 1$ (denominator is zero at $x = 1$).
+   - Horizontal asymptote: $y = 2$ (degrees of numerator and denominator are equal; 
+     ratio of leading coefficients is $`\frac{2}{1}`$).
+
+2. **Exponential Decay**: $`f(x) = 5e^{-x}`$
+   - No vertical asymptote.
+   - Horizontal asymptote: $y = 0$ as $`x \to \infty`$.
+
+---
+
+### **Applications**
+1. **Physics**: Modeling phenomena like gravitational forces or electric fields, which approach zero but never reach it.
+2. **Economics**: Long-term trends in supply and demand or cost functions.
+3. **Biology**: Population growth models with carrying capacity.
+
+Understanding vertical and horizontal asymptotes helps analyze the behavior of functions in both theoretical and 
+applied contexts.
 
 
 
