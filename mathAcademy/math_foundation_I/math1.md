@@ -3,8 +3,6 @@
 
 
 
-
-
 ## The isosceles Triangle Theorem
 Remember that longer sides in a triangle are opposite to larger angles, and vice versa. But what if two (or more) sides have the same length?
 

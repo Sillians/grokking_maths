@@ -38,9 +38,27 @@
 
 
 ## Bases of a Vector Space
+   - vector space and subspace
    - 
 
 
+## Matrices
+   - Definitions
+   - Sum of matrices *
+   - scalar multiplication *
+   - product of matrices *
+   - square matrix *
+   - Identity matrix *
+   - matrix transpose *
+   - inverse matrix *
+   - non-singular matrix (invertible matrix) *
+   - singular matrix (Not invertible matrix) *
+   - Associative property of matrix multiplication
+
+
+## Linear Maps
+   - linear transformation
+   - 
 
 
 
@@ -474,7 +492,111 @@ These concepts form the backbone of many fields, including machine learning, qua
 
 
 
-## Affine Combinations
+## **Bilinear Form in Matrix Context**
+
+A **bilinear form** is a mathematical function that combines two vectors and maps them to a scalar, while being **linear** in each of its arguments. In the context of matrices, bilinear forms can be represented and computed compactly using matrix multiplication.
+
+---
+
+### **Definition of a Bilinear Form**
+
+A bilinear form on a vector space \( V \) over a field (e.g., real numbers \( \mathbb{R} \)) is a function \( B: V \times V \to \mathbb{R} \) such that:
+
+1. **Linearity in the First Argument**:
+   \[
+   B(\alpha \mathbf{u} + \beta \mathbf{v}, \mathbf{w}) = \alpha B(\mathbf{u}, \mathbf{w}) + \beta B(\mathbf{v}, \mathbf{w}),
+   \]
+   for all vectors \( \mathbf{u}, \mathbf{v}, \mathbf{w} \in V \) and scalars \( \alpha, \beta \).
+
+2. **Linearity in the Second Argument**:
+   \[
+   B(\mathbf{u}, \alpha \mathbf{v} + \beta \mathbf{w}) = \alpha B(\mathbf{u}, \mathbf{v}) + \beta B(\mathbf{u}, \mathbf{w}),
+   \]
+   for all vectors \( \mathbf{u}, \mathbf{v}, \mathbf{w} \in V \) and scalars \( \alpha, \beta \).
+
+---
+
+### **Matrix Representation of Bilinear Forms**
+
+If \( B \) is a bilinear form and \( \mathbf{x}, \mathbf{y} \in \mathbb{R}^n \) are column vectors, then \( B \) can be represented using a square matrix \( A \in \mathbb{R}^{n \times n} \) as:
+\[
+B(\mathbf{x}, \mathbf{y}) = \mathbf{x}^T A \mathbf{y},
+\]
+where:
+- \( \mathbf{x}^T \) is the transpose of \( \mathbf{x} \),
+- \( A \) is the **matrix associated** with the bilinear form,
+- \( \mathbf{y} \) is the second vector.
+
+---
+
+### **Special Cases of Bilinear Forms**
+
+1. **Symmetric Bilinear Forms**:
+   A bilinear form \( B(\mathbf{x}, \mathbf{y}) \) is symmetric if:
+   \[
+   B(\mathbf{x}, \mathbf{y}) = B(\mathbf{y}, \mathbf{x}) \quad \text{for all } \mathbf{x}, \mathbf{y}.
+   \]
+   In matrix terms, this means \( A \) is symmetric (\( A = A^T \)).
+
+2. **Skew-Symmetric Bilinear Forms**:
+   A bilinear form \( B(\mathbf{x}, \mathbf{y}) \) is skew-symmetric if:
+   \[
+   B(\mathbf{x}, \mathbf{y}) = -B(\mathbf{y}, \mathbf{x}) \quad \text{for all } \mathbf{x}, \mathbf{y}.
+   \]
+   In matrix terms, this means \( A \) is skew-symmetric (\( A^T = -A \)).
+
+3. **Quadratic Form**:
+   A **quadratic form** is derived from a bilinear form by setting \( \mathbf{x} = \mathbf{y} \):
+   \[
+   Q(\mathbf{x}) = \mathbf{x}^T A \mathbf{x}.
+   \]
+
+---
+
+### **Properties of Bilinear Forms**
+
+1. **Linearity**:
+   Bilinear forms are linear in both arguments, making them versatile for transformations and projections.
+
+2. **Relation to Inner Products**:
+   Symmetric bilinear forms generalize the concept of inner products.
+
+3. **Change of Basis**:
+   If \( P \) is a change-of-basis matrix, the bilinear form matrix \( A \) transforms as:
+   \[
+   A' = P^T A P.
+   \]
+
+---
+
+### **Examples**
+
+1. **Standard Dot Product**:
+   The dot product in \( \mathbb{R}^n \) is a bilinear form where \( A = I \) (the identity matrix):
+   \[
+   B(\mathbf{x}, \mathbf{y}) = \mathbf{x}^T I \mathbf{y} = \mathbf{x} \cdot \mathbf{y}.
+   \]
+
+2. **Energy in Physics**:
+   The energy \( E = \frac{1}{2} \mathbf{x}^T K \mathbf{x} \) (where \( K \) is the stiffness matrix) is a quadratic form derived from a bilinear form.
+
+---
+
+### **Applications**
+
+1. **Geometry**:
+   Bilinear forms describe distances, angles, and areas.
+
+2. **Physics**:
+   Used in mechanics, elasticity, and electromagnetism.
+
+3. **Machine Learning**:
+   Kernel functions in support vector machines can involve bilinear forms.
+
+4. **Linear Algebra**:
+   Bilinear forms appear in eigenvalue problems and matrix factorization.
+
+Bilinear forms unify geometric and algebraic properties, enabling powerful tools for problem-solving in multiple domains.
 
 
 
