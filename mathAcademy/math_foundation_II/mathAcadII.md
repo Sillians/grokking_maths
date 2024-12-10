@@ -1307,18 +1307,17 @@ The probability of a compound event is calculated from the frequency of occurren
 
 3. **Calculate Probabilities**:
    - **Experimental Probability Formula**:
-     \[
-     P(\text{Event}) = \frac{\text{Number of times the event occurred}}{\text{Total number of trials}}
-     \]
+     
+     $`P(\text{Event}) = \frac{\text{Number of times the event occurred}}{\text{Total number of trials}}`$
+   
 
 4. **Combine Probabilities Based on the Event Type**:
    - **"And"** (Intersection):
-     For events \( A \) and \( B \), calculate \( P(A \cap B) \) as the frequency where both \( A \) and \( B \) occur.
+     For events $A$ and $B$, calculate $`P(A \cap B)`$ as the frequency where both $A$ and $B$ occur.
    - **"Or"** (Union):
-     For events \( A \) and \( B \), calculate \( P(A \cup B) \) using:
-     \[
-     P(A \cup B) = P(A) + P(B) - P(A \cap B)
-     \]
+     For events $A$ and $B$, calculate $`P(A \cup B)`$ using:
+     
+     $`P(A \cup B) = P(A) + P(B) - P(A \cap B)`$
 
 ---
 
@@ -1338,42 +1337,40 @@ An experiment involves flipping a coin and rolling a die 100 times. The results 
 ### **Solution**
 
 1. **Probability of Flipping Heads**:
-   \[
-   P(\text{Heads}) = \frac{\text{Number of heads outcomes}}{\text{Total trials}} = \frac{60}{100} = 0.6.
-   \]
+   
+   $`P(\text{Heads}) = \frac{\text{Number of heads outcomes}}{\text{Total trials}} = \frac{60}{100} = 0.6`$.
+
 
 2. **Probability of Rolling an Even Number**:
-   \[
-   P(\text{Even Number}) = \frac{\text{Number of even outcomes}}{\text{Total trials}} = \frac{40}{100} = 0.4.
-   \]
+   
+   $`P(\text{Even Number}) = \frac{\text{Number of even outcomes}}{\text{Total trials}} = \frac{40}{100} = 0.4`$.
+
 
 3. **Probability of Both Heads and Even Number**:
-   \[
-   P(\text{Heads} \cap \text{Even Number}) = \frac{\text{Number of times both occur}}{\text{Total trials}} = \frac{25}{100} = 0.25.
-   \]
+   
+   $`P(\text{Heads} \cap \text{Even Number}) = \frac{\text{Number of times both occur}}{\text{Total trials}} = \frac{25}{100} = 0.25`$.
+
 
 4. **Probability of Heads or Even Number**:
    Using the union formula:
-   \[
-   P(\text{Heads} \cup \text{Even Number}) = P(\text{Heads}) + P(\text{Even Number}) - P(\text{Heads} \cap \text{Even Number}).
-   \]
+   
+   $`P(\text{Heads} \cup \text{Even Number}) = P(\text{Heads}) + P(\text{Even Number}) - P(\text{Heads} \cap \text{Even Number})`$.
+   
    Substitute the values:
-   \[
-   P(\text{Heads} \cup \text{Even Number}) = 0.6 + 0.4 - 0.25 = 0.75.
-   \]
+   
+   $`P(\text{Heads} \cup \text{Even Number}) = 0.6 + 0.4 - 0.25 = 0.75$.
 
 ---
 
 ### **Final Results**
 1. The probability of flipping heads or rolling an even number is:
-   \[
-   P(\text{Heads} \cup \text{Even Number}) = 0.75.
-   \]
+   
+   $`P(\text{Heads} \cup \text{Even Number}) = 0.75`$.
+
 
 2. The probability of flipping heads and rolling an even number is:
-   \[
-   P(\text{Heads} \cap \text{Even Number}) = 0.25.
-   \]
+   
+   $`P(\text{Heads} \cap \text{Even Number}) = 0.25`$.
 
 ---
 
@@ -1385,30 +1382,30 @@ An experiment involves flipping a coin and rolling a die 100 times. The results 
 
 ## **Axis of Symmetry of a Parabola**
 
-The **axis of symmetry** of a parabola is a vertical line that divides the parabola into two symmetrical halves. This line always passes through the **vertex** of the parabola.
+The **axis of symmetry** of a parabola is a vertical line that divides the parabola into two symmetrical halves. 
+This line always passes through the **vertex** of the parabola.
 
 ---
 
 ### **Equation of the Axis of Symmetry**
 For a quadratic equation in standard form:
-\[
-y = ax^2 + bx + c,
-\]
-the axis of symmetry is given by:
-\[
-x = -\frac{b}{2a}.
-\]
 
-This formula gives the \(x\)-coordinate of the vertex, which is also the axis of symmetry for the parabola.
+$`y = ax^2 + bx + c`$,
+
+the axis of symmetry is given by:
+
+$`x = -\frac{b}{2a}`$.
+
+This formula gives the $x$-coordinate of the vertex, which is also the axis of symmetry for the parabola.
 
 ---
 
 ### **Steps to Find the Axis of Symmetry**
-1. Identify the coefficients \(a\) and \(b\) from the quadratic equation.
+1. Identify the coefficients $a$ and $b$ from the quadratic equation.
 2. Substitute these values into the formula:
-   \[
-   x = -\frac{b}{2a}.
-   \]
+   
+   $`x = -\frac{b}{2a}`$.
+
 
 ---
 
@@ -1416,54 +1413,53 @@ This formula gives the \(x\)-coordinate of the vertex, which is also the axis of
 
 #### Example 1:
 Find the axis of symmetry for the parabola:
-\[
-y = 2x^2 + 4x + 1.
-\]
+
+$`y = 2x^2 + 4x + 1`$.
+
 
 **Solution**:
-1. Identify \(a = 2\) and \(b = 4\).
+1. Identify $a = 2$ and $b = 4$.
 2. Substitute into the formula:
-   \[
-   x = -\frac{4}{2(2)} = -\frac{4}{4} = -1.
-   \]
+   
+   $`x = -\frac{4}{2(2)} = -\frac{4}{4} = -1`$.
+
 
 **Axis of Symmetry**:
-\[
-x = -1.
-\]
+
+$`x = -1`$.
+
 
 ---
 
 #### Example 2:
 Find the axis of symmetry for:
-\[
-y = -3x^2 + 6x - 5.
-\]
+
+$`y = -3x^2 + 6x - 5`$.
+
 
 **Solution**:
-1. Identify \(a = -3\) and \(b = 6\).
+1. Identify $a = -3$ and $b = 6$.
 2. Substitute into the formula:
-   \[
-   x = -\frac{6}{2(-3)} = -\frac{6}{-6} = 1.
-   \]
+   
+   $`x = -\frac{6}{2(-3)} = -\frac{6}{-6} = 1`$.
+
 
 **Axis of Symmetry**:
-\[
-x = 1.
-\]
+
+$x = 1$.
 
 ---
 
 ### **Vertex Form of a Parabola**
 If the quadratic equation is in **vertex form**:
-\[
-y = a(x-h)^2 + k,
-\]
+
+$`y = a(x-h)^2 + k`$,
+
 the axis of symmetry is:
-\[
-x = h,
-\]
-where \((h, k)\) is the vertex of the parabola.
+
+$x = h$,
+
+where $(h, k)$ is the vertex of the parabola.
 
 ---
 
@@ -1476,127 +1472,129 @@ where \((h, k)\) is the vertex of the parabola.
 
 ## **Understanding Radians of a Circle**
 
-A **radian** is a unit of angular measure based on the radius of a circle. It is used to measure angles in mathematics and physics.
+A **radian** is a unit of angular measure based on the radius of a circle. It is used to measure angles in 
+mathematics and physics.
 
 ---
 
 ### **Definition of a Radian**
-One radian is the angle subtended at the center of a circle by an arc that is equal in length to the radius of the circle.
+One radian is the angle subtended at the center of a circle by an arc that is equal in length to the radius of 
+the circle.
 
 ---
 
 ### **Relationship Between Radians and Degrees**
-The full circumference of a circle is \( 2\pi \) times the radius. In terms of angles:
-- A full circle measures \( 360^\circ \) in degrees.
-- A full circle measures \( 2\pi \) radians.
+The full circumference of a circle is $2\pi$ times the radius. In terms of angles:
+- A full circle measures $360^\circ$ in degrees.
+- A full circle measures $2\pi$ radians.
 
 Thus, the conversion between radians and degrees is:
-\[
-1 \text{ radian} = \frac{180^\circ}{\pi} \quad \text{or} \quad 1^\circ = \frac{\pi}{180} \text{ radians}.
-\]
+
+$`1 \text{ radian} = \frac{180^\circ}{\pi} \quad \text{or} \quad 1^\circ = \frac{\pi}{180} \text{ radians}`$.
+
 
 ---
 
 ### **Key Radian Measures**
 For a circle, the following common angles in degrees and radians are important:
 
-| Degrees (\(^\circ\)) | Radians (\(\text{rad}\)) |
-|-----------------------|-------------------------|
-| \( 0^\circ \)         | \( 0 \)                |
-| \( 30^\circ \)        | \( \frac{\pi}{6} \)    |
-| \( 45^\circ \)        | \( \frac{\pi}{4} \)    |
-| \( 60^\circ \)        | \( \frac{\pi}{3} \)    |
-| \( 90^\circ \)        | \( \frac{\pi}{2} \)    |
-| \( 180^\circ \)       | \( \pi \)              |
-| \( 270^\circ \)       | \( \frac{3\pi}{2} \)   |
-| \( 360^\circ \)       | \( 2\pi \)             |
+| Degrees $`(^\circ)`$ | Radians $`(\text{rad})`$ |
+|----------------------|--------------------------|
+| $`0^\circ`$          | $0$                      |
+| $`30^\circ`$         | $`\frac{\pi}{6}`$        |
+| $`45^\circ`$         | $`\frac{\pi}{4}`$        |
+| $`60^\circ`$         | $`\frac{\pi}{3}`$        |
+| $`90^\circ`$         | $`\frac{\pi}{2}`$        |
+| $`180^\circ`$        | $`\pi`$                  |
+| $`270^\circ`$        | $`\frac{3\pi}{2}`$       |
+| $`360^\circ`$        | $`2\pi`$                 |
 
 ---
 
 ### **Converting Between Degrees and Radians**
 
-#### Example 1: Convert \( 90^\circ \) to radians
+#### Example 1: Convert $`90^\circ`$ to radians
 Using the formula:
-\[
-\text{Radians} = \text{Degrees} \times \frac{\pi}{180},
-\]
-\[
-90^\circ \times \frac{\pi}{180} = \frac{\pi}{2}.
-\]
 
-#### Example 2: Convert \( \frac{\pi}{3} \) radians to degrees
+$`\text{Radians} = \text{Degrees} \times \frac{\pi}{180}`$,
+
+
+$`90^\circ \times \frac{\pi}{180} = \frac{\pi}{2}`$.
+
+
+#### Example 2: Convert $`\frac{\pi}{3}`$ radians to degrees
 Using the formula:
-\[
-\text{Degrees} = \text{Radians} \times \frac{180}{\pi},
-\]
-\[
-\frac{\pi}{3} \times \frac{180}{\pi} = 60^\circ.
-\]
+
+$`\text{Degrees} = \text{Radians} \times \frac{180}{\pi}`$,
+
+
+$`\frac{\pi}{3} \times \frac{180}{\pi} = 60^\circ`$.
+
 
 ---
 
 ### **Applications of Radians**
 1. **Trigonometry**: Angles in the unit circle and trigonometric functions are often expressed in radians.
 2. **Physics**: Angular velocity and rotational motion are measured in radians per second.
-3. **Calculus**: Many formulas in calculus, such as derivatives and integrals of trigonometric functions, assume angles are measured in radians.
+3. **Calculus**: Many formulas in calculus, such as derivatives and integrals of trigonometric functions, 
+assume angles are measured in radians.
 
 
 
 ## **Understanding Factorials**
 
-The **factorial** of a non-negative integer \(n\), denoted as \(n!\), is the product of all positive integers from \(1\) to \(n\). It is defined as:
-\[
-n! = n \times (n-1) \times (n-2) \times \cdots \times 1, \quad \text{for } n \geq 1,
-\]
+The **factorial** of a non-negative integer $n$, denoted as $n!$, is the product of all positive 
+integers from $1$ to $n$. It is defined as:
+
+$`n! = n \times (n-1) \times (n-2) \times \cdots \times 1, \quad \text{for } n \geq 1`$,
+
 with a special case:
-\[
-0! = 1.
-\]
+
+$0! = 1$.
 
 ---
 
 ### **Examples**
 
-1. **Calculate \(5!\):**
-   \[
-   5! = 5 \times 4 \times 3 \times 2 \times 1 = 120.
-   \]
+1. **Calculate $5!$:**
+   
+   $`5! = 5 \times 4 \times 3 \times 2 \times 1 = 120`$.
+   
 
-2. **Calculate \(0!\):**
+2. **Calculate $0!$:**
    By definition:
-   \[
-   0! = 1.
-   \]
+   
+   $0! = 1$.
+   
 
-3. **Calculate \(7!\):**
-   \[
-   7! = 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 5040.
-   \]
+3. **Calculate $7!$:**
+   
+   $`7! = 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 5040`$.
+   
 
 ---
 
 ### **Properties of Factorials**
 
 1. **Recursive Property**:
-   \[
-   n! = n \times (n-1)!
-   \]
+   
+   $`n! = n \times (n-1)!`$
+   
    Example:
-   \[
-   5! = 5 \times 4!.
-   \]
+   
+   $`5! = 5 \times 4!`$.
+   
 
 2. **Growth**:
-   Factorials grow very rapidly with \(n\). For example:
-   \[
-   10! = 3,628,800 \quad \text{and} \quad 20! = 2,432,902,008,176,640,000.
-   \]
+   Factorials grow very rapidly with $n$. For example:
+   
+   $`10! = 3,628,800 \quad \text{and} \quad 20! = 2,432,902,008,176,640,000`$.
+   
 
 3. **Division of Factorials**:
    When dividing factorials, many terms cancel out. For example:
-   \[
-   \frac{6!}{4!} = \frac{6 \times 5 \times 4!}{4!} = 6 \times 5 = 30.
-   \]
+   
+   $`\frac{6!}{4!} = \frac{6 \times 5 \times 4!}{4!} = 6 \times 5 = 30`$.
 
 ---
 
@@ -1604,19 +1602,19 @@ with a special case:
 
 1. **Combinatorics**: 
    - Counting permutations:
-     \[
-     P(n, r) = \frac{n!}{(n-r)!}.
-     \]
+     
+     $`P(n, r) = \frac{n!}{(n-r)!}`$.
+     
    - Counting combinations:
-     \[
-     C(n, r) = \frac{n!}{r!(n-r)!}.
-     \]
+     
+     $`C(n, r) = \frac{n!}{r!(n-r)!}`$.
+     
 
 2. **Mathematics**:
    - Factorials appear in series expansions, such as the Taylor series:
-     \[
-     e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}.
-     \]
+     
+     $`e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}`$.
+     
 
 3. **Probability**:
    - Used in probability distributions like the binomial and Poisson distributions.
