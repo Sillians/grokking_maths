@@ -693,10 +693,10 @@ To convert:
    - $`a^{\log_a(c)} = c`$.
    - $`\log_a(a^b) = b`$.
 
-2. **Natural Logarithms** (\(\ln\)):
+2. **Natural Logarithms** $(\ln)$:
    - Base $e$: $`\ln(x) = \log_e(x)`$.
 
-3. **Common Logarithms** (\(\log\)):
+3. **Common Logarithms** $(\log)$:
    - Base $10$: $`\log(x) = \log_{10}(x)`$.
 
 ---
@@ -718,11 +718,11 @@ To convert:
 
 ### **Summary Table**
 
-| Exponential Form        | Logarithmic Form       |
-|--------------------------|------------------------|
-| \(a^b = c\)             | \(\log_a(c) = b\)     |
-| \(2^3 = 8\)             | \(\log_2(8) = 3\)     |
-| \(10^4 = 10000\)        | \(\log_{10}(10000) = 4\) |
+| Exponential Form | Logarithmic Form         |
+|------------------|--------------------------|
+| $a^b = c$        | $`\log_a(c) = b`$        |
+| $2^3 = 8$        | $`\log_2(8) = 3`$        |
+| $10^4 = 10000$   | $`\log_{10}(10000) = 4`$ |
 
 The conversion between these forms simplifies calculations and aids in understanding exponential and logarithmic relationships.
 
