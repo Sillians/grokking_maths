@@ -2325,38 +2325,37 @@ If not, alternative methods such as completing the square or the quadratic formu
 
 ## **Perpendicular Lines in the Coordinate Plane**
 
-In the coordinate plane, **two lines are perpendicular** if the product of their slopes is \(-1\). This relationship arises because perpendicular lines intersect at a right angle (\(90^\circ\)).
+In the coordinate plane, **two lines are perpendicular** if the product of their slopes is $-1$. 
+This relationship arises because perpendicular lines intersect at a right angle $`(90^\circ)`$.
 
 ---
 
 ### **Key Points**
 
 #### **1. Slope of a Line**
-The slope (\(m\)) of a line is calculated as:
+The slope $(m)$ of a line is calculated as:
 
-\[
-m = \frac{y_2 - y_1}{x_2 - x_1}
-\]
+
+$`m = \frac{y_2 - y_1}{x_2 - x_1}`$
 
 Where:
-- \((x_1, y_1)\) and \((x_2, y_2)\) are two points on the line.
+- $`(x_1, y_1)`$ and $`(x_2, y_2)`$ are two points on the line.
 
 #### **2. Condition for Perpendicularity**
-Let \(m_1\) and \(m_2\) be the slopes of two lines. The lines are perpendicular if:
+Let $m_1$ and $m_2$ be the slopes of two lines. The lines are perpendicular if:
 
-\[
-m_1 \cdot m_2 = -1
-\]
+
+$`m_1 \cdot m_2 = -1`$
+
 
 This means the slope of one line is the **negative reciprocal** of the other:
 
-\[
-m_2 = -\frac{1}{m_1}
-\]
+
+$`m_2 = -\frac{1}{m_1}`$
 
 #### **3. Vertical and Horizontal Lines**
-- A vertical line has an **undefined slope** (e.g., \(x = c\)).
-- A horizontal line has a slope of \(0\) (e.g., \(y = c\)).
+- A vertical line has an **undefined slope** (e.g., $x = c$).
+- A horizontal line has a slope of $0$ (e.g., $y = c$).
 - A vertical line is always perpendicular to a horizontal line.
 
 ---
@@ -2364,103 +2363,103 @@ m_2 = -\frac{1}{m_1}
 ### **Equation of Perpendicular Lines**
 
 #### **Given a Line**
-If a line has slope \(m_1\), the slope of any line perpendicular to it will be \(m_2 = -\frac{1}{m_1}\).
+If a line has slope $m_1$, the slope of any line perpendicular to it will be $`m_2 = -\frac{1}{m_1}`$.
 
 #### **Finding the Equation of a Perpendicular Line**
-To find the equation of a line perpendicular to another and passing through a specific point \((x_1, y_1)\):
-1. Calculate the perpendicular slope \(m_2 = -\frac{1}{m_1}\).
+To find the equation of a line perpendicular to another and passing through a specific point $`(x_1, y_1)`$:
+1. Calculate the perpendicular slope $`m_2 = -\frac{1}{m_1}`$.
 2. Use the point-slope form of a line:
-   \[
-   y - y_1 = m_2(x - x_1)
-   \]
+   
+   $`y - y_1 = m_2(x - x_1)`$
+   
 
 ---
 
 ### **Examples**
 
 #### **Example 1: Checking Perpendicularity**
-Are the lines \(y = 2x + 3\) and \(y = -\frac{1}{2}x - 4\) perpendicular?
+Are the lines $y = 2x + 3$ and $`y = -\frac{1}{2}x - 4`$ perpendicular?
 
-1. Slope of first line: \(m_1 = 2\).
-2. Slope of second line: \(m_2 = -\frac{1}{2}\).
-3. Verify: \(m_1 \cdot m_2 = 2 \cdot -\frac{1}{2} = -1\).
+1. Slope of first line: $m_1 = 2$.
+2. Slope of second line: $`m_2 = -\frac{1}{2}`$.
+3. Verify: $`m_1 \cdot m_2 = 2 \cdot -\frac{1}{2} = -1`$.
 
 The lines are perpendicular.
 
 ---
 
 #### **Example 2: Finding the Perpendicular Line**
-Find the equation of a line perpendicular to \(y = 3x + 1\) and passing through the point \((2, 5)\).
+Find the equation of a line perpendicular to $`y = 3x + 1`$ and passing through the point $(2, 5)$.
 
-1. Slope of given line: \(m_1 = 3\).
-2. Slope of perpendicular line: \(m_2 = -\frac{1}{3}\).
+1. Slope of given line: $m_1 = 3$.
+2. Slope of perpendicular line: $`(m_2 = -\frac{1}{3}`$.
 3. Use point-slope form:
-   \[
-   y - 5 = -\frac{1}{3}(x - 2)
-   \]
+   
+   $`y - 5 = -\frac{1}{3}(x - 2)`$
+   
    Simplify:
-   \[
-   y = -\frac{1}{3}x + \frac{2}{3} + 5
-   \]
-   \[
-   y = -\frac{1}{3}x + \frac{17}{3}
-   \]
+   
+   $`y = -\frac{1}{3}x + \frac{2}{3} + 5`$
+   
+   
+   $`y = -\frac{1}{3}x + \frac{17}{3}`$
+   
 
 The equation of the perpendicular line is:
-\[
-y = -\frac{1}{3}x + \frac{17}{3}
-\]
+
+$`y = -\frac{1}{3}x + \frac{17}{3}`$
+
 
 ---
 
 #### Example 3
-To find the equation of the line perpendicular to \( y = 1 \) and passing through the point \((-1, 0)\), follow these steps:
+To find the equation of the line perpendicular to $y = 1$ and passing through the point $(-1, 0)$, 
+follow these steps:
 
 ---
 
 ### Step 1: Understand the Slope of the Given Line
-The line \( y = 1 \) is **horizontal** with a slope of \( m = 0 \). A line perpendicular to a horizontal line is **vertical**, meaning it has an **undefined slope**.
+The line $y = 1$ is **horizontal** with a slope of $m = 0$. A line perpendicular to a horizontal
+line is **vertical**, meaning it has an **undefined slope**.
 
 ---
 
 ### Step 2: Equation of a Vertical Line
-The equation of a vertical line is always in the form \( x = c \), where \( c \) is the \(x\)-coordinate of all points on the line.
+The equation of a vertical line is always in the form $x = c$, where $c$ is the $x$-coordinate of 
+all points on the line.
 
-Since the line passes through \((-1, 0)\), the equation of the line is:
+Since the line passes through $`(-1, 0)`$, the equation of the line is:
 
-\[
-x = -1
-\]
+
+$x = -1$
 
 ---
 
 ### Step 3: Write in Standard Form
 The standard form of a linear equation is:
 
-\[
-Ax + By = C
-\]
 
-For \( x = -1 \), rewrite it as:
+$`Ax + By = C`$
 
-\[
-1x + 0y = -1
-\]
+
+For $x = -1$, rewrite it as:
+
+
+$`1x + 0y = -1`$
+
 
 or simply:
 
-\[
-x = -1
-\]
+
+$x = -1$
 
 ---
 
 ### Final Answer
 The equation of the line in standard form is:
 
-\[
-x = -1
-\]
+
+$x = -1$
 
 Understanding perpendicular lines is essential in geometry, algebra, and applications like graphics and navigation.
 
@@ -2469,7 +2468,9 @@ Understanding perpendicular lines is essential in geometry, algebra, and applica
 
 ## **Radical Equations**
 
-A **radical equation** is an equation in which the variable appears inside a radical, usually a square root, cube root, or any higher-order root. Solving radical equations involves isolating the radical expression and eliminating the radical by raising both sides of the equation to the appropriate power.
+A **radical equation** is an equation in which the variable appears inside a radical, usually a square root, 
+cube root, or any higher-order root. Solving radical equations involves isolating the radical expression 
+and eliminating the radical by raising both sides of the equation to the appropriate power.
 
 ---
 
@@ -2487,121 +2488,121 @@ A **radical equation** is an equation in which the variable appears inside a rad
    - After eliminating the radical, solve the equation (it may be linear, quadratic, or higher degree).
 
 4. **Check for Extraneous Solutions**:
-   - Substituting back into the original equation may reveal "extraneous solutions," which arise from squaring both sides or other operations that introduce invalid results.
+   - Substituting back into the original equation may reveal "extraneous solutions," which arise from 
+   squaring both sides or other operations that introduce invalid results.
 
 ---
 
 ### **Example 1: Square Root Equation**
 Solve:
-\[
-\sqrt{x + 5} = 3
-\]
+
+$`\sqrt{x + 5} = 3`$
+
 
 **Solution**:
 1. Isolate the radical:
-   \[
-   \sqrt{x + 5} = 3
-   \]
+   
+   $`\sqrt{x + 5} = 3`$
+   
 
 2. Eliminate the radical (square both sides):
-   \[
-   (\sqrt{x + 5})^2 = 3^2
-   \]
-   \[
-   x + 5 = 9
-   \]
+   
+   $`(\sqrt{x + 5})^2 = 3^2`$
+   
+   
+   $`x + 5 = 9`$
+   
 
-3. Solve for \(x\):
-   \[
-   x = 9 - 5
-   \]
-   \[
-   x = 4
-   \]
+3. Solve for $x$:
+   
+   $`x = 9 - 5`$
+   
+   $x = 4$
+
 
 4. Check for extraneous solutions:
-   Substitute \(x = 4\) into the original equation:
-   \[
-   \sqrt{4 + 5} = \sqrt{9} = 3
-   \]
-   Valid solution: \(x = 4\).
+   Substitute $x = 4$ into the original equation:
+   
+   $`\sqrt{4 + 5} = \sqrt{9} = 3`$
+   
+   Valid solution: $x = 4$.
 
 ---
 
 ### **Example 2: Radical on Both Sides**
 Solve:
-\[
-\sqrt{x + 2} = \sqrt{2x - 3}
-\]
+
+$`\sqrt{x + 2} = \sqrt{2x - 3}`$
+
 
 **Solution**:
 1. Eliminate the radicals (square both sides):
-   \[
-   (\sqrt{x + 2})^2 = (\sqrt{2x - 3})^2
-   \]
-   \[
-   x + 2 = 2x - 3
-   \]
+   
+   $`(\sqrt{x + 2})^2 = (\sqrt{2x - 3})^2`$
+   
+   
+   $`x + 2 = 2x - 3`$
+   
 
-2. Solve for \(x\):
-   \[
-   2 = x - 3
-   \]
-   \[
-   x = 5
-   \]
+2. Solve for $x$:
+   
+   $`2 = x - 3`$
+   
+   
+   $x = 5$
+
 
 3. Check for extraneous solutions:
-   Substitute \(x = 5\) into the original equation:
-   \[
-   \sqrt{5 + 2} = \sqrt{2(5) - 3}
-   \]
-   \[
-   \sqrt{7} = \sqrt{7}
-   \]
-   Valid solution: \(x = 5\).
+   Substitute $x = 5$ into the original equation:
+   
+   $`\sqrt{5 + 2} = \sqrt{2(5) - 3}`$
+   
+   
+   $`\sqrt{7} = \sqrt{7}`$
+   
+   Valid solution: $x = 5$.
 
 ---
 
 ### **Example 3: Quadratic After Eliminating the Radical**
 Solve:
-\[
-\sqrt{x} + 4 = x
-\]
+
+$`\sqrt{x} + 4 = x`$
+
 
 **Solution**:
 1. Isolate the radical:
-   \[
-   \sqrt{x} = x - 4
-   \]
+   
+   $`\sqrt{x} = x - 4`$
+
 
 2. Eliminate the radical (square both sides):
-   \[
-   (\sqrt{x})^2 = (x - 4)^2
-   \]
-   \[
-   x = x^2 - 8x + 16
-   \]
+   
+   $`(\sqrt{x})^2 = (x - 4)^2`$
+   
+   
+   $`x = x^2 - 8x + 16`$
+   
 
 3. Rearrange into standard form:
-   \[
-   x^2 - 9x + 16 = 0
-   \]
+   
+   $`x^2 - 9x + 16 = 0`$
+   
 
 4. Solve the quadratic equation:
    Use the quadratic formula:
-   \[
-   x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}, \quad a = 1, b = -9, c = 16
-   \]
-   \[
-   x = \frac{-(-9) \pm \sqrt{(-9)^2 - 4(1)(16)}}{2(1)}
-   \]
-   \[
-   x = \frac{9 \pm \sqrt{81 - 64}}{2}
-   \]
-   \[
-   x = \frac{9 \pm \sqrt{17}}{2}
-   \]
+   
+   $`x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}, \quad a = 1, b = -9, c = 16`$
+   
+   
+   $`x = \frac{-(-9) \pm \sqrt{(-9)^2 - 4(1)(16)}}{2(1)}`$
+   
+   
+   $`x = \frac{9 \pm \sqrt{81 - 64}}{2}`$
+
+   
+   $`x = \frac{9 \pm \sqrt{17}}{2}`$
+   
 
 5. Check for extraneous solutions:
    Substitute both solutions back into the original equation to ensure validity.
@@ -2623,7 +2624,7 @@ involving roots.
 
 A **reflection** is a transformation that "flips" a geometric figure over a specific line, 
 called the **line of reflection**, producing a mirror image. In the Cartesian plane, reflections 
-are commonly performed over the **x-axis**, **y-axis**, the line \(y = x\), or the line \(y = -x\).
+are commonly performed over the **x-axis**, **y-axis**, the line $y = x$, or the line $y = -x$.
 
 ---
 
@@ -2631,59 +2632,59 @@ are commonly performed over the **x-axis**, **y-axis**, the line \(y = x\), or t
 
 #### 1. **Reflection over the x-axis**
 - The x-coordinate stays the same, but the y-coordinate changes its sign.
-- **Rule**: \((x, y) \rightarrow (x, -y)\).
+- **Rule**: $`(x, y) \rightarrow (x, -y)`$.
 
 **Example**:  
-If a point \(A(3, 4)\) is reflected over the x-axis, the new point \(A'\) is:
-\[
-(3, 4) \rightarrow (3, -4)
-\]
+If a point $`A(3, 4)`$ is reflected over the x-axis, the new point $A'$ is:
+
+$`(3, 4) \rightarrow (3, -4)`$
+
 
 ---
 
 #### 2. **Reflection over the y-axis**
 - The y-coordinate stays the same, but the x-coordinate changes its sign.
-- **Rule**: \((x, y) \rightarrow (-x, y)\).
+- **Rule**: $`(x, y) \rightarrow (-x, y)`$.
 
 **Example**:  
-If a point \(B(3, 4)\) is reflected over the y-axis, the new point \(B'\) is:
-\[
-(3, 4) \rightarrow (-3, 4)
-\]
+If a point $`B(3, 4)`$ is reflected over the y-axis, the new point $B'$ is:
+
+$`(3, 4) \rightarrow (-3, 4)`$
+
 
 ---
 
-#### 3. **Reflection over the line \(y = x\)**
+#### 3. **Reflection over the line $y = x$**
 - The x-coordinate and y-coordinate are swapped.
-- **Rule**: \((x, y) \rightarrow (y, x)\).
+- **Rule**: $`(x, y) \rightarrow (y, x)`$.
 
 **Example**:  
-If a point \(C(3, 4)\) is reflected over the line \(y = x\), the new point \(C'\) is:
-\[
-(3, 4) \rightarrow (4, 3)
-\]
+If a point $`C(3, 4)`$ is reflected over the line $y = x$, the new point $C'$ is:
+
+$`(3, 4) \rightarrow (4, 3)`$
+
 
 ---
 
-#### 4. **Reflection over the line \(y = -x\)**
+#### 4. **Reflection over the line $y = -x$**
 - The x-coordinate and y-coordinate are swapped, and both signs are changed.
-- **Rule**: \((x, y) \rightarrow (-y, -x)\).
+- **Rule**: $`(x, y) \rightarrow (-y, -x)`$.
 
 **Example**:  
-If a point \(D(3, 4)\) is reflected over the line \(y = -x\), the new point \(D'\) is:
-\[
-(3, 4) \rightarrow (-4, -3)
-\]
+If a point $D(3, 4)$ is reflected over the line $y = -x$, the new point $D'$ is:
+
+$`(3, 4) \rightarrow (-4, -3)`$
+
 
 ---
 
 ### **Summary of Reflection Rules**
-| **Line of Reflection** | **Transformation Rule**       |
-|-------------------------|-------------------------------|
-| Over the x-axis         | \((x, y) \rightarrow (x, -y)\) |
-| Over the y-axis         | \((x, y) \rightarrow (-x, y)\) |
-| Over \(y = x\)          | \((x, y) \rightarrow (y, x)\)  |
-| Over \(y = -x\)         | \((x, y) \rightarrow (-y, -x)\)|
+| **Line of Reflection** | **Transformation Rule**         |
+|----------------------|---------------------------------|
+| Over the x-axis      | $`(x, y) \rightarrow (x, -y)`$  |
+| Over the y-axis      | $`(x, y) \rightarrow (-x, y)`$  |
+| Over $y = x$         | $`(x, y) \rightarrow (y, x)`$   |
+| Over $y = -x$        | $`(x, y) \rightarrow (-y, -x)`$ |
 
 ---
 
@@ -2694,14 +2695,14 @@ To reflect a geometric figure:
 2. Connect the reflected points to form the reflected image.
 
 **Example: Reflection of a Triangle**  
-Given a triangle with vertices \(A(1, 2)\), \(B(3, 4)\), and \(C(5, 0)\):
+Given a triangle with vertices $A(1, 2)$, $B(3, 4)$, and $C(5, 0)$:
 
 - **Reflection over the x-axis**:
-   - \(A(1, 2) \rightarrow A'(1, -2)\)
-   - \(B(3, 4) \rightarrow B'(3, -4)\)
-   - \(C(5, 0) \rightarrow C'(5, 0)\)
+   - $`A(1, 2) \rightarrow A'(1, -2)`$
+   - $`B(3, 4) \rightarrow B'(3, -4)`$
+   - $`C(5, 0) \rightarrow C'(5, 0)`$
 
-The reflected triangle has vertices \(A'(1, -2)\), \(B'(3, -4)\), and \(C'(5, 0)\).
+The reflected triangle has vertices $A'(1, -2)$, $B'(3, -4)$, and $C'(5, 0)$.
 
 ---
 
@@ -2709,7 +2710,7 @@ The reflected triangle has vertices \(A'(1, -2)\), \(B'(3, -4)\), and \(C'(5, 0)
 Reflections create **mirror images** of geometric figures across the line of reflection. For example:
 - A figure reflected over the x-axis flips vertically.
 - A figure reflected over the y-axis flips horizontally.
-- A figure reflected over \(y = x\) or \(y = -x\) is rotated and flipped accordingly.
+- A figure reflected over $y = x$ or $y = -x$ is rotated and flipped accordingly.
 
 ---
 
@@ -2732,74 +2733,73 @@ part of the specified event. It essentially represents the "opposite" of the eve
 ---
 
 ### **Definition**
-If \( A \) is an event, then its complement, denoted by \( A^c \) or \( \neg A \), consists of all 
-outcomes in the sample space \( S \) that are not in \( A \).
+If $A$ is an event, then its complement, denoted by $A^c$ or $\neg A$, consists of all 
+outcomes in the sample space $S$ that are not in $A$.
 
-\[
-A^c = S \setminus A
-\]
 
-- **Sample space (\( S \))**: The set of all possible outcomes.
-- **Event (\( A \))**: A subset of \( S \), representing specific outcomes.
-- **Complement (\( A^c \))**: The set of outcomes in \( S \) that are not in \( A \).
+$`A^c = S \setminus A`$
+
+
+- **Sample space $( S )$**: The set of all possible outcomes.
+- **Event $( A )$**: A subset of $S$, representing specific outcomes.
+- **Complement $( A^c )$**: The set of outcomes in $S$ that are not in $A$.
 
 ---
 
 ### **Complement Rule**
 The probability of the complement of an event is given by:
 
-\[
-P(A^c) = 1 - P(A)
-\]
+
+$`P(A^c) = 1 - P(A)`$
+
 
 This follows from the fact that:
-- \( P(A) + P(A^c) = 1 \), since together they cover the entire sample space.
+- $`P(A) + P(A^c) = 1`$, since together they cover the entire sample space.
 
 ---
 
 ### **Example 1: Tossing a Coin**
-- Sample space: \( S = \{ \text{Heads, Tails} \} \)
-- Event \( A \): Getting Heads (\( A = \{\text{Heads}\} \)).
+- Sample space: $`S = \{ \text{Heads, Tails} \}`$
+- Event $A$: Getting Heads $`( A = \{\text{Heads}\} )`$.
 
-The complement of \( A \) (\( A^c \)) is:
-\[
-A^c = \{\text{Tails}\}
-\]
+The complement of $A$ $( A^c )$ is:
 
-If \( P(A) = 0.5 \), then \( P(A^c) = 1 - 0.5 = 0.5 \).
+$`A^c = \{\text{Tails}\}`$
+
+
+If $`P(A) = 0.5`$, then $`P(A^c) = 1 - 0.5 = 0.5`$.
 
 ---
 
 ### **Example 2: Rolling a Die**
-- Sample space: \( S = \{1, 2, 3, 4, 5, 6\} \)
-- Event \( A \): Rolling an odd number (\( A = \{1, 3, 5\} \)).
+- Sample space: $`S = \{1, 2, 3, 4, 5, 6\}`$
+- Event $A$: Rolling an odd number $( A = \{1, 3, 5\} )$.
 
-The complement of \( A \) (\( A^c \)) is:
-\[
-A^c = \{2, 4, 6\}
-\]
+The complement of $A$ $( A^c )$ is:
 
-If \( P(A) = \frac{3}{6} = 0.5 \), then \( P(A^c) = 1 - 0.5 = 0.5 \).
+$`A^c = \{2, 4, 6\}`$
+
+If $`P(A) = \frac{3}{6} = 0.5`$, then $`P(A^c) = 1 - 0.5 = 0.5`$.
 
 ---
 
 ### **Key Properties of Complements**
 1. **Exclusivity**:
-   - \( A \) and \( A^c \) are mutually exclusive, meaning they cannot occur simultaneously.
-   - \( A \cap A^c = \emptyset \).
+   - $A$ and  $A^c$  are mutually exclusive, meaning they cannot occur simultaneously.
+   - $`A \cap A^c = \emptyset`$.
 
 2. **Exhaustiveness**:
-   - \( A \cup A^c = S \), meaning together they include all possible outcomes.
+   - $`A \cup A^c = S`$, meaning together they include all possible outcomes.
 
 3. **Probability**:
-   - \( P(A^c) = 1 - P(A) \).
+   - $`P(A^c) = 1 - P(A)`$.
 
 ---
 
 ### **Applications**
 1. **Simplifying Probability Calculations**:
    - When calculating the probability of an event is difficult, use its complement instead.
-   - Example: Probability of "at least one success" is easier calculated as \( 1 - P(\text{no success}) \).
+   - Example: Probability of "at least one success" is easier calculated as $`1 - P(\text{no success})`$.
 
 2. **Risk Analysis**:
    - Complement is used to calculate the likelihood of avoiding an undesired outcome.
@@ -2807,7 +2807,8 @@ If \( P(A) = \frac{3}{6} = 0.5 \), then \( P(A^c) = 1 - 0.5 = 0.5 \).
 ---
 
 ### **Conclusion**
-The complement of an event helps to account for all outcomes not included in the original event. It is an essential concept in probability, making it easier to work with events and their associated probabilities.
+The complement of an event helps to account for all outcomes not included in the original event. 
+It is an essential concept in probability, making it easier to work with events and their associated probabilities.
 
 
 
@@ -2815,17 +2816,18 @@ The complement of an event helps to account for all outcomes not included in the
 
 ## **Discriminant of a Quadratic Equation**
 
-The **discriminant** of a quadratic equation provides important information about the nature and number of the roots of the equation. For a quadratic equation of the form:
+The **discriminant** of a quadratic equation provides important information about the nature and number 
+of the roots of the equation. For a quadratic equation of the form:
 
-\[
-ax^2 + bx + c = 0 \quad (a \neq 0),
-\]
 
-the discriminant (\(D\)) is defined as:
+$`ax^2 + bx + c = 0 \quad (a \neq 0)`$,
 
-\[
-D = b^2 - 4ac
-\]
+
+the discriminant $(D)$ is defined as:
+
+
+$`D = b^2 - 4ac`$
+
 
 ---
 
@@ -2833,59 +2835,58 @@ D = b^2 - 4ac
 
 The discriminant determines the nature of the roots of the quadratic equation:
 
-1. **When \(D > 0\):**
+1. **When $D > 0$:**
    - The equation has **two distinct real roots**.
-   - If \(D\) is a perfect square, the roots are rational; otherwise, they are irrational.
+   - If $D$ is a perfect square, the roots are rational; otherwise, they are irrational.
 
-2. **When \(D = 0\):**
+2. **When $D = 0$:**
    - The equation has **exactly one real root** (a repeated or double root).
 
-3. **When \(D < 0\):**
+3. **When $D < 0$:**
    - The equation has **two complex conjugate roots** (no real roots).
 
 ---
 
 ### **Examples**
 
-#### **1. Positive Discriminant (\(D > 0\))**
-Equation: \(x^2 - 5x + 6 = 0\)
+#### **1. Positive Discriminant $(D > 0)$**
+Equation: $`x^2 - 5x + 6 = 0`$
 
 Here:
-- \(a = 1\), \(b = -5\), \(c = 6\).
+- $a = 1$, $b = -5$, $c = 6$.
 - Discriminant: 
-  \[
-  D = (-5)^2 - 4(1)(6) = 25 - 24 = 1.
-  \]
+  
+  $`D = (-5)^2 - 4(1)(6) = 25 - 24 = 1`$.
 
-Since \(D > 0\), there are two distinct real roots.
+Since $D > 0$, there are two distinct real roots.
 
 ---
 
-#### **2. Zero Discriminant (\(D = 0\))**
-Equation: \(x^2 - 4x + 4 = 0\)
+#### **2. Zero Discriminant $(D = 0)$**
+Equation: $`x^2 - 4x + 4 = 0`$
 
 Here:
-- \(a = 1\), \(b = -4\), \(c = 4\).
+- $a = 1$, $b = -4$, $c = 4$.
 - Discriminant: 
-  \[
-  D = (-4)^2 - 4(1)(4) = 16 - 16 = 0.
-  \]
+  
+  $`D = (-4)^2 - 4(1)(4) = 16 - 16 = 0`$.
+  
 
-Since \(D = 0\), there is exactly one real root (a double root).
+Since $D = 0$, there is exactly one real root (a double root).
 
 ---
 
-#### **3. Negative Discriminant (\(D < 0\))**
-Equation: \(x^2 + x + 1 = 0\)
+#### **3. Negative Discriminant $(D < 0)$**
+Equation: $`x^2 + x + 1 = 0`$
 
 Here:
-- \(a = 1\), \(b = 1\), \(c = 1\).
+- $a = 1$, $b = 1$, $c = 1$.
 - Discriminant:
-  \[
-  D = (1)^2 - 4(1)(1) = 1 - 4 = -3.
-  \]
+  
+  $`D = (1)^2 - 4(1)(1) = 1 - 4 = -3`$.
+  
 
-Since \(D < 0\), there are two complex conjugate roots.
+Since $D < 0$, there are two complex conjugate roots.
 
 ---
 
@@ -2897,70 +2898,72 @@ Since \(D < 0\), there are two complex conjugate roots.
 
 ## **Horizontal Stretches of Functions**
 
-A **horizontal stretch** of a function occurs when the function's input values are scaled by a factor, causing the graph of the function to widen horizontally. This transformation changes how the function behaves along the x-axis, while its behavior along the y-axis remains unchanged.
+A **horizontal stretch** of a function occurs when the function's input values are scaled by a factor, 
+causing the graph of the function to widen horizontally. This transformation changes how the function 
+behaves along the x-axis, while its behavior along the y-axis remains unchanged.
 
 ---
 
 ### **Definition**
-For a given function \( f(x) \), a horizontal stretch is represented by:
+For a given function $f(x)$, a horizontal stretch is represented by:
 
-\[
-g(x) = f\left(\frac{x}{k}\right),
-\]
+
+$`g(x) = f\left(\frac{x}{k}\right)`$,
+
 
 where:
-- \( k > 1 \): The graph is **stretched** horizontally by a factor of \( k \).
-- \( 0 < k < 1 \): The graph is **compressed** (squeezed) horizontally by a factor of \( k \).
+- $k > 1$: The graph is **stretched** horizontally by a factor of $k$.
+- $0 < k < 1$: The graph is **compressed** (squeezed) horizontally by a factor of $k$.
 
 ---
 
 ### **How It Works**
-In \( g(x) = f\left(\frac{x}{k}\right) \), each input \( x \) is replaced by \( \frac{x}{k} \). This means:
-- When \( k > 1 \), the graph appears wider because each \( x \)-coordinate is divided by \( k \), effectively spreading the graph out.
-- When \( 0 < k < 1 \), the graph is compressed because each \( x \)-coordinate is divided by a small fraction, pulling the graph closer together.
+In $`g(x) = f\left(\frac{x}{k}\right)`$, each input $x$ is replaced by $`\frac{x}{k}`$. This means:
+- When $k > 1$, the graph appears wider because each $x$-coordinate is divided by $k$, effectively spreading the graph out.
+- When $`0 < k < 1`$, the graph is compressed because each $x$-coordinate is divided by a small fraction, pulling the graph closer together.
 
 ---
 
 ### **Examples**
 
 #### 1. **Horizontal Stretch**
-Given \( f(x) = x^2 \):
-- Apply a horizontal stretch by \( k = 2 \):  
-  \[
-  g(x) = f\left(\frac{x}{2}\right) = \left(\frac{x}{2}\right)^2 = \frac{x^2}{4}.
-  \]
-- The graph of \( g(x) \) will be wider compared to \( f(x) \).
+Given $f(x) = x^2$:
+- Apply a horizontal stretch by $k = 2$:  
+  
+  $`g(x) = f\left(\frac{x}{2}\right) = \left(\frac{x}{2}\right)^2 = \frac{x^2}{4}`$.
+  
+- The graph of $g(x)$ will be wider compared to $f(x)$.
 
 #### 2. **Horizontal Compression**
-Given \( f(x) = x^2 \):
-- Apply a horizontal compression by \( k = \frac{1}{2} \):  
-  \[
-  g(x) = f\left(\frac{x}{\frac{1}{2}}\right) = f(2x) = (2x)^2 = 4x^2.
-  \]
-- The graph of \( g(x) \) will be narrower compared to \( f(x) \).
+Given $`f(x) = x^2`$:
+- Apply a horizontal compression by $`k = \frac{1}{2}`$:  
+  
+  $`g(x) = f\left(\frac{x}{\frac{1}{2}}\right) = f(2x) = (2x)^2 = 4x^2`$.
+  
+- The graph of $g(x)$ will be narrower compared to $f(x)$.
 
 ---
 
 ### **Visual Understanding**
 
-#### Original Function \( f(x) = x^2 \):
+#### Original Function $f(x) = x^2$:
 - The graph is a parabola centered at the origin.
 
-#### Horizontal Stretch (\( k > 1 \)):
-- Each point on the graph moves farther from the y-axis. For example, \((1, 1)\) becomes \((2, 1)\) when stretched by \( k = 2 \).
+#### Horizontal Stretch $( k > 1 )$:
+- Each point on the graph moves farther from the y-axis. For example, $(1, 1)$ becomes $(2, 1)$ when stretched by $k = 2$.
 
-#### Horizontal Compression (\( 0 < k < 1 \)):
-- Each point on the graph moves closer to the y-axis. For example, \((1, 1)\) becomes \((0.5, 1)\) when compressed by \( k = \frac{1}{2} \).
+#### Horizontal Compression $( 0 < k < 1 )$:
+- Each point on the graph moves closer to the y-axis. For example, $(1, 1)$ becomes $(0.5, 1)$ when compressed by $`k = \frac{1}{2}`$.
 
 ---
 
 ### **Key Properties of Horizontal Stretches**
 1. **Only x-coordinates are affected**:
-   - The y-values remain unchanged, while the x-values are scaled by the factor \( k \).
+   - The y-values remain unchanged, while the x-values are scaled by the factor $k$.
 
 2. **Inverse Relationship**:
-   - A horizontal stretch by \( k > 1 \) is equivalent to dividing x-values by \( k \).
-   - A horizontal compression by \( 0 < k < 1 \) is equivalent to multiplying x-values by a factor greater than 1.
+   - A horizontal stretch by $k > 1$ is equivalent to dividing x-values by  $k$.
+   - A horizontal compression by $0 < k < 1$ is equivalent to multiplying x-values by a factor greater than 1.
 
 ---
 
@@ -2970,48 +2973,50 @@ Given \( f(x) = x^2 \):
 
 
 
+
 ## **Modeling Downward Vertical Motion**
 
-Downward vertical motion is a key concept in physics that describes the motion of an object moving under the influence of gravity. This type of motion can be modeled using equations from kinematics, assuming negligible air resistance.
+Downward vertical motion is a key concept in physics that describes the motion of an object moving 
+under the influence of gravity. This type of motion can be modeled using equations from kinematics, 
+assuming negligible air resistance.
 
 ---
 
 ### **Key Equations**
 The primary equation for vertical motion is derived from the kinematic equations:
 
-\[
-h(t) = h_0 - v_0t - \frac{1}{2}gt^2
-\]
+
+$`h(t) = h_0 - v_0t - \frac{1}{2}gt^2`$
 
 Where:
-- \( h(t) \): The height of the object at time \( t \).
-- \( h_0 \): The initial height of the object (when \( t = 0 \)).
-- \( v_0 \): The initial velocity of the object (positive if upwards, negative if downwards).
-- \( g \): Acceleration due to gravity (\( g \approx 9.8 \, \text{m/s}^2 \) on Earth).
-- \( t \): Time in seconds.
+- $h(t)$: The height of the object at time $t$.
+- $h_0$: The initial height of the object (when $t = 0$).
+- $v_0$: The initial velocity of the object (positive if upwards, negative if downwards).
+- $g$: Acceleration due to gravity $`( g \approx 9.8 \, \text{m/s}^2`$ on Earth).
+- $t$: Time in seconds.
 
 ---
 
 ### **Explanation of Terms**
-1. **Initial Height (\( h_0 \))**: The starting height of the object above the ground.
-2. **Initial Velocity (\( v_0 \))**:
-   - If \( v_0 = 0 \), the object starts from rest.
-   - If \( v_0 > 0 \), the object is thrown or projected upwards.
-   - If \( v_0 < 0 \), the object is projected downwards.
-3. **Acceleration Due to Gravity (\( g \))**:
+1. **Initial Height $( h_0 )$**: The starting height of the object above the ground.
+2. **Initial Velocity $( v_0 )$**:
+   - If $v_0 = 0$, the object starts from rest.
+   - If $v_0 > 0$, the object is thrown or projected upwards.
+   - If $v_0 < 0$, the object is projected downwards.
+3. **Acceleration Due to Gravity $( g )$**:
    - Always acts downward, causing the object to accelerate towards the ground.
 
 ---
 
 ### **Special Cases**
 1. **Free Fall (No Initial Velocity)**:
-   If \( v_0 = 0 \), the equation simplifies to:
-   \[
-   h(t) = h_0 - \frac{1}{2}gt^2.
-   \]
+   If $v_0 = 0$, the equation simplifies to:
+   
+   $`h(t) = h_0 - \frac{1}{2}gt^2`$.
+   
 
 2. **Object Thrown Downwards**:
-   If \( v_0 < 0 \), the term \( -v_0t \) becomes larger in magnitude, increasing the speed of descent.
+   If $v_0 < 0$, the term $-v_0t$ becomes larger in magnitude, increasing the speed of descent.
 
 3. **Object Thrown Upwards**:
    The object first rises until its velocity reduces to zero, then falls back under the influence of gravity.
@@ -3021,38 +3026,39 @@ Where:
 ### **Example Problem**
 
 #### **Scenario**:
-A ball is dropped from a height of \( h_0 = 50 \, \text{m} \) with no initial velocity. How long does it take to hit the ground?
+A ball is dropped from a height of $`h_0 = 50 \, \text{m}`$ with no initial velocity. 
+How long does it take to hit the ground?
 
 #### **Solution**:
 Given:
-- \( h_0 = 50 \, \text{m} \)
-- \( v_0 = 0 \)
-- \( g = 9.8 \, \text{m/s}^2 \)
+- $`h_0 = 50 \, \text{m}`$
+-  $v_0 = 0$
+- $`g = 9.8 \, \text{m/s}^2`$
 
 The equation becomes:
-\[
-0 = h_0 - \frac{1}{2}gt^2.
-\]
 
-Rearrange to solve for \( t \):
-\[
-\frac{1}{2}gt^2 = h_0 \implies t^2 = \frac{2h_0}{g}.
-\]
+$`0 = h_0 - \frac{1}{2}gt^2`$.
+
+
+Rearrange to solve for $t$:
+
+$`\frac{1}{2}gt^2 = h_0 \implies t^2 = \frac{2h_0}{g}`$.
+
 
 Substitute the values:
-\[
-t^2 = \frac{2(50)}{9.8} \approx 10.204.
-\]
 
-\[
-t \approx \sqrt{10.204} \approx 3.2 \, \text{seconds}.
-\]
+$`t^2 = \frac{2(50)}{9.8} \approx 10.204`$.
+
+
+
+$`t \approx \sqrt{10.204} \approx 3.2 \, \text{seconds}`$.
+
 
 ---
 
 ### **Graphical Representation**
-- The height \( h(t) \) decreases quadratically with time \( t \).
-- The velocity \( v(t) = -v_0 - gt \) increases linearly in magnitude, indicating constant acceleration.
+- The height $h(t)$ decreases quadratically with time $t$.
+- The velocity $`v(t) = -v_0 - gt`$ increases linearly in magnitude, indicating constant acceleration.
 
 ---
 
@@ -3068,68 +3074,69 @@ This framework helps predict motion, impact time, and velocity in practical scen
 
 ## **Axis of Symmetry of a Parabola**
 
-The **axis of symmetry** of a parabola is a vertical or horizontal line that divides the parabola into two symmetrical halves. It passes through the vertex of the parabola and is a critical feature in understanding the parabola's geometry.
+The **axis of symmetry** of a parabola is a vertical or horizontal line that divides the parabola 
+into two symmetrical halves. It passes through the vertex of the parabola and is a critical feature 
+in understanding the parabola's geometry.
 
 ---
 
 ### **Standard Form of a Parabola**
 The equation of a parabola in **standard form** is:
 
-\[
-y = ax^2 + bx + c
-\]
+
+$`y = ax^2 + bx + c`$
 
 - The axis of symmetry is given by the formula:
-  \[
-  x = -\frac{b}{2a}.
-  \]
+  
+  $`x = -\frac{b}{2a}`$.
+  
 
 Here:
-- \( a \), \( b \), and \( c \): Coefficients of the quadratic equation.
-- \( x = -\frac{b}{2a} \): The x-coordinate of the vertex and the axis of symmetry.
+- $a$, $b$, and $c$: Coefficients of the quadratic equation.
+- $`x = -\frac{b}{2a}`$: The x-coordinate of the vertex and the axis of symmetry.
 
 ---
 
 ### **Vertex Form of a Parabola**
 The equation of a parabola in **vertex form** is:
 
-\[
-y = a(x - h)^2 + k,
-\]
+
+$`y = a(x - h)^2 + k`$,
+
 
 where:
-- \( (h, k) \): The vertex of the parabola.
+- $`(h, k)`$: The vertex of the parabola.
 - The axis of symmetry is:
-  \[
-  x = h.
-  \]
+  
+  $x = h$.
+  
 
 ---
 
 ### **Direction of the Axis of Symmetry**
-1. **For a vertical parabola** (\( y = ax^2 + bx + c \)):
-   - The axis of symmetry is a vertical line, \( x = -\frac{b}{2a} \).
+1. **For a vertical parabola** $`( y = ax^2 + bx + c )`$:
+   - The axis of symmetry is a vertical line, $`x = -\frac{b}{2a}`$.
 
-2. **For a horizontal parabola** (\( x = ay^2 + by + c \)):
-   - The axis of symmetry is a horizontal line, \( y = -\frac{b}{2a} \).
+2. **For a horizontal parabola** $`( x = ay^2 + by + c )`$:
+   - The axis of symmetry is a horizontal line, $`y = -\frac{b}{2a}`$.
 
 ---
 
 ### **Examples**
 
-#### 1. **Find the Axis of Symmetry for \( y = 2x^2 + 4x + 1 \):**
-- Given: \( a = 2 \), \( b = 4 \), \( c = 1 \).
+#### 1. **Find the Axis of Symmetry for $y = 2x^2 + 4x + 1$:**
+- Given: $a = 2$, $b = 4$, $c = 1$.
 - Use the formula:
-  \[
-  x = -\frac{b}{2a} = -\frac{4}{2(2)} = -1.
-  \]
-- The axis of symmetry is \( x = -1 \).
+  
+  $`x = -\frac{b}{2a} = -\frac{4}{2(2)} = -1`$.
+  
+- The axis of symmetry is $x = -1$.
 
 ---
 
-#### 2. **Find the Axis of Symmetry for \( y = (x - 3)^2 + 2 \):**
-- The equation is in vertex form, \( y = a(x - h)^2 + k \), where \( h = 3 \), \( k = 2 \).
-- The axis of symmetry is \( x = 3 \).
+#### 2. **Find the Axis of Symmetry for $y = (x - 3)^2 + 2$ :**
+- The equation is in vertex form, $`y = a(x - h)^2 + k`$, where $h = 3$, $k = 2$.
+- The axis of symmetry is $x = 3$.
 
 ---
 
@@ -3141,7 +3148,7 @@ where:
 
 ### **Key Properties**
 1. **Relationship to Vertex**: The axis of symmetry always passes through the vertex of the parabola.
-2. **Independent of \( c \)**: In the standard form \( y = ax^2 + bx + c \), the axis of symmetry depends only on \( a \) and \( b \).
+2. **Independent of $c$**: In the standard form $`y = ax^2 + bx + c`$, the axis of symmetry depends only on $a$ and $b$.
 
 ---
 
@@ -3163,75 +3170,75 @@ These ratios are fundamental in trigonometry and are used to solve problems invo
 ### **Right Triangle Setup**
 For a right triangle:
 - The **hypotenuse** is the longest side (opposite the right angle).
-- The **adjacent side** is the side next to the given angle (\(\theta\)) other than the hypotenuse.
-- The **opposite side** is the side opposite to the given angle (\(\theta\)).
+- The **adjacent side** is the side next to the given angle $(\theta)$ other than the hypotenuse.
+- The **opposite side** is the side opposite to the given angle $(\theta)$.
 
 ---
 
 ### **Primary Trigonometric Ratios**
-1. **Sine (\(\sin\))**: 
-   \[
-   \sin\theta = \frac{\text{Opposite}}{\text{Hypotenuse}}
-   \]
+1. **Sine $(\sin)$**: 
+   
+   $`\sin\theta = \frac{\text{Opposite}}{\text{Hypotenuse}}`$
+   
 
-2. **Cosine (\(\cos\))**: 
-   \[
-   \cos\theta = \frac{\text{Adjacent}}{\text{Hypotenuse}}
-   \]
+2. **Cosine $(\cos)$**: 
+   
+   $`\cos\theta = \frac{\text{Adjacent}}{\text{Hypotenuse}}`$
+   
 
-3. **Tangent (\(\tan\))**: 
-   \[
-   \tan\theta = \frac{\text{Opposite}}{\text{Adjacent}}
-   \]
+3. **Tangent $(\tan)$**: 
+   
+   $`\tan\theta = \frac{\text{Opposite}}{\text{Adjacent}}`$
+   
 
 ---
 
 ### **Reciprocal Trigonometric Ratios**
-4. **Cosecant (\(\csc\))**: 
-   \[
-   \csc\theta = \frac{1}{\sin\theta} = \frac{\text{Hypotenuse}}{\text{Opposite}}
-   \]
+4. **Cosecant $(\csc)$**: 
+   
+   $`\csc\theta = \frac{1}{\sin\theta} = \frac{\text{Hypotenuse}}{\text{Opposite}}`$
+   
 
-5. **Secant (\(\sec\))**: 
-   \[
-   \sec\theta = \frac{1}{\cos\theta} = \frac{\text{Hypotenuse}}{\text{Adjacent}}
-   \]
+5. **Secant $(\sec)$**: 
+   
+   $`\sec\theta = \frac{1}{\cos\theta} = \frac{\text{Hypotenuse}}{\text{Adjacent}}`$
+   
 
-6. **Cotangent (\(\cot\))**: 
-   \[
-   \cot\theta = \frac{1}{\tan\theta} = \frac{\text{Adjacent}}{\text{Opposite}}
-   \]
+6. **Cotangent $(\cot)$**: 
+   
+   $`\cot\theta = \frac{1}{\tan\theta} = \frac{\text{Adjacent}}{\text{Opposite}}`$
+   
 
 ---
 
 ### **Summary Table**
 
-| Ratio         | Definition                          | Formula                              |
-|---------------|-------------------------------------|--------------------------------------|
-| Sine (\(\sin\)) | Opposite ÷ Hypotenuse              | \(\sin\theta = \frac{\text{O}}{\text{H}}\) |
-| Cosine (\(\cos\)) | Adjacent ÷ Hypotenuse            | \(\cos\theta = \frac{\text{A}}{\text{H}}\) |
-| Tangent (\(\tan\)) | Opposite ÷ Adjacent             | \(\tan\theta = \frac{\text{O}}{\text{A}}\) |
-| Cosecant (\(\csc\)) | 1 ÷ Sine                      | \(\csc\theta = \frac{\text{H}}{\text{O}}\) |
-| Secant (\(\sec\)) | 1 ÷ Cosine                      | \(\sec\theta = \frac{\text{H}}{\text{A}}\) |
-| Cotangent (\(\cot\)) | 1 ÷ Tangent                 | \(\cot\theta = \frac{\text{A}}{\text{O}}\) |
+| Ratio              | Definition                          | Formula                                    |
+|--------------------|-------------------------------------|--------------------------------------------|
+| Sine $(\sin)$      | Opposite ÷ Hypotenuse              | $`\sin\theta = \frac{\text{O}}{\text{H}}`$ |
+| Cosine $(\cos)$    | Adjacent ÷ Hypotenuse            | $`\cos\theta = \frac{\text{A}}{\text{H}}`$ |
+| Tangent $(\tan)$   | Opposite ÷ Adjacent             | $`\tan\theta = \frac{\text{O}}{\text{A}}`$ |
+| Cosecant $(\csc)$  | 1 ÷ Sine                      | $`\csc\theta = \frac{\text{H}}{\text{O}}`$ |
+| Secant $(\sec)$    | 1 ÷ Cosine                      | $`\sec\theta = \frac{\text{H}}{\text{A}}`$ |
+| Cotangent $(\cot)$ | 1 ÷ Tangent                 | $`\cot\theta = \frac{\text{A}}{\text{O}}`$ |
 
 ---
 
 ### **Key Relationships**
 1. **Pythagorean Identity**:
-   \[
-   \sin^2\theta + \cos^2\theta = 1
-   \]
+   
+   $`\sin^2\theta + \cos^2\theta = 1`$
+   
 
 2. **Tangent and Sine/Cosine**:
-   \[
-   \tan\theta = \frac{\sin\theta}{\cos\theta}
-   \]
+   
+   $`\tan\theta = \frac{\sin\theta}{\cos\theta}`$
+   
 
 3. **Reciprocal Identities**:
-   \[
-   \csc\theta = \frac{1}{\sin\theta}, \quad \sec\theta = \frac{1}{\cos\theta}, \quad \cot\theta = \frac{1}{\tan\theta}.
-   \]
+   
+   $`\csc\theta = \frac{1}{\sin\theta}, \quad \sec\theta = \frac{1}{\cos\theta}, \quad \cot\theta = \frac{1}{\tan\theta}`$.
+   
 
 ---
 
@@ -3241,13 +3248,13 @@ For a right triangle:
 - Adjacent = 4
 - Hypotenuse = 5
 
-Find all trigonometric ratios for \(\theta\):
-- \(\sin\theta = \frac{3}{5}\)
-- \(\cos\theta = \frac{4}{5}\)
-- \(\tan\theta = \frac{3}{4}\)
-- \(\csc\theta = \frac{5}{3}\)
-- \(\sec\theta = \frac{5}{4}\)
-- \(\cot\theta = \frac{4}{3}\)
+Find all trigonometric ratios for $\theta$:
+- $`\sin\theta = \frac{3}{5}`$
+- $`\cos\theta = \frac{4}{5}`$
+- $`\tan\theta = \frac{3}{4}`$
+- $`\csc\theta = \frac{5}{3}`$
+- $`\sec\theta = \frac{5}{4}`$
+- $`\cot\theta = \frac{4}{3}`$
 
 ---
 
@@ -3261,7 +3268,320 @@ These ratios form the foundation for advanced topics like trigonometric equation
 
 
 
-## 
+## **Reciprocal trigonometric ratios**
+
+**Reciprocal trigonometric** ratios are derived from the primary trigonometric functions (sine, cosine, and tangent) 
+by taking their reciprocals. These ratios are commonly used in various mathematical and engineering applications.
+
+Here are the reciprocal trigonometric ratios:
+
+1. **Cosecant (csc)**: The reciprocal of sine  
+   
+   $`\csc \theta = \frac{1}{\sin \theta} = \frac{\text{Hypotenuse}}{\text{Opposite side}}`$
+   
+
+2. **Secant (sec)**: The reciprocal of cosine  
+   
+   $`\sec \theta = \frac{1}{\cos \theta} = \frac{\text{Hypotenuse}}{\text{Adjacent side}}`$
+   
+
+3. **Cotangent (cot)**: The reciprocal of tangent  
+   
+   $`\cot \theta = \frac{1}{\tan \theta} = \frac{\cos \theta}{\sin \theta} = \frac{\text{Adjacent side}}{\text{Opposite side}}`$
+   
+
+### Relationships to the Unit Circle:
+- In the unit circle, where the hypotenuse is 1, these reciprocal ratios are calculated using the coordinates $(x, y)$ of a point on the circle and the angle $\theta$:
+  - $`\csc \theta = \frac{1}{y}`$, valid where $y \neq 0$.
+  - $`\sec \theta = \frac{1}{x}`$, valid where $x \neq 0$.
+  - $`\cot \theta = \frac{x}{y}`$, valid where $y \neq 0$.
+
+### Key Points:
+- Reciprocal ratios are undefined when the denominator in the reciprocal calculation equals zero.
+- These functions are essential in advanced trigonometry, calculus, and solving equations involving right triangles or periodic functions.
+
+
+
+## **special trigonometric ratios**
+
+A **special trigonometric ratios** involves exploring the specific values of trigonometric functions for 
+commonly used angles: $0^\circ$, $30^\circ$, $45^\circ$, $60^\circ$, and $90^\circ$. 
+These values are often used in mathematics, physics, and engineering due to their simplicity and 
+relevance in geometry and calculus.
+
+---
+
+### **Key Special Angles**
+The values of trigonometric functions for these angles are often derived from properties of special right triangles:
+1. **30°–60°–90° triangle** (Half of an equilateral triangle):
+   - Hypotenuse = $2a$, Opposite side of $30^\circ$ = $a$, Adjacent side of $30^\circ$ = $a\sqrt{3}$.
+2. **45°–45°–90° triangle** (Isosceles right triangle):
+   - Hypotenuse = $a\sqrt{2}$, Legs = $a$.
+
+---
+
+### **Values of Trigonometric Ratios**
+| $\theta$   | $\sin \theta$          | $`\cos \theta`$        | $`\tan \theta`$        | $`\csc \theta`$        | $`\sec \theta`$        | $`\cot \theta`$      |
+|------------|------------------------|------------------------|------------------------|------------------------|------------------------|----------------------|
+| $0^\circ$  | $0$                    | $1$                    | $0$                    | Undefined              | $1$                    | Undefined            |
+| $30^\circ$ | $`\frac{1}{2}`$        | $`\frac{\sqrt{3}}{2}`$ | $`\frac{1}{\sqrt{3}}`$ | $2$                    | $`\frac{2}{\sqrt{3}}`$ | $\sqrt{3}$           |
+| $45^\circ$ | $`\frac{1}{\sqrt{2}}`$ | $`\frac{1}{\sqrt{2}}`$ | $1$                    | $`\sqrt{2}`$           | $`\sqrt{2}`$           | $1$                  |
+| $60^\circ$ | $`\frac{\sqrt{3}}{2}`$ | $`\frac{1}{2}`$        | $\sqrt{3}$             | $`\frac{2}{\sqrt{3}}`$ | $2$                    | $`\frac{1}{\sqrt{3}}`$ |
+| $90^\circ$ | $1$                    | $0$                    | Undefined              | $1$                    | Undefined              | $0$                  |
+
+---
+
+### **Special Triangles and Derivations**
+
+#### **30°–60°–90° Triangle**
+- **Sine**: For $30^\circ$, $`\sin 30^\circ = \frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{1}{2}`$.
+- **Cosine**: For $30^\circ$, $`\cos 30^\circ = \frac{\text{Adjacent}}{\text{Hypotenuse}} = \frac{\sqrt{3}}{2}`$.
+- **Tangent**: For $30^\circ$, $`\tan 30^\circ = \frac{\text{Opposite}}{\text{Adjacent}} = \frac{1}{\sqrt{3}}`$.
+
+#### **45°–45°–90° Triangle**
+- **Sine and Cosine**: For $45^\circ$, $`\sin 45^\circ = \cos 45^\circ = \frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{1}{\sqrt{2}}`$.
+- **Tangent**: For $45^\circ$, $`\tan 45^\circ = \frac{\text{Opposite}}{\text{Adjacent}} = 1`$.
+
+---
+
+### **Reciprocal Relationships**
+- **Cosecant**: $`\csc \theta = \frac{1}{\sin \theta}`$.
+- **Secant**: $`\sec \theta = \frac{1}{\cos \theta}`$.
+- **Cotangent**: $`\cot \theta = \frac{1}{\tan \theta}`$.
+
+---
+
+### **Unit Circle Perspective**
+In the unit circle:
+- The coordinates of points on the circle represent $`(\cos \theta, \sin \theta)`$.
+- Tangent is the slope of the line formed by the terminal side of the angle and the origin.
+
+#### Key Points:
+| Angle $(\theta)$ | Coordinates $(x, y)$                         |
+|------------------|----------------------------------------------|
+| $0^\circ$        | $(1, 0)$                                     |
+| $30^\circ$       | $`(\frac{\sqrt{3}}{2}, \frac{1}{2})`$        |
+| $45^\circ$       | $`(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2})`$ |
+| $60^\circ$       | $`(\frac{1}{2}, \frac{\sqrt{3}}{2})`$        |
+| $90^\circ$       | $(0, 1)$                                     |
+
+---
+
+### **Applications**
+- Used in solving right triangles.
+- Fundamental in Fourier analysis and wave theory.
+- Appear in optimization problems and integrals in calculus.
+
+
+
+
+## **Domain and Range of Quadratic Functions
+The **domain** and **range** of quadratic functions are essential characteristics in understanding their behavior. 
+A quadratic function is typically expressed as:
+
+
+$`f(x) = ax^2 + bx + c`$
+
+
+where $a$, $b$, and $c$ are constants, and $a \neq 0$.
+
+---
+
+### **Domain of Quadratic Functions**
+- The domain of any quadratic function is all real numbers, $\mathbb{R}$, because there are no restrictions on the values that $x$ can take.
+- **Mathematically**:
+  
+  $`\text{Domain: } (-\infty, \infty)`$
+  
+
+---
+
+### **Range of Quadratic Functions**
+The range depends on the **vertex** and the **direction** of the parabola (whether it opens upwards or downwards):
+
+1. **Parabola Opens Upward** $(a > 0)$:
+   - The vertex is the minimum point of the function.
+   - The range includes all values greater than or equal to the $y$-coordinate of the vertex.
+   - **Range**:
+     
+     $`[k, \infty), \quad \text{where } k = f(h) \text{ and } h = -\frac{b}{2a}`$.
+     
+
+2. **Parabola Opens Downward** $(a < 0)$:
+   - The vertex is the maximum point of the function.
+   - The range includes all values less than or equal to the $y$-coordinate of the vertex.
+   - **Range**:
+     
+     $`(-\infty, k], \quad \text{where } k = f(h) \text{ and } h = -\frac{b}{2a}$.
+     
+
+---
+
+### **Finding the Vertex**
+The vertex $(h, k)$ can be calculated using:
+
+$`h = -\frac{b}{2a}, \quad k = f(h) = a\left(-\frac{b}{2a}\right)^2 + b\left(-\frac{b}{2a}\right) + c`$.
+
+
+---
+
+### **Examples**
+1. $`f(x) = x^2 - 4x + 3`$:
+   - $a = 1$, $b = -4$, $c = 3$.
+   - Vertex: $`h = -\frac{-4}{2(1)} = 2`$, $`k = f(2) = (2)^2 - 4(2) + 3 = -1`$.
+   - **Range**: $`[-1, \infty)`$.
+
+2. $`f(x) = -2x^2 + 4x - 1`$:
+   - $a = -2$, $b = 4$, $c = -1$.
+   - Vertex: $`h = -\frac{4}{2(-2)} = 1`$, $`k = f(1) = -2(1)^2 + 4(1) - 1 = 1`$.
+   - **Range**: $`(-\infty, 1]`$.
+
+---
+
+### Summary
+- **Domain**: Always $`(-\infty, \infty)`$.
+- **Range**: Depends on the vertex and the direction of the parabola:
+  - $`a > 0`$: $[k, \infty)$
+  - $a < 0$: $(-\infty, k]$.
+
+
+
+
+## **Exponential Equations Using the Zero-Product Property**
+The **Zero-Product Property** is a fundamental principle in algebra that states:
+
+$`\text{If } ab = 0, \text{ then } a = 0 \text{ or } b = 0`$.
+
+
+This property is commonly used to solve **exponential equations** when they can be expressed as a 
+product of terms set equal to zero. Here's how it applies:
+
+---
+
+### **Steps to Solve Exponential Equations Using the Zero-Product Property**
+
+1. **Rewrite the Equation**:
+   - Bring all terms to one side of the equation to set it equal to zero.
+
+2. **Factorize the Expression**:
+   - If possible, factorize the equation into the product of terms.
+
+3. **Apply the Zero-Product Property**:
+   - Set each factor equal to zero.
+
+4. **Solve Each Equation**:
+   - Solve for the variable in each equation.
+
+---
+
+### **Example 1: Basic Exponential Equation**
+Solve:
+
+$`e^{2x} - 4e^x = 0`$
+
+
+**Solution**:
+1. Rewrite the equation:
+   
+   $`e^x(e^x - 4) = 0`$
+
+2. Apply the Zero-Product Property:
+   
+   $`e^x = 0 \quad \text{or} \quad e^x - 4 = 0`$
+   
+
+3. Solve each equation:
+   - $e^x = 0$: No solution, because $e^x > 0$ for all $x$.
+   - $`e^x - 4 = 0`$: $e^x = 4$.
+
+4. Solve for $x$:
+   
+   $`x = \ln(4)`$
+   
+
+**Final Answer**:
+
+$`x = \ln(4)`$
+
+
+---
+
+### **Example 2: Quadratic Form Exponential Equation**
+Solve:
+
+$`2^{2x} - 5 \cdot 2^x + 6 = 0`$
+
+
+**Solution**:
+1. Let $y = 2^x$. Then $`2^{2x} = y^2`$.
+
+2. Rewrite the equation:
+   
+   $`y^2 - 5y + 6 = 0`$
+   
+
+3. Factorize:
+   
+   $`(y - 2)(y - 3) = 0`$
+   
+
+4. Apply the Zero-Product Property:
+   
+   $`y - 2 = 0 \quad \text{or} \quad y - 3 = 0`$
+   
+
+5. Solve for $y$:
+   
+   $`y = 2 \quad \text{or} \quad y = 3`$
+   
+
+6. Recall $y = 2^x$, so:
+   
+   $`2^x = 2 \quad \text{or} \quad 2^x = 3`$
+   
+
+7. Solve for $x$:
+   - $2^x = 2$: $x = 1$.
+   - $2^x = 3$: $x = \log_2(3)$.
+
+**Final Answer**:
+
+$`x = 1 \quad \text{or} \quad x = \log_2(3)`$
+
+---
+
+### **Key Takeaways**
+1. The Zero-Product Property simplifies solving equations where the product of terms equals zero.
+2. In exponential equations, factorization often involves substitutions to simplify the equation.
+3. Solutions may involve logarithms, as exponential terms are inverses of logarithms.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
