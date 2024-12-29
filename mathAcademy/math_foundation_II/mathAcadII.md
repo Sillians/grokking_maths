@@ -3375,7 +3375,7 @@ In the unit circle:
 
 
 
-## **Domain and Range of Quadratic Functions
+## **Domain and Range of Quadratic Functions**
 The **domain** and **range** of quadratic functions are essential characteristics in understanding their behavior. 
 A quadratic function is typically expressed as:
 
@@ -3554,6 +3554,617 @@ $`x = 1 \quad \text{or} \quad x = \log_2(3)`$
 1. The Zero-Product Property simplifies solving equations where the product of terms equals zero.
 2. In exponential equations, factorization often involves substitutions to simplify the equation.
 3. Solutions may involve logarithms, as exponential terms are inverses of logarithms.
+
+
+
+
+## **Solving Logarithmic Equations**
+Logarithmic equations involve logarithms with unknowns and can be solved by applying logarithmic properties.
+Here's an overview of solving these equations:
+
+---
+
+### **Steps to Solve Logarithmic Equations**
+
+1. **Isolate the Logarithmic Term(s)**:
+   - Ensure the logarithmic expression is alone on one side of the equation.
+
+2. **Use Logarithmic Properties**:
+   - Apply properties of logarithms to simplify the equation:
+     - \(\log_b(xy) = \log_b(x) + \log_b(y)\)
+     - \(\log_b\left(\frac{x}{y}\right) = \log_b(x) - \log_b(y)\)
+     - \(\log_b(x^n) = n \cdot \log_b(x)\)
+
+3. **Rewrite in Exponential Form**:
+   - If the equation has a single logarithm, rewrite it using:
+     \[
+     \log_b(x) = y \implies x = b^y
+     \]
+
+4. **Solve for the Variable**:
+   - Solve the resulting equation after simplifying.
+
+5. **Check for Extraneous Solutions**:
+   - Logarithms are only defined for positive arguments. Ensure the solution makes all logarithmic expressions valid.
+
+---
+
+### **Example 1: Single Logarithmic Equation**
+Solve:
+\[
+\log_2(x) = 3
+\]
+
+**Solution**:
+1. Rewrite in exponential form:
+   \[
+   x = 2^3
+   \]
+
+2. Simplify:
+   \[
+   x = 8
+   \]
+
+**Final Answer**:
+\[
+x = 8
+\]
+
+---
+
+### **Example 2: Logarithms on Both Sides**
+Solve:
+\[
+\log_3(x) = \log_3(5)
+\]
+
+**Solution**:
+1. If the bases are the same, equate the arguments:
+   \[
+   x = 5
+   \]
+
+**Final Answer**:
+\[
+x = 5
+\]
+
+---
+
+### **Example 3: Using Logarithmic Properties**
+Solve:
+\[
+\log_2(x) + \log_2(x - 3) = 3
+\]
+
+**Solution**:
+1. Apply the product rule:
+   \[
+   \log_2(x(x - 3)) = 3
+   \]
+
+2. Simplify:
+   \[
+   \log_2(x^2 - 3x) = 3
+   \]
+
+3. Rewrite in exponential form:
+   \[
+   x^2 - 3x = 2^3
+   \]
+
+4. Solve the quadratic equation:
+   \[
+   x^2 - 3x - 8 = 0
+   \]
+
+   Factorize:
+   \[
+   (x - 4)(x + 2) = 0
+   \]
+
+   Solutions:
+   \[
+   x = 4 \quad \text{or} \quad x = -2
+   \]
+
+5. Check for extraneous solutions:
+   - \(x = -2\) is invalid because \(\log_2(x)\) is undefined for \(x \leq 0\).
+   - \(x = 4\) is valid.
+
+**Final Answer**:
+\[
+x = 4
+\]
+
+---
+
+### **Example 4: Equation with Different Bases**
+Solve:
+\[
+\log_2(x) = \log_3(9)
+\]
+
+**Solution**:
+1. Simplify \(\log_3(9)\):
+   \[
+   \log_3(9) = \log_3(3^2) = 2
+   \]
+
+2. Rewrite the equation:
+   \[
+   \log_2(x) = 2
+   \]
+
+3. Solve for \(x\) using exponential form:
+   \[
+   x = 2^2 = 4
+   \]
+
+**Final Answer**:
+\[
+x = 4
+\]
+
+---
+
+### **Key Tips**
+1. Logarithmic properties are essential for simplifying equations.
+2. Always check the domain (\(x > 0\)) to avoid extraneous solutions.
+3. Rewrite complex logarithms in exponential form to solve effectively.
+
+
+
+
+## **Area of a General Triangle**
+The **area of a general triangle** can be computed using several formulas depending on the available information (e.g., side lengths, base and height, or angles). Below are the most common methods:
+
+---
+
+### **1. Using Base and Height**
+If the base (\(b\)) and height (\(h\)) of the triangle are known:
+\[
+\text{Area} = \frac{1}{2} \times \text{base} \times \text{height}
+\]
+- \(b\) is the length of the base.
+- \(h\) is the perpendicular height from the base to the opposite vertex.
+
+---
+
+### **2. Using Heron's Formula**
+If the lengths of all three sides (\(a\), \(b\), \(c\)) are known:
+1. Compute the semi-perimeter:
+   \[
+   s = \frac{a + b + c}{2}
+   \]
+
+2. Compute the area:
+   \[
+   \text{Area} = \sqrt{s(s - a)(s - b)(s - c)}
+   \]
+
+---
+
+### **3. Using Two Sides and the Included Angle**
+If two sides (\(a\), \(b\)) and the included angle (\(\theta\)) are known:
+\[
+\text{Area} = \frac{1}{2} \times a \times b \times \sin(\theta)
+\]
+- \(\theta\) is the angle between sides \(a\) and \(b\).
+
+---
+
+### **4. Coordinate Geometry Formula**
+If the coordinates of the triangle's vertices are known as \((x_1, y_1)\), \((x_2, y_2)\), and \((x_3, y_3)\):
+\[
+\text{Area} = \frac{1}{2} \left| x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2) \right|
+\]
+
+---
+
+### **Examples**
+
+#### **Example 1: Base and Height**
+Find the area of a triangle with base \(b = 10\) units and height \(h = 6\) units:
+\[
+\text{Area} = \frac{1}{2} \times 10 \times 6 = 30 \, \text{square units.}
+\]
+
+#### **Example 2: Heron's Formula**
+Find the area of a triangle with sides \(a = 5\), \(b = 6\), and \(c = 7\):
+1. Compute \(s\):
+   \[
+   s = \frac{5 + 6 + 7}{2} = 9
+   \]
+
+2. Compute the area:
+   \[
+   \text{Area} = \sqrt{9(9 - 5)(9 - 6)(9 - 7)} = \sqrt{9 \cdot 4 \cdot 3 \cdot 2} = \sqrt{216} \approx 14.7 \, \text{square units.}
+   \]
+
+#### **Example 3: Two Sides and Angle**
+Find the area of a triangle with \(a = 8\), \(b = 10\), and \(\theta = 60^\circ\):
+\[
+\text{Area} = \frac{1}{2} \times 8 \times 10 \times \sin(60^\circ) = \frac{1}{2} \times 8 \times 10 \times \frac{\sqrt{3}}{2} = 20\sqrt{3} \approx 34.64 \, \text{square units.}
+\]
+
+---
+
+### **Conclusion**
+The appropriate formula depends on the information available about the triangle. Use the one that matches 
+the given data for efficient calculation.
+
+
+
+
+## **Consistency and Dependency in Linear Systems**
+When analyzing **linear systems of equations**, the concepts of **consistency** and **dependency** help determine the nature of solutions the system may have. Here's a breakdown of these concepts:
+
+---
+
+### **1. Consistency in Linear Systems**
+A linear system is classified as:
+
+#### **a) Consistent**
+- The system has **at least one solution**.
+- Can be further divided into:
+  - **Unique Solution**: A single solution exists (intersection at a point).
+  - **Infinite Solutions**: The equations represent the same line/plane, so they overlap completely.
+
+#### **b) Inconsistent**
+- The system has **no solutions**.
+- This happens when the equations represent parallel lines or planes that never intersect.
+
+---
+
+### **2. Dependency in Linear Systems**
+Dependency refers to whether the equations in the system are related (dependent) or independent.
+
+#### **a) Independent**
+- Each equation provides unique information.
+- The system has exactly one solution if it is consistent.
+
+#### **b) Dependent**
+- At least one equation is a scalar multiple or linear combination of the others.
+- The system has infinitely many solutions because the equations describe the same geometric entity (e.g., overlapping lines or planes).
+
+---
+
+### **Geometric Interpretation**
+
+- **2 Variables (Lines in a Plane)**:
+  - **Consistent and Independent**: Lines intersect at a point (unique solution).
+  - **Consistent and Dependent**: Lines are identical (infinite solutions).
+  - **Inconsistent**: Lines are parallel and do not intersect (no solution).
+
+- **3 Variables (Planes in Space)**:
+  - **Consistent and Independent**: Planes intersect at a single point.
+  - **Consistent and Dependent**: Planes overlap or intersect along a line.
+  - **Inconsistent**: Planes are parallel or form inconsistent arrangements.
+
+---
+
+### **Example Analysis**
+
+#### **Example 1: Unique Solution**
+\[
+x + y = 3 \\
+2x - y = 1
+\]
+- Solving yields \(x = 1, y = 2\).
+- **Consistent and Independent** (unique solution).
+
+#### **Example 2: Infinite Solutions**
+\[
+x + y = 3 \\
+2x + 2y = 6
+\]
+- The second equation is a multiple of the first.
+- **Consistent and Dependent** (infinite solutions).
+
+#### **Example 3: No Solution**
+\[
+x + y = 3 \\
+x + y = 5
+\]
+- The lines are parallel with no intersection.
+- **Inconsistent**.
+
+---
+
+### **Summary**
+- A system's **consistency** determines if solutions exist.
+- A system's **dependency** determines whether the equations provide unique or redundant information.
+Understanding these concepts helps identify the type of solutions a linear system has and their geometric interpretation.
+
+
+
+  
+## **Vertical Translation of an Exponential Decay Function**
+A **vertical translation** of an **exponential decay function** involves shifting the graph of the function 
+up or down along the \(y\)-axis. Here's an overview:
+
+---
+
+### **Exponential Decay Function**
+The general form of an exponential decay function is:
+\[
+f(x) = a \cdot b^x, \quad \text{where } 0 < b < 1 \text{ and } a > 0.
+\]
+- \(a\): Initial value (value of \(f(x)\) when \(x = 0\)).
+- \(b\): Decay factor (indicates the rate of decay).
+
+---
+
+### **Vertical Translation**
+When a constant \(k\) is added to or subtracted from the function, the graph is translated vertically:
+\[
+f(x) = a \cdot b^x + k
+\]
+- \(k > 0\): The graph shifts **up** by \(k\) units.
+- \(k < 0\): The graph shifts **down** by \(|k|\) units.
+
+---
+
+### **Key Characteristics After Translation**
+1. **Horizontal Asymptote**:
+   - The horizontal asymptote, originally at \(y = 0\), shifts to \(y = k\).
+   - This happens because \(k\) is added to all \(y\)-values of the function.
+
+2. **Decay Behavior**:
+   - The function still exhibits exponential decay, but the \(y\)-values are shifted by \(k\).
+
+3. **Domain**:
+   - The domain remains all real numbers (\(-\infty, \infty\)).
+
+4. **Range**:
+   - The range changes to:
+     \[
+     y > k \quad \text{(if \(a > 0\))}.
+     \]
+
+---
+
+### **Example**
+#### Original Function:
+\[
+f(x) = 2 \cdot (0.5)^x
+\]
+- Decay factor: \(b = 0.5\).
+- Horizontal asymptote: \(y = 0\).
+- Range: \(y > 0\).
+
+#### Vertical Translation:
+\[
+f(x) = 2 \cdot (0.5)^x + 3
+\]
+- The graph shifts **up** by 3 units.
+- New horizontal asymptote: \(y = 3\).
+- New range: \(y > 3\).
+
+---
+
+### **Graphical Representation**
+1. The graph of \(f(x) = 2 \cdot (0.5)^x\) starts at \(y = 2\) when \(x = 0\) and approaches \(y = 0\) as \(x \to \infty\).
+2. After the translation (\(k = 3\)):
+   - The graph starts at \(y = 5\) when \(x = 0\).
+   - The horizontal asymptote shifts to \(y = 3\).
+
+---
+
+### **Summary**
+- Vertical translations adjust the horizontal asymptote and shift the entire graph up or down without changing the domain or the decay rate.
+- The new function \(f(x) = a \cdot b^x + k\) provides a decay model that reflects the additional constant \(k\), which is common in real-world scenarios like adjusting baseline levels in exponential processes.
+
+
+
+
+## **logarithms of exponentiated expressions**
+When dealing with **logarithms of exponentiated expressions**, it's important to apply the properties
+of logarithms to simplify the expression. Here's how to handle such cases:
+
+---
+
+### **General Expression**
+For an expression of the form:
+\[
+\log_b(a^c)
+\]
+where:
+- \(b\): Base of the logarithm.
+- \(a\): Argument of the logarithm.
+- \(c\): Exponent of the argument.
+
+---
+
+### **Key Property**
+Using the **power rule of logarithms**, which states:
+\[
+\log_b(a^c) = c \cdot \log_b(a)
+\]
+This allows the exponent \(c\) to be brought in front as a coefficient.
+
+---
+
+### **Examples**
+#### **Example 1: Simplify \(\log_2(8^3)\)**
+1. Apply the power rule:
+   \[
+   \log_2(8^3) = 3 \cdot \log_2(8)
+   \]
+
+2. Simplify \(\log_2(8)\) (since \(8 = 2^3\)):
+   \[
+   \log_2(8) = 3
+   \]
+
+3. Final result:
+   \[
+   \log_2(8^3) = 3 \cdot 3 = 9
+   \]
+
+---
+
+#### **Example 2: Simplify \(\ln(e^{5x})\)**
+1. Use the natural logarithm property:
+   \[
+   \ln(e^{5x}) = 5x \cdot \ln(e)
+   \]
+
+2. Simplify \(\ln(e) = 1\):
+   \[
+   \ln(e^{5x}) = 5x
+   \]
+
+---
+
+#### **Example 3: Simplify \(\log_{10}(100^2)\)**
+1. Apply the power rule:
+   \[
+   \log_{10}(100^2) = 2 \cdot \log_{10}(100)
+   \]
+
+2. Simplify \(\log_{10}(100) = 2\) (since \(100 = 10^2\)):
+   \[
+   \log_{10}(100^2) = 2 \cdot 2 = 4
+   \]
+
+---
+
+### **Special Cases**
+1. **When the base and argument are powers of the same number**:
+   \[
+   \log_a(a^n) = n
+   \]
+   Example: \(\log_3(3^4) = 4\).
+
+2. **Logarithm of an exponent involving the same base**:
+   \[
+   \log_b(b^{x+y}) = x + y
+   \]
+   Example: \(\log_2(2^{3+4}) = 3 + 4 = 7\).
+
+---
+
+### **Common Mistakes to Avoid**
+1. **Not simplifying the logarithm before applying rules**:
+   - For example, \(\log_2(64^2)\) can first simplify \(\log_2(64) = 6\), then apply the power rule.
+
+2. **Misapplying the base**:
+   - Ensure the base of the logarithm matches the context (e.g., natural logarithm \(e\), common logarithm \(10\), or other bases).
+
+---
+
+### **Conclusion**
+The power rule of logarithms (\(\log_b(a^c) = c \cdot \log_b(a)\)) is a fundamental property that simplifies exponentiated logarithmic expressions. Combine it with other logarithmic properties for efficient calculations.
+
+
+
+## **Limits of Power Functions**
+### **Limits of Power Functions**
+A **power function** is of the form \( f(x) = x^n \), where \( n \) is a real number. Evaluating the limits of power functions depends on the behavior of \( x \) (as \( x \to \infty \), \( x \to -\infty \), or \( x \to 0 \)) and the exponent \( n \).
+
+#### **1. As \( x \to \infty \):**
+- If \( n > 0 \), \( x^n \to \infty \).
+- If \( n < 0 \), \( x^n \to 0 \) (because \( x^n = \frac{1}{x^{|n|}} \)).
+- If \( n = 0 \), \( x^n = 1 \) (a constant).
+
+#### **2. As \( x \to -\infty \):**
+- If \( n > 0 \) and \( n \) is an **even integer**, \( x^n \to \infty \) (since negative values squared become positive).
+- If \( n > 0 \) and \( n \) is an **odd integer**, \( x^n \to -\infty \).
+- If \( n < 0 \), \( x^n \to 0 \) (negative or positive doesn't matter as the fraction approaches zero).
+- If \( n = 0 \), \( x^n = 1 \).
+
+#### **3. As \( x \to 0^+ \) or \( x \to 0^- \):**
+- If \( n > 0 \), \( x^n \to 0 \).
+- If \( n < 0 \), \( x^n \to \infty \) or \( x^n \to -\infty \), depending on the sign of \( x \).
+
+---
+
+### **Examples of Limits for Power Functions**
+1. \(\lim_{x \to \infty} x^3 = \infty\) (positive exponent, positive \(x\)).
+2. \(\lim_{x \to -\infty} x^4 = \infty\) (even positive exponent, negative \(x\)).
+3. \(\lim_{x \to 0^+} x^{-2} = \infty\) (negative exponent, small positive \(x\)).
+
+---
+
+### **Constant Rule for Limits**
+The **constant rule for limits** states:
+\[
+\lim_{x \to c} k = k
+\]
+where \(k\) is a constant, and \(c\) is any value (finite or infinite). This means the limit of a constant function is the constant itself.
+
+#### **Key Points:**
+1. The value of \( x \) has no effect on the outcome since the function is constant.
+2. This rule applies regardless of whether \( x \to c \) is finite or infinite.
+
+---
+
+### **Examples of the Constant Rule**
+1. \(\lim_{x \to \infty} 5 = 5\).
+2. \(\lim_{x \to -\infty} -7 = -7\).
+3. \(\lim_{x \to 0} 3 = 3\).
+
+---
+
+### **Combining Power Functions and Constants**
+When dealing with combinations of power functions and constants, apply the **sum, product, and quotient rules** in addition to the constant rule.
+
+#### Example:
+\[
+f(x) = 3x^2 + 5
+\]
+- \(\lim_{x \to \infty} f(x) = \lim_{x \to \infty} (3x^2) + \lim_{x \to \infty} 5\).
+- Using power function and constant rules:
+  - \(\lim_{x \to \infty} 3x^2 = \infty\),
+  - \(\lim_{x \to \infty} 5 = 5\).
+- So, \(\lim_{x \to \infty} f(x) = \infty\).
+
+---
+
+### **Conclusion**
+- **Power Functions**: Their limits depend on the value of the exponent \( n \) and the behavior of \( x \).
+- **Constant Rule**: The limit of a constant is always the constant itself.
+- Use these principles together with algebraic manipulation to evaluate complex limits.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
