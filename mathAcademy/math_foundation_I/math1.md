@@ -692,7 +692,7 @@ Where:
 - $A$ and $B$ are not both zero $`((A, B) \neq (0, 0))`$.
 
 ### Steps to Write a Line in Standard Form:
-1. Rearrange the given equation to move $x$- and $$-terms to the left side.
+1. Rearrange the given equation to move $x$- and $y$-terms to the left side.
 2. Ensure coefficients are integers by multiplying through by an appropriate factor if fractions are present.
 3. Normalize the equation (e.g., ensure $A$ is positive).
 
