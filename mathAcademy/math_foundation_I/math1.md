@@ -1,5 +1,19 @@
 ## Mathematical Foundations I
 
+## Content
+### 1. Fractions
+### 2. Ratios and Percentages
+### 3. The Number System
+### 4. Exponents and Radicals
+### 5. Equations and Inequalities
+### 6. Two-Variable Equations
+### 7. Radical and Rational Expressions
+### 8. Functions
+### 9. Absolute Value
+### 10. Exponential Functions
+### 11. Polynomials
+### 12. Geometry Fundamentals
+### 13. Polygons
 
 
 
