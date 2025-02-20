@@ -4496,54 +4496,1061 @@ making calculations and interpretations easier.
 
 
 
+## **Writing Geometric Series in Sigma Notation**  
+
+A **geometric series** is a sum of terms where each term is obtained by multiplying the previous 
+one by a constant ratio. **Sigma notation (∑)** provides a compact way to represent these sums.
+
+---
+
+### **🔹 General Formula for a Geometric Series in Sigma Notation**  
+A geometric series can be written as:  
+
+\[
+S_n = a + ar + ar^2 + ar^3 + \dots + ar^{n-1}
+\]
+
+Using **sigma notation**, this becomes:
+
+\[
+S_n = \sum_{k=0}^{n-1} ar^k
+\]
+
+where:  
+- \( a \) = first term  
+- \( r \) = common ratio  
+- \( n \) = number of terms  
+- \( k \) = index of summation (starting from 0)
+
+---
+
+### **🔹 Examples**
+#### **1️⃣ Finite Geometric Series Example**
+Write the sum **\( 3 + 6 + 12 + 24 + 48 \)** in sigma notation.
+
+👉 Identify parameters:  
+- First term: \( a = 3 \)  
+- Common ratio: \( r = \frac{6}{3} = 2 \)  
+- Number of terms: \( n = 5 \)  
+
+Using the formula:
+
+\[
+\sum_{k=0}^{4} 3(2)^k
+\]
+
+---
+
+#### **2️⃣ Infinite Geometric Series Example**
+An infinite geometric series **\( 5 + \frac{5}{2} + \frac{5}{4} + \frac{5}{8} + \dots \)** can be written as:
+
+\[
+\sum_{k=0}^{\infty} 5\left(\frac{1}{2}\right)^k
+\]
+
+✅ **Converges if** \( |r| < 1 \), using:
+
+\[
+S_{\infty} = \frac{a}{1 - r}
+\]
+
+---
+
+### **🔹 Special Cases**
+1. **Geometric Series Starting from \( k=1 \)**:  
+   If a series starts from \( k=1 \), rewrite it as:
+
+   \[
+   \sum_{k=1}^{n} ar^{k-1}
+   \]
+
+2. **Changing the First Term**:  
+   If the first term isn't at \( k=0 \), adjust the exponent accordingly.
+
+---
+
+### **🔹 Summary**
+| **Case** | **Sigma Notation** |
+|------------|--------------------|
+| Finite Series | \( \sum_{k=0}^{n-1} ar^k \) |
+| Infinite Series (\( |r| < 1 \)) | \( \sum_{k=0}^{\infty} ar^k \) |
+| Starting at \( k=1 \) | \( \sum_{k=1}^{n} ar^{k-1} \) |
+
+🚀 **Key Takeaway**: Geometric series are easy to express using sigma notation, making it useful for 
+compact representation and further calculations.
+
+
+
+
+## **The Polar Form of a Complex Number**  
+
+A **complex number** \( z \) can be expressed in both **rectangular (Cartesian)** and **polar forms**. 
+The **polar form** is particularly useful for multiplication, division, and finding roots of complex numbers.
+
+---
+
+### **🔹 Rectangular vs. Polar Form**  
+A complex number in **rectangular form** is:  
+\[
+z = x + iy
+\]  
+where:  
+- \( x \) = real part  
+- \( y \) = imaginary part  
+- \( i \) = imaginary unit (\( i^2 = -1 \))
+
+In **polar form**, the same number is expressed as:  
+\[
+z = r (\cos \theta + i \sin \theta)
+\]  
+or using **Euler’s formula**:  
+\[
+z = r e^{i\theta}
+\]  
+where:  
+- \( r = |z| = \sqrt{x^2 + y^2} \) (modulus or magnitude)  
+- \( \theta = \tan^{-1} \left(\frac{y}{x}\right) \) (argument or phase angle)  
+
+---
+
+### **🔹 Conversion Between Forms**
+#### **1️⃣ Rectangular to Polar**  
+Given \( z = x + iy \):  
+- Compute **magnitude**:  
+  \[
+  r = \sqrt{x^2 + y^2}
+  \]
+- Compute **angle** \( \theta \) (principal argument):  
+  \[
+  \theta = \tan^{-1} \left(\frac{y}{x}\right)
+  \]
+
+Then, write:
+\[
+z = r (\cos \theta + i \sin \theta) = r e^{i\theta}
+\]
+
+👉 **Example:** Convert \( z = 1 + i\sqrt{3} \) to polar form.  
+- \( r = \sqrt{1^2 + (\sqrt{3})^2} = \sqrt{4} = 2 \)  
+- \( \theta = \tan^{-1} \left(\frac{\sqrt{3}}{1}\right) = \frac{\pi}{3} \)  
+
+So,  
+\[
+z = 2 e^{i\pi/3}
+\]
+
+---
+
+#### **2️⃣ Polar to Rectangular**  
+Given \( z = r e^{i\theta} \), expand using Euler’s formula:  
+\[
+z = r (\cos \theta + i \sin \theta)
+\]
+
+👉 **Example:** Convert \( z = 4e^{i\pi/4} \) to rectangular form.  
+- \( x = 4 \cos (\pi/4) = 4 \times \frac{\sqrt{2}}{2} = 2\sqrt{2} \)  
+- \( y = 4 \sin (\pi/4) = 4 \times \frac{\sqrt{2}}{2} = 2\sqrt{2} \)  
+
+So,  
+\[
+z = 2\sqrt{2} + i 2\sqrt{2}
+\]
+
+---
+
+### **🔹 Applications of Polar Form**
+1. **Multiplication & Division**:  
+   - **Multiplication**:  
+     \[
+     z_1 z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)}
+     \]
+   - **Division**:  
+     \[
+     \frac{z_1}{z_2} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}
+     \]
+
+2. **Powers & Roots (De Moivre’s Theorem)**:  
+   - **Powers**:  
+     \[
+     z^n = r^n e^{i n \theta}
+     \]
+   - **Roots**:  
+     \[
+     z_k = r^{1/n} e^{i (\theta + 2k\pi)/n}, \quad k = 0,1,\dots, n-1
+     \]
+
+---
+
+### **🔹 Summary**
+| **Form** | **Expression** |
+|----------|--------------|
+| Rectangular | \( x + iy \) |
+| Polar | \( r (\cos \theta + i \sin \theta) \) |
+| Exponential | \( r e^{i\theta} \) |
+| Magnitude | \( r = \sqrt{x^2 + y^2} \) |
+| Argument | \( \theta = \tan^{-1} (y/x) \) |
+
+🚀 **Key Takeaway**: The polar form is extremely useful for simplifying operations like multiplication, 
+division, and root calculations of complex numbers.
+
+
+
+
+
+
+## **Convergence of a Geometric Sequence**  
+
+#### **1. Definition of a Geometric Sequence**  
+A geometric sequence (or geometric progression) is a sequence where each term is obtained by 
+multiplying the previous term by a constant ratio, denoted as \( r \). It has the general form:  
+
+
+\[
+a, ar, ar^2, ar^3, \dots
+\]
+
+where:  
+- \( a \) is the first term.  
+- \( r \) is the common ratio.  
+
+#### **2. When Does a Geometric Sequence Converge?**  
+A sequence **converges** if it approaches a finite limit as \( n \to \infty \). The behavior of a geometric sequence depends on the common ratio \( r \):  
+
+1. **If \( |r| < 1 \), the sequence converges**  
+   - As \( n \to \infty \), the terms \( ar^n \) approach **zero** because multiplying by a small number repeatedly makes the terms shrink.
+   - Example: \( 2, 1, 0.5, 0.25, 0.125, \dots \) with \( r = \frac{1}{2} \) converges to 0.
+
+2. **If \( |r| \geq 1 \), the sequence diverges**  
+   - When \( r > 1 \), the terms grow indefinitely (\( \to \infty \)).
+   - When \( r < -1 \), the terms oscillate between large positive and negative values (does not settle to a single limit).
+   - Example: \( 2, 4, 8, 16, 32, \dots \) with \( r = 2 \) diverges to \( \infty \).
+
+#### **3. Limit of a Geometric Sequence**  
+For a geometric sequence with common ratio \( |r| < 1 \), the limit of the general term as \( n \to \infty \) is:
+
+\[
+\lim_{n \to \infty} ar^n = 0
+\]
+
+Thus, all geometric sequences with \( |r| < 1 \) converge to **zero**.
+
+#### **4. Example Problems**
+**Example 1:** Does the geometric sequence \( 5, 2.5, 1.25, 0.625, \dots \) converge?  
+- \( a = 5 \), \( r = \frac{1}{2} \), and \( |r| < 1 \).  
+- Since the ratio is less than 1, the sequence **converges** to 0.
+
+**Example 2:** Does the sequence \( 3, 6, 12, 24, \dots \) converge?  
+- \( a = 3 \), \( r = 2 \), and \( |r| > 1 \).  
+- The sequence grows infinitely large, so it **diverges**.
+
+#### **5. Key Takeaways**  
+- If \( |r| < 1 \), the sequence **converges** to 0.  
+- If \( |r| \geq 1 \), the sequence **diverges**.  
+- Geometric sequences play an essential role in series, finance (compound interest), and signal processing.  
+
+
+
+
+
+
+## **Sum of a Finite Geometric Series Given in Sigma Notation**
+
+#### **1. Understanding the Sigma Notation for a Geometric Series**
+A **geometric series** is a sum of terms in a geometric sequence, where each term is obtained by 
+multiplying the previous term by a constant ratio \( r \). A **finite geometric series** has a 
+limited number of terms.
+
+The general form of a **finite geometric series** using **sigma notation** is:
+
+\[
+\sum_{k=m}^{n} a r^k
+\]
+
+where:
+- \( a \) is the **first term** of the series,
+- \( r \) is the **common ratio**,
+- \( k \) is the **index of summation**, running from \( m \) to \( n \).
+
+#### **2. Formula for the Sum of a Finite Geometric Series**
+The sum of the first \( N \) terms of a geometric series is given by:
+
+\[
+S_N = a \frac{1 - r^N}{1 - r}, \quad \text{for } r \neq 1
+\]
+
+where:
+- \( S_N \) is the sum of the first \( N \) terms,
+- \( a \) is the first term,
+- \( r \) is the common ratio,
+- \( N \) is the number of terms in the series.
+
+If the index \( k \) starts at \( m \) instead of \( 0 \), then the formula adapts as:
+
+\[
+S = a r^m \frac{1 - r^{(n-m+1)}}{1 - r}, \quad \text{for } r \neq 1
+\]
+
+#### **3. Example Calculations**
+##### **Example 1: Basic Finite Geometric Series**
+Evaluate:
+
+\[
+\sum_{k=0}^{4} 3(2)^k
+\]
+
+**Solution:**
+- \( a = 3 \),  
+- \( r = 2 \),  
+- Number of terms: \( N = 4 - 0 + 1 = 5 \).
+
+Using the sum formula:
+
+\[
+S_5 = 3 \frac{1 - 2^5}{1 - 2}
+\]
+
+\[
+= 3 \frac{1 - 32}{1 - 2} = 3 \times \frac{-31}{-1} = 3 \times 31 = 93
+\]
+
+Thus, the sum is **93**.
+
+##### **Example 2: Geometric Series with a Different Starting Index**
+Evaluate:
+
+\[
+\sum_{k=2}^{5} 4(3)^k
+\]
+
+**Solution:**
+- \( a = 4 \),  
+- \( r = 3 \),  
+- Number of terms: \( N = 5 - 2 + 1 = 4 \).
+
+Using the adapted sum formula:
+
+\[
+S = 4(3^2) \frac{1 - 3^4}{1 - 3}
+\]
+
+\[
+= 4(9) \times \frac{1 - 81}{1 - 3}
+\]
+
+\[
+= 36 \times \frac{-80}{-2} = 36 \times 40 = 1440
+\]
+
+Thus, the sum is **1440**.
+
+#### **4. Special Cases**
+1. **If \( r = 1 \):**  
+   The series becomes arithmetic because each term is the same. The sum simplifies to:
+
+   \[
+   S_N = aN
+   \]
+
+2. **Negative or Fractional \( r \):**  
+   The same formula applies, but terms alternate signs (for negative \( r \)) or decrease in magnitude (for \( 0 < r < 1 \)).
+
+#### **5. Conclusion**
+- **Identify** the first term \( a \), common ratio \( r \), and number of terms \( N \).
+- **Apply** the geometric sum formula accordingly.
+- **Adjust** for different starting indices in sigma notation.
+
+This method efficiently evaluates finite geometric series without manually summing each term.
+
+
+
+
+
+## **Euler's Formula**
+
+#### **1. Introduction to Euler’s Formula**
+Euler’s formula is one of the most profound and beautiful equations in mathematics, linking complex numbers, 
+trigonometry, and exponentials. It is given by:
+
+\[
+e^{ix} = \cos x + i \sin x
+\]
+
+where:
+- \( e \) is the base of the natural logarithm,
+- \( i \) is the imaginary unit (\( i^2 = -1 \)),
+- \( x \) is a real number (usually representing an angle in radians),
+- \( \cos x \) and \( \sin x \) are the trigonometric functions.
+
+This formula establishes a deep connection between exponential functions and trigonometry.
+
+---
+
+#### **2. Derivation of Euler’s Formula**
+Euler’s formula can be derived using the Maclaurin series expansions of \( e^x \), \( \cos x \), and \( \sin x \).
+
+##### **Step 1: Maclaurin Series Expansions**
+The Taylor series expansions for these functions are:
+
+1. **Exponential function:**
+   \[
+   e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!} + \dots
+   \]
+
+2. **Sine function:**
+   \[
+   \sin x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \dots
+   \]
+
+3. **Cosine function:**
+   \[
+   \cos x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \dots
+   \]
+
+##### **Step 2: Substituting \( x = ix \) in \( e^x \)**
+If we replace \( x \) with \( ix \) in the Maclaurin series for \( e^x \), we get:
+
+\[
+e^{ix} = 1 + ix + \frac{(ix)^2}{2!} + \frac{(ix)^3}{3!} + \frac{(ix)^4}{4!} + \frac{(ix)^5}{5!} + \dots
+\]
+
+Expanding the powers of \( i \):
+
+\[
+e^{ix} = 1 + ix - \frac{x^2}{2!} - i \frac{x^3}{3!} + \frac{x^4}{4!} + i \frac{x^5}{5!} - \dots
+\]
+
+Rearranging real and imaginary terms:
+
+\[
+e^{ix} = \left( 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \dots \right) + i \left( x - \frac{x^3}{3!} + \frac{x^5}{5!} - \dots \right)
+\]
+
+Recognizing these as the series for cosine and sine:
+
+\[
+e^{ix} = \cos x + i \sin x
+\]
+
+Thus, we have derived Euler’s formula.
+
+---
+
+#### **3. Special Cases of Euler’s Formula**
+##### **Case 1: Euler’s Identity**
+Setting \( x = \pi \) in Euler’s formula:
+
+\[
+e^{i\pi} = \cos \pi + i \sin \pi
+\]
+
+Since \( \cos \pi = -1 \) and \( \sin \pi = 0 \), this simplifies to:
+
+\[
+e^{i\pi} + 1 = 0
+\]
+
+This is known as **Euler’s identity**, often considered one of the most beautiful equations in mathematics as it relates five fundamental constants: \( e, i, \pi, 1, \) and \( 0 \).
+
+##### **Case 2: Relation to the Unit Circle**
+For any real number \( x \), Euler’s formula states:
+
+\[
+e^{ix} = \cos x + i \sin x
+\]
+
+This describes a point on the **unit circle** in the complex plane, where \( \cos x \) is the real part and \( \sin x \) is the imaginary part.
+
+---
+
+#### **4. Applications of Euler’s Formula**
+##### **1. Complex Number Representation**
+Euler’s formula provides a way to express complex numbers in **polar form**:
+
+\[
+z = r e^{i\theta}
+\]
+
+where:
+- \( r = |z| \) is the magnitude (modulus) of \( z \),
+- \( \theta = \arg(z) \) is the argument (angle) of \( z \).
+
+##### **2. De Moivre’s Theorem**
+Euler’s formula leads to **De Moivre’s Theorem**:
+
+\[
+(\cos x + i \sin x)^n = e^{inx} = \cos(nx) + i \sin(nx)
+\]
+
+This is useful in **computing powers and roots of complex numbers**.
+
+##### **3. Fourier Analysis**
+Euler’s formula is fundamental in Fourier analysis, where signals are represented as sums of exponential functions:
+
+\[
+f(t) = \sum c_n e^{i n t}
+\]
+
+This is widely used in **signal processing, quantum mechanics, and engineering**.
+
+##### **4. Differential Equations**
+Many differential equations, especially in **physics and engineering**, have solutions involving exponentials of imaginary numbers, which can be rewritten using Euler’s formula.
+
+---
+
+#### **5. Conclusion**
+- **Euler’s formula** bridges complex numbers, trigonometry, and exponentials.
+- **It is derived** using the Taylor series expansions of \( e^x, \sin x, \) and \( \cos x \).
+- **Euler’s identity** \( e^{i\pi} + 1 = 0 \) is a special case.
+- **The formula is crucial** in complex number operations, Fourier analysis, and engineering applications.
+
+This equation stands as one of the most elegant and fundamental relationships in mathematics.
+
+
+
+
+
+
+
+# **Infinite Series and Partial Sums**  
+
+#### **1. Introduction to Infinite Series**  
+An **infinite series** is the sum of infinitely many terms of a sequence:
+
+\[
+S = a_1 + a_2 + a_3 + \dots = \sum_{n=1}^{\infty} a_n
+\]
+
+where \( a_n \) represents the terms of the sequence. The sum of the first \( N \) terms is called the **partial sum**.
+
+---
+
+#### **2. Partial Sums and Convergence**  
+The **\( N \)th partial sum** of an infinite series is:
+
+\[
+S_N = \sum_{n=1}^{N} a_n = a_1 + a_2 + \dots + a_N
+\]
+
+To determine whether an infinite series **converges** or **diverges**, we examine the limit:
+
+\[
+\lim_{N \to \infty} S_N = S
+\]
+
+- If \( S_N \) approaches a finite value \( S \), the series **converges**.
+- If \( S_N \) grows without bound or oscillates indefinitely, the series **diverges**.
+
+---
+
+#### **3. Common Types of Infinite Series**  
+
+##### **1. Geometric Series**
+A geometric series has the form:
+
+\[
+\sum_{n=0}^{\infty} ar^n = a + ar + ar^2 + ar^3 + \dots
+\]
+
+where \( a \) is the first term and \( r \) is the common ratio.  
+- The sum of the first \( N \) terms (partial sum) is:
+
+  \[
+  S_N = a \frac{1 - r^N}{1 - r}, \quad r \neq 1
+  \]
+
+- The **infinite sum** (if \( |r| < 1 \)) is:
+
+  \[
+  S = \frac{a}{1 - r}, \quad \text{for } |r| < 1
+  \]
+
+- If \( |r| \geq 1 \), the series **diverges**.
+
+##### **2. Harmonic Series**
+The harmonic series is:
+
+\[
+\sum_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \dots
+\]
+
+Although the terms decrease, the series **diverges** to infinity.
+
+##### **3. p-Series**
+A **p-series** is of the form:
+
+\[
+\sum_{n=1}^{\infty} \frac{1}{n^p}
+\]
+
+- It **converges** if \( p > 1 \).
+- It **diverges** if \( p \leq 1 \).
+
+##### **4. Alternating Series**
+An alternating series has terms that switch signs, such as:
+
+\[
+\sum_{n=1}^{\infty} (-1)^n a_n
+\]
+
+A special case is the **alternating harmonic series**:
+
+\[
+\sum_{n=1}^{\infty} \frac{(-1)^n}{n}
+\]
+
+which **converges** conditionally.
+
+---
+
+#### **4. Tests for Convergence**  
+To determine if a series converges, several tests are used:
+
+1. **Divergence Test**: If \( \lim_{n \to \infty} a_n \neq 0 \), then \( \sum a_n \) **diverges**.
+2. **Geometric Series Test**: Converges if \( |r| < 1 \).
+3. **p-Series Test**: Converges if \( p > 1 \).
+4. **Integral Test**: If \( f(x) \) is decreasing and positive, then:
+
+   \[
+   \sum a_n \text{ and } \int f(x)dx \text{ have the same behavior}
+   \]
+
+5. **Comparison Test**: If \( 0 \leq a_n \leq b_n \) and \( \sum b_n \) converges, then \( \sum a_n \) converges.
+6. **Limit Comparison Test**: If \( \lim_{n\to\infty} \frac{a_n}{b_n} = C \) (a finite, positive constant), and \( \sum b_n \) converges, then \( \sum a_n \) converges.
+7. **Alternating Series Test**: If the sequence decreases and its limit is zero, then the alternating series **converges**.
+8. **Ratio Test**: If \( \lim_{n\to\infty} \left| \frac{a_{n+1}}{a_n} \right| < 1 \), the series converges absolutely.
+9. **Root Test**: If \( \lim_{n\to\infty} \sqrt[n]{|a_n|} < 1 \), the series converges absolutely.
+
+---
+
+#### **5. Absolute vs. Conditional Convergence**  
+- A series **converges absolutely** if \( \sum |a_n| \) converges.
+- If \( \sum |a_n| \) diverges but \( \sum a_n \) converges, it **converges conditionally**.
+
+---
+
+#### **6. Applications of Infinite Series**  
+- **Taylor and Maclaurin Series** approximate functions using infinite series.
+- **Fourier Series** represents periodic functions.
+- **Physics and Engineering** use series in wave analysis and quantum mechanics.
+- **Computer Science** relies on series for numerical approximations.
+
+---
+
+### **Conclusion**
+Infinite series play a crucial role in mathematics and applications. Understanding **partial sums**, 
+**convergence tests**, and **special series types** helps determine whether a series has a finite sum or diverges.
+
+
+
+
+
+
+## **Upward and Downward Opening Parabolas**  
+
+#### **1. Introduction to Parabolas**  
+A **parabola** is a U-shaped curve that represents a quadratic function. It is defined by the equation:
+
+\[
+y = ax^2 + bx + c
+\]
+
+where:  
+- \( a \) determines the **direction** and **width** of the parabola.
+- \( b \) controls the **horizontal shift**.
+- \( c \) represents the **y-intercept**.
+
+The **vertex** of the parabola is its highest or lowest point, depending on whether it opens **upward** or **downward**.
+
+---
+
+#### **2. Direction of Opening**  
+The direction of a parabola is determined by the **sign of the leading coefficient** \( a \):  
+
+- If \( a > 0 \), the parabola **opens upward** (like a U).  
+- If \( a < 0 \), the parabola **opens downward** (like an inverted U).  
+
+🔹 **Example 1: Upward Opening Parabola**  
+\[
+y = 2x^2 - 4x + 1
+\]
+Since \( a = 2 > 0 \), the parabola opens **upward**.
+
+🔹 **Example 2: Downward Opening Parabola**  
+\[
+y = -3x^2 + 6x - 2
+\]
+Since \( a = -3 < 0 \), the parabola opens **downward**.
+
+---
+
+#### **3. Key Features of a Parabola**  
+##### **(a) Vertex**  
+The **vertex** is the turning point of the parabola, given by:
+
+\[
+x = \frac{-b}{2a}
+\]
+
+Substituting \( x \) into the equation finds \( y \), giving the vertex \( (h, k) \).
+
+##### **(b) Axis of Symmetry**  
+A vertical line that passes through the vertex:
+
+\[
+x = \frac{-b}{2a}
+\]
+
+##### **(c) Y-Intercept**  
+Occurs where \( x = 0 \):
+
+\[
+y = c
+\]
+
+##### **(d) X-Intercepts (Roots/Zeros)**  
+Solve \( ax^2 + bx + c = 0 \) using:
+- **Factoring** (if possible)
+- **Quadratic formula**:
+
+  \[
+  x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+  \]
+
+---
+
+#### **4. Graphing a Parabola**
+1. **Find the vertex** \( (h, k) \).
+2. **Draw the axis of symmetry** \( x = h \).
+3. **Find the y-intercept** \( (0, c) \).
+4. **Find x-intercepts**, if they exist.
+5. **Plot additional points** for accuracy.
+6. **Sketch the curve**, ensuring symmetry.
+
+---
+
+#### **5. Applications of Parabolas**
+- **Physics**: Projectile motion follows a parabolic trajectory.
+- **Engineering**: Parabolic reflectors in antennas and headlights.
+- **Economics**: Quadratic cost and revenue functions.
+
+---
+
+### **Conclusion**
+Upward-opening parabolas occur when \( a > 0 \), while downward-opening parabolas occur when \( a < 0 \). 
+The vertex, axis of symmetry, and intercepts provide key insights into their behavior and graphing.
+
+
+
+
+
+
+
+## **Expressing Rational Functions with Irreducible Quadratic Factors as Sums of Partial Fractions**  
+
+#### **1. Introduction to Partial Fractions**  
+Partial fraction decomposition is a technique used to break down a **rational function** 
+(a fraction where both the numerator and denominator are polynomials) into simpler fractions 
+that are easier to integrate or manipulate.  
+
+For a rational function of the form:  
+
+\[
+\frac{P(x)}{Q(x)}
+\]
+
+where **\( P(x) \)** is the numerator and **\( Q(x) \)** is the denominator, we express it as a sum of simpler fractions.
+
+---
+
+#### **2. Types of Factors in the Denominator**  
+Before decomposing, analyze \( Q(x) \), which can contain:  
+1. **Linear factors** (e.g., \( (x - a) \))  
+2. **Irreducible quadratic factors** (e.g., \( x^2 + bx + c \), which cannot be factored further over real numbers)  
+
+This discussion focuses on rational functions with **irreducible quadratic factors**.
+
+---
+
+#### **3. Decomposition When the Denominator Contains Irreducible Quadratic Factors**  
+If \( Q(x) \) has irreducible quadratic factors, each quadratic term contributes a fraction of the form:
+
+\[
+\frac{Ax + B}{ax^2 + bx + c}
+\]
+
+where:  
+- \( A \) and \( B \) are **unknown coefficients** to be determined.  
+- \( ax^2 + bx + c \) is an **irreducible quadratic factor** in the denominator.  
+
+---
+
+#### **4. Step-by-Step Decomposition**  
+##### **Step 1: Factor the Denominator**  
+Ensure that \( Q(x) \) is completely factored into linear and irreducible quadratic terms.  
+
+##### **Step 2: Set Up Partial Fractions**  
+For each **irreducible quadratic factor** \( ax^2 + bx + c \), include a fraction:
+
+\[
+\frac{Ax + B}{ax^2 + bx + c}
+\]
+
+For any **linear factor** \( (x - d) \), include a fraction:
+
+\[
+\frac{C}{x - d}
+\]
+
+##### **Step 3: Multiply Both Sides by the Denominator**  
+Multiply both sides by the **least common denominator (LCD)** to eliminate fractions.
+
+##### **Step 4: Expand and Collect Like Terms**  
+Expand both sides and group terms based on powers of \( x \).
+
+##### **Step 5: Solve for Coefficients**  
+Solve for \( A, B, C, \) etc., using:
+- **Coefficient comparison**: Match coefficients of corresponding powers of \( x \).
+- **Substituting values**: Choose values of \( x \) to simplify calculations.
+
+---
+
+#### **5. Example: Decomposing a Rational Function**  
+**Problem:**  
+Decompose the function:
+
+\[
+\frac{x^3 + 2x^2 + 3}{(x-1)(x^2 + x + 1)}
+\]
+
+##### **Step 1: Factor the Denominator**  
+The denominator is already factored into a **linear factor** \( (x - 1) \) and an **irreducible quadratic factor** \( (x^2 + x + 1) \).
+
+##### **Step 2: Set Up Partial Fractions**  
+Since \( x - 1 \) is a linear factor, assign:
+
+\[
+\frac{A}{x - 1}
+\]
+
+Since \( x^2 + x + 1 \) is an irreducible quadratic factor, assign:
+
+\[
+\frac{Bx + C}{x^2 + x + 1}
+\]
+
+Thus, the equation is:
+
+\[
+\frac{x^3 + 2x^2 + 3}{(x-1)(x^2 + x + 1)} = \frac{A}{x - 1} + \frac{Bx + C}{x^2 + x + 1}
+\]
+
+##### **Step 3: Multiply by the LCD**  
+Multiply both sides by \( (x - 1)(x^2 + x + 1) \) to clear fractions:
+
+\[
+x^3 + 2x^2 + 3 = A(x^2 + x + 1) + (Bx + C)(x - 1)
+\]
+
+##### **Step 4: Expand Both Sides**  
+Expand both terms:
+
+\[
+x^3 + 2x^2 + 3 = A(x^2 + x + 1) + Bx^2 - Bx + Cx - C
+\]
+
+\[
+= Ax^2 + Ax + A + Bx^2 - Bx + Cx - C
+\]
+
+\[
+= (A + B)x^2 + (A - B + C)x + (A - C)
+\]
+
+##### **Step 5: Solve for Coefficients**  
+Comparing coefficients with \( x^3 + 2x^2 + 3 \):
+
+- **\( x^3 \) term:** No \( x^3 \) on the right side, so **\( A + B = 1 \)**.  
+- **\( x^2 \) term:** \( A + B = 1 \) and must match \( 2x^2 \), so **\( A + B = 2 \)**.  
+- **\( x \) term:** \( A - B + C = 0 \).  
+- **Constant term:** \( A - C = 3 \).
+
+Solving:
+
+1. \( A + B = 2 \)  
+2. \( A - B + C = 0 \)  
+3. \( A - C = 3 \)  
+
+From equation (3):  
+\[
+C = A - 3
+\]
+
+Substituting into equation (2):  
+\[
+A - B + (A - 3) = 0
+\]
+\[
+2A - B - 3 = 0
+\]
+\[
+2A - B = 3
+\]
+
+Now solving the system:
+
+- \( A + B = 2 \)
+- \( 2A - B = 3 \)
+
+Adding both equations:
+
+\[
+3A = 5 \Rightarrow A = \frac{5}{3}
+\]
+
+Substituting into \( A + B = 2 \):
+
+\[
+\frac{5}{3} + B = 2
+\]
+
+\[
+B = 2 - \frac{5}{3} = \frac{6}{3} - \frac{5}{3} = \frac{1}{3}
+\]
+
+Using \( C = A - 3 \):
+
+\[
+C = \frac{5}{3} - 3 = \frac{5}{3} - \frac{9}{3} = -\frac{4}{3}
+\]
+
+##### **Step 6: Final Decomposition**  
+\[
+\frac{x^3 + 2x^2 + 3}{(x-1)(x^2 + x + 1)} = \frac{5/3}{x-1} + \frac{(1/3)x - 4/3}{x^2 + x + 1}
+\]
+
+---
+
+### **6. Applications of Partial Fractions**
+- **Integration**: Decomposing fractions into simpler terms makes them easier to integrate.
+- **Laplace Transforms**: Used in engineering and physics to analyze systems.
+- **Algebraic Manipulation**: Simplifies complex expressions.
+
+---
+
+### **Conclusion**
+When dealing with irreducible quadratic factors, each factor contributes a **linear numerator** in the 
+partial fraction decomposition. By setting up the equation, clearing fractions, and solving for unknowns, 
+the rational function is rewritten as a sum of simpler fractions.
+
+
+
+
+
+
+## **Writing an Infinite Geometric Series in Sigma Notation**  
+
+#### **1. Introduction to Geometric Series**  
+A **geometric series** is a sum of terms where each term is obtained by multiplying the previous 
+term by a constant ratio \( r \). It takes the general form:
+
+\[
+S = a + ar + ar^2 + ar^3 + \dots
+\]
+
+where:  
+- \( a \) is the **first term**,  
+- \( r \) is the **common ratio**,  
+- The series continues indefinitely for an **infinite geometric series**.
+
+---
+
+#### **2. Sigma Notation for Infinite Geometric Series**  
+The **sigma notation** (\( \sum \)) is a compact way to represent sums. The general form of an infinite geometric series in sigma notation is:
+
+\[
+\sum_{n=0}^{\infty} ar^n
+\]
+
+where:  
+- The **lower index** \( n=0 \) indicates that the summation starts at \( n=0 \).  
+- The **upper index** \( \infty \) represents an infinite number of terms.  
+- \( ar^n \) is the general term of the series.  
+
+**Example:**  
+
+The infinite geometric series  
+
+\[
+3 + 6 + 12 + 24 + 48 + \dots
+\]
+
+has:  
+- First term: \( a = 3 \)  
+- Common ratio: \( r = 2 \)  
+
+It can be written in sigma notation as:
+
+\[
+\sum_{n=0}^{\infty} 3(2)^n
+\]
+
+---
+
+#### **3. Convergence of an Infinite Geometric Series**  
+An **infinite geometric series** **converges** if \( |r| < 1 \) and **diverges** if \( |r| \geq 1 \).  
+
+When \( |r| < 1 \), the sum of the infinite geometric series is given by:
+
+\[
+S = \frac{a}{1 - r}
+\]
+
+where:  
+- \( a \) is the first term,  
+- \( r \) is the common ratio, with \( |r| < 1 \).  
+
+**Example:**  
+
+The infinite geometric series:
+
+\[
+5 + 2.5 + 1.25 + 0.625 + \dots
+\]
+
+has:  
+- First term: \( a = 5 \)  
+- Common ratio: \( r = 0.5 \)  
+
+Sigma notation:
+
+\[
+\sum_{n=0}^{\infty} 5(0.5)^n
+\]
+
+Sum of the series:
+
+\[
+S = \frac{5}{1 - 0.5} = \frac{5}{0.5} = 10
+\]
+
+---
+
+### **4. Conclusion**  
+An **infinite geometric series** in **sigma notation** is written as:
+
+\[
+\sum_{n=0}^{\infty} ar^n
+\]
+
+where \( a \) is the first term and \( r \) is the common ratio. The series converges 
+when \( |r| < 1 \) and diverges otherwise.
+
+
+
+
+
+
 ## 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
