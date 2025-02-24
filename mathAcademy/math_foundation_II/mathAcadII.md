@@ -10301,7 +10301,9 @@ Find the equation of the line perpendicular to \(3x - 4y = 8\) and passing throu
 
 ##  **Covariance: Definition and Explanation**
 
-Covariance is a statistical measure that quantifies the relationship between two random variables, indicating how changes in one variable are associated with changes in the other. It measures the degree to which two variables vary together.
+Covariance is a statistical measure that quantifies the relationship between two random variables, 
+indicating how changes in one variable are associated with changes in the other. It measures the degree
+to which two variables vary together.
 
 ---
 

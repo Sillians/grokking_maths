@@ -5550,125 +5550,2564 @@ when \( |r| < 1 \) and diverges otherwise.
 
 
 
-## 
 
+## **Scalar Multiplication of Matrices**
 
+#### **Definition**
+Scalar multiplication of a matrix involves multiplying each element of the matrix by a single constant 
+(called a scalar). If \( A \) is an \( m \times n \) matrix and \( k \) is a scalar, the result of 
+multiplying \( k \) by \( A \) is another \( m \times n \) matrix where each element is the product 
+of \( k \) and the corresponding element in \( A \).
 
+Mathematically, if:
 
+\[
+A = \begin{bmatrix} a_{11} & a_{12} & \dots & a_{1n} \\ a_{21} & a_{22} & \dots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \dots & a_{mn} \end{bmatrix}
+\]
 
+then:
 
+\[
+kA = \begin{bmatrix} k a_{11} & k a_{12} & \dots & k a_{1n} \\ k a_{21} & k a_{22} & \dots & k a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ k a_{m1} & k a_{m2} & \dots & k a_{mn} \end{bmatrix}
+\]
 
+#### **Properties of Scalar Multiplication**
+1. **Distributive Property Over Matrix Addition**  
+   \[
+   k(A + B) = kA + kB
+   \]
+   where \( A \) and \( B \) are matrices of the same size.
 
+2. **Associative Property of Scalars**  
+   \[
+   (k_1 k_2) A = k_1 (k_2 A)
+   \]
+   where \( k_1, k_2 \) are scalars.
 
+3. **Identity Property**  
+   \[
+   1 \cdot A = A
+   \]
+   Multiplying a matrix by 1 leaves it unchanged.
 
+4. **Zero Property**  
+   \[
+   0 \cdot A = 0
+   \]
+   Multiplying a matrix by 0 results in the zero matrix.
 
+5. **Multiplication with Negative Scalars**  
+   \[
+   (-1)A = -A
+   \]
+   Multiplying a matrix by \(-1\) negates each element of the matrix.
 
+#### **Example Calculation**
+Given:
 
+\[
+A = \begin{bmatrix} 2 & -3 \\ 4 & 5 \end{bmatrix}
+\]
 
+Multiply by scalar \( k = 3 \):
 
+\[
+3A = \begin{bmatrix} 3(2) & 3(-3) \\ 3(4) & 3(5) \end{bmatrix} = \begin{bmatrix} 6 & -9 \\ 12 & 15 \end{bmatrix}
+\]
 
+#### **Applications**
+- **Image Processing**: Adjusting brightness in grayscale images.
+- **Economics & Finance**: Scaling financial models and market indices.
+- **Physics & Engineering**: Transforming physical quantities in equations.
 
+Scalar multiplication is fundamental in linear algebra and serves as a building block for more advanced 
+operations like matrix-vector multiplication and transformations.
 
+
+
+
+
+## **Addition and Scalar Multiplication of Cartesian Vectors in 3D**
+
+#### **Definition of a 3D Cartesian Vector**
+A **Cartesian vector** in three-dimensional space is represented as:
+
+\[
+\mathbf{v} = (v_x, v_y, v_z)
+\]
+
+where \( v_x, v_y, v_z \) are the components along the \( x \)-, \( y \)-, and \( z \)-axes, respectively. 
+Vectors can be written in component form:
+
+\[
+\mathbf{v} = v_x \hat{i} + v_y \hat{j} + v_z \hat{k}
+\]
+
+where \( \hat{i}, \hat{j}, \hat{k} \) are unit vectors along the \( x \)-, \( y \)-, and \( z \)-axes.
+
+---
 
+## **1. Vector Addition in 3D**
+### **Definition**
+The sum of two vectors \( \mathbf{a} = (a_x, a_y, a_z) \) and \( \mathbf{b} = (b_x, b_y, b_z) \) is found by adding corresponding components:
+
+\[
+\mathbf{a} + \mathbf{b} = (a_x + b_x, a_y + b_y, a_z + b_z)
+\]
+
+or in unit vector notation:
+
+\[
+\mathbf{a} + \mathbf{b} = (a_x + b_x) \hat{i} + (a_y + b_y) \hat{j} + (a_z + b_z) \hat{k}
+\]
+
+### **Properties of Vector Addition**
+1. **Commutative Property**:  
+   \[
+   \mathbf{a} + \mathbf{b} = \mathbf{b} + \mathbf{a}
+   \]
+2. **Associative Property**:  
+   \[
+   (\mathbf{a} + \mathbf{b}) + \mathbf{c} = \mathbf{a} + (\mathbf{b} + \mathbf{c})
+   \]
+3. **Identity Element**: The zero vector \( \mathbf{0} = (0,0,0) \) satisfies:
+   \[
+   \mathbf{a} + \mathbf{0} = \mathbf{a}
+   \]
+4. **Inverse Element**: The negative vector \( -\mathbf{a} = (-a_x, -a_y, -a_z) \) satisfies:
+   \[
+   \mathbf{a} + (-\mathbf{a}) = \mathbf{0}
+   \]
 
+### **Example**
+Given:
 
+\[
+\mathbf{a} = (2, -1, 3), \quad \mathbf{b} = (4, 5, -2)
+\]
 
+Find \( \mathbf{a} + \mathbf{b} \):
 
+\[
+(2, -1, 3) + (4, 5, -2) = (2+4, -1+5, 3+(-2)) = (6, 4, 1)
+\]
 
+---
 
+## **2. Scalar Multiplication of a Vector in 3D**
+### **Definition**
+Multiplying a vector \( \mathbf{a} = (a_x, a_y, a_z) \) by a scalar \( k \) scales each component:
 
+\[
+k \mathbf{a} = (k a_x, k a_y, k a_z)
+\]
 
+or in unit vector notation:
 
+\[
+k \mathbf{a} = (k a_x) \hat{i} + (k a_y) \hat{j} + (k a_z) \hat{k}
+\]
 
+### **Properties of Scalar Multiplication**
+1. **Distributive Property Over Vector Addition**:  
+   \[
+   k (\mathbf{a} + \mathbf{b}) = k \mathbf{a} + k \mathbf{b}
+   \]
+2. **Distributive Property Over Scalar Addition**:  
+   \[
+   (k_1 + k_2) \mathbf{a} = k_1 \mathbf{a} + k_2 \mathbf{a}
+   \]
+3. **Associative Property**:  
+   \[
+   (k_1 k_2) \mathbf{a} = k_1 (k_2 \mathbf{a})
+   \]
+4. **Multiplication by 1**:  
+   \[
+   1 \mathbf{a} = \mathbf{a}
+   \]
+5. **Multiplication by 0**:  
+   \[
+   0 \mathbf{a} = \mathbf{0}
+   \]
 
+### **Example**
+Given:
 
+\[
+\mathbf{a} = (3, -2, 5), \quad k = -2
+\]
 
+Find \( k\mathbf{a} \):
 
+\[
+-2(3, -2, 5) = (-6, 4, -10)
+\]
 
+---
 
+## **Applications of Vector Addition and Scalar Multiplication**
+- **Physics**: Force, velocity, and acceleration calculations.
+- **Computer Graphics**: Transformations and animations.
+- **Robotics**: Path planning and motion control.
+- **Engineering**: Structural analysis and electromagnetism.
 
+These operations form the foundation of vector algebra, which extends to more advanced topics 
+like dot and cross products.
 
 
 
 
 
+## **Finding the Sum of an Infinite Geometric Series**
 
+---
 
+### **1. Definition of an Infinite Geometric Series**
+A **geometric series** is a sum of terms where each term is a constant multiple of the previous one. 
+In general, a geometric series has the form:
 
+\[
+S = a + ar + ar^2 + ar^3 + \dots
+\]
 
+where:
+- \( a \) is the **first term**,
+- \( r \) is the **common ratio**, and
+- The series continues indefinitely.
 
+If \( |r| < 1 \), the series **converges** to a finite sum. Otherwise, the series **diverges** (sum approaches \( \infty \) or does not settle at a finite value).
 
+---
 
+### **2. Sum Formula for an Infinite Geometric Series**
+When \( |r| < 1 \), the sum of an infinite geometric series is given by:
 
+\[
+S_{\infty} = \frac{a}{1 - r}
+\]
 
+This formula is derived from the finite sum formula of a geometric series:
 
+\[
+S_n = \frac{a(1 - r^n)}{1 - r}
+\]
 
+Taking the limit as \( n \to \infty \), if \( |r| < 1 \), then \( r^n \to 0 \), simplifying to:
 
+\[
+S_{\infty} = \frac{a}{1 - r}
+\]
 
+---
 
+### **3. Conditions for Convergence**
+- The series **converges** only if \( |r| < 1 \).
+- If \( |r| \geq 1 \), the series **diverges** (sum approaches infinity or oscillates indefinitely).
 
+---
 
+### **4. Examples**
+#### **Example 1: Finding the Sum of a Convergent Series**
+Find the sum of the infinite geometric series:
 
+\[
+3 + 2.4 + 1.92 + 1.536 + \dots
+\]
 
+**Solution:**
+- First term: \( a = 3 \)
+- Common ratio: \( r = \frac{2.4}{3} = 0.8 \)
+- Since \( |r| = 0.8 < 1 \), the series converges.
 
+Using the formula:
 
+\[
+S_{\infty} = \frac{3}{1 - 0.8} = \frac{3}{0.2} = 15
+\]
 
+#### **Example 2: Identifying a Divergent Series**
+Determine whether the series \( 5 + 10 + 20 + 40 + \dots \) converges.
 
+**Solution:**
+- First term: \( a = 5 \)
+- Common ratio: \( r = \frac{10}{5} = 2 \)
+- Since \( |r| = 2 > 1 \), the series **diverges**.
 
+Thus, there is no finite sum.
 
+---
 
+### **5. Applications of Infinite Geometric Series**
+1. **Finance**: Calculating the present value of perpetuities.
+2. **Physics**: Modeling wave reflections and decay processes.
+3. **Computer Science**: Algorithms involving recurrence relations.
+4. **Engineering**: Signal processing and control systems.
 
+Understanding infinite geometric series is fundamental in various fields, providing a powerful 
+tool for modeling real-world scenarios.
 
 
 
 
 
+## **The Transpose of a Matrix**
+---
 
+### **1. Definition of the Transpose**
+The **transpose** of a matrix \( A \), denoted as \( A^T \), is obtained by flipping the matrix over 
+its **main diagonal** (from top-left to bottom-right). This operation swaps the **rows** and **columns** 
+of the matrix.
 
+Formally, if \( A = [a_{ij}] \) is an \( m \times n \) matrix, its transpose \( A^T \) is an \( n \times m \) 
+matrix where:
 
+\[
+(A^T)_{ij} = A_{ji}
+\]
 
+This means:
+- The **first row** of \( A \) becomes the **first column** of \( A^T \).
+- The **second row** of \( A \) becomes the **second column** of \( A^T \), and so on.
 
+---
 
+### **2. Example of Matrix Transposition**
+#### **Example 1:**
+Given the matrix:
 
+\[
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix}
+\]
 
+The transpose is:
 
+\[
+A^T =
+\begin{bmatrix}
+1 & 4 \\
+2 & 5 \\
+3 & 6
+\end{bmatrix}
+\]
 
+Here, the **rows of \( A \) became columns in \( A^T \)**.
 
+---
 
+### **3. Properties of the Transpose**
+1. **Double Transposition**: \( (A^T)^T = A \)  
+   - Taking the transpose twice returns the original matrix.
 
+2. **Transpose of a Sum**: \( (A + B)^T = A^T + B^T \)  
+   - The transpose of a sum is the sum of the transposes.
 
+3. **Transpose of a Product**: \( (AB)^T = B^T A^T \)  
+   - The transpose of a product reverses the order of multiplication.
 
+4. **Transpose of a Scalar Multiple**: \( (\alpha A)^T = \alpha A^T \)  
+   - A scalar factor remains unchanged.
 
+5. **Symmetric Matrices**: A matrix is **symmetric** if \( A^T = A \).  
 
+6. **Skew-Symmetric Matrices**: A matrix is **skew-symmetric** if \( A^T = -A \).
 
+---
 
+### **4. Special Cases**
+#### **Square Matrices**
+For a square matrix (same number of rows and columns), the transpose does not change the size of the matrix but can change its properties (e.g., making it symmetric).
 
+#### **Column and Row Vectors**
+- A **column vector** (size \( m \times 1 \)) transposes into a **row vector** (size \( 1 \times m \)).
+- A **row vector** (size \( 1 \times n \)) transposes into a **column vector** (size \( n \times 1 \)).
 
+Example:
+\[
+\begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}^T =
+\begin{bmatrix} 4 & 5 & 6 \end{bmatrix}
+\]
 
+---
 
+### **5. Applications of Matrix Transposition**
+- **Linear Algebra**: Used in vector spaces and transformations.
+- **Machine Learning**: Essential in operations like covariance matrices and backpropagation.
+- **Computer Graphics**: Used in transformations and projections.
+- **Signal Processing**: Applied in Fourier transforms and filtering.
 
+Understanding matrix transposition is fundamental for working with data structures, mathematical modeling,
+and various computational applications.
 
 
 
 
 
+## **Calculating the Dot Product Using Components**  
 
+---
 
+### **1. Definition of the Dot Product**  
+The **dot product** (also called the **scalar product**) of two vectors \( \mathbf{a} \) and \( \mathbf{b} \) 
+is a mathematical operation that results in a **scalar** (a single number). It is defined as:
 
+\[
+\mathbf{a} \cdot \mathbf{b} = \|\mathbf{a}\| \|\mathbf{b}\| \cos \theta
+\]
 
+where:
+- \( \|\mathbf{a}\| \) and \( \|\mathbf{b}\| \) are the magnitudes (lengths) of the vectors.
+- \( \theta \) is the angle between the two vectors.
+- \( \cos \theta \) determines how much one vector points in the direction of the other.
 
+---
 
+### **2. Dot Product Using Components**  
+Given two vectors in **component form**:
 
+\[
+\mathbf{a} = (a_1, a_2, a_3)
+\]
+\[
+\mathbf{b} = (b_1, b_2, b_3)
+\]
 
+the dot product is computed as:
 
+\[
+\mathbf{a} \cdot \mathbf{b} = a_1 b_1 + a_2 b_2 + a_3 b_3
+\]
 
+For **2D vectors** \( \mathbf{a} = (a_1, a_2) \) and \( \mathbf{b} = (b_1, b_2) \), the formula simplifies to:
 
+\[
+\mathbf{a} \cdot \mathbf{b} = a_1 b_1 + a_2 b_2
+\]
 
+---
 
+### **3. Example Calculations**
+#### **Example 1: 2D Vectors**  
+Let:
 
+\[
+\mathbf{a} = (3, -2), \quad \mathbf{b} = (4, 5)
+\]
 
+\[
+\mathbf{a} \cdot \mathbf{b} = (3)(4) + (-2)(5) = 12 - 10 = 2
+\]
 
+#### **Example 2: 3D Vectors**  
+Let:
 
+\[
+\mathbf{a} = (1, -3, 2), \quad \mathbf{b} = (4, 0, -2)
+\]
+
+\[
+\mathbf{a} \cdot \mathbf{b} = (1)(4) + (-3)(0) + (2)(-2)
+\]
+
+\[
+= 4 + 0 - 4 = 0
+\]
+
+Since the result is **zero**, the vectors are **orthogonal** (perpendicular to each other).
+
+---
+
+### **4. Properties of the Dot Product**  
+1. **Commutativity**:  
+   \[
+   \mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a}
+   \]
+
+2. **Distributive Property**:  
+   \[
+   \mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) = \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c}
+   \]
+
+3. **Scalar Multiplication**:  
+   \[
+   (c\mathbf{a}) \cdot \mathbf{b} = c (\mathbf{a} \cdot \mathbf{b})
+   \]
+
+4. **Dot Product with Itself** (Magnitude Squared):  
+   \[
+   \mathbf{a} \cdot \mathbf{a} = \|\mathbf{a}\|^2
+   \]
+
+---
+
+### **5. Application of the Dot Product**  
+- **Checking Orthogonality**: If \( \mathbf{a} \cdot \mathbf{b} = 0 \), the vectors are perpendicular.
+- **Projection of a Vector**:  
+  The scalar projection of \( \mathbf{a} \) onto \( \mathbf{b} \) is:
+
+  \[
+  \text{proj}_{\mathbf{b}} \mathbf{a} = \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{b}\|}
+  \]
+
+- **Work Done by a Force**: If a force \( \mathbf{F} \) moves an object along displacement \( \mathbf{d} \), the work done is:
+
+  \[
+  W = \mathbf{F} \cdot \mathbf{d}
+  \]
+
+---
+
+### **6. Summary**  
+- The dot product results in a **scalar**.
+- Computed as \( \mathbf{a} \cdot \mathbf{b} = a_1 b_1 + a_2 b_2 + a_3 b_3 \).
+- Useful for determining angles, projections, and physical applications like work and force.
+
+
+
+
+
+
+## **Left and Right Opening Parabolas**
+---
+
+### **1. Introduction to Parabolas**  
+A **parabola** is a U-shaped curve that is the graph of a **quadratic equation**. 
+While the most common parabolas open **upward or downward**, some parabolas open **leftward or rightward** 
+when the equation is in terms of \( x \) as a function of \( y \).
+
+---
+
+### **2. Standard Form of Left and Right Opening Parabolas**  
+The general equation of a **horizontally oriented** parabola is:
+
+\[
+(x - h) = 4p(y - k)^2
+\]
+
+or equivalently,
+
+\[
+x = a(y - k)^2 + h
+\]
+
+where:
+- \( (h, k) \) is the **vertex** of the parabola.
+- \( p \) is the distance from the vertex to the **focus**.
+- \( a = \frac{1}{4p} \) determines the **width** and **direction** of the parabola.
+- The **axis of symmetry** is **horizontal** (parallel to the x-axis).
+
+---
+
+### **3. Determining the Direction of Opening**  
+- If **\( a > 0 \) or \( p > 0 \)** → The parabola opens **rightward**.
+- If **\( a < 0 \) or \( p < 0 \)** → The parabola opens **leftward**.
+
+---
+
+### **4. Focus, Directrix, and Latus Rectum**  
+For the equation:
+
+\[
+(x - h) = 4p(y - k)^2
+\]
+
+- **Focus:** \( (h + p, k) \)
+- **Directrix:** \( x = h - p \) (a vertical line)
+- **Latus Rectum Length:** \( |4p| \) (the focal width)
+
+---
+
+### **5. Example Equations**  
+#### **Example 1: Rightward Opening Parabola**  
+\[
+x = \frac{1}{2} (y - 3)^2 + 2
+\]
+- **Vertex:** \( (2, 3) \)
+- **Focus:** \( (2 + \frac{1}{4 \times \frac{1}{2}}, 3) = (2.5, 3) \)
+- **Directrix:** \( x = 2 - 0.5 = 1.5 \)
+
+#### **Example 2: Leftward Opening Parabola**  
+\[
+x = -\frac{1}{4} (y + 1)^2 + 5
+\]
+- **Vertex:** \( (5, -1) \)
+- **Focus:** \( (5 - \frac{1}{4 \times \frac{1}{4}}, -1) = (4, -1) \)
+- **Directrix:** \( x = 5 + 1 = 6 \)
+
+---
+
+### **6. Key Properties of Left and Right Opening Parabolas**
+| Feature | Right-Opening Parabola | Left-Opening Parabola |
+|---------|----------------------|---------------------|
+| Equation | \( x = a(y - k)^2 + h \) ( \( a > 0 \) ) | \( x = a(y - k)^2 + h \) ( \( a < 0 \) ) |
+| Axis of Symmetry | \( y = k \) | \( y = k \) |
+| Focus | \( (h + p, k) \) | \( (h - p, k) \) |
+| Directrix | \( x = h - p \) | \( x = h + p \) |
+| Direction | Opens right | Opens left |
+
+---
+
+### **7. Applications of Left and Right Opening Parabolas**  
+- **Satellite Dishes & Antennas**: Parabolas that open sideways are used in some reflector designs.
+- **Projectile Motion & Physics**: Sideways-opening parabolas model horizontal cross-sections of parabolic motion.
+- **Lenses & Mirrors**: Optical instruments use these shapes for focusing light.
+
+---
+
+### **8. Summary**  
+- Left and right opening parabolas are defined by equations in the form \( x = a(y - k)^2 + h \).
+- The **sign of \( a \)** determines whether the parabola opens left or right.
+- The **focus, directrix, and axis of symmetry** play crucial roles in their geometric properties.
+- These parabolas are widely used in engineering, physics, and optics.
+
+
+
+
+
+
+## **Zero, Square, Diagonal, and Identity Matrices**
+
+---
+
+### **1. Zero Matrix**  
+A **zero matrix** (or **null matrix**) is a matrix in which **all elements are zero**. It is denoted as \( O \).  
+
+#### **Example: Zero Matrices of Different Sizes**  
+\[
+O_{2 \times 2} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}, \quad O_{3 \times 3} = \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0 \end{bmatrix}
+\]
+
+#### **Properties of the Zero Matrix**  
+- **Additive Identity**: For any matrix \( A \), \( A + O = A \).
+- **Multiplicative Absorption**: For any matrix \( A \) (of compatible dimensions), \( A O = O A = O \).
+
+---
+
+### **2. Square Matrix**  
+A **square matrix** has the same number of rows and columns, i.e., an \( n \times n \) matrix.
+
+#### **Example: Square Matrices**  
+\[
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad B = \begin{bmatrix} 5 & 6 & 7 \\ 8 & 9 & 10 \\ 11 & 12 & 13 \end{bmatrix}
+\]
+Both \( A \) and \( B \) are square matrices (\( 2 \times 2 \) and \( 3 \times 3 \), respectively).
+
+#### **Properties of Square Matrices**  
+- Can have a **determinant**.
+- Can be **invertible** if \(\det(A) \neq 0\).
+- Can be **diagonalizable**.
+
+---
+
+### **3. Diagonal Matrix**  
+A **diagonal matrix** is a square matrix where all **non-diagonal elements are zero**. That is, \( A_{ij} = 0 \) for all \( i \neq j \).
+
+#### **Example: Diagonal Matrices**  
+\[
+D = \begin{bmatrix} 5 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & -2 \end{bmatrix}
+\]
+
+#### **Properties of Diagonal Matrices**  
+- **Multiplication Rule**: The product of two diagonal matrices is also diagonal.
+- **Inverse**: If all diagonal entries are nonzero, the inverse exists and is given by:
+  \[
+  D^{-1} = \begin{bmatrix} \frac{1}{d_1} & 0 & 0 \\ 0 & \frac{1}{d_2} & 0 \\ 0 & 0 & \frac{1}{d_3} \end{bmatrix}
+  \]
+- **Eigenvalues**: The diagonal elements are the **eigenvalues** of the matrix.
+
+---
+
+### **4. Identity Matrix**  
+An **identity matrix** (or **unit matrix**), denoted as \( I_n \), is a **diagonal matrix with all diagonal elements equal to 1**.
+
+#### **Example: Identity Matrices**  
+\[
+I_2 = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}, \quad
+I_3 = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
+\]
+
+#### **Properties of the Identity Matrix**  
+- **Multiplicative Identity**: For any square matrix \( A \),
+  \[
+  A I = I A = A
+  \]
+- **Inverse**: \( I^{-1} = I \).
+- **Eigenvalues**: Always **1**.
+
+---
+
+### **5. Relationships Between These Matrices**  
+| Type of Matrix | Definition | Key Property |
+|--------------|------------|--------------|
+| Zero Matrix \( O \) | All elements are zero | \( A + O = A \), \( A O = O A = O \) |
+| Square Matrix | \( n \times n \) matrix | Can have a determinant and inverse |
+| Diagonal Matrix | Only diagonal elements are nonzero | \( D_1 D_2 = D_3 \) (also diagonal) |
+| Identity Matrix \( I \) | Diagonal matrix with 1s on the main diagonal | \( A I = I A = A \) |
+
+---
+
+### **6. Applications**  
+- **Zero Matrix**: Used in **null transformations** and **linear algebra proofs**.
+- **Square Matrices**: Found in **system of equations**, **eigenvalue problems**, and **graph theory**.
+- **Diagonal Matrices**: Common in **simplifying matrix operations** and **eigenvalue decomposition**.
+- **Identity Matrix**: Essential in **matrix inversion**, **linear algebra**, and **computer graphics**.
+
+---
+
+### **7. Summary**  
+- **Zero matrices** contain only zeros.
+- **Square matrices** have equal rows and columns.
+- **Diagonal matrices** have nonzero entries only on the diagonal.
+- **Identity matrices** are diagonal matrices where all diagonal entries are 1.
+
+These matrix types form the **foundation** for more advanced concepts in **linear algebra**, **computer science**, 
+and **engineering**.
+
+
+
+
+
+## **Multiplying Square Matrices**  
+
+---
+
+### **1. Definition of Square Matrix Multiplication**  
+The **product of two square matrices** \( A \) and \( B \), both of size \( n \times n \), 
+results in another square matrix \( C = AB \) of size \( n \times n \).  
+
+Each element of \( C \) is computed as:  
+\[
+C_{ij} = \sum_{k=1}^{n} A_{ik} B_{kj}
+\]
+where:
+- \( A_{ik} \) is the element from row \( i \), column \( k \) of \( A \).
+- \( B_{kj} \) is the element from row \( k \), column \( j \) of \( B \).
+- The sum runs over all values of \( k \), from \( 1 \) to \( n \).
+
+---
+
+### **2. Example of Square Matrix Multiplication**  
+#### **Given:**
+\[
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad
+B = \begin{bmatrix} 2 & 0 \\ 1 & 3 \end{bmatrix}
+\]
+
+#### **Step-by-Step Calculation:**
+\[
+C_{11} = (1 \times 2) + (2 \times 1) = 2 + 2 = 4
+\]
+\[
+C_{12} = (1 \times 0) + (2 \times 3) = 0 + 6 = 6
+\]
+\[
+C_{21} = (3 \times 2) + (4 \times 1) = 6 + 4 = 10
+\]
+\[
+C_{22} = (3 \times 0) + (4 \times 3) = 0 + 12 = 12
+\]
+
+Thus, the product matrix is:
+\[
+C = AB = \begin{bmatrix} 4 & 6 \\ 10 & 12 \end{bmatrix}
+\]
+
+---
+
+### **3. Properties of Square Matrix Multiplication**
+1. **Associative Property**:  
+   \[
+   (AB)C = A(BC)
+   \]
+   Multiplication order within parentheses does not matter.
+
+2. **Distributive Property**:  
+   \[
+   A(B + C) = AB + AC
+   \]
+
+3. **Not Commutative** (in general):  
+   \[
+   AB \neq BA
+   \]
+   Unlike numbers, matrix multiplication **depends on order**.
+
+4. **Identity Matrix Property**:  
+   \[
+   AI = IA = A
+   \]
+   Where \( I \) is the identity matrix.
+
+5. **Zero Matrix Property**:  
+   \[
+   AO = O
+   \]
+   Where \( O \) is the zero matrix.
+
+6. **Inverse Property** (if \( A \) is invertible):  
+   \[
+   A A^{-1} = A^{-1} A = I
+   \]
+
+---
+
+### **4. Special Cases**
+#### **(a) Multiplying a Matrix by Itself (Squaring a Matrix)**
+If \( A \) is a square matrix:
+\[
+A^2 = A \times A
+\]
+Example:
+\[
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+\]
+\[
+A^2 = A \times A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \times \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+\]
+
+Calculating:
+\[
+A^2 = \begin{bmatrix} (1 \times 1 + 2 \times 3) & (1 \times 2 + 2 \times 4) \\ (3 \times 1 + 4 \times 3) & (3 \times 2 + 4 \times 4) \end{bmatrix}
+\]
+\[
+A^2 = \begin{bmatrix} 1 + 6 & 2 + 8 \\ 3 + 12 & 6 + 16 \end{bmatrix} = \begin{bmatrix} 7 & 10 \\ 15 & 22 \end{bmatrix}
+\]
+
+#### **(b) Power of a Matrix**
+For integer exponent \( n \),  
+\[
+A^n = A \times A \times A \times \dots \times A \quad (n \text{ times})
+\]
+
+#### **(c) Diagonal Matrices Multiplication**
+If \( D \) is a diagonal matrix:
+\[
+D = \begin{bmatrix} d_1 & 0 & 0 \\ 0 & d_2 & 0 \\ 0 & 0 & d_3 \end{bmatrix}, \quad E = \begin{bmatrix} e_1 & 0 & 0 \\ 0 & e_2 & 0 \\ 0 & 0 & e_3 \end{bmatrix}
+\]
+Then:
+\[
+DE = \begin{bmatrix} d_1 e_1 & 0 & 0 \\ 0 & d_2 e_2 & 0 \\ 0 & 0 & d_3 e_3 \end{bmatrix}
+\]
+Each diagonal entry is simply multiplied.
+
+---
+
+### **5. Applications of Square Matrix Multiplication**
+- **Transformations in Computer Graphics**: Rotation, scaling, and reflection matrices.
+- **Solving Systems of Equations**: Using **matrix inverses** and **Gaussian elimination**.
+- **Markov Chains**: State transitions in probability models.
+- **Quantum Mechanics**: Operators in quantum state evolution.
+- **Graph Theory**: Adjacency matrices representing connectivity.
+
+---
+
+### **6. Summary**
+- Matrix multiplication follows **row-column multiplication** rules.
+- It is **not commutative** but **associative** and **distributive**.
+- **Diagonal matrices** multiply element-wise on the diagonal.
+- **Identity matrix** acts as a **neutral element**.
+- Square matrix multiplication is **fundamental** in transformations, systems of equations, and computational models.
+
+This concept is crucial in **linear algebra, machine learning, physics, and engineering applications**.
+
+
+
+
+
+
+## **Introduction to Linear Transformations**  
+
+#### **1. What is a Linear Transformation?**  
+A **linear transformation** is a function that maps vectors from one vector space to another while preserving vector addition and scalar multiplication. 
+Mathematically, a function \( T: V \to W \) is a linear transformation if for all vectors \( \mathbf{u}, \mathbf{v} \) in \( V \) and all scalars \( c \),
+it satisfies:
+
+1. **Additivity**:  
+   \[
+   T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
+   \]
+2. **Homogeneity (Scaling Property)**:  
+   \[
+   T(c \mathbf{v}) = c T(\mathbf{v})
+   \]
+
+These two conditions ensure that the transformation behaves consistently with the structure of a vector space.
+
+---
+
+#### **2. Matrix Representation of Linear Transformations**  
+In finite-dimensional spaces, every linear transformation can be represented by a **matrix**. If \( T: \mathbb{R}^n \to \mathbb{R}^m \) is a linear transformation, there exists an \( m \times n \) matrix \( A \) such that for any vector \( \mathbf{x} \):
+
+\[
+T(\mathbf{x}) = A \mathbf{x}
+\]
+
+where:
+- \( A \) is the **transformation matrix**.
+- \( \mathbf{x} \) is an \( n \)-dimensional vector.
+- \( T(\mathbf{x}) \) is the transformed \( m \)-dimensional vector.
+
+---
+
+#### **3. Examples of Linear Transformations**
+##### **a) Scaling**
+\[
+T(x, y) = (2x, 2y)
+\]
+Matrix form:
+\[
+A = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}
+\]
+
+##### **b) Rotation by \( \theta \)**
+\[
+T(x, y) = (x \cos\theta - y \sin\theta, x \sin\theta + y \cos\theta)
+\]
+Matrix form:
+\[
+A = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}
+\]
+
+##### **c) Reflection Across the x-axis**
+\[
+T(x, y) = (x, -y)
+\]
+Matrix form:
+\[
+A = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}
+\]
+
+##### **d) Shear Transformation**
+\[
+T(x, y) = (x + ky, y)
+\]
+Matrix form:
+\[
+A = \begin{bmatrix} 1 & k \\ 0 & 1 \end{bmatrix}
+\]
+
+---
+
+#### **4. Properties of Linear Transformations**
+1. **Preserve the origin**: \( T(0) = 0 \).
+2. **Composition of linear transformations is linear**.
+3. **Invertibility**: If \( A \) is an invertible matrix, then \( T \) has an inverse transformation \( T^{-1} \).
+
+---
+
+#### **5. Kernel and Range**
+- **Kernel (Null Space):** The set of all vectors mapped to zero:
+  \[
+  \ker(T) = \{ \mathbf{x} \mid T(\mathbf{x}) = 0 \}
+  \]
+  Determines when \( T \) is **one-to-one**.
+  
+- **Range (Image):** The set of all possible outputs:
+  \[
+  \text{Im}(T) = \{ T(\mathbf{x}) \mid \mathbf{x} \in V \}
+  \]
+  Determines when \( T \) is **onto**.
+
+By the **Rank-Nullity Theorem**:
+\[
+\dim(\ker(T)) + \dim(\text{Im}(T)) = \dim(V)
+\]
+
+---
+
+#### **6. Applications of Linear Transformations**
+- **Computer Graphics**: Rotations, scaling, and perspective transformations.
+- **Data Science & PCA**: Dimensionality reduction using eigenvectors and eigenvalues.
+- **Physics & Engineering**: Modeling transformations in mechanics and electromagnetism.
+
+Understanding linear transformations is foundational for **linear algebra, computer vision, optimization, and deep learning**.
+
+
+
+
+
+## **The Minors of a 3×3 Matrix**  
+
+#### **1. Understanding Minors in a Matrix**  
+The **minor** of an element in a matrix is the determinant of the smaller matrix that remains after removing the row and column containing that element. 
+This is useful in calculating **cofactors**, **determinants**, and **matrix inverses**.
+
+For a **\(3 \times 3\) matrix**:
+\[
+A =
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{bmatrix}
+\]
+the **minor** of an element \( a_{ij} \) is found by deleting the \( i \)th row and \( j \)th column and computing the determinant of the resulting \( 2 \times 2 \) matrix.
+
+---
+
+#### **2. Computing the Minors of a \(3 \times 3\) Matrix**  
+Each element \( a_{ij} \) has a minor \( M_{ij} \), which is the determinant of the \( 2 \times 2 \) submatrix formed by removing the row and column of \( a_{ij} \).
+
+##### **Example: Compute the Minors for a 3×3 Matrix**  
+Given:
+\[
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\]
+
+The minor of each element is calculated as follows:
+
+1. **Minor of \( a_{11} = 1 \):**  
+   Remove the first row and first column:
+   \[
+   M_{11} = \begin{vmatrix} 5 & 6 \\ 8 & 9 \end{vmatrix} = (5 \times 9 - 6 \times 8) = (45 - 48) = -3
+   \]
+
+2. **Minor of \( a_{12} = 2 \):**  
+   Remove the first row and second column:
+   \[
+   M_{12} = \begin{vmatrix} 4 & 6 \\ 7 & 9 \end{vmatrix} = (4 \times 9 - 6 \times 7) = (36 - 42) = -6
+   \]
+
+3. **Minor of \( a_{13} = 3 \):**  
+   Remove the first row and third column:
+   \[
+   M_{13} = \begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix} = (4 \times 8 - 5 \times 7) = (32 - 35) = -3
+   \]
+
+4. **Minor of \( a_{21} = 4 \):**  
+   Remove the second row and first column:
+   \[
+   M_{21} = \begin{vmatrix} 2 & 3 \\ 8 & 9 \end{vmatrix} = (2 \times 9 - 3 \times 8) = (18 - 24) = -6
+   \]
+
+5. **Minor of \( a_{22} = 5 \):**  
+   Remove the second row and second column:
+   \[
+   M_{22} = \begin{vmatrix} 1 & 3 \\ 7 & 9 \end{vmatrix} = (1 \times 9 - 3 \times 7) = (9 - 21) = -12
+   \]
+
+6. **Minor of \( a_{23} = 6 \):**  
+   Remove the second row and third column:
+   \[
+   M_{23} = \begin{vmatrix} 1 & 2 \\ 7 & 8 \end{vmatrix} = (1 \times 8 - 2 \times 7) = (8 - 14) = -6
+   \]
+
+7. **Minor of \( a_{31} = 7 \):**  
+   Remove the third row and first column:
+   \[
+   M_{31} = \begin{vmatrix} 2 & 3 \\ 5 & 6 \end{vmatrix} = (2 \times 6 - 3 \times 5) = (12 - 15) = -3
+   \]
+
+8. **Minor of \( a_{32} = 8 \):**  
+   Remove the third row and second column:
+   \[
+   M_{32} = \begin{vmatrix} 1 & 3 \\ 4 & 6 \end{vmatrix} = (1 \times 6 - 3 \times 4) = (6 - 12) = -6
+   \]
+
+9. **Minor of \( a_{33} = 9 \):**  
+   Remove the third row and third column:
+   \[
+   M_{33} = \begin{vmatrix} 1 & 2 \\ 4 & 5 \end{vmatrix} = (1 \times 5 - 2 \times 4) = (5 - 8) = -3
+   \]
+
+---
+
+#### **3. The Matrix of Minors**
+\[
+M =
+\begin{bmatrix}
+-3 & -6 & -3 \\
+-6 & -12 & -6 \\
+-3 & -6 & -3
+\end{bmatrix}
+\]
+
+---
+
+#### **4. Applications of Minors**
+- **Cofactors**: Used in determinant expansion and inverse calculations.
+- **Adjugate Matrix**: The cofactor matrix (transposed).
+- **Inverse of a Matrix**: If \( A^{-1} \) exists, it is given by:
+  \[
+  A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
+  \]
+- **Solving Systems of Equations**: Minors contribute to Cramer's Rule.
+
+Understanding minors is essential in **linear algebra, numerical analysis, and machine learning applications involving matrix operations**.
+
+
+
+
+
+
+## **Introduction to the Inverse of a Matrix**  
+
+#### **1. What is the Inverse of a Matrix?**  
+The **inverse** of a square matrix \( A \) is another matrix, denoted as \( A^{-1} \), such that:  
+
+\[
+A A^{-1} = A^{-1} A = I
+\]
+
+where \( I \) is the **identity matrix**, which satisfies:  
+
+\[
+I = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} \quad \text{(for a 2×2 matrix)}
+\]
+
+A matrix must be **square** (\( n \times n \)) and **non-singular** (\( \det(A) \neq 0 \)) for an inverse to exist.
+
+---
+
+#### **2. Conditions for a Matrix to Have an Inverse**  
+A matrix \( A \) has an inverse if and only if:
+- \( A \) is a **square matrix** (\( n \times n \)).
+- \( A \) is **non-singular**, meaning \( \det(A) \neq 0 \).  
+
+If \( \det(A) = 0 \), \( A \) is **singular** and has **no inverse**.
+
+---
+
+#### **3. Finding the Inverse of a 2×2 Matrix**  
+For a **2×2 matrix**:
+
+\[
+A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+\]
+
+its inverse is given by:
+
+\[
+A^{-1} = \frac{1}{\det(A)} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}
+\]
+
+where \( \det(A) = ad - bc \) (the determinant of \( A \)).  
+
+##### **Example**  
+Given:
+
+\[
+A = \begin{bmatrix} 4 & 7 \\ 2 & 6 \end{bmatrix}
+\]
+
+1. Compute the determinant:
+
+   \[
+   \det(A) = (4 \times 6) - (7 \times 2) = 24 - 14 = 10
+   \]
+
+2. Apply the formula:
+
+   \[
+   A^{-1} = \frac{1}{10} \begin{bmatrix} 6 & -7 \\ -2 & 4 \end{bmatrix}
+   \]
+
+3. Simplify:
+
+   \[
+   A^{-1} = \begin{bmatrix} 0.6 & -0.7 \\ -0.2 & 0.4 \end{bmatrix}
+   \]
+
+---
+
+#### **4. Finding the Inverse of a 3×3 Matrix Using the Adjugate Method**  
+For a **3×3 matrix**:
+
+\[
+A = \begin{bmatrix} 
+a_{11} & a_{12} & a_{13} \\ 
+a_{21} & a_{22} & a_{23} \\ 
+a_{31} & a_{32} & a_{33} 
+\end{bmatrix}
+\]
+
+the inverse is:
+
+\[
+A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)
+\]
+
+where **adj(A)** is the adjugate matrix, obtained by:
+1. Finding the **cofactor matrix**.
+2. Taking the **transpose** of the cofactor matrix.
+
+##### **Example**  
+Given:
+
+\[
+A = \begin{bmatrix} 
+2 & 3 & 1 \\ 
+4 & 5 & 6 \\ 
+7 & 8 & 9 
+\end{bmatrix}
+\]
+
+1. Compute \( \det(A) \).
+2. Compute the **cofactor matrix**.
+3. Compute the **adjugate matrix** (transpose of cofactor matrix).
+4. Compute \( A^{-1} \) by dividing each element of the adjugate matrix by \( \det(A) \).
+
+---
+
+#### **5. Properties of Matrix Inverses**
+1. **Uniqueness**: If \( A \) has an inverse, it is unique.
+2. **Inverse of a Product**:  
+   \[
+   (AB)^{-1} = B^{-1} A^{-1}
+   \]
+3. **Inverse of a Transpose**:  
+   \[
+   (A^T)^{-1} = (A^{-1})^T
+   \]
+4. **Inverse of an Inverse**:  
+   \[
+   (A^{-1})^{-1} = A
+   \]
+5. **Determinant Relationship**:  
+   \[
+   \det(A^{-1}) = \frac{1}{\det(A)}
+   \]
+
+---
+
+#### **6. Applications of Matrix Inverses**
+- **Solving Linear Systems**:  
+  \[
+  Ax = b \quad \Rightarrow \quad x = A^{-1} b
+  \]
+- **Computer Graphics**: Used for geometric transformations.
+- **Cryptography**: Used in encoding and decoding messages.
+- **Machine Learning**: Used in optimization algorithms.
+
+---
+
+Understanding matrix inversion is fundamental for **linear algebra, data science, computer vision, and numerical computing**.
+
+
+
+
+
+## **The Determinant of a 3×3 Matrix**  
+
+#### **1. What is the Determinant of a Matrix?**  
+The determinant of a matrix is a scalar value that provides important properties of the matrix, such as whether it is invertible. 
+The determinant of a **3×3 matrix** is found using **cofactor expansion** (Laplace expansion).  
+
+For a **3×3 matrix**:
+
+\[
+A = \begin{bmatrix} 
+a_{11} & a_{12} & a_{13} \\ 
+a_{21} & a_{22} & a_{23} \\ 
+a_{31} & a_{32} & a_{33} 
+\end{bmatrix}
+\]
+
+the determinant, denoted as \( \det(A) \) or \( |A| \), is calculated as:
+
+\[
+\det(A) = a_{11} \begin{vmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{vmatrix} 
+- a_{12} \begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix} 
++ a_{13} \begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix} 
+\]
+
+Each **2×2 determinant** (inside \( \begin{vmatrix} \cdot \end{vmatrix} \)) is called a **minor**.
+
+---
+
+#### **2. Expanding Along the First Row**  
+The determinant of the **3×3 matrix** is:
+
+\[
+\det(A) = a_{11} M_{11} - a_{12} M_{12} + a_{13} M_{13}
+\]
+
+where each **minor determinant** is computed as:
+
+\[
+M_{11} = \begin{vmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{vmatrix} = (a_{22} a_{33} - a_{23} a_{32})
+\]
+
+\[
+M_{12} = \begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix} = (a_{21} a_{33} - a_{23} a_{31})
+\]
+
+\[
+M_{13} = \begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix} = (a_{21} a_{32} - a_{22} a_{31})
+\]
+
+Thus,
+
+\[
+\det(A) = a_{11}(a_{22}a_{33} - a_{23}a_{32}) - a_{12}(a_{21}a_{33} - a_{23}a_{31}) + a_{13}(a_{21}a_{32} - a_{22}a_{31})
+\]
+
+---
+
+#### **3. Example Calculation**
+Consider:
+
+\[
+A = \begin{bmatrix} 
+1 & 2 & 3 \\ 
+4 & 5 & 6 \\ 
+7 & 8 & 9 
+\end{bmatrix}
+\]
+
+**Step 1: Compute the 2×2 Minors**  
+
+\[
+M_{11} = \begin{vmatrix} 5 & 6 \\ 8 & 9 \end{vmatrix} = (5 \times 9 - 6 \times 8) = 45 - 48 = -3
+\]
+
+\[
+M_{12} = \begin{vmatrix} 4 & 6 \\ 7 & 9 \end{vmatrix} = (4 \times 9 - 6 \times 7) = 36 - 42 = -6
+\]
+
+\[
+M_{13} = \begin{vmatrix} 4 & 5 \\ 7 & 8 \end{vmatrix} = (4 \times 8 - 5 \times 7) = 32 - 35 = -3
+\]
+
+**Step 2: Compute the Determinant**  
+
+\[
+\det(A) = 1(-3) - 2(-6) + 3(-3)
+\]
+
+\[
+= -3 + 12 - 9 = 0
+\]
+
+Since \( \det(A) = 0 \), this matrix is **singular**, meaning it has no inverse.
+
+---
+
+#### **4. Properties of a 3×3 Determinant**
+1. **Row Operations Affect the Determinant**:  
+   - Swapping two rows **negates** the determinant.
+   - Multiplying a row by a scalar **multiplies** the determinant by that scalar.
+   - Adding a multiple of one row to another **does not** change the determinant.
+
+2. **If Any Row or Column is All Zeros**, then \( \det(A) = 0 \).
+
+3. **If Two Rows (or Columns) are Identical**, then \( \det(A) = 0 \).
+
+4. **Multiplicative Property**:  
+   If \( A \) and \( B \) are both \( 3 \times 3 \) matrices:
+
+   \[
+   \det(A B) = \det(A) \cdot \det(B)
+   \]
+
+5. **Inverse and Determinant**:  
+   If \( A \) is invertible, then:
+
+   \[
+   \det(A^{-1}) = \frac{1}{\det(A)}
+   \]
+
+---
+
+#### **5. Applications of the Determinant**
+- **Checking for Invertibility**: If \( \det(A) \neq 0 \), \( A \) has an inverse.
+- **Solving Linear Systems**: Used in **Cramer's Rule**.
+- **Finding Volume of a Parallelepiped**: The determinant represents the **signed volume** of a parallelepiped formed by three vectors.
+- **Computer Graphics and Physics**: Used for transformations and cross-products.
+
+---
+
+### **Conclusion**
+The determinant of a **3×3 matrix** provides critical insights into the properties of a matrix, including whether 
+it is **invertible** or **singular**. The **cofactor expansion method** is a fundamental way to compute it, 
+and understanding its properties is essential in **linear algebra, engineering, and applied mathematics**.
+
+
+
+
+
+## **The Vertex of a Parabola**  
+
+#### **1. Understanding the Vertex of a Parabola**  
+A **parabola** is a U-shaped curve defined by a quadratic equation. The **vertex** of a parabola 
+is its highest or lowest point, depending on its orientation. It represents the **turning point**
+and plays a key role in understanding the parabola's geometry.  
+
+The general forms of a quadratic equation are:  
+
+1. **Standard Form:**  
+   \[
+   y = ax^2 + bx + c
+   \]
+   The vertex is given by:
+   \[
+   x = -\frac{b}{2a}
+   \]
+   Once \( x \) is found, substitute it into the equation to find \( y \).
+
+2. **Vertex Form:**  
+   \[
+   y = a(x - h)^2 + k
+   \]
+   The vertex is simply **\( (h, k) \)**.
+
+---
+
+#### **2. Finding the Vertex in Standard Form**  
+For the quadratic equation:
+\[
+y = ax^2 + bx + c
+\]
+
+The **x-coordinate** of the vertex is:
+
+\[
+x = -\frac{b}{2a}
+\]
+
+To find the **y-coordinate**, substitute \( x \) back into the equation:
+
+\[
+y = a\left(-\frac{b}{2a}\right)^2 + b\left(-\frac{b}{2a}\right) + c
+\]
+
+Thus, the vertex is:
+
+\[
+\left(-\frac{b}{2a}, f\left(-\frac{b}{2a}\right)\right)
+\]
+
+##### **Example 1: Finding the Vertex from Standard Form**
+Find the vertex of:
+
+\[
+y = 2x^2 - 4x + 1
+\]
+
+1. **Compute \( x \)-coordinate:**
+   \[
+   x = -\frac{-4}{2(2)} = \frac{4}{4} = 1
+   \]
+
+2. **Substitute into the equation:**
+   \[
+   y = 2(1)^2 - 4(1) + 1 = 2 - 4 + 1 = -1
+   \]
+
+Thus, the **vertex is \( (1, -1) \)**.
+
+---
+
+#### **3. Finding the Vertex in Vertex Form**  
+The **vertex form** of a parabola:
+
+\[
+y = a(x - h)^2 + k
+\]
+
+**Vertex:** \( (h, k) \)  
+
+##### **Example 2: Finding the Vertex from Vertex Form**
+Given:
+
+\[
+y = 3(x + 2)^2 - 5
+\]
+
+The vertex is \( (-2, -5) \).
+
+---
+
+#### **4. Orientation and Properties of the Vertex**
+- If **\( a > 0 \)**, the parabola **opens upward**, and the vertex is the **minimum** point.
+- If **\( a < 0 \)**, the parabola **opens downward**, and the vertex is the **maximum** point.
+
+**Example Interpretation:**
+- \( y = 2x^2 + 3x + 4 \) (since \( a > 0 \), vertex is a minimum)
+- \( y = -5(x - 1)^2 + 3 \) (since \( a < 0 \), vertex is a maximum)
+
+---
+
+#### **5. Applications of the Vertex**
+- **Optimization Problems**: Maximum or minimum values in physics, economics, and engineering.
+- **Projectile Motion**: The vertex represents the **highest point** in projectile motion.
+- **Computer Graphics**: Parabolas are used in animations and rendering.
+
+---
+
+### **Conclusion**
+The **vertex of a parabola** is the most important point in its geometry, 
+found using **\( x = -\frac{b}{2a} \)** in standard form or **directly from vertex form**.
+It determines the direction, highest/lowest point, and practical applications in various fields.
+
+
+
+
+
+
+## **Inverses of \(2 \times 2\) Matrices**  
+
+#### **1. Understanding the Inverse of a Matrix**  
+The inverse of a square matrix \( A \), denoted as \( A^{-1} \), is a matrix that satisfies:  
+
+\[
+A A^{-1} = A^{-1} A = I
+\]
+
+where \( I \) is the **identity matrix**:
+
+\[
+I = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+\]
+
+For a \( 2 \times 2 \) matrix:
+
+\[
+A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+\]
+
+the inverse exists **only if** the determinant \( \det(A) \neq 0 \), where:
+
+\[
+\det(A) = ad - bc
+\]
+
+If \( \det(A) = 0 \), the matrix **does not have an inverse**.
+
+---
+
+#### **2. Formula for the Inverse of a \(2 \times 2\) Matrix**  
+If \( \det(A) \neq 0 \), the inverse is given by:
+
+\[
+A^{-1} = \frac{1}{\det(A)} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}
+\]
+
+This formula follows a simple pattern:
+- **Swap** \( a \) and \( d \).
+- **Negate** \( b \) and \( c \).
+- **Divide by \( \det(A) \).**
+
+---
+
+#### **3. Example Calculation**  
+Find the inverse of:
+
+\[
+A = \begin{bmatrix} 2 & 3 \\ 1 & 4 \end{bmatrix}
+\]
+
+1. **Compute the determinant**:
+
+   \[
+   \det(A) = (2)(4) - (3)(1) = 8 - 3 = 5
+   \]
+
+   Since \( \det(A) \neq 0 \), the inverse exists.
+
+2. **Apply the inverse formula**:
+
+   \[
+   A^{-1} = \frac{1}{5} \begin{bmatrix} 4 & -3 \\ -1 & 2 \end{bmatrix}
+   \]
+
+3. **Result**:
+
+   \[
+   A^{-1} = \begin{bmatrix} \frac{4}{5} & -\frac{3}{5} \\ -\frac{1}{5} & \frac{2}{5} \end{bmatrix}
+   \]
+
+---
+
+#### **4. Properties of Inverses**
+- \( (A^{-1})^{-1} = A \)  
+- \( (AB)^{-1} = B^{-1} A^{-1} \)  
+- \( (A^T)^{-1} = (A^{-1})^T \)  
+- If \( \det(A) = 0 \), \( A \) is **singular** (non-invertible).
+
+---
+
+#### **5. Application of Matrix Inverses**
+- **Solving Systems of Equations**: If \( AX = B \), then:
+
+  \[
+  X = A^{-1} B
+  \]
+
+- **Transformations in Computer Graphics**: Used in rotations, scaling, and reflections.
+- **Control Systems & Physics**: State-space representations involve matrix inverses.
+
+---
+
+### **Conclusion**
+The inverse of a \(2 \times 2\) matrix is computed using:
+
+\[
+A^{-1} = \frac{1}{\det(A)} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}
+\]
+
+It exists only when \( \det(A) \neq 0 \). This concept is fundamental in linear algebra, 
+computer science, and engineering applications.
+
+
+
+
+
+## **Calculating Intercepts of Parabolas**  
+
+A **parabola** is a quadratic function of the form:
+
+\[
+y = ax^2 + bx + c
+\]
+
+where \( a, b, c \) are constants. The intercepts of a parabola refer to **points where the curve crosses the x-axis and y-axis**.
+
+---
+
+### **1. Finding the Y-Intercept**
+The **y-intercept** is the point where the parabola crosses the **y-axis**. This happens when \( x = 0 \).
+
+#### **Formula for Y-Intercept:**
+\[
+y = c
+\]
+
+#### **Example:**
+Given the quadratic function:
+
+\[
+y = 2x^2 - 3x + 5
+\]
+
+Substituting \( x = 0 \):
+
+\[
+y = 2(0)^2 - 3(0) + 5 = 5
+\]
+
+**Y-Intercept:** \( (0,5) \)
+
+---
+
+### **2. Finding the X-Intercept(s)**
+The **x-intercepts** (also called **roots or zeros**) occur where the parabola crosses the **x-axis**, meaning \( y = 0 \).
+
+#### **Equation for X-Intercepts:**
+\[
+ax^2 + bx + c = 0
+\]
+
+Solving this quadratic equation gives the x-intercepts.
+
+#### **Methods to Find X-Intercepts:**
+1. **Factoring** (if possible)
+2. **Quadratic Formula** (if factoring is difficult)
+3. **Completing the Square** (less common but useful)
+
+#### **Using the Quadratic Formula:**
+\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+
+- **If** \( b^2 - 4ac > 0 \), **two real solutions** → two x-intercepts.
+- **If** \( b^2 - 4ac = 0 \), **one real solution** → one x-intercept (the vertex is on the x-axis).
+- **If** \( b^2 - 4ac < 0 \), **no real solutions** → no x-intercepts (the parabola does not cross the x-axis).
+
+---
+
+### **3. Example Calculations**
+#### **Example 1: Finding X-Intercepts**
+Given:
+
+\[
+y = x^2 - 4x + 3
+\]
+
+Solve:
+
+\[
+x^2 - 4x + 3 = 0
+\]
+
+**Factoring:**
+\[
+(x - 3)(x - 1) = 0
+\]
+
+Setting each factor to zero:
+
+\[
+x - 3 = 0 \quad \text{or} \quad x - 1 = 0
+\]
+
+\[
+x = 3, \quad x = 1
+\]
+
+**X-Intercepts:** \( (1,0) \) and \( (3,0) \)
+
+---
+
+#### **Example 2: Using the Quadratic Formula**
+Given:
+
+\[
+y = 2x^2 - 4x + 1
+\]
+
+Solve:
+
+\[
+2x^2 - 4x + 1 = 0
+\]
+
+Using the quadratic formula:
+
+\[
+x = \frac{-(-4) \pm \sqrt{(-4)^2 - 4(2)(1)}}{2(2)}
+\]
+
+\[
+x = \frac{4 \pm \sqrt{16 - 8}}{4}
+\]
+
+\[
+x = \frac{4 \pm \sqrt{8}}{4}
+\]
+
+\[
+x = \frac{4 \pm 2\sqrt{2}}{4} = \frac{2 \pm \sqrt{2}}{2}
+\]
+
+**X-Intercepts:** \( \left(\frac{2 + \sqrt{2}}{2}, 0\right) \) and \( \left(\frac{2 - \sqrt{2}}{2}, 0\right) \)
+
+---
+
+### **4. Summary**
+- **Y-Intercept:** Found by setting \( x = 0 \).
+- **X-Intercepts:** Found by solving \( ax^2 + bx + c = 0 \).
+- **Quadratic Formula** is used when factoring is difficult.
+- **Number of x-intercepts depends on the discriminant** (\( b^2 - 4ac \)).
+
+Understanding intercepts is crucial in **graphing parabolas, physics (projectile motion), and 
+engineering applications**.
+
+
+
+
+
+
+## **Properties of Matrix Addition**  
+
+Matrix addition is an essential operation in linear algebra that follows specific mathematical properties. 
+Understanding these properties is fundamental when working with matrices in applications like machine learning, 
+physics, and computer graphics.
+
+---
+
+### **1. Definition of Matrix Addition**
+Matrix addition is performed by adding corresponding elements of two matrices of the **same dimensions**. 
+
+For two matrices **A** and **B** of size \( m \times n \):
+
+\[
+A + B = \left[ a_{ij} \right] + \left[ b_{ij} \right] = \left[ a_{ij} + b_{ij} \right]
+\]
+
+Each element of the resulting matrix is obtained by:
+
+\[
+(A + B)_{ij} = A_{ij} + B_{ij}
+\]
+
+#### **Example:**
+If
+
+\[
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad
+B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}
+\]
+
+Then:
+
+\[
+A + B = \begin{bmatrix} 1+5 & 2+6 \\ 3+7 & 4+8 \end{bmatrix} = \begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix}
+\]
+
+---
+
+### **2. Properties of Matrix Addition**
+Matrix addition obeys the following properties:
+
+#### **1. Commutative Property**
+\[
+A + B = B + A
+\]
+Matrix addition is **commutative**, meaning the order of addition does not affect the result.
+
+**Example:**
+\[
+\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} + \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} =
+\begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix}
+\]
+
+\[
+\begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} + \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} =
+\begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix}
+\]
+
+Both orders produce the same matrix.
+
+---
+
+#### **2. Associative Property**
+\[
+(A + B) + C = A + (B + C)
+\]
+Matrix addition is **associative**, meaning the way matrices are grouped does not change the sum.
+
+**Example:**
+\[
+\left( \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} + \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} \right) + \begin{bmatrix} 9 & 10 \\ 11 & 12 \end{bmatrix}
+\]
+
+First, compute \( A + B \):
+
+\[
+\begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix} + \begin{bmatrix} 9 & 10 \\ 11 & 12 \end{bmatrix} =
+\begin{bmatrix} 15 & 18 \\ 21 & 24 \end{bmatrix}
+\]
+
+Now compute \( B + C \):
+
+\[
+\begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} + \begin{bmatrix} 9 & 10 \\ 11 & 12 \end{bmatrix} =
+\begin{bmatrix} 14 & 16 \\ 18 & 20 \end{bmatrix}
+\]
+
+\[
+\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} + \begin{bmatrix} 14 & 16 \\ 18 & 20 \end{bmatrix} =
+\begin{bmatrix} 15 & 18 \\ 21 & 24 \end{bmatrix}
+\]
+
+Both ways produce the same result.
+
+---
+
+#### **3. Existence of an Additive Identity (Zero Matrix)**
+There exists a **zero matrix** \( O \), where:
+
+\[
+A + O = O + A = A
+\]
+
+For any matrix \( A \), adding a matrix of the same dimensions filled with zeros does not change \( A \).
+
+**Example:**
+\[
+\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} + \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix} =
+\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}
+\]
+
+---
+
+#### **4. Existence of an Additive Inverse (Negative Matrix)**
+For every matrix \( A \), there exists a matrix \( -A \) such that:
+
+\[
+A + (-A) = (-A) + A = O
+\]
+
+The negative matrix \( -A \) is obtained by multiplying each element of \( A \) by -1.
+
+**Example:**
+\[
+A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad
+-A = \begin{bmatrix} -1 & -2 \\ -3 & -4 \end{bmatrix}
+\]
+
+\[
+A + (-A) = \begin{bmatrix} 1-1 & 2-2 \\ 3-3 & 4-4 \end{bmatrix} = \begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}
+\]
+
+---
+
+#### **5. Closure Property**
+If \( A \) and \( B \) are matrices of the same size, their sum \( A + B \) is also a matrix of the same size.
+
+For example, if \( A \) and \( B \) are both \( 2 \times 2 \) matrices, then \( A + B \) will also be a \( 2 \times 2 \) matrix.
+
+---
+
+### **3. Summary of Properties**
+| Property | Equation | Description |
+|-----------|------------|-------------|
+| **Commutative** | \( A + B = B + A \) | Order does not matter. |
+| **Associative** | \( (A + B) + C = A + (B + C) \) | Grouping does not matter. |
+| **Additive Identity** | \( A + O = A \) | Adding a zero matrix leaves \( A \) unchanged. |
+| **Additive Inverse** | \( A + (-A) = O \) | Every matrix has an opposite that sums to zero. |
+| **Closure** | If \( A \) and \( B \) are \( m \times n \) matrices, then \( A + B \) is also \( m \times n \). | The sum remains within the set of matrices of the same dimension. |
+
+---
+
+### **4. Applications of Matrix Addition**
+1. **Computer Graphics:** Adding transformation matrices to apply multiple effects.
+2. **Machine Learning & Data Science:** Combining weight matrices in neural networks.
+3. **Economics:** Summing matrices to analyze financial trends.
+4. **Physics & Engineering:** Adding matrices in simulations and structural calculations.
+
+Understanding these properties allows for efficient problem-solving in mathematics and its applications.
+
+
+
+
+
+
+## **The Geometric Interpretation of the 2×2 Determinant**  
+
+The determinant of a \(2 \times 2\) matrix provides a geometric interpretation related to **area, transformations, 
+and orientation** in 2D space. Understanding how the determinant affects geometric shapes and transformations 
+is fundamental in linear algebra, physics, and computer graphics.
+
+---
+
+### **1. The Determinant of a 2×2 Matrix**
+For a \(2 \times 2\) matrix:
+
+\[
+A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+\]
+
+The determinant is given by:
+
+\[
+\det(A) = ad - bc
+\]
+
+This scalar value has significant geometric meaning in terms of area scaling, transformations, and orientation.
+
+---
+
+### **2. Interpretation as Area Scaling**
+The determinant represents the **signed area** of the parallelogram formed by the column vectors of the matrix.
+
+#### **Case 1: Identity Matrix (\(A\) as a Basis)**
+For the identity matrix:
+
+\[
+I = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+\]
+
+\[
+\det(I) = (1)(1) - (0)(0) = 1
+\]
+
+The unit square remains unchanged.
+
+#### **Case 2: General 2D Transformation**
+If the column vectors of \( A \) are:
+
+\[
+\mathbf{v}_1 = \begin{bmatrix} a \\ c \end{bmatrix}, \quad \mathbf{v}_2 = \begin{bmatrix} b \\ d \end{bmatrix}
+\]
+
+Then the parallelogram formed by \( \mathbf{v}_1 \) and \( \mathbf{v}_2 \) has area:
+
+\[
+\text{Area} = |\det(A)|
+\]
+
+##### **Example**
+Consider:
+
+\[
+A = \begin{bmatrix} 2 & 1 \\ 3 & 4 \end{bmatrix}
+\]
+
+\[
+\det(A) = (2)(4) - (1)(3) = 8 - 3 = 5
+\]
+
+The parallelogram spanned by the column vectors has an area of **5**.
+
+---
+
+### **3. Orientation and Signed Area**
+The sign of the determinant indicates whether the transformation preserves or reverses orientation:
+
+- **If \( \det(A) > 0 \):** The transformation **preserves** orientation.
+- **If \( \det(A) < 0 \):** The transformation **flips** orientation (reflection).
+- **If \( \det(A) = 0 \):** The transformation **collapses** the plane into a lower-dimensional space (line or point), meaning the vectors are **linearly dependent**.
+
+##### **Example: Reflection**
+For:
+
+\[
+A = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}
+\]
+
+\[
+\det(A) = (0)(0) - (1)(1) = -1
+\]
+
+Since the determinant is negative, this matrix represents a reflection, flipping the orientation.
+
+---
+
+### **4. Determinant as a Volume Factor**
+The determinant also tells us how a transformation scales areas:
+
+\[
+\text{New Area} = |\det(A)| \times \text{Original Area}
+\]
+
+For a transformation matrix \( A \):
+
+- If \( |\det(A)| > 1 \), the transformation **expands** areas.
+- If \( 0 < |\det(A)| < 1 \), the transformation **contracts** areas.
+- If \( |\det(A)| = 0 \), the transformation **collapses** the shape into a lower dimension.
+
+##### **Example: Scaling**
+For:
+
+\[
+A = \begin{bmatrix} 3 & 0 \\ 0 & 2 \end{bmatrix}
+\]
+
+\[
+\det(A) = (3)(2) - (0)(0) = 6
+\]
+
+The unit square expands by a factor of **6**.
+
+---
+
+### **5. Summary of Geometric Insights**
+| Property | Interpretation |
+|----------|---------------|
+| \( \det(A) \) | Signed area of the parallelogram formed by column vectors. |
+| \( \det(A) > 0 \) | Orientation is preserved. |
+| \( \det(A) < 0 \) | Reflection occurs, reversing orientation. |
+| \( \det(A) = 0 \) | Vectors are linearly dependent (collapse to a lower dimension). |
+| \( |\det(A)| \) | The scaling factor for area. |
+
+The determinant of a \(2 \times 2\) matrix thus serves as a **measure of transformation, area scaling, 
+and orientation preservation** in 2D geometry.
+
+
+
+
+
+
+## **Calculating the Inverse of a \(3 \times 3\) Matrix Using the Cofactor Method**  
+
+The inverse of a \(3 \times 3\) matrix \(A\) exists only if its determinant is nonzero. 
+One method to compute the inverse is the **cofactor method**, which involves finding the matrix of cofactors, 
+forming the adjugate, and dividing by the determinant.
+
+---
+
+## **1. Formula for the Inverse of a 3×3 Matrix**  
+
+Given a \(3 \times 3\) matrix:
+
+\[
+A = \begin{bmatrix} 
+a & b & c \\ 
+d & e & f \\ 
+g & h & i 
+\end{bmatrix}
+\]
+
+The inverse \( A^{-1} \) is given by:
+
+\[
+A^{-1} = \frac{1}{\det(A)} \text{Adj}(A)
+\]
+
+where:
+- \( \det(A) \) is the determinant of \( A \).
+- \( \text{Adj}(A) \) (the **adjugate matrix**) is the transpose of the **cofactor matrix**.
+
+---
+
+## **2. Step-by-Step Calculation of \( A^{-1} \)**
+### **Step 1: Compute the Determinant**
+The determinant of a \(3 \times 3\) matrix is given by:
+
+\[
+\det(A) = a(ei - fh) - b(di - fg) + c(dh - eg)
+\]
+
+If \( \det(A) = 0 \), the matrix is **singular** and does **not** have an inverse.
+
+### **Step 2: Compute the Cofactor Matrix**
+The **cofactor** \( C_{ij} \) of an element \( A_{ij} \) is found by deleting row \( i \) and column \( j \), then computing the determinant of the resulting \(2 \times 2\) matrix, with a sign adjustment:
+
+\[
+C_{ij} = (-1)^{i+j} \det(M_{ij})
+\]
+
+where \( M_{ij} \) is the minor of \( A_{ij} \) (the determinant of the \(2 \times 2\) submatrix obtained by removing row \( i \) and column \( j \)).
+
+#### **Example of Cofactors**
+For \( A \), the cofactors are:
+
+\[
+C_{11} = \det \begin{bmatrix} e & f \\ h & i \end{bmatrix} = ei - fh
+\]
+
+\[
+C_{12} = -\det \begin{bmatrix} d & f \\ g & i \end{bmatrix} = -(di - fg)
+\]
+
+\[
+C_{13} = \det \begin{bmatrix} d & e \\ g & h \end{bmatrix} = dh - eg
+\]
+
+Computing all cofactors, we get the **cofactor matrix**:
+
+\[
+C = \begin{bmatrix} 
+ei - fh & -(di - fg) & dh - eg \\ 
+-(bi - ch) & ai - cg & -(ah - bg) \\ 
+bf - ce & -(af - cd) & ae - bd 
+\end{bmatrix}
+\]
+
+### **Step 3: Compute the Adjugate Matrix**
+The **adjugate matrix** \( \text{Adj}(A) \) is obtained by **transposing** the cofactor matrix:
+
+\[
+\text{Adj}(A) = C^T = \begin{bmatrix} 
+ei - fh & -(bi - ch) & bf - ce \\ 
+-(di - fg) & ai - cg & -(af - cd) \\ 
+dh - eg & -(ah - bg) & ae - bd 
+\end{bmatrix}
+\]
+
+### **Step 4: Compute \( A^{-1} \)**
+Finally, divide by \( \det(A) \):
+
+\[
+A^{-1} = \frac{1}{\det(A)} \text{Adj}(A)
+\]
+
+---
+
+## **3. Example Calculation**
+Consider:
+
+\[
+A = \begin{bmatrix} 
+2 & 3 & 1 \\ 
+4 & 5 & 6 \\ 
+7 & 8 & 9 
+\end{bmatrix}
+\]
+
+### **Step 1: Compute \( \det(A) \)**
+\[
+\det(A) = 2(5 \times 9 - 6 \times 8) - 3(4 \times 9 - 6 \times 7) + 1(4 \times 8 - 5 \times 7)
+\]
+
+\[
+= 2(45 - 48) - 3(36 - 42) + 1(32 - 35)
+\]
+
+\[
+= 2(-3) - 3(-6) + 1(-3) = -6 + 18 - 3 = 9
+\]
+
+### **Step 2: Compute Cofactor Matrix**
+\[
+C = \begin{bmatrix} 
+(5 \times 9 - 6 \times 8) & -(4 \times 9 - 6 \times 7) & (4 \times 8 - 5 \times 7) \\ 
+-(3 \times 9 - 1 \times 8) & (2 \times 9 - 1 \times 7) & -(2 \times 8 - 3 \times 7) \\ 
+(3 \times 6 - 1 \times 5) & -(2 \times 6 - 1 \times 4) & (2 \times 5 - 3 \times 4) 
+\end{bmatrix}
+\]
+
+\[
+= \begin{bmatrix} 
+-3 & 6 & -3 \\ 
+-19 & 11 & -5 \\ 
+13 & -8 & -2 
+\end{bmatrix}
+\]
+
+### **Step 3: Compute the Adjugate Matrix**
+\[
+\text{Adj}(A) = C^T = \begin{bmatrix} 
+-3 & -19 & 13 \\ 
+6 & 11 & -8 \\ 
+-3 & -5 & -2 
+\end{bmatrix}
+\]
+
+### **Step 4: Compute \( A^{-1} \)**
+\[
+A^{-1} = \frac{1}{9} \begin{bmatrix} 
+-3 & -19 & 13 \\ 
+6 & 11 & -8 \\ 
+-3 & -5 & -2 
+\end{bmatrix}
+\]
+
+---
+
+## **4. Key Takeaways**
+- The **cofactor method** involves finding **cofactors**, forming the **adjugate**, and dividing by the **determinant**.
+- If \( \det(A) = 0 \), the matrix is singular and has no inverse.
+- This method works for any square matrix but is computationally expensive for larger matrices.
+
+This approach is fundamental in solving linear systems, physics simulations, and graphics transformations.
+
+
+
+
+
+## **Multiplying a Matrix by a Column Vector**  
+
+Matrix-vector multiplication is a fundamental operation in linear algebra, used in solving systems of 
+linear equations, transformations, machine learning models, and physics simulations.
+
+---
+
+## **1. Definition and Formula**  
+Given an \( m \times n \) matrix \( A \):
+
+\[
+A = \begin{bmatrix} 
+a_{11} & a_{12} & \cdots & a_{1n} \\ 
+a_{21} & a_{22} & \cdots & a_{2n} \\ 
+\vdots & \vdots & \ddots & \vdots \\ 
+a_{m1} & a_{m2} & \cdots & a_{mn} 
+\end{bmatrix}
+\]
+
+and an \( n \times 1 \) column vector \( x \):
+
+\[
+x = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}
+\]
+
+The product \( Ax \) is an \( m \times 1 \) column vector:
+
+\[
+Ax = \begin{bmatrix} 
+a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n \\ 
+a_{21}x_1 + a_{22}x_2 + \dots + a_{2n}x_n \\ 
+\vdots \\ 
+a_{m1}x_1 + a_{m2}x_2 + \dots + a_{mn}x_n 
+\end{bmatrix}
+\]
+
+This operation **computes a linear combination** of the matrix’s column vectors weighted by the corresponding elements of \( x \).
+
+---
+
+## **2. Example Calculation**  
+Consider:
+
+\[
+A = \begin{bmatrix} 
+2 & -1 & 3 \\ 
+4 & 0 & 1 \\ 
+-2 & 5 & 6 
+\end{bmatrix}
+\]
+
+and the vector:
+
+\[
+x = \begin{bmatrix} 1 \\ -2 \\ 4 \end{bmatrix}
+\]
+
+Multiplying:
+
+\[
+Ax = \begin{bmatrix} 
+(2 \times 1) + (-1 \times -2) + (3 \times 4) \\ 
+(4 \times 1) + (0 \times -2) + (1 \times 4) \\ 
+(-2 \times 1) + (5 \times -2) + (6 \times 4) 
+\end{bmatrix}
+\]
+
+\[
+= \begin{bmatrix} 2 + 2 + 12 \\ 4 + 0 + 4 \\ -2 -10 + 24 \end{bmatrix} 
+= \begin{bmatrix} 16 \\ 8 \\ 12 \end{bmatrix}
+\]
+
+---
+
+## **3. Interpretation and Applications**
+- **Linear Systems**: If \( A \) represents coefficients and \( x \) represents variables, \( Ax \) is the result of applying the system.
+- **Transformations**: In graphics, multiplying a vector by a matrix transforms its position.
+- **Machine Learning**: Neural networks compute activations using matrix-vector multiplication.
+
+This operation is efficient and heavily optimized in computational libraries like NumPy, TensorFlow, and PyTorch.
+
+
+
+
+
+
+## **Convergent and Divergent Infinite Series**  
+
+Infinite series play a crucial role in mathematics, physics, and engineering, particularly in calculus and analysis. 
+Understanding their convergence or divergence helps in determining their sum and applicability in real-world problems.
+
+---
+
+## **1. Definition of an Infinite Series**  
+An **infinite series** is the sum of the terms of an infinite sequence:
+
+\[
+S = a_1 + a_2 + a_3 + \dots = \sum_{n=1}^{\infty} a_n
+\]
+
+where \( a_n \) represents the terms of the sequence.
+
+The behavior of this sum as \( n \to \infty \) determines whether the series **converges** or **diverges**.
+
+---
+
+## **2. Convergent Series**  
+An infinite series **converges** if the sequence of its partial sums approaches a finite limit.
+
+### **Partial Sums**
+The partial sum \( S_n \) of the first \( n \) terms is:
+
+\[
+S_n = \sum_{k=1}^{n} a_k
+\]
+
+If \( \lim\limits_{n \to \infty} S_n = S \) (a finite number), then the series **converges** to \( S \).
+
+### **Example: Geometric Series**  
+A geometric series:
+
+\[
+\sum_{n=0}^{\infty} ar^n = a + ar + ar^2 + ar^3 + \dots
+\]
+
+converges if \( |r| < 1 \) and its sum is:
+
+\[
+S = \frac{a}{1 - r}
+\]
+
+Example: \( \sum_{n=0}^{\infty} \frac{1}{2^n} = 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots \)  
+Since \( |r| = \frac{1}{2} < 1 \), it converges to:
+
+\[
+S = \frac{1}{1 - \frac{1}{2}} = 2
+\]
+
+---
+
+## **3. Divergent Series**  
+A series **diverges** if its partial sums tend to infinity or oscillate without approaching a finite limit.
+
+### **Example: Harmonic Series**  
+\[
+\sum_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \dots
+\]
+
+Although individual terms decrease, the partial sums grow without bound:
+
+\[
+\lim\limits_{n \to \infty} S_n = \infty
+\]
+
+Thus, the harmonic series **diverges**.
+
+### **Example: Geometric Series with \( |r| \geq 1 \)**  
+\[
+\sum_{n=0}^{\infty} 2^n = 1 + 2 + 4 + 8 + \dots
+\]
+
+Since \( r = 2 \), the terms grow exponentially, causing the series to **diverge to infinity**.
+
+---
+
+## **4. Tests for Convergence or Divergence**
+Several tests determine whether a series converges or diverges.
+
+### **1. nth-Term Test for Divergence**
+If \( \lim\limits_{n \to \infty} a_n \neq 0 \), the series **diverges**.
+
+Example: \( \sum_{n=1}^{\infty} \frac{n}{n+1} \), where \( \lim\limits_{n \to \infty} \frac{n}{n+1} = 1 \neq 0 \), so it diverges.
+
+### **2. Integral Test**  
+If \( f(n) \) is positive, decreasing, and continuous, and the improper integral:
+
+\[
+\int_{1}^{\infty} f(x)dx
+\]
+
+converges, then the series \( \sum a_n \) also converges.
+
+### **3. Comparison Test**  
+If \( 0 \leq a_n \leq b_n \) and \( \sum b_n \) converges, then \( \sum a_n \) also converges.  
+Conversely, if \( \sum b_n \) diverges and \( a_n \geq b_n \), then \( \sum a_n \) also diverges.
+
+Example: Since \( \sum \frac{1}{n^2} \) (p-series with \( p > 1 \)) converges and \( \frac{1}{n^2} \leq \frac{1}{n} \), we conclude that \( \sum \frac{1}{n} \) diverges.
+
+### **4. Ratio Test**  
+For a series \( \sum a_n \), if
+
+\[
+L = \lim\limits_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right|
+\]
+
+- If \( L < 1 \), the series **converges**.
+- If \( L > 1 \), the series **diverges**.
+- If \( L = 1 \), the test is inconclusive.
+
+Example: The geometric series \( \sum \frac{1}{2^n} \) has:
+
+\[
+\lim\limits_{n \to \infty} \frac{1}{2^{n+1}} \div \frac{1}{2^n} = \frac{1}{2} < 1
+\]
+
+so it **converges**.
+
+---
+
+## **5. Summary**
+| **Series Type**         | **Convergent Condition** | **Example** |
+|-------------------------|-------------------------|-------------|
+| **Geometric Series**    | \( |r| < 1 \)           | \( \sum \frac{1}{2^n} \) |
+| **Harmonic Series**     | Always diverges         | \( \sum \frac{1}{n} \) |
+| **p-Series** \( \sum \frac{1}{n^p} \) | \( p > 1 \) converges, \( p \leq 1 \) diverges | \( \sum \frac{1}{n^2} \) converges, \( \sum \frac{1}{n} \) diverges |
+| **Comparison Test**     | Compare to known series | \( \sum \frac{1}{n^2} \leq \sum \frac{1}{n} \) |
+| **Ratio Test**          | \( L < 1 \) converges, \( L > 1 \) diverges | \( \sum \frac{n!}{2^n} \) diverges |
+
+Mastering these concepts is essential in calculus, physics, and machine learning, where series approximations 
+and summations are frequently used.
+
+
+
+
+
+
+
+## **Calculating the Magnitude of Cartesian Vectors in 3D**  
+
+In three-dimensional space, a **Cartesian vector** represents a directed quantity with three components 
+along the \( x \)-, \( y \)-, and \( z \)-axes. The **magnitude** (or length) of a vector measures its 
+size and is computed using the Euclidean norm.
+
+---
+
+## **1. Definition of a 3D Cartesian Vector**  
+A 3D vector is represented as:
+
+\[
+\mathbf{v} = (x, y, z)
+\]
+
+where:  
+- \( x \) is the component along the **x-axis**  
+- \( y \) is the component along the **y-axis**  
+- \( z \) is the component along the **z-axis**
+
+### **Example:**
+\[
+\mathbf{v} = (3, -4, 5)
+\]
+
+This vector has components **3** in the x-direction, **-4** in the y-direction, and **5** in the z-direction.
+
+---
+
+## **2. Formula for the Magnitude of a 3D Vector**  
+The magnitude (or norm) of a vector **\( \mathbf{v} \)** is given by:
+
+\[
+|\mathbf{v}| = \sqrt{x^2 + y^2 + z^2}
+\]
+
+This follows from the **Pythagorean Theorem** in three dimensions.
+
+---
+
+## **3. Step-by-Step Calculation**  
+### **Example 1:**  
+Find the magnitude of the vector \( \mathbf{v} = (3, -4, 5) \).
+
+**Step 1:** Square each component  
+\[
+3^2 = 9, \quad (-4)^2 = 16, \quad 5^2 = 25
+\]
+
+**Step 2:** Sum the squares  
+\[
+9 + 16 + 25 = 50
+\]
+
+**Step 3:** Take the square root  
+\[
+|\mathbf{v}| = \sqrt{50} = 5\sqrt{2} \approx 7.07
+\]
+
+Thus, the magnitude of \( \mathbf{v} \) is **\( 7.07 \)**.
+
+### **Example 2:**  
+Find the magnitude of \( \mathbf{w} = (-2, 6, -3) \).
+
+\[
+|\mathbf{w}| = \sqrt{(-2)^2 + 6^2 + (-3)^2}
+\]
+
+\[
+= \sqrt{4 + 36 + 9} = \sqrt{49} = 7
+\]
+
+---
+
+## **4. Special Cases**
+### **1. Zero Vector (\( \mathbf{0} \))**
+The **zero vector** \( \mathbf{0} = (0,0,0) \) has a magnitude of:
+
+\[
+|\mathbf{0}| = \sqrt{0^2 + 0^2 + 0^2} = 0
+\]
+
+### **2. Unit Vectors**
+A **unit vector** has a magnitude of **1** and is often used to indicate direction. The standard unit vectors in 3D are:
+
+\[
+\mathbf{i} = (1,0,0), \quad \mathbf{j} = (0,1,0), \quad \mathbf{k} = (0,0,1)
+\]
+
+Each has a magnitude of:
+
+\[
+|\mathbf{i}| = \sqrt{1^2 + 0^2 + 0^2} = 1
+\]
+
+---
+
+## **5. Applications of Vector Magnitude**
+1. **Physics** – Computing velocity, force, and displacement magnitudes.  
+2. **Engineering** – Determining resultant forces in statics and dynamics.  
+3. **Computer Graphics** – Normalizing vectors for lighting and shading.  
+4. **Machine Learning** – Measuring distances in high-dimensional spaces.  
+
+The magnitude of a vector is essential for many real-world applications, including **unit vector normalization**, 
+**vector projections**, and **distance computations**.
 
 
 
