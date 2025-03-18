@@ -16539,6 +16539,2502 @@ By mastering logarithms, exponent rules, and sign analysis, solving exponential 
 
 
 
+# **Introduction to Differential Equations**  
+
+## **1. What is a Differential Equation?**  
+
+A **differential equation (DE)** is an equation that involves an unknown function and its derivatives. 
+It describes how a quantity changes with respect to another. The general form is:  
+
+\[
+F(x, y, y', y'', \dots, y^{(n)}) = 0
+\]
+
+where:
+- \( y = f(x) \) is the unknown function,
+- \( y', y'', \dots, y^{(n)} \) are its derivatives,
+- \( x \) is the independent variable.
+
+### **Why Study Differential Equations?**  
+DEs model many natural phenomena, including:
+- **Physics**: Motion (Newton’s Laws), heat conduction, electromagnetism.
+- **Biology**: Population growth, epidemiology.
+- **Engineering**: Circuit design, fluid dynamics.
+- **Economics**: Interest rates, stock market modeling.
+
+---
+
+## **2. Types of Differential Equations**  
+
+### **(a) Ordinary vs. Partial Differential Equations**  
+- **Ordinary Differential Equation (ODE)**: Involves derivatives with respect to a single independent variable \( x \).  
+  - Example: \( \frac{dy}{dx} = x^2 \).  
+- **Partial Differential Equation (PDE)**: Involves partial derivatives with respect to multiple variables.  
+  - Example: Heat equation \( \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2} \).  
+
+### **(b) Order of a Differential Equation**  
+The **order** is the highest derivative in the equation.
+- **First-order**: \( \frac{dy}{dx} + y = 3x \).  
+- **Second-order**: \( y'' + 4y = \sin x \).  
+
+### **(c) Linear vs. Nonlinear Differential Equations**  
+- **Linear**: The dependent variable and its derivatives appear **only in the first degree** and are **not multiplied together**.
+  - Example: \( y'' + 3y' + 2y = e^x \).
+- **Nonlinear**: Contains terms like \( y^2, (y')^3, \sin y \).
+  - Example: \( y'' + y^2 = x \).
+
+### **(d) Homogeneous vs. Nonhomogeneous Equations**  
+- **Homogeneous**: No external forcing function (right-hand side = 0).
+  - Example: \( y'' - 2y' + y = 0 \).
+- **Nonhomogeneous**: Includes an external term.
+  - Example: \( y'' - 2y' + y = e^x \).
+
+---
+
+## **3. First-Order Differential Equations**  
+
+### **(a) Separable Equations**  
+A first-order DE is **separable** if it can be written as:
+
+\[
+\frac{dy}{dx} = g(x) h(y)
+\]
+
+**Solution Strategy:**  
+1. Rewrite as \( \frac{dy}{h(y)} = g(x) dx \).
+2. Integrate both sides.
+3. Solve for \( y \).
+
+**Example:**  
+
+\[
+\frac{dy}{dx} = xy
+\]
+
+Rewriting:
+
+\[
+\frac{dy}{y} = x dx
+\]
+
+Integrating:
+
+\[
+\ln |y| = \frac{x^2}{2} + C
+\]
+
+\[
+y = e^{\frac{x^2}{2} + C} = C' e^{x^2/2}
+\]
+
+---
+
+### **(b) Linear First-Order Equations**  
+A first-order **linear** DE has the form:
+
+\[
+\frac{dy}{dx} + P(x)y = Q(x)
+\]
+
+**Solution using the Integrating Factor (IF):**  
+1. Compute \( IF = e^{\int P(x) dx} \).  
+2. Multiply both sides by \( IF \).  
+3. Recognize that the left-hand side becomes \( \frac{d}{dx} (IF \cdot y) \).  
+4. Integrate and solve for \( y \).  
+
+**Example:**  
+
+\[
+\frac{dy}{dx} + y = x
+\]
+
+Here, \( P(x) = 1 \) and \( Q(x) = x \).
+
+**Compute Integrating Factor:**  
+
+\[
+IF = e^{\int 1dx} = e^x
+\]
+
+Multiply by \( e^x \):
+
+\[
+e^x \frac{dy}{dx} + e^x y = x e^x
+\]
+
+Recognizing as a derivative:
+
+\[
+\frac{d}{dx} (e^x y) = x e^x
+\]
+
+Integrate both sides:
+
+\[
+e^x y = \int x e^x dx
+\]
+
+Using **Integration by Parts**, solve for \( y \).
+
+---
+
+## **4. Second-Order Linear Differential Equations**  
+
+A **general second-order linear DE** is:
+
+\[
+a y'' + b y' + c y = f(x)
+\]
+
+### **(a) Homogeneous Case (\( f(x) = 0 \))**  
+
+Solve using **characteristic equations**:
+
+\[
+ar^2 + br + c = 0
+\]
+
+**Example:**  
+
+\[
+y'' - 3y' + 2y = 0
+\]
+
+Solve \( r^2 - 3r + 2 = 0 \):
+
+\[
+(r - 1)(r - 2) = 0 \Rightarrow r = 1, 2
+\]
+
+Solution:
+
+\[
+y = C_1 e^x + C_2 e^{2x}
+\]
+
+---
+
+### **(b) Nonhomogeneous Case**  
+
+Use **method of undetermined coefficients** or **variation of parameters**.  
+
+**Example:**
+
+\[
+y'' - 3y' + 2y = e^x
+\]
+
+1. Solve the **homogeneous** equation \( y_h \).  
+2. Find **particular solution** \( y_p \).  
+3. General solution:  
+
+\[
+y = y_h + y_p
+\]
+
+---
+
+## **5. Systems of Differential Equations**  
+
+A system of DEs involves multiple equations with interdependent variables.  
+
+Example:
+
+\[
+\frac{dx}{dt} = x + y, \quad \frac{dy}{dt} = x - y
+\]
+
+Solve using matrix methods:
+
+\[
+\mathbf{x}' = A \mathbf{x}
+\]
+
+where \( A \) is a coefficient matrix.
+
+---
+
+## **6. Partial Differential Equations (PDEs)**  
+
+PDEs involve partial derivatives:
+
+\[
+\frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2}
+\]
+
+**Common PDEs:**
+- Heat Equation
+- Wave Equation
+- Laplace Equation
+
+---
+
+## **7. Numerical Methods**  
+
+For DEs without analytical solutions:
+- **Euler’s Method**
+- **Runge-Kutta Methods**
+- **Finite Difference Methods (PDEs)**
+
+---
+
+## **8. Summary**  
+
+| Type | Form | Solution Approach |
+|------|------|------------------|
+| **Separable** | \( y' = f(x)g(y) \) | Separate and integrate |
+| **Linear (1st order)** | \( y' + P(x)y = Q(x) \) | Integrating factor |
+| **Homogeneous (2nd order)** | \( ay'' + by' + cy = 0 \) | Characteristic equation |
+| **Nonhomogeneous** | \( ay'' + by' + cy = f(x) \) | Undetermined coefficients / Variation of parameters |
+| **Systems** | \( \mathbf{x}' = A \mathbf{x} \) | Eigenvalues/eigenvectors |
+| **PDEs** | Multiple variables | Separation of variables / Fourier methods |
+
+
+
+
+
+
+
+
+# **Solving Inequalities Involving Logarithmic Functions**
+
+## **1. Introduction**
+Logarithmic inequalities involve expressions where logarithms appear in inequalities such as:
+
+\[
+\log_b(f(x)) > \log_b(g(x))
+\]
+
+Solving these requires a careful approach, ensuring domain constraints and handling logarithm properties correctly.
+
+---
+
+## **2. Fundamental Properties of Logarithms**
+To solve logarithmic inequalities, the following properties of logarithms are essential:
+
+1. **Logarithm of a Product:**
+   \[
+   \log_b(A \cdot B) = \log_b A + \log_b B
+   \]
+
+2. **Logarithm of a Quotient:**
+   \[
+   \log_b \left( \frac{A}{B} \right) = \log_b A - \log_b B
+   \]
+
+3. **Logarithm of a Power:**
+   \[
+   \log_b(A^c) = c \log_b A
+   \]
+
+4. **One-to-One Property:**
+   If \( \log_b(A) = \log_b(B) \), then \( A = B \).
+
+5. **Monotonicity:**
+   - If \( b > 1 \), then \( \log_b x \) is **increasing**.
+   - If \( 0 < b < 1 \), then \( \log_b x \) is **decreasing**.
+
+These properties help transform logarithmic inequalities into simpler algebraic inequalities.
+
+---
+
+## **3. Steps to Solve Logarithmic Inequalities**
+To solve an inequality involving logarithms, follow these structured steps:
+
+### **Step 1: Define the Domain**
+Logarithmic expressions are only defined for positive arguments. That is:
+
+\[
+f(x) > 0, \quad g(x) > 0
+\]
+
+These constraints must always be checked to ensure valid solutions.
+
+### **Step 2: Isolate Logarithmic Expressions**
+Rewrite the inequality to isolate the logarithmic terms on one or both sides.
+
+### **Step 3: Apply Logarithmic Properties**
+If necessary, use logarithmic properties to simplify the expressions.
+
+### **Step 4: Convert to Algebraic Inequality**
+If the bases of the logarithms are the same, use the monotonicity property:
+
+\[
+\log_b f(x) > \log_b g(x) \Rightarrow f(x) > g(x) \quad \text{(for } b > 1\text{)}
+\]
+
+\[
+\log_b f(x) < \log_b g(x) \Rightarrow f(x) < g(x) \quad \text{(for } b > 1\text{)}
+\]
+
+If the base is \( 0 < b < 1 \), the inequality direction **reverses**.
+
+### **Step 5: Solve the Resulting Inequality**
+Solve for \( x \) in the transformed algebraic inequality.
+
+### **Step 6: Combine with Domain Restrictions**
+Ensure that the solution satisfies the original domain constraints.
+
+---
+
+## **4. Example Problems and Solutions**
+
+### **Example 1: Solving \(\log(4x + 7) > \log(2x - 5)\)**  
+#### **Step 1: Define the Domain**
+For the logarithms to be valid, their arguments must be positive:
+
+\[
+4x + 7 > 0 \quad \Rightarrow \quad x > -\frac{7}{4}
+\]
+
+\[
+2x - 5 > 0 \quad \Rightarrow \quad x > \frac{5}{2}
+\]
+
+Since \( x > \frac{5}{2} \) is stricter, it becomes the valid domain.
+
+#### **Step 2: Remove the Logarithm**
+Since logarithms are increasing, we can rewrite:
+
+\[
+4x + 7 > 2x - 5
+\]
+
+#### **Step 3: Solve for \( x \)**  
+\[
+4x - 2x > -5 - 7
+\]
+
+\[
+2x > -12
+\]
+
+\[
+x > -6
+\]
+
+#### **Step 4: Apply the Domain Restriction**
+From Step 1, \( x > \frac{5}{2} \) must hold. The solution \( x > -6 \) is broader, so the final solution is:
+
+\[
+x > \frac{5}{2}
+\]
+
+---
+
+### **Example 2: Solve \( \log_3(x^2 - 5) < \log_3(2x + 1) \)**  
+#### **Step 1: Define the Domain**
+\[
+x^2 - 5 > 0 \quad \Rightarrow \quad x^2 > 5 \quad \Rightarrow \quad x > \sqrt{5} \text{ or } x < -\sqrt{5}
+\]
+
+\[
+2x + 1 > 0 \quad \Rightarrow \quad x > -\frac{1}{2}
+\]
+
+The valid domain is the intersection: \( x > \sqrt{5} \).
+
+#### **Step 2: Remove the Logarithm**
+\[
+x^2 - 5 < 2x + 1
+\]
+
+#### **Step 3: Solve for \( x \)**
+Rearrange:
+
+\[
+x^2 - 2x - 6 < 0
+\]
+
+Solve \( x^2 - 2x - 6 = 0 \) using the quadratic formula:
+
+\[
+x = \frac{2 \pm \sqrt{4 + 24}}{2} = \frac{2 \pm \sqrt{28}}{2} = \frac{2 \pm 2\sqrt{7}}{2} = 1 \pm \sqrt{7}
+\]
+
+Factor the quadratic inequality:
+
+\[
+(x - (1 + \sqrt{7}))(x - (1 - \sqrt{7})) < 0
+\]
+
+Using a sign analysis, the solution to \( x^2 - 2x - 6 < 0 \) is:
+
+\[
+1 - \sqrt{7} < x < 1 + \sqrt{7}
+\]
+
+#### **Step 4: Apply the Domain Restriction**
+From Step 1, \( x > \sqrt{5} \). The intersection with \( 1 - \sqrt{7} < x < 1 + \sqrt{7} \) gives:
+
+\[
+\sqrt{5} < x < 1 + \sqrt{7}
+\]
+
+---
+
+## **5. Key Takeaways**
+- Always check **domain restrictions** before solving logarithmic inequalities.
+- Use **logarithmic properties** to simplify expressions when necessary.
+- Convert logarithmic inequalities into **algebraic inequalities** using the monotonicity property.
+- **Consider the base** of the logarithm when solving inequalities; if \( 0 < b < 1 \), the inequality sign **reverses**.
+- **Verify the solution** by ensuring it satisfies the original domain constraints.
+
+
+
+
+
+
+
+
+# **Verifying Solutions of Differential Equations**  
+
+#### **1. Understanding Solution Verification**  
+A function \( y = f(x) \) is a solution to a differential equation if substituting it into the equation satisfies the given relationship between derivatives and variables.  
+
+#### **2. General Steps to Verify a Solution**  
+Given a differential equation:  
+\[
+F(x, y, y', y'', \dots) = 0
+\]  
+and a proposed solution \( y = f(x) \), follow these steps:  
+
+1. **Compute the necessary derivatives** \( y', y'', \dots \).  
+2. **Substitute** the function and its derivatives into the differential equation.  
+3. **Simplify the expression** to check if the left-hand side equals the right-hand side.  
+4. If equality holds for all values in the domain, the function is a solution.  
+
+#### **3. Example 1: First-Order Verification**  
+**Given:**  
+\[
+\frac{dy}{dx} + y = e^x
+\]  
+**Proposed solution:**  
+\[
+y = e^x - 1
+\]  
+**Steps:**  
+1. Compute \( y' \):  
+   \[
+   \frac{dy}{dx} = e^x
+   \]  
+2. Substitute into the equation:  
+   \[
+   e^x + (e^x - 1) = e^x
+   \]  
+   Simplifies to:  
+   \[
+   e^x - 1 + e^x = e^x
+   \]  
+   \[
+   2e^x - 1 \neq e^x
+   \]  
+Since the equation does not hold, \( y = e^x - 1 \) is **not** a solution.
+
+#### **4. Example 2: Second-Order Verification**  
+**Given:**  
+\[
+y'' - 4y = 0
+\]  
+**Proposed solution:**  
+\[
+y = c_1 e^{2x} + c_2 e^{-2x}
+\]  
+**Steps:**  
+1. Compute \( y' \):  
+   \[
+   y' = 2c_1 e^{2x} - 2c_2 e^{-2x}
+   \]  
+2. Compute \( y'' \):  
+   \[
+   y'' = 4c_1 e^{2x} + 4c_2 e^{-2x}
+   \]  
+3. Substitute into the equation:  
+   \[
+   (4c_1 e^{2x} + 4c_2 e^{-2x}) - 4(c_1 e^{2x} + c_2 e^{-2x}) = 0
+   \]  
+   \[
+   4c_1 e^{2x} + 4c_2 e^{-2x} - 4c_1 e^{2x} - 4c_2 e^{-2x} = 0
+   \]  
+   \[
+   0 = 0
+   \]  
+Since the equation holds, the function **is a solution**.
+
+#### **5. Key Takeaways**  
+- **Derivatives must be correctly computed.**  
+- **Full substitution should be checked.**  
+- **Equivalence must hold identically.**  
+
+
+
+
+
+
+
+
+
+# **Conditions for a Function to be Differentiable at a Point**  
+
+A function \( f(x) \) is **differentiable** at a point \( x = a \) if the **derivative** \( f'(a) \) exists. 
+This means that the function must satisfy the following conditions at \( x = a \):
+
+#### **1. The Function Must Be Defined at \( x = a \)**  
+   - The function must have a value at \( x = a \), i.e., \( f(a) \) exists.  
+   - If a function has a **hole** or **removable discontinuity**, it is **not** differentiable at that point.
+
+#### **2. The Function Must Be Continuous at \( x = a \)**  
+   - That is,  
+     \[
+     \lim_{x \to a} f(x) = f(a)
+     \]  
+   - If there is a **jump** or **infinite discontinuity**, the function is **not differentiable**.  
+   - **Differentiability implies continuity**, but continuity **does not** guarantee differentiability.
+
+#### **3. The Limit Defining the Derivative Must Exist**  
+   - The derivative is defined as:  
+     \[
+     f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+     \]  
+   - If this limit exists and is finite, the function is differentiable at \( x = a \).  
+   - If the left-hand and right-hand derivatives are **not equal**, the function is **not differentiable**.
+
+#### **4. No Sharp Corners or Cusps at \( x = a \)**  
+   - A function is **not differentiable** at a **corner** or **cusp** where the left-hand derivative and right-hand derivative are different or infinite.  
+   - **Example:** \( f(x) = |x| \) at \( x = 0 \)  
+     - \( f'(0^-) = -1 \), \( f'(0^+) = 1 \), so \( f(x) \) is **not differentiable at \( x = 0 \)**.
+
+#### **5. No Vertical Tangents at \( x = a \)**  
+   - If the derivative approaches \( \pm \infty \), the function is **not differentiable**.  
+   - **Example:** \( f(x) = x^{1/3} \) at \( x = 0 \)  
+     - \( f'(x) = \frac{1}{3}x^{-2/3} \)  
+     - As \( x \to 0 \), \( f'(x) \to \infty \), so the function is **not differentiable at \( x = 0 \)**.
+
+---
+
+### **Summary of Non-Differentiability Cases**  
+
+A function **is NOT differentiable** at \( x = a \) if:  
+✅ **It is not defined at \( x = a \)** (hole or discontinuity).  
+✅ **It is not continuous at \( x = a \)** (jump or infinite discontinuity).  
+✅ **It has a sharp corner or cusp at \( x = a \)** (e.g., \( |x| \) at \( x = 0 \)).  
+✅ **It has a vertical tangent at \( x = a \)** (e.g., \( x^{1/3} \) at \( x = 0 \)).  
+
+**Conclusion:** If a function is **continuous and smooth (no sharp points or vertical tangents)** at \( x = a \), then it is **differentiable** at \( x = a \).
+
+
+
+
+
+
+
+
+
+# **Connecting Differentiability and Continuity**  
+
+#### **1. Fundamental Relationship Between Differentiability and Continuity**  
+A function must be **continuous** at a point to be **differentiable** at that point. However, continuity alone does not guarantee differentiability. This relationship can be summarized as:  
+
+\[
+\text{Differentiability} \Rightarrow \text{Continuity}
+\]
+
+but  
+
+\[
+\text{Continuity} \not\Rightarrow \text{Differentiability}
+\]
+
+This means that if a function is differentiable at \( x = a \), then it must also be continuous at \( x = a \), but a function can be continuous at \( x = a \) without being differentiable there.
+
+---
+
+#### **2. Understanding Differentiability**
+A function \( f(x) \) is differentiable at \( x = a \) if the following limit exists:
+
+\[
+\lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+\]
+
+This means that the **left-hand derivative** and the **right-hand derivative** must exist and be equal at \( x = a \). 
+If they are different or do not exist, then \( f(x) \) is not differentiable at \( x = a \).
+
+---
+
+#### **3. Key Cases Where Continuity Holds but Differentiability Fails**
+Even though a function can be continuous at a point, differentiability can fail in the following cases:
+
+1. **Sharp Corners or Cusps**  
+   - Example: \( f(x) = |x| \) at \( x = 0 \)  
+   - The function is continuous at \( x = 0 \) but the left and right derivatives are different (\(-1\) and \(1\)), making it **non-differentiable**.
+
+2. **Vertical Tangents**  
+   - Example: \( f(x) = \sqrt[3]{x} \) at \( x = 0 \)  
+   - The derivative at \( x = 0 \) is infinite because:
+
+     \[
+     f'(x) = \frac{1}{3} x^{-2/3}
+     \]
+
+     which approaches infinity as \( x \to 0 \), making it **non-differentiable** at \( x = 0 \).
+
+3. **Discontinuities** (which automatically break differentiability)  
+   - If a function is **not continuous** at a point, it is **automatically not differentiable**.
+   - Example: The step function \( f(x) = \begin{cases} 1, & x < 0 \\ 2, & x \geq 0 \end{cases} \)  
+   - Since there is a jump discontinuity at \( x = 0 \), it is **not differentiable** at \( x = 0 \).
+
+---
+
+#### **4. Geometric and Intuitive Interpretation**
+- **Differentiability** means the function has a well-defined **tangent line** at the point.
+- If a function is **continuous but not differentiable**, it either has:
+  - A **sharp turn** (where the tangent is undefined),
+  - A **vertical tangent** (where the slope is infinite).
+
+Thus, differentiability ensures **smooth behavior** of a function without abrupt changes.
+
+---
+
+#### **5. Summary**
+| Case | Continuous? | Differentiable? | Example |
+|------|------------|----------------|---------|
+| Smooth function | ✅ | ✅ | \( f(x) = x^2 \) |
+| Sharp corner | ✅ | ❌ | \( f(x) = |x| \) |
+| Vertical tangent | ✅ | ❌ | \( f(x) = \sqrt[3]{x} \) |
+| Discontinuity | ❌ | ❌ | Step function |
+
+In conclusion, differentiability is a **stronger** condition than continuity. A function must be **smooth and continuous** to be differentiable at a point.
+
+
+
+
+
+
+
+# **Global vs. Local Extrema and Critical Points**
+
+#### **1. Definitions and Intuition**
+Understanding extrema (maximums and minimums) is crucial in optimization, calculus, and real-world applications like machine learning and physics. 
+We distinguish between **local** (or relative) extrema and **global** (or absolute) extrema.
+
+- **Global (Absolute) Extrema:** A function \( f(x) \) has a **global maximum** at \( x = c \) if \( f(c) \geq f(x) \) for all \( x \) in the domain of \( f \). Similarly, it has a **global minimum** at \( x = d \) if \( f(d) \leq f(x) \) for all \( x \) in the domain.
+  
+- **Local (Relative) Extrema:** A function \( f(x) \) has a **local maximum** at \( x = c \) if there exists an interval around \( c \) where \( f(c) \) is the highest value, i.e., \( f(c) \geq f(x) \) for \( x \) in some neighborhood around \( c \). A **local minimum** follows similarly.
+
+> **Key Difference:** A **global** extremum is the highest/lowest function value **in the entire domain**, while a **local** extremum is the highest/lowest **in a small interval**.
+
+---
+
+#### **2. Critical Points and How They Relate to Extrema**
+A **critical point** is a point where:
+1. \( f'(x) = 0 \) (the derivative is zero), or
+2. \( f'(x) \) is **undefined**, but \( f(x) \) is still defined.
+
+Critical points are **candidates** for local extrema but do not always guarantee them.
+
+##### **Example 1: Critical Point but No Extrema**
+Consider \( f(x) = x^3 \). The derivative is:
+
+\[
+f'(x) = 3x^2
+\]
+
+Setting \( f'(x) = 0 \):
+
+\[
+3x^2 = 0 \Rightarrow x = 0
+\]
+
+At \( x = 0 \), \( f(x) = x^3 \) has an **inflection point**, not a maximum or minimum.
+
+---
+
+#### **3. First and Second Derivative Tests**
+To determine whether a critical point is a local max or min:
+
+##### **First Derivative Test**
+- If \( f'(x) \) **changes from positive to negative**, \( x \) is a **local maximum**.
+- If \( f'(x) \) **changes from negative to positive**, \( x \) is a **local minimum**.
+- If \( f'(x) \) does **not change signs**, \( x \) is **neither** a max nor a min.
+
+##### **Second Derivative Test**
+- If \( f''(x) > 0 \) at a critical point \( x = c \), then \( f(x) \) is **concave up**, and \( c \) is a **local minimum**.
+- If \( f''(x) < 0 \), then \( f(x) \) is **concave down**, and \( c \) is a **local maximum**.
+- If \( f''(x) = 0 \), the test is inconclusive.
+
+---
+
+#### **4. Global Extrema and the Extreme Value Theorem**
+If \( f(x) \) is **continuous** on a **closed interval** \([a, b]\), it must have a **global maximum** and **global minimum** somewhere in that interval. 
+
+To find global extrema:
+1. Find **critical points** inside \([a, b]\).
+2. Evaluate \( f(x) \) at **endpoints** \( x = a, x = b \).
+3. Compare values at critical points and endpoints to find the largest (global max) and smallest (global min).
+
+##### **Example 2: Global vs. Local Extrema**
+Consider \( f(x) = x^3 - 3x \) on \( [-2, 2] \):
+
+1. Compute \( f'(x) \):
+
+   \[
+   f'(x) = 3x^2 - 3
+   \]
+
+   Setting \( f'(x) = 0 \):
+
+   \[
+   3x^2 - 3 = 0 \Rightarrow x^2 = 1 \Rightarrow x = \pm1
+   \]
+
+2. Compute \( f(x) \) at endpoints and critical points:
+
+   \[
+   f(-2) = (-2)^3 - 3(-2) = -8 + 6 = -2
+   \]
+
+   \[
+   f(-1) = (-1)^3 - 3(-1) = -1 + 3 = 2
+   \]
+
+   \[
+   f(1) = (1)^3 - 3(1) = 1 - 3 = -2
+   \]
+
+   \[
+   f(2) = (2)^3 - 3(2) = 8 - 6 = 2
+   \]
+
+- **Local max**: \( f(-1) = 2 \)
+- **Local min**: \( f(1) = -2 \)
+- **Global max**: \( 2 \) (attained at \( x = -1 \) and \( x = 2 \))
+- **Global min**: \( -2 \) (attained at \( x = 1 \) and \( x = -2 \))
+
+---
+
+#### **5. Non-Differentiability and Extrema**
+A function can still have extrema even if it is **not differentiable** at some points. For example:
+
+- **Absolute Value Function**: \( f(x) = |x| \) has a sharp minimum at \( x = 0 \), but \( f'(x) \) is undefined at \( x = 0 \).
+- **Piecewise Functions**: Extrema can occur at points where different pieces meet.
+
+##### **Example 3: Piecewise Function**
+\[
+f(x) =
+\begin{cases}
+x^2, & x \leq 1 \\
+2 - x, & x > 1
+\end{cases}
+\]
+
+- \( f'(x) = 2x \) for \( x < 1 \).
+- \( f'(x) = -1 \) for \( x > 1 \).
+- \( f(x) \) is continuous at \( x = 1 \), but \( f'(x) \) is not.
+- **Local maximum at \( x = 1 \)** since \( f(x) \) changes from increasing to decreasing.
+
+---
+
+#### **6. Summary Table**
+| Concept | Definition |
+|---------|------------|
+| **Global Maximum** | \( f(c) \geq f(x) \) for all \( x \) in domain |
+| **Global Minimum** | \( f(d) \leq f(x) \) for all \( x \) in domain |
+| **Local Maximum** | \( f(c) \) is the highest value in a neighborhood around \( c \) |
+| **Local Minimum** | \( f(d) \) is the lowest value in a neighborhood around \( d \) |
+| **Critical Point** | Where \( f'(x) = 0 \) or \( f'(x) \) is undefined |
+| **First Derivative Test** | Determines local extrema based on sign changes in \( f'(x) \) |
+| **Second Derivative Test** | Uses concavity to classify critical points |
+
+---
+
+### **Key Takeaways**
+- **Global extrema** are the highest/lowest values over the entire domain.
+- **Local extrema** occur within a small interval.
+- **Critical points** are where \( f'(x) = 0 \) or undefined; they are candidates for extrema but need further testing.
+- **Endpoints** should be checked when looking for global extrema.
+- **Non-differentiability** (sharp points, discontinuities) can still indicate extrema.
+
+Understanding extrema is essential for **optimization, real-world applications, and problem-solving in calculus**.
+
+
+
+
+
+
+
+# **Using Differentiation to Calculate Critical Points**  
+
+### **1. Understanding Critical Points**  
+A **critical point** of a function \( f(x) \) occurs where:  
+1. \( f'(x) = 0 \) (the derivative is zero, indicating a possible local max or min).  
+2. \( f'(x) \) is undefined, but \( f(x) \) is still defined (possible cusp or vertical tangent).  
+
+Critical points help in identifying **local extrema (maxima and minima)** and analyzing the function’s behavior.
+
+---
+
+### **2. Step-by-Step Process to Find Critical Points**  
+
+#### **Step 1: Compute the First Derivative \( f'(x) \)**
+Differentiate \( f(x) \) to find \( f'(x) \).
+
+#### **Step 2: Solve \( f'(x) = 0 \)**
+Find \( x \)-values where \( f'(x) = 0 \). These indicate where the function’s slope is zero (horizontal tangents).
+
+#### **Step 3: Identify Points Where \( f'(x) \) is Undefined**
+Check if \( f'(x) \) does not exist but \( f(x) \) is defined. These can be sharp points or vertical tangents.
+
+#### **Step 4: Verify Whether They are Extrema**
+Use either:
+- **Second derivative test:** \( f''(x) > 0 \) (local min), \( f''(x) < 0 \) (local max).
+- **First derivative test:** Analyze sign changes in \( f'(x) \) around critical points.
+
+---
+
+### **3. Example Calculation**  
+Let’s find the critical points of:
+
+\[
+f(x) = x^3 - 3x^2 + 4
+\]
+
+#### **Step 1: Compute \( f'(x) \)**
+\[
+f'(x) = \frac{d}{dx} (x^3 - 3x^2 + 4) = 3x^2 - 6x
+\]
+
+#### **Step 2: Solve \( f'(x) = 0 \)**
+\[
+3x^2 - 6x = 0
+\]
+Factor:
+\[
+3x(x - 2) = 0
+\]
+\[
+x = 0 \quad \text{or} \quad x = 2
+\]
+
+These are **critical points**.
+
+#### **Step 3: Check if \( f'(x) \) is Undefined**
+Since \( f'(x) = 3x^2 - 6x \) is a polynomial, it is defined for all \( x \). No additional critical points.
+
+#### **Step 4: Use Second Derivative Test**
+Compute \( f''(x) \):
+
+\[
+f''(x) = \frac{d}{dx} (3x^2 - 6x) = 6x - 6
+\]
+
+Evaluate at critical points:
+
+- At \( x = 0 \):
+  \[
+  f''(0) = 6(0) - 6 = -6 \quad (\text{Negative} \Rightarrow \text{Local Max})
+  \]
+- At \( x = 2 \):
+  \[
+  f''(2) = 6(2) - 6 = 6 \quad (\text{Positive} \Rightarrow \text{Local Min})
+  \]
+
+Thus:
+- **Local max at \( x = 0 \)**.
+- **Local min at \( x = 2 \)**.
+
+---
+
+### **4. Conclusion**
+To find critical points:
+1. Compute \( f'(x) \).
+2. Solve \( f'(x) = 0 \) and check where \( f'(x) \) is undefined.
+3. Use the **second derivative test** or **sign changes in \( f'(x) \)** to classify extrema.
+
+Critical points provide insight into the function’s **maxima, minima, and overall shape**, which is crucial for optimization problems and curve sketching.
+
+
+
+
+
+
+
+
+
+
+# **Modeling with Differential Equations**
+
+## **1. Introduction to Differential Equations in Modeling**
+Differential equations describe how quantities change over time or space and are fundamental in modeling 
+real-world systems. These equations relate a function to its derivatives, capturing dynamic behavior in 
+various fields such as physics, biology, economics, and engineering.
+
+### **Types of Differential Equations**
+1. **Ordinary Differential Equations (ODEs):** Involve functions of a single variable and their derivatives.
+2. **Partial Differential Equations (PDEs):** Involve multiple independent variables and partial derivatives.
+3. **Linear vs. Nonlinear Equations:** Linear equations obey the principle of superposition, while nonlinear ones do not.
+4. **Homogeneous vs. Nonhomogeneous:** Homogeneous equations have solutions that sum to zero, whereas nonhomogeneous ones include external forces or inputs.
+
+---
+
+## **2. Modeling Process with Differential Equations**
+1. **Define the System:** Identify dependent and independent variables.
+2. **Formulate the Equation:** Use physical laws, empirical data, or theoretical assumptions.
+3. **Solve the Equation:** Analytical or numerical methods.
+4. **Interpret the Solution:** Validate results against real-world data.
+
+### **Examples of Modeled Systems**
+- **Population Growth (Logistic Equation):**  
+  \[
+  \frac{dP}{dt} = rP \left(1 - \frac{P}{K}\right)
+  \]
+  where \( P \) is population size, \( r \) is growth rate, and \( K \) is carrying capacity.
+
+- **Newton’s Law of Cooling:**  
+  \[
+  \frac{dT}{dt} = -k(T - T_{\text{env}})
+  \]
+  where \( T \) is object temperature, \( T_{\text{env}} \) is ambient temperature, and \( k \) is a cooling constant.
+
+- **Electrical Circuits (RL Circuit):**  
+  \[
+  L \frac{dI}{dt} + RI = V(t)
+  \]
+  where \( I \) is current, \( L \) is inductance, \( R \) is resistance, and \( V(t) \) is applied voltage.
+
+---
+
+## **3. Analytical Solution Techniques**
+### **Separation of Variables**
+For equations of the form:
+\[
+\frac{dy}{dx} = g(x) h(y)
+\]
+we separate and integrate:
+\[
+\int \frac{dy}{h(y)} = \int g(x) dx.
+\]
+
+### **Integrating Factor (Linear First-Order ODEs)**
+For:
+\[
+\frac{dy}{dx} + P(x)y = Q(x),
+\]
+the solution uses the integrating factor:
+\[
+\mu(x) = e^{\int P(x)dx}.
+\]
+
+### **Characteristic Equations (Linear ODEs with Constant Coefficients)**
+For:
+\[
+a y'' + b y' + c y = 0,
+\]
+the solution is based on solving the characteristic equation:
+\[
+ar^2 + br + c = 0.
+\]
+
+---
+
+## **4. Numerical Methods for Solving Differential Equations**
+For complex systems without closed-form solutions, numerical methods are essential.
+
+### **Euler’s Method**
+Approximates solutions iteratively using:
+\[
+y_{n+1} = y_n + h f(x_n, y_n).
+\]
+
+### **Runge-Kutta Methods (RK4)**
+A more accurate method using weighted averages of function slopes.
+
+### **Finite Difference Methods (For PDEs)**
+Approximates derivatives using discrete points.
+
+---
+
+## **5. Applications in Machine Learning and Deep Learning**
+- **Gradient Descent Optimization:** Modeled as an ODE:
+  \[
+  \frac{d\theta}{dt} = -\nabla J(\theta).
+  \]
+- **Neural ODEs:** Continuous analogs of deep networks:
+  \[
+  \frac{dh}{dt} = f(h, t, \theta).
+  \]
+- **Physics-Informed Neural Networks (PINNs):** Solving PDEs using deep learning.
+
+---
+
+## **6. Conclusion**
+Differential equations are essential for modeling dynamic systems, and their solutions—whether analytical or numerical—enable understanding and prediction across various disciplines. Advanced computational tools like deep learning further enhance the ability to solve complex differential equations efficiently.
+
+
+
+
+
+
+
+
+# **The Roots of Unity**  
+
+#### **1. Definition of Roots of Unity**  
+The **\( n \)th roots of unity** are the complex solutions to the equation:  
+\[
+z^n = 1
+\]  
+where \( n \) is a positive integer. These roots are given by:  
+\[
+z_k = e^{2\pi i k / n}, \quad k = 0, 1, 2, \dots, n-1
+\]  
+which can also be written in terms of trigonometric functions:  
+\[
+z_k = \cos\left(\frac{2\pi k}{n}\right) + i \sin\left(\frac{2\pi k}{n}\right).
+\]  
+
+#### **2. Geometric Interpretation**  
+- The roots of unity lie on the unit circle in the complex plane.
+- They are equally spaced at angles of \( \frac{2\pi}{n} \) radians.
+- The principal **\( n \)th root of unity** is \( \omega = e^{2\pi i / n} \), and all other roots are given by \( \omega^k \).
+
+#### **3. Properties of Roots of Unity**  
+- **Closure under multiplication**: If \( z_a \) and \( z_b \) are roots, then \( z_a z_b \) is also a root.  
+- **Sum of all roots**:  
+  \[
+  \sum_{k=0}^{n-1} z_k = 0, \quad \text{for } n > 1.
+  \]  
+- **Cyclotomic Polynomial**: The minimal polynomial for primitive \( n \)th roots of unity is:  
+  \[
+  \Phi_n(x) = \prod_{\substack{1 \leq k \leq n \\ \gcd(k, n) = 1}} \left(x - e^{2\pi i k/n} \right).
+  \]  
+- **Power Cycles**: Since \( z_k^n = 1 \), raising them to higher powers cycles through the same set.
+
+#### **4. Applications**  
+- **Fourier Transform**: The Discrete Fourier Transform (DFT) relies on the roots of unity to decompose signals.  
+- **Number Theory**: Used in algebraic number fields and solving Diophantine equations.  
+- **Polynomial Factorization**: Helps in efficient evaluation of polynomials via the Fast Fourier Transform (FFT).  
+- **Cryptography**: Appears in lattice-based cryptography.  
+
+
+
+
+
+
+
+
+# **Solving Inequalities Involving Positive and Negative Factors**  
+
+#### **1. Understanding Factor-Based Inequalities**  
+Inequalities involving factors arise when solving polynomial or rational inequalities, such as:  
+\[
+(x - a)(x - b) > 0
+\]
+or  
+\[
+\frac{(x - a)(x - b)}{(x - c)} < 0.
+\]  
+The key idea is to analyze **when each factor is positive or negative** and use sign charts to determine the solution set.
+
+---
+
+#### **2. Steps to Solve Polynomial Inequalities**  
+
+##### **Step 1: Find the Critical Points**  
+- Identify values where each factor equals zero. These are called **critical points** or **boundary points**.  
+- Solve \( f(x) = 0 \) to find these values.
+
+##### **Step 2: Determine Intervals**  
+- Use the critical points to divide the number line into intervals.  
+- Test each interval to determine whether the expression is positive or negative.
+
+##### **Step 3: Apply Sign Analysis**  
+- Select a **test point** in each interval and substitute it into the inequality.  
+- If the result is positive, the entire interval satisfies \( f(x) > 0 \).  
+- If the result is negative, the entire interval satisfies \( f(x) < 0 \).  
+- Consider whether to include or exclude the boundary points based on **strict** (\( <, > \)) vs. **non-strict** (\( \leq, \geq \)) inequalities.
+
+---
+
+#### **3. Example 1: Quadratic Inequality**  
+Solve:  
+\[
+(x - 2)(x + 3) > 0.
+\]  
+
+##### **Step 1: Find the Critical Points**  
+Setting \( (x - 2)(x + 3) = 0 \), we get:  
+\[
+x = 2, \quad x = -3.
+\]  
+
+##### **Step 2: Determine Intervals**  
+The critical points split the number line into three intervals:  
+- \( (-\infty, -3) \)  
+- \( (-3, 2) \)  
+- \( (2, \infty) \)  
+
+##### **Step 3: Test Each Interval**  
+- Pick \( x = -4 \) in \( (-\infty, -3) \):  
+  \[
+  (-4 - 2)(-4 + 3) = (-6)(-1) = 6 \quad (\text{positive})
+  \]
+- Pick \( x = 0 \) in \( (-3,2) \):  
+  \[
+  (0 - 2)(0 + 3) = (-2)(3) = -6 \quad (\text{negative})
+  \]
+- Pick \( x = 3 \) in \( (2, \infty) \):  
+  \[
+  (3 - 2)(3 + 3) = (1)(6) = 6 \quad (\text{positive})
+  \]
+
+##### **Step 4: Write the Solution**  
+Since we need \( (x - 2)(x + 3) > 0 \), we take the intervals where the expression is **positive**:  
+\[
+x \in (-\infty, -3) \cup (2, \infty).
+\]
+
+---
+
+#### **4. Example 2: Rational Inequality**  
+Solve:  
+\[
+\frac{x - 1}{x + 2} \leq 0.
+\]
+
+##### **Step 1: Find the Critical Points**  
+- Numerator: \( x - 1 = 0 \) gives \( x = 1 \).  
+- Denominator: \( x + 2 = 0 \) gives \( x = -2 \) (which **cannot** be included in the solution since division by zero is undefined).  
+
+##### **Step 2: Determine Intervals**  
+The critical points split the number line into:  
+- \( (-\infty, -2) \)  
+- \( (-2, 1) \)  
+- \( (1, \infty) \)  
+
+##### **Step 3: Test Each Interval**  
+- Pick \( x = -3 \) in \( (-\infty, -2) \):  
+  \[
+  \frac{-3 - 1}{-3 + 2} = \frac{-4}{-1} = 4 \quad (\text{positive})
+  \]
+- Pick \( x = 0 \) in \( (-2,1) \):  
+  \[
+  \frac{0 - 1}{0 + 2} = \frac{-1}{2} \quad (\text{negative})
+  \]
+- Pick \( x = 2 \) in \( (1,\infty) \):  
+  \[
+  \frac{2 - 1}{2 + 2} = \frac{1}{4} \quad (\text{positive})
+  \]
+
+##### **Step 4: Write the Solution**  
+We need \( \frac{x - 1}{x + 2} \leq 0 \), which includes the negative region:  
+\[
+x \in (-2, 1].
+\]  
+Since \( x = -2 \) makes the denominator zero, it must be excluded. The final solution is:  
+\[
+(-2, 1].
+\]
+
+---
+
+#### **5. Summary of the Method**  
+1. **Find critical points** by solving \( f(x) = 0 \) and undefined values (for rational expressions).  
+2. **Split the number line** into test intervals.  
+3. **Check signs** by substituting test points.  
+4. **Select the correct intervals** based on the inequality sign.  
+5. **Write the final solution** using interval notation.
+
+
+
+
+
+
+
+
+# **Pascal’s Triangle and the Binomial Coefficients**  
+
+#### **1. Introduction to Pascal’s Triangle**  
+Pascal’s Triangle is a triangular array of numbers where each row represents the **binomial coefficients** 
+for expanding a binomial expression. It is constructed using the rule that each entry is the sum of the two 
+directly above it.
+
+The first few rows of Pascal’s Triangle are:  
+\[
+\begin{array}{ccccccc}
+    & & & 1 & & & \\
+    & & 1 & & 1 & & \\
+    & 1 & & 2 & & 1 & \\
+    1 & & 3 & & 3 & & 1 \\
+    & 1 & & 4 & & 6 & & 4 & & 1 \\
+    & 1 & & 5 & & 10 & & 10 & & 5 & & 1 \\
+\end{array}
+\]  
+Each row corresponds to the coefficients in the binomial expansion \( (a + b)^n \).
+
+---
+
+#### **2. Binomial Coefficients**  
+The **binomial coefficient** \( \binom{n}{k} \) represents the number of ways to choose \( k \) elements from \( n \), given by:  
+\[
+\binom{n}{k} = \frac{n!}{k!(n-k)!}.
+\]
+These coefficients appear in Pascal’s Triangle because of the recurrence relation:  
+\[
+\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}.
+\]
+This follows directly from combinatorial reasoning:  
+- The first term counts selections **including** a specific element.  
+- The second term counts selections **excluding** it.
+
+For example:  
+\[
+\binom{4}{2} = \binom{3}{1} + \binom{3}{2} = 3 + 3 = 6.
+\]  
+
+---
+
+#### **3. Binomial Theorem**  
+The Binomial Theorem states:  
+\[
+(a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k.
+\]
+Each term in the expansion consists of:  
+- The binomial coefficient \( \binom{n}{k} \).  
+- A power of \( a \) decreasing from \( n \) to \( 0 \).  
+- A power of \( b \) increasing from \( 0 \) to \( n \).  
+
+##### **Example: Expansion of \( (x + y)^4 \)**  
+Using Pascal’s Triangle, row 4:  
+\[
+\binom{4}{0} = 1, \quad \binom{4}{1} = 4, \quad \binom{4}{2} = 6, \quad \binom{4}{3} = 4, \quad \binom{4}{4} = 1.
+\]  
+\[
+(x+y)^4 = 1x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + 1y^4.
+\]
+
+---
+
+#### **4. Properties of Pascal’s Triangle and Binomial Coefficients**  
+
+##### **(1) Symmetry Property**  
+\[
+\binom{n}{k} = \binom{n}{n-k}.
+\]  
+This follows because choosing \( k \) elements is the same as leaving out \( n-k \) elements.
+
+##### **(2) Sum of a Row**  
+\[
+\sum_{k=0}^{n} \binom{n}{k} = 2^n.
+\]  
+Each row sums to \( 2^n \) because every term in the expansion of \( (1+1)^n \) equals 1.
+
+##### **(3) Hockey Stick Identity**  
+\[
+\binom{r}{r} + \binom{r+1}{r} + \binom{r+2}{r} + \dots + \binom{n}{r} = \binom{n+1}{r+1}.
+\]
+This follows from summing elements diagonally in Pascal’s Triangle.
+
+##### **(4) Vandermonde's Identity**  
+\[
+\sum_{j=0}^{r} \binom{m}{j} \binom{n}{r-j} = \binom{m+n}{r}.
+\]
+This arises in combinatorial counting.
+
+---
+
+#### **5. Pascal’s Triangle in Combinatorics**  
+Pascal’s Triangle is widely used in combinatorial problems, such as:  
+- **Paths in a grid**: The number of shortest paths from \( (0,0) \) to \( (n,k) \) in a grid is \( \binom{n}{k} \).  
+- **Probability calculations**: Binomial coefficients help compute probabilities in binomial distributions.
+
+---
+
+#### **6. Pascal’s Triangle and Fibonacci Numbers**  
+By summing diagonal elements, Fibonacci numbers appear:  
+\[
+F_n = \sum_{k=0}^{\lfloor (n-1)/2 \rfloor} \binom{n-1-k}{k}.
+\]
+
+
+
+
+
+
+# **Differentiating an Inverse Function at a Point**  
+
+#### **1. The Key Formula for Inverse Function Differentiation**  
+If \( f(x) \) is a one-to-one function with an inverse \( f^{-1}(y) \), then the derivative of the inverse function is given by:
+
+\[
+(f^{-1})'(y) = \frac{1}{f'(f^{-1}(y))}
+\]
+
+This formula states that the derivative of the inverse function at a point \( y \) is simply the reciprocal of the derivative of the 
+original function at the corresponding \( x \)-value, where \( x = f^{-1}(y) \).
+
+---
+
+#### **2. Why This Formula Works (Derivation)**  
+The inverse function satisfies:
+
+\[
+f(f^{-1}(y)) = y
+\]
+
+Differentiating both sides with respect to \( y \) using implicit differentiation:
+
+\[
+f'(f^{-1}(y)) \cdot (f^{-1})'(y) = 1
+\]
+
+Solving for \( (f^{-1})'(y) \):
+
+\[
+(f^{-1})'(y) = \frac{1}{f'(f^{-1}(y))}
+\]
+
+This formula is valid as long as \( f'(x) \neq 0 \) at \( x = f^{-1}(y) \), ensuring that \( f(x) \) is locally invertible.
+
+---
+
+#### **3. Step-by-Step Example**  
+**Given Function:**
+\[
+f(x) = 1 + 2e^{x+1}
+\]
+
+##### **Step 1: Find \( x \) such that \( f(x) = 3 \)**
+\[
+1 + 2e^{x+1} = 3
+\]
+\[
+2e^{x+1} = 2
+\]
+\[
+e^{x+1} = 1
+\]
+\[
+x+1 = 0
+\]
+\[
+x = -1
+\]
+
+Thus, \( f^{-1}(3) = -1 \).
+
+##### **Step 2: Compute \( f'(x) \)**
+\[
+f'(x) = \frac{d}{dx} (1 + 2e^{x+1}) = 2e^{x+1}
+\]
+
+Evaluate at \( x = -1 \):
+
+\[
+f'(-1) = 2e^0 = 2
+\]
+
+##### **Step 3: Compute \( (f^{-1})'(3) \)**
+\[
+(f^{-1})'(3) = \frac{1}{f'(-1)} = \frac{1}{2}
+\]
+
+Thus, the answer is:
+
+\[
+\boxed{\frac{1}{2}}
+\]
+
+---
+
+#### **4. Key Insights & Intuition**
+1. **Reciprocal Relationship**: The derivative of the inverse function at \( y \) is the reciprocal of the derivative of \( f(x) \) at \( x \).
+2. **Graphical Interpretation**: If \( f(x) \) has a steep slope at \( x \), then \( f^{-1}(y) \) has a small slope at \( y \), and vice versa.
+3. **Applications**: This method is widely used in calculus, physics, and engineering when dealing with invertible transformations.
+
+This structured approach ensures accurate computation of inverse function derivatives at any given point.
+
+
+
+
+
+
+
+
+# **Differentiating Inverse Trigonometric Functions**
+
+Inverse trigonometric functions are the inverse functions of the six fundamental trigonometric functions: sine, cosine, tangent, cotangent, secant, and cosecant. 
+They are essential in calculus, especially in differentiation and integration problems.
+
+This deep dive explores their derivatives, step-by-step derivations, and applications.
+
+---
+
+## **1. Inverse Trigonometric Functions Overview**
+
+The six inverse trigonometric functions are:
+
+| Function  | Notation        | Domain               | Range                 |
+|-----------|---------------|----------------------|----------------------|
+| **Arcsine**  | \( y = \arcsin(x) \) | \( -1 \leq x \leq 1 \) | \( -\frac{\pi}{2} \leq y \leq \frac{\pi}{2} \) |
+| **Arccosine** | \( y = \arccos(x) \) | \( -1 \leq x \leq 1 \) | \( 0 \leq y \leq \pi \) |
+| **Arctangent** | \( y = \arctan(x) \) | \( -\infty < x < \infty \) | \( -\frac{\pi}{2} < y < \frac{\pi}{2} \) |
+| **Arccotangent** | \( y = \arccot(x) \) | \( -\infty < x < \infty \) | \( 0 < y < \pi \) |
+| **Arcsecant** | \( y = \arcsec(x) \) | \( |x| \geq 1 \) | \( 0 \leq y \leq \frac{\pi}{2}, y \neq \frac{\pi}{2} \) |
+| **Arccosecant** | \( y = \arccsc(x) \) | \( |x| \geq 1 \) | \( -\frac{\pi}{2} \leq y \leq \frac{\pi}{2}, y \neq 0 \) |
+
+---
+
+## **2. Derivatives of Inverse Trigonometric Functions**
+
+The differentiation formulas for the six inverse trigonometric functions are:
+
+| Function  | Derivative |
+|------------|-------------------------------------|
+| \( \frac{d}{dx} \arcsin(x) \) | \( \frac{1}{\sqrt{1 - x^2}}, \quad |x| < 1 \) |
+| \( \frac{d}{dx} \arccos(x) \) | \( \frac{-1}{\sqrt{1 - x^2}}, \quad |x| < 1 \) |
+| \( \frac{d}{dx} \arctan(x) \) | \( \frac{1}{1 + x^2} \) |
+| \( \frac{d}{dx} \arccot(x) \) | \( \frac{-1}{1 + x^2} \) |
+| \( \frac{d}{dx} \arcsec(x) \) | \( \frac{1}{|x| \sqrt{x^2 - 1}}, \quad |x| > 1 \) |
+| \( \frac{d}{dx} \arccsc(x) \) | \( \frac{-1}{|x| \sqrt{x^2 - 1}}, \quad |x| > 1 \) |
+
+---
+
+## **3. Derivations of the Derivatives**
+
+### **(a) Derivative of \( y = \arcsin(x) \)**
+
+1. Let \( y = \arcsin(x) \), so by definition:
+   \[
+   \sin(y) = x
+   \]
+
+2. Differentiate both sides implicitly:
+   \[
+   \cos(y) \cdot \frac{dy}{dx} = 1
+   \]
+
+3. Express \( \cos(y) \) in terms of \( x \) using the identity \( \cos^2(y) = 1 - \sin^2(y) \):
+
+   \[
+   \cos(y) = \sqrt{1 - x^2}
+   \]
+
+4. Solve for \( \frac{dy}{dx} \):
+
+   \[
+   \frac{dy}{dx} = \frac{1}{\sqrt{1 - x^2}}
+   \]
+
+Thus,
+
+\[
+\frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^2}}, \quad |x| < 1
+\]
+
+---
+
+### **(b) Derivative of \( y = \arccos(x) \)**
+
+Since we know that:
+
+\[
+\arccos(x) + \arcsin(x) = \frac{\pi}{2}
+\]
+
+Differentiate both sides:
+
+\[
+\frac{d}{dx} [\arccos(x) + \arcsin(x)] = \frac{d}{dx} \left( \frac{\pi}{2} \right)
+\]
+
+Since the derivative of a constant is 0,
+
+\[
+\frac{d}{dx} \arccos(x) + \frac{d}{dx} \arcsin(x) = 0
+\]
+
+Substituting \( \frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^2}} \):
+
+\[
+\frac{d}{dx} \arccos(x) = -\frac{1}{\sqrt{1 - x^2}}
+\]
+
+Thus,
+
+\[
+\frac{d}{dx} \arccos(x) = -\frac{1}{\sqrt{1 - x^2}}, \quad |x| < 1
+\]
+
+---
+
+### **(c) Derivative of \( y = \arctan(x) \)**
+
+1. Let \( y = \arctan(x) \), so by definition:
+   \[
+   \tan(y) = x
+   \]
+
+2. Differentiate both sides implicitly:
+
+   \[
+   \sec^2(y) \cdot \frac{dy}{dx} = 1
+   \]
+
+3. Express \( \sec^2(y) \) in terms of \( x \) using the identity \( \sec^2(y) = 1 + \tan^2(y) \):
+
+   \[
+   \sec^2(y) = 1 + x^2
+   \]
+
+4. Solve for \( \frac{dy}{dx} \):
+
+   \[
+   \frac{dy}{dx} = \frac{1}{1 + x^2}
+   \]
+
+Thus,
+
+\[
+\frac{d}{dx} \arctan(x) = \frac{1}{1 + x^2}
+\]
+
+---
+
+### **(d) Derivative of \( y = \arcsec(x) \)**
+
+1. Let \( y = \arcsec(x) \), so:
+
+   \[
+   \sec(y) = x
+   \]
+
+2. Differentiate both sides implicitly:
+
+   \[
+   \sec(y) \tan(y) \cdot \frac{dy}{dx} = 1
+   \]
+
+3. Express \( \tan(y) \) in terms of \( x \) using \( \tan^2(y) = \sec^2(y) - 1 \):
+
+   \[
+   \tan(y) = \sqrt{x^2 - 1}
+   \]
+
+4. Solve for \( \frac{dy}{dx} \):
+
+   \[
+   \frac{dy}{dx} = \frac{1}{|x| \sqrt{x^2 - 1}}
+   \]
+
+Thus,
+
+\[
+\frac{d}{dx} \arcsec(x) = \frac{1}{|x| \sqrt{x^2 - 1}}, \quad |x| > 1
+\]
+
+---
+
+## **4. Applications of Inverse Trigonometric Derivatives**
+
+### **1. Solving Trigonometric Equations**
+Used in physics and engineering to model angles in wave motion, oscillations, and periodic systems.
+
+### **2. Implicit Differentiation**
+Useful in problems where \( y \) is embedded within a function.
+
+### **3. Integration**
+Inverse trigonometric functions appear in integrals, such as:
+
+\[
+\int \frac{dx}{\sqrt{1 - x^2}} = \arcsin(x) + C
+\]
+
+\[
+\int \frac{dx}{1 + x^2} = \arctan(x) + C
+\]
+
+### **4. Signal Processing**
+Used in Fourier Transforms and data transformations.
+
+---
+
+### **Conclusion**
+Inverse trigonometric functions play a crucial role in calculus, physics, and engineering. Their derivatives are fundamental in differentiation, 
+integration, and real-world applications.
+
+
+
+
+
+
+
+
+# **Solving Rational Inequalities**
+
+A **rational inequality** is an inequality that involves a rational expression—i.e., a fraction where both the numerator and the denominator are polynomials. These inequalities are solved by finding the critical points where the numerator is zero (making the fraction zero) or where the denominator is zero (which makes the expression undefined).
+
+---
+
+## **Step-by-Step Process for Solving Rational Inequalities**
+Let’s break it down into a structured method for solving rational inequalities.
+
+### **Step 1: Express the Inequality in Standard Form**
+A rational inequality is usually in one of these forms:
+
+\[
+\frac{P(x)}{Q(x)} > 0, \quad \frac{P(x)}{Q(x)} \geq 0, \quad \frac{P(x)}{Q(x)} < 0, \quad \frac{P(x)}{Q(x)} \leq 0
+\]
+
+Here, \( P(x) \) and \( Q(x) \) are polynomials. The denominator \( Q(x) \) must **never be zero**.
+
+---
+
+### **Step 2: Find the Critical Points**
+The critical points come from:
+
+- **Setting the numerator to zero**: Solve \( P(x) = 0 \). These are the potential boundary points where the fraction **can be zero**.
+- **Setting the denominator to zero**: Solve \( Q(x) = 0 \). These points make the fraction **undefined**, so they should be **excluded** from the solution.
+
+---
+
+### **Step 3: Divide the Number Line into Intervals**
+The critical points divide the number line into intervals. The number of intervals is always **one more than the number of critical points**.
+
+For example, if the critical points are \( x = a, b, c \), then the number line is divided into four intervals:
+
+\[
+(-\infty, a), \quad (a, b), \quad (b, c), \quad (c, \infty)
+\]
+
+---
+
+### **Step 4: Test Sign of the Expression in Each Interval**
+To determine where \( \frac{P(x)}{Q(x)} \) is **positive or negative**, follow these steps:
+
+1. Pick a **test point** from each interval.
+2. Substitute the test point into \( \frac{P(x)}{Q(x)} \).
+3. Determine whether the result is **positive** or **negative**.
+4. Mark each interval with **positive (+) or negative (-) signs**.
+
+Remember that:
+- A positive number divided by a positive number is **positive**.
+- A negative number divided by a positive number is **negative**.
+- A positive divided by a negative (or vice versa) is negative.
+
+---
+
+### **Step 4: Identify the Solution**
+- If the inequality involves \( > 0 \) or \( \geq 0 \), the solution includes intervals where \( \frac{P(x)}{Q(x)} \) is **positive** (or zero if \( \geq 0 \)).
+- If the inequality involves \( < 0 \) or \( \leq 0 \), the solution includes intervals where \( \frac{P(x)}{Q(x)} \) is **negative** (or zero if \( \leq 0 \)).
+
+**Be careful with denominators:**
+- If a **critical point comes from the denominator**, it must be **excluded** from the solution.
+- If a **critical point comes from the numerator**, it is **included only if the inequality is \( \leq 0 \) or \( \geq 0 \)**.
+
+---
+
+### **Example Problem**
+#### **Solve the Rational Inequality:**
+\[
+\frac{-3}{(x^2 + 1)(4 - x)} \leq 0
+\]
+
+#### **Step 1: Find the Critical Points**
+- **Numerator**: \( -3 = 0 \) has no solutions.
+- **Denominator**: \( (x^2 + 1)(4 - x) = 0 \).
+
+  - The term \( x^2 + 1 \) is never zero for real \( x \), since \( x^2 + 1 \) is always at least 1.
+  - The term \( 4 - x = 0 \) when \( x = 4 \), making the fraction undefined at \( x = 4 \).
+
+Thus, the **only critical point is \( x = 4 \)**.
+
+---
+
+### **Step 5: Test Intervals**
+The critical point \( x = 4 \) divides the number line into two intervals:
+
+\[
+(-\infty, 4) \quad \text{and} \quad (4, \infty)
+\]
+
+We choose test points:
+- \( x = 0 \) for \( (-\infty, 4) \)
+- \( x = 5 \) for \( (4, \infty) \)
+
+**Evaluate at \( x = 0 \):**
+\[
+\frac{-3}{(0^2 + 1)(4 - 0)} = \frac{-3}{(1)(4)} = \frac{-3}{4} < 0
+\]
+So, the function is **negative** for \( x \in (-\infty, 4) \).
+
+**Evaluate at \( x = 5 \):**
+\[
+\frac{-3}{(5^2 + 1)(4 - 5)} = \frac{-3}{(25+1)(-1)} = \frac{-3}{-26} = \frac{3}{26} > 0
+\]
+So, the function is **positive** for \( x > 4 \).
+
+---
+
+### **Step 5: Write the Final Solution**
+We need the fraction to be **\( \leq 0 \)**:
+- Negative values are found in \( (-\infty, 4) \).
+- The fraction **cannot be equal to zero** because the numerator is always \(-3\), which is negative.
+- At \( x = 4 \), the function is undefined (division by zero), so we **must exclude \( x = 4 \) from the solution**.
+
+Thus, the solution is:
+
+\[
+\mathbf{x \in (-\infty, 4)}
+\]
+
+---
+
+### **Final Answer:**
+\[
+\mathbf{b) \quad x \in (-\infty,4)}
+\]
+
+
+
+
+
+
+
+
+# **Expanding a Binomial Using Binomial Coefficients**
+
+Expanding a binomial involves using the **Binomial Theorem**, which provides a systematic way to expand expressions of the form:
+
+\[
+(a + b)^n
+\]
+
+where \( n \) is a **non-negative integer**. This expansion involves **binomial coefficients**, which determine the coefficients of each term in the expansion.
+
+---
+
+## **1. Understanding the Binomial Theorem**
+The **Binomial Theorem** states that:
+
+\[
+(a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k
+\]
+
+where:
+
+- \( \binom{n}{k} \) is the **binomial coefficient**, also written as:
+
+  \[
+  \binom{n}{k} = \frac{n!}{k!(n-k)!}
+  \]
+
+- \( a^{n-k} \) represents the decreasing powers of \( a \).
+- \( b^k \) represents the increasing powers of \( b \).
+- The summation runs from \( k = 0 \) to \( k = n \), meaning the expansion has \( n+1 \) terms.
+
+---
+
+## **2. Binomial Coefficients and Pascal’s Triangle**
+The **binomial coefficients** \( \binom{n}{k} \) correspond to the entries in **Pascal’s Triangle**. Each row \( n \) in 
+Pascal’s Triangle gives the coefficients for \( (a + b)^n \).
+
+For example:
+
+\[
+\begin{array}{c|cccccc}
+n & \text{Expansion} & \text{Binomial Coefficients} \\
+\hline
+0 & (a+b)^0 = 1 & 1 \\
+1 & (a+b)^1 = a + b & 1, 1 \\
+2 & (a+b)^2 = a^2 + 2ab + b^2 & 1, 2, 1 \\
+3 & (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 & 1, 3, 3, 1 \\
+4 & (a+b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4 & 1, 4, 6, 4, 1 \\
+\end{array}
+\]
+
+Each binomial coefficient follows the recursive rule:
+
+\[
+\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}
+\]
+
+which is why Pascal’s Triangle works.
+
+---
+
+## **3. Example Expansions**
+### **Example 1: Expanding \( (x + 2)^4 \)**
+Using the Binomial Theorem:
+
+\[
+(x + 2)^4 = \sum_{k=0}^{4} \binom{4}{k} x^{4-k} 2^k
+\]
+
+Calculate each binomial coefficient:
+
+\[
+\binom{4}{0} = 1, \quad \binom{4}{1} = 4, \quad \binom{4}{2} = 6, \quad \binom{4}{3} = 4, \quad \binom{4}{4} = 1
+\]
+
+Now substitute and simplify:
+
+\[
+(x + 2)^4 = 1x^4 + 4x^3(2) + 6x^2(4) + 4x(8) + 1(16)
+\]
+
+\[
+= x^4 + 8x^3 + 24x^2 + 32x + 16
+\]
+
+### **Example 2: Expanding \( (3x - y)^3 \)**
+\[
+(3x - y)^3 = \sum_{k=0}^{3} \binom{3}{k} (3x)^{3-k} (-y)^k
+\]
+
+Calculate the binomial coefficients:
+
+\[
+\binom{3}{0} = 1, \quad \binom{3}{1} = 3, \quad \binom{3}{2} = 3, \quad \binom{3}{3} = 1
+\]
+
+Expand term by term:
+
+\[
+(3x - y)^3 = 1(3x)^3(-y)^0 + 3(3x)^2(-y)^1 + 3(3x)^1(-y)^2 + 1(3x)^0(-y)^3
+\]
+
+\[
+= 27x^3 - 27x^2y + 9xy^2 - y^3
+\]
+
+---
+
+## **4. Special Cases**
+### **Case 1: Expanding \( (1 + x)^n \) and the Binomial Series**
+For a **positive integer** \( n \):
+
+\[
+(1 + x)^n = \sum_{k=0}^{n} \binom{n}{k} x^k
+\]
+
+For a **fractional or negative** \( n \), we get the **infinite binomial series**:
+
+\[
+(1 + x)^n = 1 + nx + \frac{n(n-1)}{2!}x^2 + \frac{n(n-1)(n-2)}{3!}x^3 + \dots
+\]
+
+valid for \( |x| < 1 \).
+
+### **Case 2: Expanding \( (a - b)^n \)**
+If the binomial contains subtraction:
+
+\[
+(a - b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} (-b)^k
+\]
+
+which alternates signs due to \( (-b)^k \).
+
+Example:
+
+\[
+(x - 2)^3 = x^3 - 6x^2 + 12x - 8
+\]
+
+---
+
+## **5. Summary**
+- The **Binomial Theorem** provides a structured way to expand \( (a + b)^n \).
+- **Binomial coefficients** \( \binom{n}{k} \) determine the terms in the expansion.
+- **Pascal’s Triangle** can be used to find binomial coefficients.
+- The expansion follows the pattern:
+
+  \[
+  \binom{n}{0} a^n + \binom{n}{1} a^{n-1} b + \binom{n}{2} a^{n-2} b^2 + \dots + \binom{n}{n} b^n
+  \]
+
+- **Negative and fractional exponents** lead to **infinite binomial series**.
+
+---
+
+This method allows for easy expansion of binomials, which is useful in algebra, probability, calculus (Taylor series), and combinatorics.
+
+
+
+
+
+
+
+
+
+# **Applying the Fundamental Theorem of Calculus to Exponential and Trigonometric Functions**
+
+The **Fundamental Theorem of Calculus (FTC)** is one of the most important results in calculus, linking 
+differentiation with integration. It has two main parts:
+
+1. **First Fundamental Theorem of Calculus (FTC1)**: If \( f(x) \) is a continuous function on the closed interval \([a, b]\) and \( F(x) \) is its antiderivative (i.e., a function such that \( F'(x) = f(x) \)), then:
+
+   \[
+   \int_a^b f(x) \, dx = F(b) - F(a)
+   \]
+
+2. **Second Fundamental Theorem of Calculus**: If \( f(x) \) is continuous on an interval \([a, b]\), and we define a new function:
+
+   \[
+   F(x) = \int_a^x f(t) \, dt
+   \]
+
+   then the derivative of \( F(x) \) is simply:
+
+   \[
+   \frac{d}{dx} \int_a^x f(t) \, dt = f(x).
+   \]
+
+This theorem is crucial for evaluating definite integrals and shows that differentiation and integration are inverse operations.
+
+---
+
+## **Applying the FTC to Exponential Functions**
+
+The exponential function, particularly **\( e^x \)**, has the unique property that its derivative is itself:
+
+\[
+\frac{d}{dx} e^x = e^x
+\]
+
+Using the **Fundamental Theorem of Calculus**, we can evaluate definite integrals of exponential functions. Suppose we have:
+
+\[
+I = \int_a^b e^x \, dx
+\]
+
+1. Find the antiderivative of \( f(x) = e^x \):
+
+   \[
+   F(x) = e^x
+   \]
+
+2. Apply FTC:
+
+   \[
+   \int_a^b e^x \, dx = e^b - e^a.
+   \]
+
+This technique extends to other exponential functions and compositions, such as \( e^{ax} \), \( e^{f(x)} \), and trigonometric functions.
+
+---
+
+## **Example 1: Exponential Function**
+Evaluate the definite integral:
+
+\[
+\int_0^1 e^{2x} \, dx.
+\]
+
+### **Step 1: Compute the Antiderivative**  
+We recognize that:
+
+\[
+\int e^{ax} \, dx = \frac{1}{a} e^{ax} + C
+\]
+
+For \( f(x) = e^{x-2} \), the antiderivative is:
+
+\[
+\int e^{x-2} \, dx = e^{x-2}
+\]
+
+---
+
+### **Applying the Fundamental Theorem**
+Using **FTC Part 2**:
+
+\[
+\int_a^b f(x) \,dx = F(b) - F(a).
+\]
+
+For \( f(x) = e^x \):
+
+\[
+\int e^x \, dx = e^x + C.
+\]
+
+Applying limits \( x - 2 \) from \( x = a \) to \( x = b \):
+
+\[
+\int_{a}^{b} e^{x - 2} \, dx = e^b - e^a.
+\]
+
+---
+
+## **Application to Trigonometric Functions**  
+
+Now, let’s consider trigonometric functions. The derivatives and antiderivatives of common trigonometric functions include:
+
+\[
+\frac{d}{dx} \sin x = \cos x, \quad \frac{d}{dx} \cos x = -\sin x
+\]
+
+\[
+\frac{d}{dx} \sin(ax) = a \cos(ax), \quad \frac{d}{dx} \cos(ax) = -\sin(ax) \cdot a
+\]
+
+Using the **Fundamental Theorem of Calculus**, we compute definite integrals of trigonometric functions.
+
+### **Example 1: Evaluating an Integral with Exponential and Trigonometric Functions**
+Evaluate:
+
+\[
+\int_0^{\pi} e^x \cos x \, dx.
+\]
+
+#### **Step 1: Identify the Function and Integration Technique**
+Given \( f(x) = e^x \cos x \), we use **integration by parts** where:
+
+\[
+u = e^x, \quad dv = \cos x \, dx.
+\]
+
+#### **Step 2: Compute the Antiderivative**
+Using integration by parts:
+
+1. Let \( u = e^x \), then \( du = e^x \, dx \).
+2. Let \( dv = \cos x \, dx \), which integrates to \( \sin x \).
+
+Using integration by parts:  
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+Let:
+\[
+I = \int e^x \cos x \, dx
+\]
+
+We use integration by parts:
+
+\[
+I = e^x \sin x - \int \sin x e^x dx.
+\]
+
+Now, integrating by parts again:
+
+- Let \( u = e^x \), so \( du = e^x dx \).
+- Let \( dv = \cos x \, dx \), so \( v = \sin x \).
+
+Applying integration by parts:
+\[
+I = e^x \sin x - \int e^x \sin x \, dx.
+\]
+
+This results in:
+
+\[
+\int e^x \cos x \, dx = \frac{e^x}{2}(\sin x + \cos x) + C.
+\]
+
+---
+
+### **Step 2: Apply the Fundamental Theorem of Calculus**
+Now, using FTC:
+
+\[
+\int_0^{\pi} e^x \cos x \, dx = \left[ e^x \frac{\sin x + \cos x}{2} \right] \Bigg|_0^{\pi}.
+\]
+
+We now substitute \( x = \pi \) and \( x = 0 \):
+
+\[
+= \left(e^\pi \sin \pi - e^\pi \cos \pi \right) - \left( e^0 \sin 0 - e^0 \right)
+\]
+
+\[
+= \left( e^\pi \cdot 0 - e^\pi \cos \pi \right) - \left( 0 - e^0 \right)
+\]
+
+\[
+= \left( 0 - e^\pi \right) - \left( e^0 \sin 0 - e^0 \cos 0 \right).
+\]
+
+Since \( \sin 0 = 0 \) and \( \cos \pi = -1 \), simplifying:
+
+\[
+= -e^\pi - (0 - 1).
+\]
+
+\[
+= -e^\pi + 1.
+\]
+
+### **Conclusion**
+Thus, the result of the definite integral is:
+
+\[
+\boxed{1 - e^\pi}
+\]
+
+
+
+
+
+
+
+
+# **Differentiating Inverse Reciprocal Trigonometric Functions**
+
+Inverse reciprocal trigonometric functions include **arcsecant** (\(\arcsec x\)) 
+and **arccosecant** (\(\arccsc x\)). These are the inverse functions of secant (\(\sec x\)) 
+and cosecant (\(\csc x\)), respectively. Their derivatives are crucial in many applications, 
+including implicit differentiation, integration, and calculus-based physics problems.
+
+---
+
+## **1. Derivative of \( \arcsec x \)**
+The arcsecant function is defined as:
+
+\[
+y = \arcsec x \implies x = \sec y
+\]
+
+### **Step 1: Differentiate Both Sides**
+Differentiating implicitly:
+
+\[
+\frac{d}{dx} (x) = \frac{d}{dx} (\sec y).
+\]
+
+Since \( \frac{d}{dy} \sec y = \sec y \tan y \), applying the chain rule gives:
+
+\[
+1 = \sec y \tan y \cdot \frac{dy}{dx}.
+\]
+
+### **Step 2: Express in Terms of \( x \)**
+Since \( x = \sec y \), we substitute:
+
+\[
+\tan^2 y = \sec^2 y - 1 = x^2 - 1 \implies \tan y = \sqrt{x^2 - 1}.
+\]
+
+Thus,
+
+\[
+1 = x \cdot \sqrt{x^2 - 1} \cdot \frac{dy}{dx}.
+\]
+
+Solving for \( \frac{dy}{dx} \):
+
+\[
+\frac{dy}{dx} = \frac{1}{x \sqrt{x^2 - 1}}.
+\]
+
+Thus, the derivative of the inverse secant function is:
+
+\[
+\frac{d}{dx} \arcsec x = \frac{1}{x \sqrt{x^2 - 1}}, \quad |x| > 1.
+\]
+
+---
+
+## **2. Derivative of \( \arccsc x \)**
+Similarly, the arccosecant function is defined as:
+
+\[
+y = \arccsc x \implies x = \csc y.
+\]
+
+### **Step 1: Differentiate Both Sides**
+Differentiating implicitly:
+
+\[
+\frac{d}{dx} (x) = \frac{d}{dx} (\csc y).
+\]
+
+Since \( \frac{d}{dy} \csc y = -\csc y \cot y \), applying the chain rule:
+
+\[
+1 = -\csc y \cot y \cdot \frac{dy}{dx}.
+\]
+
+### **Step 2: Express in Terms of \( x \)**
+Since \( x = \csc y \), we substitute:
+
+\[
+\cot^2 y = \csc^2 y - 1 = x^2 - 1 \implies \cot y = \sqrt{x^2 - 1}.
+\]
+
+Thus,
+
+\[
+1 = -x \cdot \sqrt{x^2 - 1} \cdot \frac{dy}{dx}.
+\]
+
+Solving for \( \frac{dy}{dx} \):
+
+\[
+\frac{dy}{dx} = -\frac{1}{x \sqrt{x^2 - 1}}.
+\]
+
+Thus, the derivative of the inverse cosecant function is:
+
+\[
+\frac{d}{dx} \arccsc x = -\frac{1}{x \sqrt{x^2 - 1}}, \quad |x| > 1.
+\]
+
+---
+
+## **3. Summary of Derivatives**
+| Function | Derivative |
+|----------|-----------|
+| \( \frac{d}{dx} \arcsec x \) | \( \frac{1}{x \sqrt{x^2 - 1}}, \quad |x| > 1 \) |
+| \( \frac{d}{dx} \arccsc x \) | \( -\frac{1}{x \sqrt{x^2 - 1}}, \quad |x| > 1 \) |
+
+These formulas are frequently used in **calculus, physics, and engineering**, especially in cases involving inverse trigonometric functions in integration and differentiation problems.
+
+
+
+
+
+
+
+
+
+# **Sum and Constant Multiple Rules for Definite Integrals**
+
+Definite integrals follow several fundamental properties that simplify computations, especially when
+dealing with sums of functions or constant multiples. Two key rules that are frequently used are:
+
+1. **Sum Rule**  
+2. **Constant Multiple Rule**
+
+---
+
+### **1. Sum Rule for Definite Integrals**  
+The integral of a sum of functions equals the sum of their integrals. Mathematically, for functions \( f(x) \) and \( g(x) \):
+
+\[
+\int_a^b [f(x) + g(x)] \,dx = \int_a^b f(x) \,dx + \int_a^b g(x) \,dx
+\]
+
+#### **Explanation**
+- This rule is derived from the linearity of integration.
+- It allows breaking complex integrals into simpler parts.
+- Applies to any finite sum of functions.
+
+#### **Example**
+Evaluate:
+
+\[
+\int_1^3 (x^2 + \sin x) \,dx
+\]
+
+Using the sum rule:
+
+\[
+\int_1^3 x^2 \,dx + \int_1^3 \sin x \,dx
+\]
+
+Evaluating each integral separately:
+
+\[
+\frac{x^3}{3} \Big|_1^3 + (-\cos x \Big|_1^3)
+\]
+
+\[
+\left( \frac{27}{3} - \frac{1}{3} \right) + \left( -\cos 3 + \cos 1 \right)
+\]
+
+\[
+\frac{26}{3} + (\cos 1 - \cos 3)
+\]
+
+---
+
+### **2. Constant Multiple Rule for Definite Integrals**  
+A constant factor can be pulled out of an integral:
+
+\[
+\int_a^b c f(x) \,dx = c \int_a^b f(x) \,dx
+\]
+
+where \( c \) is a constant.
+
+#### **Explanation**
+- The integral represents the signed area under the curve. Since multiplication by a constant scales the function vertically, the integral scales by the same factor.
+- This rule simplifies calculations when dealing with constant coefficients.
+
+#### **Example**
+Evaluate:
+
+\[
+\int_0^2 5x^3 \,dx
+\]
+
+Applying the constant multiple rule:
+
+\[
+5 \int_0^2 x^3 \,dx
+\]
+
+Since:
+
+\[
+\int x^3 dx = \frac{x^4}{4}
+\]
+
+we compute:
+
+\[
+5 \left( \frac{x^4}{4} \Big|_0^2 \right) = 5 \left( \frac{16}{4} - 0 \right) = 5 \times 4 = 20
+\]
+
+---
+
+### **Application in Complex Integrals**
+When dealing with integrals like:
+
+\[
+\int_a^b [cf(x) + dg(x)] \,dx
+\]
+
+you can apply both rules together:
+
+\[
+c \int_a^b f(x) \,dx + d \int_a^b g(x) \,dx
+\]
+
+This approach was used in solving the integral in your previous question.
+
+---
+
+### **Summary**
+1. **Sum Rule**: The integral of a sum is the sum of integrals.
+2. **Constant Multiple Rule**: A constant factor can be factored out of an integral.
+3. **Combination**: These rules work together to break down complex integrals into manageable parts.
+
+These properties are fundamental to integral calculus and are used extensively in engineering, physics, and applied mathematics.
+
+
+
+
+
+
+
+
+
+# **Sum and Constant Multiple Rules for Definite Integrals**
+
+Definite integrals follow several fundamental properties that simplify computations, especially when 
+dealing with sums of functions or constant multiples. Two key rules that are frequently used are:
+
+1. **Sum Rule**  
+2. **Constant Multiple Rule**
+
+---
+
+### **1. Sum Rule for Definite Integrals**  
+The integral of a sum of functions equals the sum of their integrals. Mathematically, for functions \( f(x) \) and \( g(x) \):
+
+\[
+\int_a^b [f(x) + g(x)] \,dx = \int_a^b f(x) \,dx + \int_a^b g(x) \,dx
+\]
+
+#### **Explanation**
+- This rule is derived from the linearity of integration.
+- It allows breaking complex integrals into simpler parts.
+- Applies to any finite sum of functions.
+
+#### **Example**
+Evaluate:
+
+\[
+\int_1^3 (x^2 + \sin x) \,dx
+\]
+
+Using the sum rule:
+
+\[
+\int_1^3 x^2 \,dx + \int_1^3 \sin x \,dx
+\]
+
+Evaluating each integral separately:
+
+\[
+\frac{x^3}{3} \Big|_1^3 + (-\cos x \Big|_1^3)
+\]
+
+\[
+\left( \frac{27}{3} - \frac{1}{3} \right) + \left( -\cos 3 + \cos 1 \right)
+\]
+
+\[
+\frac{26}{3} + (\cos 1 - \cos 3)
+\]
+
+---
+
+### **2. Constant Multiple Rule for Definite Integrals**  
+A constant factor can be pulled out of an integral:
+
+\[
+\int_a^b c f(x) \,dx = c \int_a^b f(x) \,dx
+\]
+
+where \( c \) is a constant.
+
+#### **Explanation**
+- The integral represents the signed area under the curve. Since multiplication by a constant scales the function vertically, the integral scales by the same factor.
+- This rule simplifies calculations when dealing with constant coefficients.
+
+#### **Example**
+Evaluate:
+
+\[
+\int_0^2 5x^3 \,dx
+\]
+
+Applying the constant multiple rule:
+
+\[
+5 \int_0^2 x^3 \,dx
+\]
+
+Since:
+
+\[
+\int x^3 dx = \frac{x^4}{4}
+\]
+
+we compute:
+
+\[
+5 \left( \frac{x^4}{4} \Big|_0^2 \right) = 5 \left( \frac{16}{4} - 0 \right) = 5 \times 4 = 20
+\]
+
+---
+
+### **Application in Complex Integrals**
+When dealing with integrals like:
+
+\[
+\int_a^b [cf(x) + dg(x)] \,dx
+\]
+
+you can apply both rules together:
+
+\[
+c \int_a^b f(x) \,dx + d \int_a^b g(x) \,dx
+\]
+
+This approach was used in solving the integral in your previous question.
+
+---
+
+### **Summary**
+1. **Sum Rule**: The integral of a sum is the sum of integrals.
+2. **Constant Multiple Rule**: A constant factor can be factored out of an integral.
+3. **Combination**: These rules work together to break down complex integrals into manageable parts.
+
+These properties are fundamental to integral calculus and are used extensively in engineering, physics, and applied mathematics.
 
 
 
@@ -16551,6 +19047,366 @@ By mastering logarithms, exponent rules, and sign analysis, solving exponential 
 
 
 
+# **Calculating Displacement for Plane Motion**
+
+Displacement in plane motion refers to the shortest straight-line distance between an object's initial 
+and final positions in a two-dimensional plane. It is a **vector quantity** with both **magnitude** 
+and **direction**. Unlike distance, which measures the total path traveled, displacement focuses only 
+on the net change in position.
+
+---
+
+## **1. Displacement as a Vector**
+If an object moves from an initial position **\( P_1(x_1, y_1) \)** to a final position **\( P_2(x_2, y_2) \)**, its displacement **\( \mathbf{d} \)** is given by:
+
+\[
+\mathbf{d} = \overrightarrow{P_1 P_2} = (x_2 - x_1) \hat{i} + (y_2 - y_1) \hat{j}
+\]
+
+where:
+- \( \hat{i} \) and \( \hat{j} \) are the unit vectors in the \( x \)- and \( y \)-directions, respectively.
+
+---
+
+## **2. Magnitude of Displacement**
+The magnitude (length) of the displacement vector is given by:
+
+\[
+|\mathbf{d}| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+\]
+
+This formula is derived from the **distance formula** between two points.
+
+---
+
+## **3. Direction of Displacement**
+The direction (or angle \( \theta \)) of displacement relative to the positive \( x \)-axis is:
+
+\[
+\theta = \tan^{-1} \left( \frac{y_2 - y_1}{x_2 - x_1} \right)
+\]
+
+where:
+- \( \theta \) is measured counterclockwise from the positive \( x \)-axis.
+- If necessary, adjust \( \theta \) based on the quadrant of the displacement vector.
+
+---
+
+## **4. Example Calculation**
+### **Problem**
+A plane moves from point \( P_1(3, 4) \) to \( P_2(10, 12) \). Find the displacement vector, magnitude, and direction.
+
+### **Solution**
+1. **Displacement vector:**
+   \[
+   \mathbf{d} = (10 - 3) \hat{i} + (12 - 4) \hat{j} = 7\hat{i} + 8\hat{j}
+   \]
+
+2. **Magnitude:**
+   \[
+   |\mathbf{d}| = \sqrt{(10 - 3)^2 + (12 - 4)^2}
+   \]
+   \[
+   = \sqrt{7^2 + 8^2} = \sqrt{49 + 64} = \sqrt{113} \approx 10.63
+   \]
+
+3. **Direction:**
+   \[
+   \theta = \tan^{-1} \left( \frac{8}{7} \right) = \tan^{-1} (1.143)
+   \]
+   \[
+   \theta \approx 48.37^\circ
+   \]
+
+### **Final Answer**
+- **Displacement vector:** \( 7\hat{i} + 8\hat{j} \)
+- **Magnitude:** \( 10.63 \) units
+- **Direction:** \( 48.37^\circ \) from the positive \( x \)-axis
+
+---
+
+## **5. Displacement in Parametric Motion**
+If an object's motion is described parametrically as:
+
+\[
+x = f(t), \quad y = g(t)
+\]
+
+for \( t_1 \leq t \leq t_2 \), the displacement is:
+
+\[
+\mathbf{d} = \big( f(t_2) - f(t_1) \big) \hat{i} + \big( g(t_2) - g(t_1) \big) \hat{j}
+\]
+
+Example:
+- A particle moves as \( x = 2t + 3 \), \( y = 4t - 1 \) from \( t = 0 \) to \( t = 5 \).
+- Initial: \( P_1(3, -1) \), Final: \( P_2(13, 19) \).
+- **Displacement:** \( (13 - 3)\hat{i} + (19 + 1)\hat{j} = 10\hat{i} + 20\hat{j} \).
+
+---
+
+## **6. Key Takeaways**
+✔ **Displacement is the vector difference between the final and initial positions.**  
+✔ **Its magnitude is found using the distance formula.**  
+✔ **Its direction is given by the inverse tangent function.**  
+✔ **In parametric motion, evaluate at endpoints and subtract.**  
+
+These principles apply in physics, navigation, and engineering scenarios where motion in a plane is involved.
+
+
+
+
+
+
+
+# **Limits of Inverse Trigonometric Functions**
+
+Inverse trigonometric functions, also known as **arc functions**, are the inverses of the standard trigonometric functions. 
+Their limits are essential in calculus, particularly in evaluating limits involving trigonometric expressions and in defining derivatives and integrals.
+
+---
+
+## **1. Domain and Range of Inverse Trigonometric Functions**
+Before evaluating limits, it's important to understand the domains and ranges of inverse trigonometric functions:
+
+| Function | Notation | Domain | Range |
+|----------|---------|--------|--------|
+| **Inverse Sine** | \( y = \sin^{-1} x \) | \( -1 \leq x \leq 1 \) | \( -\frac{\pi}{2} \leq y \leq \frac{\pi}{2} \) |
+| **Inverse Cosine** | \( y = \cos^{-1} x \) | \( -1 \leq x \leq 1 \) | \( 0 \leq y \leq \pi \) |
+| **Inverse Tangent** | \( y = \tan^{-1} x \) | \( -\infty < x < \infty \) | \( -\frac{\pi}{2} < y < \frac{\pi}{2} \) |
+| **Inverse Cotangent** | \( y = \cot^{-1} x \) | \( -\infty < x < \infty \) | \( 0 < y < \pi \) |
+| **Inverse Secant** | \( y = \sec^{-1} x \) | \( |x| \geq 1 \) | \( 0 \leq y \leq \pi, y \neq \frac{\pi}{2} \) |
+| **Inverse Cosecant** | \( y = \csc^{-1} x \) | \( |x| \geq 1 \) | \( -\frac{\pi}{2} \leq y \leq \frac{\pi}{2}, y \neq 0 \) |
+
+---
+
+## **2. Limits of Basic Inverse Trigonometric Functions**
+
+### **(a) Limits at the Boundaries of the Domain**
+#### **1. Limit of Inverse Sine**
+\[
+\lim_{x \to 1^-} \sin^{-1} x = \frac{\pi}{2}, \quad \lim_{x \to -1^+} \sin^{-1} x = -\frac{\pi}{2}
+\]
+Since \( \sin^{-1} x \) is only defined for \( -1 \leq x \leq 1 \), approaching 1 from the left and -1 from the right gives the extreme values of the range.
+
+#### **2. Limit of Inverse Cosine**
+\[
+\lim_{x \to 1^-} \cos^{-1} x = 0, \quad \lim_{x \to -1^+} \cos^{-1} x = \pi
+\]
+Inverse cosine decreases as \( x \) increases.
+
+#### **3. Limit of Inverse Tangent**
+\[
+\lim_{x \to \infty} \tan^{-1} x = \frac{\pi}{2}, \quad \lim_{x \to -\infty} \tan^{-1} x = -\frac{\pi}{2}
+\]
+Since \( \tan^{-1} x \) is defined for all \( x \), it has horizontal asymptotes at \( \pm\frac{\pi}{2} \).
+
+#### **4. Limit of Inverse Cotangent**
+\[
+\lim_{x \to \infty} \cot^{-1} x = 0, \quad \lim_{x \to -\infty} \cot^{-1} x = \pi
+\]
+Inverse cotangent approaches 0 for large positive values and \( \pi \) for large negative values.
+
+#### **5. Limit of Inverse Secant**
+\[
+\lim_{x \to 1^+} \sec^{-1} x = 0, \quad \lim_{x \to -1^-} \sec^{-1} x = \pi
+\]
+\[
+\lim_{x \to \infty} \sec^{-1} x = \frac{\pi}{2}, \quad \lim_{x \to -\infty} \sec^{-1} x = \frac{\pi}{2}
+\]
+Inverse secant is only defined for \( |x| \geq 1 \).
+
+---
+
+## **3. Indeterminate Forms and L'Hôpital's Rule**
+Some limits involve indeterminate forms such as \( \frac{0}{0} \) or \( \frac{\infty}{\infty} \). In such cases, we use **L'Hôpital's Rule**:
+
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}
+\]
+
+### **Example:**
+Find:
+\[
+\lim_{x \to 0} \frac{\sin^{-1} x}{x}
+\]
+
+Applying L'Hôpital's Rule:
+
+\[
+\lim_{x \to 0} \frac{\sin^{-1} x}{x} = \lim_{x \to 0} \frac{\frac{1}{\sqrt{1-x^2}}}{1} = \frac{1}{\sqrt{1-0}} = 1
+\]
+
+Thus:
+\[
+\lim_{x \to 0} \frac{\sin^{-1} x}{x} = 1
+\]
+
+---
+
+## **4. Special Limits Involving Inverse Trigonometric Functions**
+### **1. Limit of a Ratio**
+\[
+\lim_{x \to 0} \frac{\tan^{-1} x}{x} = 1
+\]
+This is derived similarly to \( \sin^{-1} x \), using differentiation.
+
+### **2. Limit of Difference Form**
+\[
+\lim_{x \to 0} \frac{\sin^{-1} x - \tan^{-1} x}{x^3} = \frac{1}{3}
+\]
+Using Taylor expansions:
+
+\[
+\sin^{-1} x = x + \frac{x^3}{6} + O(x^5), \quad \tan^{-1} x = x - \frac{x^3}{3} + O(x^5)
+\]
+
+\[
+\sin^{-1} x - \tan^{-1} x = \frac{x^3}{6} + \frac{x^3}{3} = \frac{x^3}{2}
+\]
+
+Dividing by \( x^3 \):
+
+\[
+\lim_{x \to 0} \frac{\sin^{-1} x - \tan^{-1} x}{x^3} = \frac{1}{3}
+\]
+
+---
+
+## **5. Asymptotic Behavior and Approximations**
+For small \( x \), inverse trigonometric functions can be approximated using **Taylor Series**:
+
+\[
+\sin^{-1} x \approx x + \frac{x^3}{6} + O(x^5)
+\]
+\[
+\tan^{-1} x \approx x - \frac{x^3}{3} + O(x^5)
+\]
+\[
+\cos^{-1} x \approx \frac{\pi}{2} - x - \frac{x^3}{6} + O(x^5)
+\]
+
+These approximations are useful when evaluating limits in calculus.
+
+---
+
+## **6. Key Takeaways**
+✔ **Understand domain and range before evaluating limits.**  
+✔ **Use L'Hôpital's Rule for indeterminate forms.**  
+✔ **Know the asymptotic behavior and approximations for small \( x \).**  
+✔ **Apply Taylor series for precise limit evaluation.**  
+✔ **Remember important special limits for quick computation.**  
+
+These principles are fundamental in calculus, especially in **differentiation, integration, and asymptotic analysis**.
+
+
+
+
+
+
+
+
+# **The Special Case of the Binomial Theorem**  
+
+The **Binomial Theorem** is a fundamental result in algebra and combinatorics that describes how to expand powers of a binomial expression.
+The special cases of the theorem provide insights into useful approximations, series expansions, and limit evaluations.
+
+---
+
+## **1. The General Binomial Theorem**  
+For any integer \( n \), the expansion of \( (a + b)^n \) is given by:  
+
+\[
+(a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k
+\]
+
+where the **binomial coefficient** is:
+
+\[
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
+\]
+
+For non-integer exponents, the expansion extends using an **infinite series** (Taylor/Maclaurin expansion).
+
+---
+
+## **2. Special Cases of the Binomial Theorem**
+
+### **Case 1: Binomial Theorem for \( n = 2 \)**
+For \( n = 2 \):
+
+\[
+(a + b)^2 = a^2 + 2ab + b^2
+\]
+
+This is the familiar expansion of a square binomial.
+
+---
+
+### **Case 2: Binomial Theorem for \( n = 3 \)**
+For \( n = 3 \):
+
+\[
+(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
+\]
+
+This expansion is widely used in algebraic manipulations.
+
+---
+
+### **Case 3: The Newton’s Binomial Series (Fractional or Negative Exponents)**
+When \( n \) is **not a positive integer** (e.g., negative, fractional, or irrational), the binomial expansion takes the form of an **infinite series**:
+
+\[
+(1 + x)^r = \sum_{k=0}^{\infty} \binom{r}{k} x^k, \quad \text{for } |x| < 1
+\]
+
+where:
+
+\[
+\binom{r}{k} = \frac{r (r-1) (r-2) \dots (r-k+1)}{k!}
+\]
+
+This case is particularly useful in **approximation methods** and **calculus**.
+
+---
+
+## **3. Special Approximation: The Binomial Approximation**
+For small \( x \), the first few terms of the binomial series give an important approximation:
+
+\[
+(1 + x)^r \approx 1 + r x, \quad \text{for small } x
+\]
+
+This is commonly used in **physics, engineering, and finance**, especially when \( x \) is small.
+
+For example:
+
+\[
+\sqrt{1 + x} \approx 1 + \frac{x}{2}, \quad |x| \ll 1
+\]
+
+\[
+(1 + x)^{-1} \approx 1 - x, \quad |x| \ll 1
+\]
+
+---
+
+## **4. Applications of Special Binomial Cases**
+1. **Calculus**: Used in Taylor series expansion.
+2. **Probability Theory**: Foundation for the binomial distribution.
+3. **Physics and Engineering**: Small-angle approximations.
+4. **Finance**: Approximations in compound interest formulas.
+
+---
+
+## **5. Key Takeaways**
+✔ **Standard binomial expansion works for positive integer exponents.**  
+✔ **For non-integer exponents, an infinite series is used.**  
+✔ **Binomial approximations simplify computations for small values of \( x \).**  
+✔ **Special cases (\( n = 2,3 \)) are frequently used in algebra and calculus.**  
+
+These special cases make the **Binomial Theorem** a powerful tool across multiple domains.
 
 
 
@@ -16563,6 +19419,503 @@ By mastering logarithms, exponent rules, and sign analysis, solving exponential 
 
 
 
+# **Integration Using Inverse Trigonometric Functions**
+
+Inverse trigonometric functions often appear in integrals involving algebraic expressions of the 
+form \( a^2 + x^2 \), \( a^2 - x^2 \), or \( x^2 - a^2 \). These integrals arise frequently in calculus, 
+engineering, and physics.
+
+---
+
+## **1. Standard Forms Involving Inverse Trigonometric Functions**
+The following are key integral formulas:
+
+### **1.1 Arctangent Integral:**
+\[
+\int \frac{dx}{a^2 + x^2} = \frac{1}{a} \arctan\left(\frac{x}{a}\right) + C
+\]
+This result is derived using the substitution:
+\[
+x = a \tan \theta, \quad dx = a \sec^2 \theta d\theta.
+\]
+
+### **1.2 Arcsine Integral:**
+\[
+\int \frac{dx}{\sqrt{a^2 - x^2}} = \arcsin\left(\frac{x}{a}\right) + C
+\]
+Here, we use:
+\[
+x = a \sin \theta, \quad dx = a \cos \theta d\theta.
+\]
+
+### **1.3 Arcsecant Integral:**
+\[
+\int \frac{dx}{x\sqrt{x^2 - a^2}} = \frac{1}{a} \arcsec\left(\frac{|x|}{a}\right) + C
+\]
+Using the substitution:
+\[
+x = a \sec \theta, \quad dx = a \sec \theta \tan \theta d\theta.
+\]
+
+---
+
+## **2. Advanced Applications**
+
+### **2.1 Integrals of Rational Functions Leading to Inverse Trigonometry**
+Some integrals do not appear in standard inverse trigonometric form immediately but can be manipulated into the required forms.
+
+#### **Example 1:**
+\[
+\int \frac{dx}{x^2 + 4}
+\]
+Rewrite the denominator:
+\[
+\int \frac{dx}{2^2 + x^2}.
+\]
+Using the arctangent formula with \( a = 2 \):
+\[
+\frac{1}{2} \arctan\left(\frac{x}{2}\right) + C.
+\]
+
+#### **Example 2:**
+\[
+\int \frac{dx}{\sqrt{9 - x^2}}
+\]
+Recognizing it as the arcsine form with \( a = 3 \):
+\[
+\arcsin\left(\frac{x}{3}\right) + C.
+\]
+
+---
+
+## **3. Integration by Substitution and Partial Fractions**
+Inverse trigonometric integrals sometimes require algebraic manipulation.
+
+### **3.1 Example Using Substitution**
+\[
+\int \frac{dx}{(x^2 + 1)^{3/2}}
+\]
+Use \( x = \sinh \theta \), so that \( dx = \cosh \theta d\theta \) and \( x^2 + 1 = \cosh^2 \theta \). This simplifies the integral into a form involving inverse hyperbolic functions.
+
+### **3.2 Example Using Partial Fractions**
+\[
+\int \frac{x}{x^2 + 1} dx
+\]
+Rewrite:
+\[
+\int \frac{x dx}{x^2 + 1} = \frac{1}{2} \int \frac{2x dx}{x^2 + 1}.
+\]
+Recognizing \( 2x dx = d(x^2 + 1) \), the result is:
+\[
+\frac{1}{2} \ln |x^2 + 1| + C.
+\]
+
+---
+
+## **4. Summary**
+- **Arctan** integrals appear in denominators of the form \( a^2 + x^2 \).
+- **Arcsin** integrals appear in square roots of the form \( \sqrt{a^2 - x^2} \).
+- **Arcsec** integrals arise in fractions of the form \( x\sqrt{x^2 - a^2} \).
+- **Substitutions** (trigonometric, hyperbolic) and **partial fractions** help simplify complex cases.
+
+
+
+
+
+
+
+
+
+
+# **Properties of Definite Integrals Involving the Limits of Integration**
+
+The definite integral of a function \( f(x) \) over an interval \([a, b]\) is given by:
+
+\[
+I = \int_a^b f(x) \,dx
+\]
+
+This integral represents the **net area** under the curve of \( f(x) \) from \( x = a \) to \( x = b \). Various properties of definite integrals help simplify their evaluation and provide deeper insights into their behavior.
+
+---
+
+## **1. Reversal of Limits**
+\[
+\int_a^b f(x) \,dx = -\int_b^a f(x) \,dx
+\]
+### **Explanation:**  
+Swapping the limits of integration negates the value of the integral. This follows from the definition:
+
+\[
+\int_a^b f(x) \,dx = F(b) - F(a)
+\]
+
+Swapping \( a \) and \( b \) gives:
+
+\[
+\int_b^a f(x) \,dx = F(a) - F(b) = -\int_a^b f(x) \,dx
+\]
+
+**Implication:**  
+If an integral is easier to evaluate in reverse order, this property can be used to adjust the sign accordingly.
+
+---
+
+## **2. Zero Integral Property**
+\[
+\int_a^a f(x) \,dx = 0
+\]
+### **Explanation:**  
+If the upper and lower limits are the same, there is no interval of integration, so the integral evaluates to zero.
+
+---
+
+## **3. Additivity (Subinterval Property)**
+\[
+\int_a^b f(x) \,dx + \int_b^c f(x) \,dx = \int_a^c f(x) \,dx
+\]
+
+### **Explanation:**  
+If an integral is split at an intermediate point \( b \), then the sum of integrals over smaller intervals reconstructs the integral over the larger interval.
+
+**Implication:**  
+This property is particularly useful in breaking integrals into manageable parts, especially when given multiple integral conditions.
+
+---
+
+## **4. Linearity of Definite Integrals**
+For any constants \( c \) and \( d \):
+
+\[
+\int_a^b (c f(x) + d g(x)) \,dx = c \int_a^b f(x) \,dx + d \int_a^b g(x) \,dx
+\]
+
+### **Explanation:**  
+Integration distributes over addition and can factor out constants.
+
+---
+
+## **5. Integral of an Even Function Over a Symmetric Interval**
+If \( f(x) \) is **even**, meaning \( f(-x) = f(x) \), then:
+
+\[
+\int_{-a}^{a} f(x) \,dx = 2 \int_0^a f(x) \,dx
+\]
+
+### **Explanation:**  
+Since even functions are symmetric about the \( y \)-axis, the integral over \( [-a, a] \) is twice the integral over \( [0, a] \).
+
+**Example:**
+\[
+\int_{-2}^{2} x^2 \,dx = 2 \int_{0}^{2} x^2 \,dx
+\]
+
+---
+
+## **6. Integral of an Odd Function Over a Symmetric Interval**
+If \( f(x) \) is **odd**, meaning \( f(-x) = -f(x) \), then:
+
+\[
+\int_{-a}^{a} f(x) \,dx = 0
+\]
+
+### **Explanation:**  
+The positive and negative contributions cancel each other out.
+
+**Example:**
+\[
+\int_{-3}^{3} x^3 \,dx = 0
+\]
+
+---
+
+## **7. Integral of a Constant Function**
+\[
+\int_a^b c \,dx = c(b - a)
+\]
+
+### **Explanation:**  
+Since the integral sums up the function's values over the interval, for a constant function \( f(x) = c \), the area is simply a rectangle with height \( c \) and width \( (b - a) \).
+
+---
+
+## **8. Change of Variables (Substitution)**
+If \( x = g(t) \), then:
+
+\[
+\int_{g(a)}^{g(b)} f(x) \,dx = \int_a^b f(g(t)) g'(t) \,dt
+\]
+
+### **Explanation:**  
+A change of variables simplifies integral evaluation, especially in cases involving trigonometric or exponential functions.
+
+---
+
+## **9. Scaling of the Variable**
+If \( f(x) \) is integrated with a scaled variable \( kx \):
+
+\[
+\int_a^b f(kx) \,dx = \frac{1}{k} \int_{ka}^{kb} f(u) \,du
+\]
+
+### **Explanation:**  
+A change in the scale of \( x \) introduces a compensating factor \( \frac{1}{k} \).
+
+---
+
+## **10. Mean Value Theorem for Definite Integrals**
+If \( f(x) \) is continuous on \( [a, b] \), then there exists some \( c \in [a, b] \) such that:
+
+\[
+\int_a^b f(x) \,dx = f(c) (b - a)
+\]
+
+### **Explanation:**  
+There is at least one point where the function equals its average value over the interval.
+
+---
+
+### **Conclusion**
+These properties form the foundation for solving and simplifying definite integrals. 
+Mastering them provides powerful techniques for evaluating integrals efficiently, 
+particularly in applied mathematics, physics, and engineering.
+
+
+
+
+
+
+
+
+
+
+# **Calculating Definite Integrals Using Substitution**
+
+Substitution is a powerful technique for evaluating definite integrals, especially when the integrand is a 
+composite function. This method simplifies integration by transforming the integral into an easier form. 
+Below is a structured deep dive into the substitution method for definite integrals.
+
+---
+
+## **1. Understanding the Substitution Method**
+The substitution method (also called **u-substitution**) is based on the **chain rule** for differentiation. 
+If an integral involves a composite function of the form:
+
+\[
+\int f(g(x)) g'(x) \,dx
+\]
+
+We introduce a substitution:
+
+\[
+u = g(x) \quad \text{so that} \quad du = g'(x)dx
+\]
+
+which transforms the integral into:
+
+\[
+\int f(u) \,du
+\]
+
+This often results in a more straightforward integral to solve.
+
+---
+
+## **2. Steps for Definite Integrals Using Substitution**
+For a **definite integral**, we must also **adjust the limits** after substitution.
+
+### **Step 1: Choose a Suitable Substitution**
+- Identify an inner function \( g(x) \) inside the integral whose derivative is also present in the integral.
+- Let \( u = g(x) \), so that \( du = g'(x)dx \).
+
+### **Step 2: Change the Differential**
+- Compute \( du \) and express \( dx \) in terms of \( du \).
+- Substitute \( u \) and \( dx \) into the integral.
+
+### **Step 3: Adjust the Limits of Integration**
+Since we are solving a **definite integral**, the original limits \( x = a \) and \( x = b \) must be converted to the corresponding \( u \)-values:
+\[
+u_{\text{new lower limit}} = g(a), \quad u_{\text{new upper limit}} = g(b)
+\]
+
+### **Step 4: Integrate in Terms of \( u \)**
+- Solve the new integral \( \int f(u) \,du \).
+- Apply the **Fundamental Theorem of Calculus** by evaluating the result at the new limits.
+
+### **Step 5: Compute the Final Answer**
+- Evaluate the definite integral in terms of \( u \).
+- If necessary, convert back to \( x \), but this is usually unnecessary when limits are adjusted.
+
+---
+
+## **3. Example Problems**
+### **Example 1: Basic Substitution**
+Evaluate:
+\[
+I = \int_1^4 x \sqrt{x^2 + 3} \,dx
+\]
+
+#### **Step 1: Choose a Substitution**
+Let:
+\[
+u = x^2 + 3 \quad \Rightarrow \quad du = 2x dx
+\]
+
+Rewriting \( dx \):
+\[
+\frac{du}{2} = x dx
+\]
+
+#### **Step 2: Adjust the Limits**
+- When \( x = 1 \), \( u = 1^2 + 3 = 4 \).
+- When \( x = 4 \), \( u = 4^2 + 3 = 19 \).
+
+Thus, the new limits are \( u = 4 \) to \( u = 19 \).
+
+#### **Step 3: Transform the Integral**
+\[
+I = \int_4^{19} \sqrt{u} \cdot \frac{du}{2}
+\]
+
+Rewriting:
+\[
+I = \frac{1}{2} \int_4^{19} u^{\frac{1}{2}} \,du
+\]
+
+#### **Step 4: Solve the Integral**
+Using the power rule:
+\[
+\int u^n \,du = \frac{u^{n+1}}{n+1}
+\]
+for \( n = \frac{1}{2} \):
+\[
+I = \frac{1}{2} \times \frac{2}{3} u^{\frac{3}{2}} \Big|_4^{19}
+\]
+
+\[
+I = \frac{1}{3} \left( 19^{\frac{3}{2}} - 4^{\frac{3}{2}} \right)
+\]
+
+#### **Step 5: Compute the Final Answer**
+\[
+19^{\frac{3}{2}} = 19 \sqrt{19}, \quad 4^{\frac{3}{2}} = 8
+\]
+
+\[
+I = \frac{1}{3} \left( 19\sqrt{19} - 8 \right)
+\]
+
+This is the final answer.
+
+---
+
+## **4. Key Takeaways**
+1. **Choose the right substitution**: Pick \( u \) so that its derivative appears in the integral.
+2. **Adjust the limits**: Always update the integration limits based on the new variable.
+3. **Transform and integrate**: Rewrite the integral in terms of \( u \) and solve it.
+4. **Evaluate at new limits**: Apply the **Fundamental Theorem of Calculus**.
+5. **No need to revert back to \( x \)**: Since limits are updated, we compute directly in terms of \( u \).
+
+This method simplifies many otherwise complex integrals, making them much more manageable.
+
+
+
+
+
+
+
+
+
+
+# **The Area Bounded by a Curve and the X-Axis**  
+
+### **1. Understanding the Concept**  
+The **area bounded by a curve and the x-axis** refers to the **absolute area** enclosed between a 
+function \( y = f(x) \) and the x-axis over a given interval \([a, b]\).** This means that we 
+integrate the function over the given range, but we consider the absolute value of the integral 
+when the function dips below the x-axis.  
+
+### **2. General Formula**  
+For a function \( f(x) \) that crosses the x-axis within the given interval \([a, b]\), the area is computed as:  
+
+\[
+A = \int_{a}^{b} |f(x)| \, dx
+\]
+
+If \( f(x) \) is **entirely above the x-axis**, the area is simply:
+
+\[
+A = \int_{a}^{b} f(x) \, dx
+\]
+
+If \( f(x) \) is **partially below the x-axis**, we must break the integral at points where \( f(x) = 0 \) and integrate separately:
+
+\[
+A = \int_{a}^{c} -f(x) \, dx + \int_{c}^{b} f(x) \, dx
+\]
+
+where \( c \) is the root where \( f(x) = 0 \).
+
+---
+
+### **3. Finding the Bounded Area Step-by-Step**  
+
+#### **Step 1: Identify the Function and Limits**  
+Given a function \( f(x) \), determine the interval \([a, b]\) over which you need to find the area.
+
+#### **Step 2: Find the X-Intercepts**  
+Solve for \( x \) where \( f(x) = 0 \), as these are points where the function crosses the x-axis.
+
+#### **Step 3: Determine Where \( f(x) \) is Positive or Negative**  
+Check where the function is above or below the x-axis within the given interval.
+
+#### **Step 4: Split the Integral Accordingly**  
+If \( f(x) \) changes sign, split the integral at the intercepts and take the absolute value for negative regions.
+
+#### **Step 5: Compute the Integral**  
+Evaluate the definite integrals over each subinterval and sum the results.
+
+---
+
+### **4. Example Calculation**  
+Find the **bounded area** between the function \( f(x) = x^3 - 2 \) and the x-axis over \( x \in [-1, 1] \).  
+
+1. **Find the x-intercept:**  
+   \[
+   x^3 - 2 = 0 \Rightarrow x = \sqrt[3]{2} \approx 1.26
+   \]
+   Since \( 1.26 \notin [-1,1] \), check within this interval. The function is negative for \( x \in [-1, \sqrt[3]{2}] \) and positive for \( x \in [\sqrt[3]{2}, 1] \).
+
+2. **Split the Integral:**  
+   \[
+   A = \int_{-1}^{\sqrt[3]{2}} |x^3 - 2| \, dx + \int_{\sqrt[3]{2}}^{1} |x^3 - 2| \, dx
+   \]
+   Since \( f(x) \) is negative for \( x \in [-1, \sqrt[3]{2}] \), we take the negative:
+
+   \[
+   A = \int_{-1}^{\sqrt[3]{2}} (2 - x^3) \, dx + \int_{\sqrt[3]{2}}^{1} (x^3 - 2) \, dx
+   \]
+
+3. **Evaluate the Integrals:**  
+   Compute:
+
+   \[
+   \int (2 - x^3) dx = 2x - \frac{x^4}{4}
+   \]
+
+   \[
+   \int (x^3 - 2) dx = \frac{x^4}{4} - 2x
+   \]
+
+   Substituting limits and solving gives the total **bounded area = 4.5**.
+
+---
+
+### **5. Key Takeaways**  
+- The area is always **positive**, so take the **absolute value** when the function is negative.
+- Find **x-intercepts** to correctly split the integral.
+- **Break up the integral** when the function crosses the x-axis.
+- Compute the **integral piecewise** and sum the absolute values.
 
 
 
@@ -16574,6 +19927,139 @@ By mastering logarithms, exponent rules, and sign analysis, solving exponential 
 
 
 
+# **Improper Integrals**  
+
+Improper integrals extend the concept of definite integrals to cases where the interval of integration is 
+infinite or where the function has singularities. These integrals play a crucial role in mathematical analysis, 
+physics, and engineering.
+
+---
+
+## **1. Definition of Improper Integrals**  
+An improper integral occurs in two main cases:  
+
+1. **Infinite Limits of Integration:**  
+   \[
+   \int_{a}^{\infty} f(x) \,dx \quad \text{or} \quad \int_{-\infty}^{b} f(x) \,dx.
+   \]
+   The integration is extended to infinity, making the behavior of \( f(x) \) at infinity crucial.
+
+2. **Singularities in the Interval:**  
+   \[
+   \int_{a}^{b} f(x) \,dx,
+   \]
+   where \( f(x) \) has a **vertical asymptote** (i.e., it approaches \(\pm \infty\)) at some point \( c \) in \( (a, b) \).
+
+In both cases, the integral is evaluated as a **limit**, rather than directly computed.
+
+---
+
+## **2. Evaluating Improper Integrals**  
+
+### **Case 1: Infinite Limits of Integration**  
+For an integral of the form:
+
+\[
+\int_{a}^{\infty} f(x) \,dx,
+\]
+
+we define it as:
+
+\[
+\lim_{t \to \infty} \int_{a}^{t} f(x) \,dx.
+\]
+
+Similarly, for an integral from \( -\infty \):
+
+\[
+\int_{-\infty}^{b} f(x) \,dx = \lim_{t \to -\infty} \int_{t}^{b} f(x) \,dx.
+\]
+
+### **Case 2: Integrals with Singularities**  
+If \( f(x) \) is undefined or infinite at some \( c \) within \( (a, b) \), we split the integral at \( c \):
+
+\[
+\int_{a}^{b} f(x) \,dx = \lim_{\epsilon \to 0^+} \left( \int_{a}^{c-\epsilon} f(x) \,dx + \int_{c+\epsilon}^{b} f(x) \,dx \right).
+\]
+
+If at least one of these limits is infinite or does not exist, the integral **diverges**.
+
+---
+
+## **3. Convergence vs. Divergence**  
+
+An improper integral is said to **converge** if the limit exists and is finite. Otherwise, it **diverges**.
+
+### **Example 1: Convergent Integral**
+\[
+\int_{1}^{\infty} \frac{1}{x^2} \,dx.
+\]
+Using the power rule:
+
+\[
+\int x^{-2} dx = \frac{x^{-1}}{-1} = -\frac{1}{x}.
+\]
+
+Evaluating from \( 1 \) to \( \infty \):
+
+\[
+\left[ -\frac{1}{x} \right]_{1}^{\infty} = \left( -\frac{1}{\infty} \right) - (-1) = 1.
+\]
+
+Since the result is finite, the integral **converges**.
+
+---
+
+### **Example 2: Divergent Integral**
+\[
+\int_{1}^{\infty} \frac{1}{x} \,dx.
+\]
+This integral evaluates to:
+
+\[
+\ln |x| \Big|_{1}^{\infty} = \ln(\infty) - \ln(1) = \infty.
+\]
+
+Since the result is infinite, the integral **diverges**.
+
+---
+
+## **4. The p-Test for Improper Integrals**  
+For integrals of the form:
+
+\[
+\int_{1}^{\infty} \frac{1}{x^p} \,dx,
+\]
+
+the behavior depends on \( p \):
+
+- If \( p > 1 \), the integral **converges**.
+- If \( p \leq 1 \), the integral **diverges**.
+
+---
+
+## **5. Comparison Test for Convergence**  
+If \( 0 \leq f(x) \leq g(x) \) for all \( x \) in \( [a, \infty) \):
+
+- If \( \int_{a}^{\infty} g(x) \,dx \) converges, then \( \int_{a}^{\infty} f(x) \,dx \) **also converges**.
+- If \( \int_{a}^{\infty} f(x) \,dx \) diverges, then \( \int_{a}^{\infty} g(x) \,dx \) **also diverges**.
+
+This test is useful when direct integration is difficult.
+
+---
+
+## **6. Applications of Improper Integrals**
+- **Probability Theory:** Defining probability density functions (e.g., Gaussian distributions).
+- **Physics:** Computing total mass, charge, or energy in infinite regions.
+- **Engineering:** Evaluating impulse responses in control systems.
+- **Economics:** Discounted cash flow models for infinite time horizons.
+
+---
+
+## **7. Conclusion**
+Improper integrals provide a mathematical framework for dealing with infinite domains and singularities. 
+By understanding their convergence and divergence properties, we can evaluate their behavior and apply 
+them in various disciplines.
 
 
 
@@ -16585,15 +20071,156 @@ By mastering logarithms, exponent rules, and sign analysis, solving exponential 
 
 
 
+# **Integration by Substitution with Inverse Trigonometric Functions**
 
+### **1. Understanding the Need for Substitution**
+Integration by substitution is a powerful technique used to simplify integrals that involve inverse
+trigonometric functions. The goal is to transform a complicated integral into a more recognizable form 
+using an appropriate substitution.
 
+Inverse trigonometric functions commonly appear when integrating expressions of the forms:
 
+1. \( \sqrt{a^2 - x^2} \)  → **Arcsin Substitution**
+2. \( \sqrt{x^2 - a^2} \)  → **Arcsec Substitution**
+3. \( \sqrt{a^2 + x^2} \)  → **Arctan Substitution**
 
+These forms arise naturally from trigonometric identities and differentiation rules.
 
+---
 
+### **2. Standard Forms and Substitutions**
 
+#### **A. Integrals of the Form \( \frac{dx}{\sqrt{a^2 - x^2}} \)**
+- **Substitution:** \( x = a \sin\theta \), so that \( dx = a \cos\theta \, d\theta \).
+- **Result:**
+  \[
+  \int \frac{dx}{\sqrt{a^2 - x^2}} = \arcsin\left(\frac{x}{a}\right) + C.
+  \]
 
+**Example:**
+\[
+I = \int \frac{dx}{\sqrt{9 - x^2}}
+\]
 
+**Solution:**
+Let \( x = 3\sin\theta \), so that \( dx = 3\cos\theta \, d\theta \).
+
+\[
+I = \int \frac{3\cos\theta \, d\theta}{\sqrt{9 - 9\sin^2\theta}}.
+\]
+
+Using \( 9 - 9\sin^2\theta = 9\cos^2\theta \):
+
+\[
+I = \int \frac{3\cos\theta \, d\theta}{3\cos\theta} = \int d\theta = \theta + C.
+\]
+
+Since \( \theta = \arcsin(x/3) \), we get:
+
+\[
+I = \arcsin\left(\frac{x}{3}\right) + C.
+\]
+
+---
+
+#### **B. Integrals of the Form \( \frac{dx}{x^2 + a^2} \)**
+- **Substitution:** \( x = a \tan\theta \), so that \( dx = a\sec^2\theta \, d\theta \).
+- **Result:**
+  \[
+  \int \frac{dx}{x^2 + a^2} = \frac{1}{a} \arctan\left(\frac{x}{a}\right) + C.
+  \]
+
+**Example:**
+\[
+I = \int \frac{dx}{x^2 + 4}
+\]
+
+**Solution:**
+Let \( x = 2\tan\theta \), so that \( dx = 2\sec^2\theta \, d\theta \).
+
+\[
+I = \int \frac{2\sec^2\theta \, d\theta}{4\tan^2\theta + 4}.
+\]
+
+Factoring:
+
+\[
+I = \int \frac{2\sec^2\theta \, d\theta}{4(\tan^2\theta + 1)}.
+\]
+
+Since \( \tan^2\theta + 1 = \sec^2\theta \):
+
+\[
+I = \int \frac{2\sec^2\theta \, d\theta}{4\sec^2\theta} = \int \frac{2}{4} d\theta = \int \frac{1}{2} d\theta.
+\]
+
+\[
+I = \frac{1}{2} \theta + C.
+\]
+
+Since \( \theta = \arctan(x/2) \), we get:
+
+\[
+I = \frac{1}{2} \arctan\left(\frac{x}{2}\right) + C.
+\]
+
+---
+
+#### **C. Integrals of the Form \( \frac{dx}{\sqrt{x^2 - a^2}} \)**
+- **Substitution:** \( x = a\sec\theta \), so that \( dx = a\sec\theta\tan\theta \, d\theta \).
+- **Result:**
+  \[
+  \int \frac{dx}{\sqrt{x^2 - a^2}} = \ln\left| x + \sqrt{x^2 - a^2} \right| + C.
+  \]
+
+**Example:**
+\[
+I = \int \frac{dx}{\sqrt{x^2 - 16}}
+\]
+
+**Solution:**
+Let \( x = 4\sec\theta \), so that \( dx = 4\sec\theta\tan\theta \, d\theta \).
+
+\[
+I = \int \frac{4\sec\theta\tan\theta \, d\theta}{\sqrt{16\sec^2\theta - 16}}.
+\]
+
+Since \( 16\sec^2\theta - 16 = 16(\sec^2\theta - 1) = 16\tan^2\theta \),
+
+\[
+I = \int \frac{4\sec\theta\tan\theta \, d\theta}{4\tan\theta}.
+\]
+
+Canceling:
+
+\[
+I = \int \sec\theta \, d\theta = \ln|\sec\theta + \tan\theta| + C.
+\]
+
+Since \( \sec\theta = x/4 \) and \( \tan\theta = \sqrt{x^2 - 16}/4 \), we get:
+
+\[
+I = \ln\left| \frac{x}{4} + \frac{\sqrt{x^2 - 16}}{4} \right| + C.
+\]
+
+Multiplying by 4:
+
+\[
+I = \ln\left| x + \sqrt{x^2 - 16} \right| + C.
+\]
+
+---
+
+### **3. Key Takeaways**
+1. **Recognize standard forms** to choose the right substitution.
+2. **Use trigonometric identities** to simplify expressions.
+3. **Convert back to \( x \)** after solving in terms of \( \theta \).
+4. **Inverse trigonometric functions often arise in integrals involving square roots**.
+
+---
+
+This method is essential in calculus and is widely used in physics, engineering, and machine learning 
+applications like probability distributions and kernel functions.
 
 
 
