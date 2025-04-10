@@ -26041,6 +26041,1082 @@ f''(x) = 6x - 6
 
 
 
+## **Using the First Derivative Test to Classify Local Extrema**
+
+---
+
+### **Overview**
+
+The **first derivative test** is a method used to determine **local maxima and minima** of a function by 
+analyzing the sign of the derivative \( f'(x) \) around **critical points**.
+
+---
+
+### **Step-by-Step Process**
+
+#### **1. Find the Critical Points**
+
+A **critical point** occurs where:
+- \( f'(x) = 0 \), or  
+- \( f'(x) \) is undefined  
+and \( x \) lies in the domain of \( f \).
+
+---
+
+#### **2. Analyze the Sign of \( f'(x) \) Around Each Critical Point**
+
+Choose test points to the **left and right** of each critical point \( c \), and evaluate the **sign of \( f'(x) \)**:
+
+- If \( f'(x) \) changes from **positive to negative**, \( f \) has a **local maximum at \( c \)**.
+- If \( f'(x) \) changes from **negative to positive**, \( f \) has a **local minimum at \( c \)**.
+- If \( f'(x) \) has the **same sign on both sides**, there is **no local extremum** at \( c \).
+
+---
+
+### **Visual Summary**
+
+| \( f'(x) \) Left of \( c \) | \( f'(x) \) Right of \( c \) | Result              |
+|-----------------------------|------------------------------|---------------------|
+| \( + \)                     | \( - \)                      | Local Maximum at \( c \) |
+| \( - \)                     | \( + \)                      | Local Minimum at \( c \) |
+| Same Sign                   | Same Sign                    | No Local Extrema     |
+
+---
+
+### **Example**
+
+**Given:**  
+\[
+f(x) = x^3 - 3x^2 + 2
+\]
+
+**Step 1:** Find \( f'(x) \)
+
+\[
+f'(x) = 3x^2 - 6x = 3x(x - 2)
+\Rightarrow f'(x) = 0 \text{ at } x = 0, x = 2
+\]
+
+**Step 2:** Test sign changes
+
+- **Interval**: \( (-\infty, 0) \): pick \( x = -1 \): \( f'(-1) = 3(-1)(-3) = 9 > 0 \)
+- **Interval**: \( (0, 2) \): pick \( x = 1 \): \( f'(1) = 3(1)(-1) = -3 < 0 \)
+- **Interval**: \( (2, \infty) \): pick \( x = 3 \): \( f'(3) = 3(3)(1) = 9 > 0 \)
+
+**Conclusion:**
+- At \( x = 0 \): \( f'(x) \) changes **positive → negative** → **local max**
+- At \( x = 2 \): \( f'(x) \) changes **negative → positive** → **local min**
+
+---
+
+### **Why This Works**
+
+The first derivative tells us about **increasing/decreasing behavior**:
+- \( f'(x) > 0 \): function increases
+- \( f'(x) < 0 \): function decreases  
+A change in this behavior signals a **turning point**, i.e., an extremum.
+
+---
+
+### **Use Cases**
+- When the **second derivative test is inconclusive** (e.g., \( f''(x) = 0 \))
+- When visualizing function behavior using a **sign chart**
+- For **non-differentiable functions**, checking **slopes** can still help
+
+---
+
+### **Caution**
+
+- Ensure the point is **within the domain**.
+- The test only gives **local** behavior, not global extrema.
+- Some functions may have **no sign change**, hence no extremum.
+
+---
+
+
+
+
+
+
+
+
+
+
+## **The Second Derivative Test**
+
+---
+
+### **Overview**
+
+The **second derivative test** is a calculus tool used to classify **critical points** of a 
+function \( f(x) \) as **local minima**, **local maxima**, or **inconclusive**, by examining the **concavity** 
+via the second derivative \( f''(x) \).
+
+---
+
+### **Step-by-Step Process**
+
+#### **Step 1: Find the First Derivative \( f'(x) \)**
+
+Solve:
+\[
+f'(x) = 0
+\]
+to find **critical points**. These are the points where the slope of the tangent is horizontal — potential 
+locations of local extrema.
+
+---
+
+#### **Step 2: Compute the Second Derivative \( f''(x) \)**
+
+Evaluate \( f''(x) \) **at each critical point** \( x = c \):
+
+- If \( f''(c) > 0 \): function is **concave up** → **local minimum** at \( c \)
+- If \( f''(c) < 0 \): function is **concave down** → **local maximum** at \( c \)
+- If \( f''(c) = 0 \): the test is **inconclusive** → use the **first derivative test**
+
+---
+
+### **Why It Works**
+
+- **Concave Up (Cup-shaped)**: the function bends **upward** around the point → minimum
+- **Concave Down (Cap-shaped)**: the function bends **downward** around the point → maximum
+
+This uses the **curvature** of the graph to determine behavior at critical points.
+
+---
+
+### **Example**
+
+Let:
+
+\[
+f(x) = x^3 - 3x^2 + 4
+\]
+
+#### **Step 1: First Derivative**
+
+\[
+f'(x) = 3x^2 - 6x = 3x(x - 2)
+\Rightarrow \text{Critical points: } x = 0, 2
+\]
+
+#### **Step 2: Second Derivative**
+
+\[
+f''(x) = 6x - 6
+\]
+
+- \( f''(0) = 6(0) - 6 = -6 < 0 \Rightarrow \) local **maximum** at \( x = 0 \)
+- \( f''(2) = 6(2) - 6 = 6 > 0 \Rightarrow \) local **minimum** at \( x = 2 \)
+
+---
+
+### **Comparison with First Derivative Test**
+
+| Feature                        | First Derivative Test         | Second Derivative Test      |
+|-------------------------------|-------------------------------|-----------------------------|
+| Based on                      | Sign of \( f'(x) \) around critical point | Value of \( f''(x) \) at critical point |
+| Detects inflection points     | Yes                           | No                          |
+| Works when \( f''(x) = 0 \)?  | Yes                           | No (inconclusive)           |
+| Useful for                    | Piecewise or sign-based logic | Concavity-focused problems  |
+
+---
+
+### **Geometric Interpretation**
+
+- **\( f''(x) > 0 \)**: Graph bends upward ⟶ bowl shape ⟶ **minimum**
+- **\( f''(x) < 0 \)**: Graph bends downward ⟶ dome shape ⟶ **maximum**
+
+---
+
+### **When the Test Fails**
+
+If \( f''(c) = 0 \), the test **does not give information**. Consider:
+\[
+f(x) = x^4 \Rightarrow f'(x) = 4x^3, \quad f''(x) = 12x^2
+\Rightarrow f''(0) = 0
+\]
+
+Here, second derivative test fails. Use the **first derivative test** instead:
+- \( f'(x) < 0 \) for \( x < 0 \), \( f'(x) > 0 \) for \( x > 0 \) ⟶ **local minimum at \( x = 0 \)**
+
+---
+
+### **Summary Table**
+
+| \( f'(c) = 0 \), \( f''(c) \) | Result                         |
+|------------------------------|--------------------------------|
+| \( > 0 \)                    | Local **minimum**              |
+| \( < 0 \)                    | Local **maximum**              |
+| \( = 0 \)                    | **Inconclusive**               |
+
+---
+
+
+
+
+
+
+
+
+## **Points of Inflection**
+
+A **point of inflection** (or inflection point) is a point on a curve where the concavity 
+changes — from **concave up** to **concave down**, or vice versa. It marks a transition in the
+behavior of the function’s curvature, not necessarily a maximum or minimum.
+
+---
+
+### **1. Basic Concept**
+A point \( x = c \) is an **inflection point** of a function \( f(x) \) if:
+
+- The second derivative \( f''(x) \) changes sign at \( x = c \)
+- The function \( f(x) \) is **continuous** and **differentiable** at or around \( x = c \)
+
+---
+
+### **2. Concavity and Second Derivative**
+- If \( f''(x) > 0 \) on an interval, \( f(x) \) is **concave up** (shaped like a cup)
+- If \( f''(x) < 0 \) on an interval, \( f(x) \) is **concave down** (shaped like a cap)
+
+**Inflection occurs** when:
+- \( f''(c) = 0 \) or \( f''(c) \) **does not exist**, and
+- There is a **sign change** in \( f''(x) \) at \( x = c \)
+
+> **Note:** \( f''(c) = 0 \) is **necessary but not sufficient**. The concavity must actually change.
+
+---
+
+### **3. Analytical Steps to Find Points of Inflection**
+Given a function \( f(x) \):
+
+1. **Compute** \( f''(x) \)
+2. **Find** values of \( x \) where \( f''(x) = 0 \) or \( f''(x) \) is undefined
+3. **Check the sign change** of \( f''(x) \) around these points
+   - Use a **sign chart** or test values in intervals
+
+---
+
+### **4. Example**
+Let’s take \( f(x) = x^3 \)
+
+- First derivative: \( f'(x) = 3x^2 \)
+- Second derivative: \( f''(x) = 6x \)
+
+Set \( f''(x) = 0 \):  
+\( 6x = 0 \Rightarrow x = 0 \)
+
+Test sign change:
+- \( f''(-1) = -6 < 0 \)
+- \( f''(1) = 6 > 0 \)
+
+Since \( f''(x) \) changes from negative to positive, **\( x = 0 \)** is a **point of inflection**.
+
+---
+
+### **5. Geometric Interpretation**
+At a point of inflection:
+- The **tangent line** may cross the curve (as in \( x^3 \))
+- The curve transitions in its bending — from "holding water" to "shedding water" or vice versa
+
+---
+
+### **6. Practical Significance**
+Inflection points are useful in:
+- **Curve sketching**
+- **Optimization problems** (e.g., changes in acceleration or economic marginal returns)
+- **Data modeling** to identify behavioral changes
+
+---
+
+
+
+
+
+
+
+
+
+
+## **Probability Mass Functions (PMFs) of Discrete Random Variables**
+
+---
+
+### **1. What is a Discrete Random Variable?**
+
+A **discrete random variable** is a variable that can take on a **finite or countably infinite** number of distinct outcomes. 
+Examples include:
+
+- Number of heads in 3 coin tosses
+- Number of customers arriving at a shop in an hour
+- Result of a die roll (1 through 6)
+
+---
+
+### **2. Definition of PMF**
+
+The **Probability Mass Function (PMF)** of a discrete random variable \( X \) is a function:
+
+\[
+p(x) = P(X = x)
+\]
+
+It gives the **probability that the random variable \( X \) takes the value \( x \)**.
+
+---
+
+### **3. Properties of a PMF**
+
+A valid PMF must satisfy the following:
+
+1. **Non-negativity**:  
+   \[
+   p(x) \geq 0 \quad \text{for all } x
+   \]
+
+2. **Normalization (Total Probability = 1)**:  
+   \[
+   \sum_x p(x) = 1
+   \]
+
+3. **Support**: PMF is defined **only** for values in the **range of \( X \)** — values outside get zero probability.
+
+---
+
+### **4. Example: Tossing a Fair Coin Twice**
+
+Define \( X \) = number of heads. Sample space:  
+\[
+\{HH, HT, TH, TT\}
+\]
+
+\( X \) can take values: \( \{0, 1, 2\} \)
+
+- \( P(X = 0) = \frac{1}{4} \) (TT)
+- \( P(X = 1) = \frac{2}{4} = \frac{1}{2} \) (HT, TH)
+- \( P(X = 2) = \frac{1}{4} \) (HH)
+
+So the PMF is:
+\[
+p(x) =
+\begin{cases}
+\frac{1}{4} & x = 0 \\
+\frac{1}{2} & x = 1 \\
+\frac{1}{4} & x = 2 \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+---
+
+### **5. Graphical Representation**
+
+A PMF can be visualized as a **bar chart**, with:
+- **x-axis**: possible values of \( X \)
+- **y-axis**: \( p(x) \) for each \( x \)
+
+Each bar represents the height of the probability at each outcome.
+
+---
+
+### **6. Use in Calculations**
+
+Once the PMF is known, it enables calculations like:
+
+- **Expected value**:
+  \[
+  E[X] = \sum_x x \cdot p(x)
+  \]
+
+- **Variance**:
+  \[
+  \text{Var}(X) = E[X^2] - (E[X])^2
+  \]
+
+---
+
+### **7. Common Discrete Distributions with PMFs**
+
+| Distribution      | PMF                                                                                  | Support                     |
+|------------------|---------------------------------------------------------------------------------------|-----------------------------|
+| **Bernoulli(p)** | \( p(x) = p^x (1 - p)^{1 - x} \)                                                      | \( x \in \{0,1\} \)         |
+| **Binomial(n, p)** | \( p(x) = \binom{n}{x} p^x (1 - p)^{n - x} \)                                       | \( x = 0, 1, ..., n \)      |
+| **Poisson(λ)**   | \( p(x) = \frac{e^{-\lambda} \lambda^x}{x!} \)                                        | \( x = 0, 1, 2, \dots \)    |
+| **Geometric(p)** | \( p(x) = (1 - p)^{x - 1} p \)                                                        | \( x = 1, 2, 3, \dots \)    |
+
+---
+
+### **8. PMF vs PDF**
+
+- **PMF** is used for **discrete** variables
+- **PDF** (Probability Density Function) is for **continuous** variables
+
+PMFs assign probability **directly to points**; PDFs assign density, and actual probability comes from **integrating** over intervals.
+
+---
+
+
+
+
+
+
+
+
+## **Expected Values of Discrete Random Variables**
+
+---
+
+### **1. What is Expected Value?**
+
+The **expected value** of a discrete random variable \( X \), denoted as \( E[X] \), represents the **long-run average** or **mean** 
+value of \( X \) over many repeated trials of the underlying experiment.
+
+Think of it as the **center of mass** of the probability distribution.
+
+---
+
+### **2. Formal Definition**
+
+For a discrete random variable \( X \) with a probability mass function \( p(x) = P(X = x) \), the expected value is defined as:
+
+\[
+E[X] = \sum_x x \cdot p(x)
+\]
+
+This is a **weighted average**, where each value of \( X \) is weighted by its probability.
+
+---
+
+### **3. Example: Fair Die Roll**
+
+Let \( X \) be the outcome when rolling a fair six-sided die. Then:
+
+- Values of \( X \): \( \{1, 2, 3, 4, 5, 6\} \)
+- PMF: \( p(x) = \frac{1}{6} \) for all \( x \)
+
+\[
+E[X] = \sum_{x=1}^{6} x \cdot \frac{1}{6}
+= \frac{1+2+3+4+5+6}{6} = \frac{21}{6} = 3.5
+\]
+
+So, the expected value is **3.5**, even though 3.5 is not an actual outcome.
+
+---
+
+### **4. Linearity of Expectation**
+
+For any two discrete random variables \( X \), \( Y \), and constants \( a, b \):
+
+\[
+E[aX + bY] = aE[X] + bE[Y]
+\]
+
+This holds **even if \( X \) and \( Y \) are dependent**.
+
+---
+
+### **5. Expectation of Functions of \( X \)**
+
+If \( g(X) \) is a function of a random variable \( X \), then:
+
+\[
+E[g(X)] = \sum_x g(x) \cdot p(x)
+\]
+
+**Example:** If \( X \) is a fair die roll, and \( g(x) = x^2 \), then:
+
+\[
+E[X^2] = \sum_{x=1}^{6} x^2 \cdot \frac{1}{6}
+= \frac{1^2 + 2^2 + \dots + 6^2}{6}
+= \frac{91}{6} \approx 15.17
+\]
+
+---
+
+### **6. Expectation vs. Sample Mean**
+
+- **Expected value**: Theoretical long-run average (population-level)
+- **Sample mean**: Empirical average from observed data
+
+As the number of samples increases, the sample mean **converges to the expected value** (Law of Large Numbers).
+
+---
+
+### **7. Common Expected Values**
+
+| Distribution        | Random Variable \( X \)     | Expected Value \( E[X] \)       |
+|---------------------|-----------------------------|---------------------------------|
+| **Bernoulli(p)**    | \( X \in \{0,1\} \)         | \( p \)                         |
+| **Binomial(n, p)**  | \( X = \# \text{ of successes} \) | \( np \)                        |
+| **Geometric(p)**    | \( X = \text{trials until 1st success} \) | \( \frac{1}{p} \)          |
+| **Poisson(λ)**      | \( X = \# \text{ of events} \)   | \( \lambda \)                  |
+
+---
+
+### **8. Applications**
+
+- **Risk analysis**: Expected profit/loss
+- **Game theory**: Expected payoff
+- **Insurance**: Expected claim amount
+- **Data science**: Centering data, evaluating model predictions
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## **Qualitative Analysis of Differential Equations**
+
+Qualitative analysis refers to the study of differential equations without necessarily solving them analytically. 
+It focuses on the **behavior** and **structure** of solutions—such as stability, equilibrium, 
+and long-term trends—using tools from geometry, analysis, and linear algebra.
+
+---
+
+### **1. Core Concepts**
+
+#### **a. Direction Fields (Slope Fields)**
+- A graphical tool to visualize solutions of first-order differential equations.
+- At each point \( (x, y) \), draw a short line segment with slope \( \frac{dy}{dx} = f(x, y) \).
+- Provides insight into solution behavior without solving.
+
+#### **b. Equilibrium Points**
+- **Definition**: Points where the derivative is zero (e.g. \( \frac{dy}{dt} = f(y) = 0 \)).
+- **Types**:
+  - **Stable**: Nearby solutions converge to the equilibrium (attractors).
+  - **Unstable**: Nearby solutions diverge.
+  - **Semi-stable**: Attract on one side, repel on the other.
+
+---
+
+### **2. Phase Line and Phase Plane Analysis**
+
+#### **a. Phase Line (1D Systems)**
+- Used for autonomous equations: \( \frac{dy}{dt} = f(y) \).
+- Plot \( f(y) \) against \( y \), identify zeros, and test sign of \( f(y) \) in intervals.
+- Arrows indicate direction of motion: increasing or decreasing \( y(t) \).
+
+#### **b. Phase Plane (2D Systems)**
+- For systems like:
+  \[
+  \frac{dx}{dt} = f(x, y), \quad \frac{dy}{dt} = g(x, y)
+  \]
+- **Nullclines**: Curves where \( \frac{dx}{dt} = 0 \) or \( \frac{dy}{dt} = 0 \).
+- **Trajectories**: Paths followed by the system in the \( (x, y) \)-plane.
+- **Fixed Points**: Where both derivatives are zero.
+
+---
+
+### **3. Linearization and Stability (Near Equilibrium Points)**
+
+#### **a. Linear Systems**
+- System: \( \frac{d\mathbf{x}}{dt} = A\mathbf{x} \)
+- Solution behavior determined by the eigenvalues of matrix \( A \).
+
+#### **b. Nonlinear Systems (Local Linearization)**
+- Use Jacobian matrix \( J \) at an equilibrium point:
+  \[
+  J = \begin{bmatrix}
+  \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} \\
+  \frac{\partial g}{\partial x} & \frac{\partial g}{\partial y}
+  \end{bmatrix}
+  \]
+- Eigenvalues of \( J \) classify fixed point:
+  - **Real & negative**: Stable node
+  - **Real & positive**: Unstable node
+  - **Opposite signs**: Saddle (unstable)
+  - **Complex with negative real part**: Spiral sink
+  - **Complex with positive real part**: Spiral source
+
+---
+
+### **4. Stability Analysis**
+
+#### **a. Lyapunov Stability**
+- A function \( V(x) \) such that:
+  - \( V(x) > 0 \), \( V(0) = 0 \)
+  - \( \frac{dV}{dt} = \nabla V \cdot f(x) \leq 0 \)
+- Indicates **stability** without solving the system.
+
+#### **b. Bifurcation Analysis**
+- Study how qualitative behavior of solutions changes as a parameter varies.
+- Common bifurcations: Saddle-node, pitchfork, Hopf.
+
+---
+
+### **5. Long-Term Behavior and Limit Sets**
+
+#### **a. Limit Cycles**
+- Closed trajectories in phase space.
+- Represent **periodic** behavior; common in biological and chemical systems.
+
+#### **b. Attractors**
+- Sets toward which nearby trajectories converge.
+- Includes:
+  - **Fixed points**
+  - **Limit cycles**
+  - **Strange attractors** (chaotic systems)
+
+---
+
+### **6. Tools and Theorems**
+
+- **Poincaré–Bendixson Theorem** (2D systems): If a bounded trajectory doesn't approach an equilibrium, it approaches a closed orbit.
+- **Hartman–Grobman Theorem**: Near a hyperbolic fixed point, the nonlinear system behaves like its linearization.
+- **Center Manifold Theory**: Handles systems with eigenvalues having zero real part.
+
+---
+
+### **Applications**
+- **Physics**: Oscillations, stability of mechanical systems.
+- **Biology**: Population dynamics, predator-prey models (Lotka–Volterra).
+- **Engineering**: Control theory, circuit analysis.
+- **Economics**: Dynamical models of markets or consumption.
+
+---
+
+
+
+
+
+
+
+
+
+## **Cumulative Distribution Functions for Discrete Random Variables**
+
+A **Cumulative Distribution Function (CDF)** provides a complete description of the distribution of a random variable. For discrete random variables, it captures the probability that the variable takes a value **less than or equal to** a specific number.
+
+---
+
+### **1. Definition**
+
+For a discrete random variable \( X \), the **Cumulative Distribution Function (CDF)** is defined as:
+
+\[
+F_X(x) = P(X \leq x)
+\]
+
+This means \( F_X(x) \) gives the probability that \( X \) takes a value less than or equal to \( x \).
+
+---
+
+### **2. Key Properties of the CDF**
+
+- **Non-decreasing**: \( F_X(x) \leq F_X(y) \) if \( x < y \)
+- **Right-continuous**: \( \lim_{t \to x^+} F_X(t) = F_X(x) \)
+- **Bounded**: \( \lim_{x \to -\infty} F_X(x) = 0 \) and \( \lim_{x \to \infty} F_X(x) = 1 \)
+- **Step Function**: In the discrete case, the CDF increases only at the points where the random variable takes values.
+
+---
+
+### **3. Relationship with the Probability Mass Function (PMF)**
+
+The PMF \( p(x) = P(X = x) \) and the CDF \( F_X(x) \) are related as:
+
+\[
+F_X(x) = \sum_{t \leq x} p(t)
+\]
+
+\[
+p(x) = F_X(x) - F_X(x^-)
+\]
+(where \( F_X(x^-) = \lim_{t \to x^-} F_X(t) \))
+
+This difference gives the **jump size** at each point \( x \) and is equal to the probability mass at \( x \).
+
+---
+
+### **4. Example**
+
+Let \( X \) be a discrete random variable taking values \( \{1, 2, 3, 5\} \) with PMF:
+
+\[
+P(X = 1) = 0.1, \quad P(X = 2) = 0.3, \quad P(X = 3) = 0.4, \quad P(X = 5) = 0.2
+\]
+
+Then the CDF \( F_X(x) \) is:
+
+| \( x \)   | \( F_X(x) = P(X \leq x) \) |
+|----------|----------------------------|
+| \( x < 1 \) | 0                          |
+| \( 1 \leq x < 2 \) | 0.1                      |
+| \( 2 \leq x < 3 \) | 0.4                      |
+| \( 3 \leq x < 5 \) | 0.8                      |
+| \( x \geq 5 \)     | 1.0                      |
+
+**Graphically**: The CDF is a step function, with jumps of size 0.1, 0.3, 0.4, and 0.2 at \( x = 1, 2, 3, 5 \), respectively.
+
+---
+
+### **5. Usage of the CDF**
+
+#### a. **Probability Calculations**
+
+- **Exact Value**:
+  \[
+  P(X = x) = F_X(x) - F_X(x^-)
+  \]
+
+- **Interval**:
+  \[
+  P(a < X \leq b) = F_X(b) - F_X(a)
+  \]
+
+  \[
+  P(a \leq X \leq b) = F_X(b) - F_X(a^-)
+  \]
+
+- **Tail Probabilities**:
+  \[
+  P(X > x) = 1 - F_X(x)
+  \]
+
+---
+
+### **6. Inverse CDF and Simulations**
+
+For discrete distributions, the **inverse CDF** (or quantile function) is used for random sampling:
+- Generate a uniform random number \( u \in (0,1) \)
+- Return the smallest \( x \) such that \( F_X(x) \geq u \)
+
+This is essential for simulating discrete distributions.
+
+---
+
+### **7. Common Discrete Distributions and Their CDFs**
+
+#### a. **Bernoulli(p)**
+\[
+F_X(x) = 
+\begin{cases}
+0 & x < 0 \\
+1 - p & 0 \leq x < 1 \\
+1 & x \geq 1
+\end{cases}
+\]
+
+#### b. **Binomial(n, p)**
+\[
+F_X(x) = \sum_{k=0}^{\lfloor x \rfloor} \binom{n}{k} p^k (1-p)^{n-k}
+\]
+
+#### c. **Geometric(p)**
+\[
+F_X(x) = 1 - (1 - p)^{\lfloor x \rfloor + 1}, \quad x \geq 0
+\]
+
+#### d. **Poisson(λ)**
+\[
+F_X(x) = \sum_{k=0}^{\lfloor x \rfloor} \frac{e^{-\lambda} \lambda^k}{k!}
+\]
+
+---
+
+### **8. Comparing Discrete CDFs**
+
+- If \( F_X(x) \leq F_Y(x) \) for all \( x \), then \( Y \) is **stochastically larger** than \( X \).
+- Useful in reliability, queuing theory, and stochastic dominance.
+
+---
+
+### **9. Practical Applications**
+
+- **Probabilistic modeling**: in risk analysis, decision theory.
+- **Data fitting**: estimating CDFs from empirical data (empirical CDFs).
+- **Random sampling**: using inverse CDF for simulations.
+- **Statistical tests**: Kolmogorov-Smirnov test uses CDFs for comparing distributions.
+
+---
+
+
+
+
+
+
+
+## **Phi Look-Up Table (Standard Normal CDF Table)**
+
+The **Phi function**, denoted \( \Phi(z) \), is the **cumulative distribution function (CDF)** 
+of the **standard normal distribution** \( N(0, 1) \). It gives the probability that a standard 
+normal variable \( Z \) is less than or equal to a given value \( z \):
+
+\[
+\Phi(z) = P(Z \leq z) = \int_{-\infty}^{z} \frac{1}{\sqrt{2\pi}} e^{-t^2/2} \, dt
+\]
+
+Since this integral has no closed-form solution, values of \( \Phi(z) \) are typically obtained 
+from a **standard normal table** (Phi look-up table) or computed numerically.
+
+---
+
+### **Structure of a Phi Table**
+
+- The **rows** represent the value of \( z \) up to the first decimal place (e.g., 0.0, 0.1, 0.2, ...).
+- The **columns** represent the second decimal place (e.g., 0.00, 0.01, ..., 0.09).
+- The **intersection** of row \( z \) and column \( c \) gives \( \Phi(z + c) \).
+
+---
+
+### **Sample Values from a Phi Table**
+
+| \( z \)  | 0.00   | 0.01   | 0.02   | 0.03   | 0.04   | 0.05   | 0.06   | 0.07   | 0.08   | 0.09   |
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| **0.0** | 0.5000 | 0.5040 | 0.5080 | 0.5120 | 0.5160 | 0.5199 | 0.5239 | 0.5279 | 0.5319 | 0.5359 |
+| **0.1** | 0.5398 | 0.5438 | 0.5478 | 0.5517 | 0.5557 | 0.5596 | 0.5636 | 0.5675 | 0.5714 | 0.5753 |
+| **0.2** | 0.5793 | 0.5832 | 0.5871 | 0.5910 | 0.5948 | 0.5987 | 0.6026 | 0.6064 | 0.6103 | 0.6141 |
+| **1.0** | 0.8413 | 0.8438 | 0.8461 | 0.8485 | 0.8508 | 0.8531 | 0.8554 | 0.8577 | 0.8599 | 0.8621 |
+| **1.5** | 0.9332 | 0.9338 | 0.9345 | 0.9352 | 0.9357 | 0.9362 | 0.9368 | 0.9373 | 0.9379 | 0.9384 |
+| **2.0** | 0.9772 | 0.9773 | 0.9774 | 0.9776 | 0.9777 | 0.9778 | 0.9779 | 0.9780 | 0.9781 | 0.9783 |
+
+---
+
+### **Usage**
+
+To find \( \Phi(1.23) \):
+- Look at **row 1.2**, column **0.03**
+- Result: \( \Phi(1.23) \approx 0.8907 \)
+
+To find \( P(Z > z) \):  
+\[
+P(Z > z) = 1 - \Phi(z)
+\]
+
+To find probabilities for arbitrary normal distributions \( X \sim N(\mu, \sigma^2) \), **standardize**:
+\[
+P(X \leq x) = \Phi\left( \frac{x - \mu}{\sigma} \right)
+\]
+
+---
+
+
+
+
+
+
+
+
+
+
+## **The Standard Normal Distribution**
+
+---
+
+### **Definition**
+
+The **standard normal distribution** is a special case of the normal (Gaussian) distribution with:
+
+- Mean \( \mu = 0 \)
+- Standard deviation \( \sigma = 1 \)
+
+A random variable \( Z \) that follows this distribution is denoted:
+
+\[
+Z \sim \mathcal{N}(0, 1)
+\]
+
+Its **probability density function (PDF)** is:
+
+\[
+f(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2}
+\]
+
+---
+
+### **Key Properties**
+
+| Property | Description |
+|----------|-------------|
+| **Symmetry** | Symmetric about \( z = 0 \). That is, \( \Phi(-z) = 1 - \Phi(z) \) |
+| **Total Area** | Area under the curve is 1 |
+| **Bell Shape** | Peaks at 0 and tails off exponentially |
+| **Inflection Points** | At \( z = \pm 1 \) |
+| **Empirical Rule** | Approx. 68% within 1 std. dev., 95% within 2, 99.7% within 3 |
+
+---
+
+### **Standardization (Z-score)**
+
+To convert a normal random variable \( X \sim \mathcal{N}(\mu, \sigma^2) \) to a standard normal variable:
+
+\[
+Z = \frac{X - \mu}{\sigma}
+\]
+
+This process is called **standardization** and allows using the standard normal table (Φ table).
+
+---
+
+### **Cumulative Distribution Function (CDF)**
+
+\[
+\Phi(z) = P(Z \leq z) = \int_{-\infty}^{z} \frac{1}{\sqrt{2\pi}} e^{-t^2/2} dt
+\]
+
+- No closed-form.
+- Approximated via tables or software (e.g., `scipy.stats.norm.cdf(z)` in Python).
+- Tells the probability that a standard normal variable is less than or equal to a value.
+
+---
+
+### **Common Probabilities**
+
+| \( z \) | \( \Phi(z) \) | \( P(-z \leq Z \leq z) \) |
+|--------|----------------|---------------------------|
+| 1.0    | 0.8413         | 0.6826                    |
+| 1.96   | 0.9750         | 0.9500                    |
+| 2.0    | 0.9772         | 0.9544                    |
+| 3.0    | 0.9987         | 0.9974                    |
+
+---
+
+### **Applications**
+
+- **Hypothesis testing**: Compute p-values from z-scores
+- **Confidence intervals**: Use critical z-values (e.g., \( z = 1.96 \) for 95% CI)
+- **Central Limit Theorem**: Sampling distributions approach normality
+- **Z-tables**: Aid in calculating left-tail probabilities
+
+---
+
+### **Visualization**
+
+The curve is bell-shaped with:
+- Peak at 0
+- Inflection points at ±1
+- Tails tapering symmetrically
+
+Plotting:
+
+\[
+f(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2}
+\]
+
+creates the iconic normal curve.
+
+---
+
+
+
+
+
+
+
+
+
+
+## **The Binomial Distribution**
+
+---
+
+### **Definition**
+
+The **binomial distribution** models the number of **successes** in a fixed number of independent Bernoulli 
+trials (yes/no outcomes), each with the same probability of success.
+
+A discrete random variable \( X \sim \text{Bin}(n, p) \) follows a binomial distribution if:
+
+- \( n \): number of trials
+- \( p \): probability of success on a single trial
+- \( X \): number of successes in those \( n \) trials
+
+---
+
+### **Probability Mass Function (PMF)**
+
+\[
+P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}
+\]
+
+Where:
+- \( \binom{n}{k} = \frac{n!}{k!(n-k)!} \) is the number of ways to choose \( k \) successes from \( n \) trials.
+- \( p^k \): probability of \( k \) successes.
+- \( (1 - p)^{n - k} \): probability of \( n - k \) failures.
+
+---
+
+### **Conditions for a Binomial Distribution**
+
+1. Fixed number of trials \( n \)
+2. Each trial has two outcomes: **success** or **failure**
+3. Constant probability of success \( p \)
+4. Trials are independent
+
+---
+
+### **Mean and Variance**
+
+- **Expected value (mean)**:  
+  \[
+  \mathbb{E}[X] = \mu = np
+  \]
+
+- **Variance**:  
+  \[
+  \text{Var}(X) = np(1 - p)
+  \]
+
+- **Standard deviation**:  
+  \[
+  \sigma = \sqrt{np(1 - p)}
+  \]
+
+---
+
+### **Example**
+
+If a fair coin is flipped 10 times, what is the probability of getting exactly 4 heads?
+
+- \( n = 10 \), \( p = 0.5 \), \( k = 4 \)
+
+\[
+P(X = 4) = \binom{10}{4} (0.5)^4 (0.5)^6 = 210 \cdot (0.5)^{10} = 210 \cdot \frac{1}{1024} \approx 0.205
+\]
+
+---
+
+### **Cumulative Probabilities**
+
+To compute \( P(X \leq k) \) or \( P(X \geq k) \), sum over the relevant probabilities:
+
+\[
+P(X \leq k) = \sum_{i=0}^{k} P(X = i)
+\]
+
+These are often computed using statistical software or tables.
+
+---
+
+### **Shape of the Distribution**
+
+- **Symmetric** when \( p = 0.5 \)
+- **Right-skewed** when \( p < 0.5 \)
+- **Left-skewed** when \( p > 0.5 \)
+
+As \( n \) increases, the binomial distribution approaches the **normal distribution** (per the Central Limit Theorem), especially when both \( np \geq 5 \) and \( n(1 - p) \geq 5 \).
+
+---
+
+### **Applications**
+
+- Quality control (e.g., number of defective items)
+- Genetics (e.g., inheritance patterns)
+- Finance (e.g., number of defaults)
+- Survey responses (e.g., number of "yes" answers)
+
+---
+
+
+
+
 
 
 
