@@ -27120,6 +27120,1837 @@ As \( n \) increases, the binomial distribution approaches the **normal distribu
 
 
 
+## **Analyzing Second-Degree Taylor Polynomials**
+
+---
+
+### **1. Introduction**
+
+A **second-degree Taylor polynomial** provides a **quadratic approximation** of a smooth function near a point. 
+It's particularly useful when approximating values of a function near that point or analyzing the local behavior of the function (like extrema and concavity).
+
+---
+
+### **2. General Formula**
+
+Given a function \( f(x) \) that is twice differentiable at a point \( a \), the second-degree Taylor polynomial of \( f \) about \( x = a \) is:
+
+\[
+P_2(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2}(x - a)^2
+\]
+
+---
+
+### **3. Interpretation of Each Term**
+
+- \( f(a) \): The value of the function at the point of expansion.
+- \( f'(a)(x - a) \): The linear (tangent) component — tells how the function is increasing or decreasing near \( a \).
+- \( \frac{f''(a)}{2}(x - a)^2 \): The curvature or concavity — reveals whether the function is curving upwards (concave up) or downwards (concave down).
+
+---
+
+### **4. Geometric Meaning**
+
+- The **sign of \( f''(a) \)** tells us:
+  - \( f''(a) > 0 \): the graph is **concave up** (U-shape).
+  - \( f''(a) < 0 \): the graph is **concave down** (∩-shape).
+- If \( f'(a) = 0 \), then \( a \) is a **critical point**, and the Taylor polynomial models the local extremum.
+
+---
+
+### **5. Example**
+
+Let’s say we have a function with:
+
+- \( f(-2) = 1 \)
+- \( f'(-2) = 0 \)
+- \( f''(-2) = 2 \)
+
+Then the second-degree Taylor polynomial about \( x = -2 \) is:
+
+\[
+P_2(x) = 1 + 0 \cdot (x + 2) + \frac{2}{2}(x + 2)^2 = 1 + (x + 2)^2
+\]
+
+This is a **parabola opening upwards** with vertex at \( x = -2 \), matching a minimum.
+
+---
+
+### **6. Use in Graph Matching**
+
+When matching a graph to its second-degree Taylor polynomial:
+
+- **Find the center** \( a \): Where the expansion is done (e.g., vertex).
+- **Evaluate \( f(a) \)**: Should match the y-coordinate at \( x = a \).
+- **Determine the sign of \( f''(a) \)**: Concavity should match the graph.
+- **Check for linear term \( f'(a) \)**:
+  - If absent: the graph is flat at \( x = a \) (horizontal tangent).
+  - If present: indicates slope at that point.
+
+---
+
+### **7. Summary Table**
+
+| Component         | Meaning                              | Graphical Effect             |
+|------------------|--------------------------------------|------------------------------|
+| \( f(a) \)        | Function value at expansion point    | y-intercept of the approx.   |
+| \( f'(a) \)       | Slope at that point                  | Tilt of the tangent          |
+| \( f''(a) \)      | Concavity                            | Shape (U or ∩)               |
+| \( (x - a)^2 \)   | Quadratic behavior                   | Curvature near the center    |
+
+---
+
+### **8. When to Use It**
+
+- Approximating function values near a point.
+- Matching polynomial forms to graphs.
+- Understanding critical points (minima/maxima).
+- Solving optimization problems locally.
+
+
+
+
+
+
+
+
+
+
+## **The Geometric Distribution**
+
+---
+
+### **1. Overview**
+
+The **Geometric Distribution** models the number of **Bernoulli trials** until the **first success**. 
+It answers the question:
+
+> "What is the probability that the first success occurs on the \( k \)-th trial?"
+
+---
+
+### **2. Assumptions**
+
+- Trials are **independent**.
+- Each trial results in **success (with probability \( p \))** or **failure (with probability \( 1 - p \))**.
+- Trials are repeated **until the first success occurs**.
+
+---
+
+### **3. Probability Mass Function (PMF)**
+
+\[
+P(X = k) = (1 - p)^{k - 1}p
+\]
+- \( X \): the trial number of the first success
+- \( k \in \{1, 2, 3, \dots\} \)
+
+🧠 **Interpretation**: \( k - 1 \) failures followed by a success.
+
+---
+
+### **4. Cumulative Distribution Function (CDF)**
+
+\[
+P(X \leq k) = 1 - (1 - p)^k
+\]
+
+---
+
+### **5. Mean and Variance**
+
+- **Expected Value (Mean)**:  
+  \[
+  \mathbb{E}[X] = \frac{1}{p}
+  \]
+- **Variance**:  
+  \[
+  \text{Var}(X) = \frac{1 - p}{p^2}
+  \]
+
+---
+
+### **6. Memoryless Property**
+
+\[
+P(X > m + n \mid X > m) = P(X > n)
+\]
+
+The future doesn’t depend on the past: the geometric distribution “resets” after each failure.
+
+---
+
+## 🧮 **Probability Computations**
+
+---
+
+### **A. Computing a Probability at a Point**
+
+Use the **PMF** to compute the probability of the first success occurring exactly on the \( k \)-th trial:
+
+\[
+P(X = k) = (1 - p)^{k - 1}p
+\]
+
+**Example**:  
+If \( p = 0.3 \), find \( P(X = 4) \):
+
+\[
+P(X = 4) = (1 - 0.3)^3 \cdot 0.3 = 0.343 \cdot 0.3 = 0.1029
+\]
+
+---
+
+### **B. Computing a Probability Over a Bounded Interval: Lower Bound is Zero**
+
+This corresponds to:
+\[
+P(X \leq k) = 1 - (1 - p)^k
+\]
+
+**Example**:  
+For \( p = 0.25 \), compute the probability that the first success happens within the first 3 trials:
+
+\[
+P(X \leq 3) = 1 - (1 - 0.25)^3 = 1 - (0.75)^3 = 1 - 0.4219 = 0.5781
+\]
+
+---
+
+### **C. Computing a Probability Over a Bounded Interval: Lower Bound is Not Zero**
+
+This corresponds to:
+\[
+P(a \leq X \leq b) = P(X \leq b) - P(X < a) = P(X \leq b) - P(X \leq a - 1)
+\]
+
+**Example**:  
+Let \( p = 0.2 \). What’s the probability that the first success occurs between the 4th and 6th trial?
+
+\[
+P(4 \leq X \leq 6) = P(X \leq 6) - P(X \leq 3) = [1 - (0.8)^6] - [1 - (0.8)^3]
+\]
+\[
+= (1 - 0.262144) - (1 - 0.512) = 0.737856 - 0.488 = 0.249856
+\]
+
+---
+
+### **D. Computing a Probability Over an Interval Using the Complement**
+
+When it's easier to calculate the complement of the interval and subtract from 1:
+
+\[
+P(X > k) = (1 - p)^k
+\]
+\[
+P(X \leq k) = 1 - (1 - p)^k
+\]
+
+**Example**:  
+What’s the probability the first success **takes more than 5 trials**, with \( p = 0.1 \)?
+
+\[
+P(X > 5) = (1 - 0.1)^5 = 0.9^5 = 0.59049
+\]
+
+So, the complement is:
+\[
+P(X \leq 5) = 1 - 0.59049 = 0.40951
+\]
+
+---
+
+## ✅ Summary Table
+
+| Task | Formula | Example |
+|------|---------|---------|
+| PMF \( P(X = k) \) | \( (1 - p)^{k-1}p \) | \( P(X = 4) = 0.1029 \) |
+| \( P(X \leq k) \) | \( 1 - (1 - p)^k \) | \( P(X \leq 3) = 0.5781 \) |
+| \( P(a \leq X \leq b) \) | \( P(X \leq b) - P(X \leq a - 1) \) | \( P(4 \leq X \leq 6) = 0.249856 \) |
+| \( P(X > k) \) | \( (1 - p)^k \) | \( P(X > 5) = 0.59049 \) |
+
+---
+
+
+
+
+
+
+
+
+## **Third-Degree Taylor Polynomials**
+
+---
+
+### **1. What is a Taylor Polynomial?**
+
+A **Taylor polynomial** approximates a smooth function \( f(x) \) near a point \( a \) using a polynomial. 
+It uses the function’s derivatives at that point.
+
+A **third-degree Taylor polynomial** gives a cubic approximation that closely mimics the function near \( x = a \).
+
+---
+
+### **2. General Formula for the 3rd-Degree Taylor Polynomial**
+
+For a function \( f(x) \), the third-degree Taylor polynomial centered at \( x = a \) is:
+
+\[
+P_3(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \frac{f^{(3)}(a)}{3!}(x - a)^3
+\]
+
+---
+
+### **3. How It Works**
+
+Each term adds accuracy by incorporating more information about the function at \( x = a \):
+
+- **0th term**: Value of function at \( a \)
+- **1st term**: Slope (tangent)
+- **2nd term**: Concavity
+- **3rd term**: Rate of change of curvature
+
+---
+
+### **4. Example 1: \( f(x) = \ln(1 + x) \), centered at \( a = 0 \)**
+
+Compute the derivatives:
+
+- \( f(x) = \ln(1 + x) \)
+- \( f'(x) = \frac{1}{1 + x} \Rightarrow f'(0) = 1 \)
+- \( f''(x) = -\frac{1}{(1 + x)^2} \Rightarrow f''(0) = -1 \)
+- \( f^{(3)}(x) = \frac{2}{(1 + x)^3} \Rightarrow f^{(3)}(0) = 2 \)
+
+Plug into the formula:
+
+\[
+P_3(x) = 0 + x - \frac{x^2}{2} + \frac{2x^3}{6} = x - \frac{x^2}{2} + \frac{x^3}{3}
+\]
+
+So,  
+\[
+\boxed{P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}}
+\]
+
+---
+
+### **5. Example 2: \( f(x) = \cos(x) \), centered at \( a = 0 \)**
+
+- \( f(x) = \cos(x) \)
+- \( f(0) = 1 \)
+- \( f'(x) = -\sin(x) \Rightarrow f'(0) = 0 \)
+- \( f''(x) = -\cos(x) \Rightarrow f''(0) = -1 \)
+- \( f^{(3)}(x) = \sin(x) \Rightarrow f^{(3)}(0) = 0 \)
+
+\[
+P_3(x) = 1 + 0 - \frac{x^2}{2!} + 0 = \boxed{1 - \frac{x^2}{2}}
+\]
+
+---
+
+### **6. Uses of Third-Degree Taylor Polynomials**
+
+- **Approximating** values of functions
+- **Numerical methods** when functions are too complex
+- **Physics and engineering** to linearize or approximate behaviors near equilibrium
+- **Machine learning & optimization**: analyzing cost functions
+
+---
+
+### **7. Visual Insight**
+
+The higher the degree of the polynomial, the closer it approximates the original function near the center \( a \). For small deviations from \( a \), 
+a third-degree approximation is usually quite accurate.
+
+
+
+
+
+
+
+
+
+
+## **The Candidates Test**
+
+---
+
+### **Overview**
+The **Candidates Test** (also called the **Closed Interval Method**) is a technique in calculus used to find the **global maximum and minimum** 
+values of a continuous function on a **closed interval** \([a, b]\). It involves evaluating the function at **critical points** inside the 
+interval and at the **endpoints**.
+
+---
+
+### **Step-by-Step Process**
+
+#### **1. Finding the Global Extrema of a Function on a Given Interval**
+
+Let \( f(x) \) be a continuous function on a closed interval \([a, b]\).  
+To find the global maximum and minimum:
+
+1. **Find the derivative** \( f'(x) \).
+2. **Solve \( f'(x) = 0 \)** to find **critical points** within \( (a, b) \).
+3. **Evaluate \( f(x) \)** at:
+   - The **critical points** found in Step 2 (if they lie in \( (a, b) \)).
+   - The **endpoints** \( x = a \) and \( x = b \).
+4. **Compare the values** from Step 3.
+   - The **largest** value is the **global maximum**.
+   - The **smallest** value is the **global minimum**.
+
+---
+
+#### **2. Discarding Stationary Points of a Function on a Given Interval**
+
+Not all stationary (critical) points affect the extrema on a closed interval. You can discard a critical point if:
+
+- It **does not lie** within the **open interval** \( (a, b) \).
+- The function is **undefined** at that point.
+- The value at the critical point is **not greater/less than** the values at the endpoints or other critical points.
+
+**Important**: You **must still check the endpoints**, as extrema might occur there even if no critical points are valid.
+
+---
+
+### **Example 1: Finding Global Extrema**
+Let  
+\[
+f(x) = x^3 - 3x^2 + 4 \quad \text{on the interval } [0, 3]
+\]
+
+**Step 1**:  
+Find the derivative:  
+\[
+f'(x) = 3x^2 - 6x
+\]
+
+**Step 2**:  
+Set derivative to zero:  
+\[
+3x(x - 2) = 0 \Rightarrow x = 0, 2
+\]
+
+**Step 3**:  
+Evaluate \( f(x) \) at \( x = 0, 2, 3 \):
+
+- \( f(0) = 0 - 0 + 4 = 4 \)
+- \( f(2) = 8 - 12 + 4 = 0 \)
+- \( f(3) = 27 - 27 + 4 = 4 \)
+
+**Step 4**:  
+Compare:
+- Global maximum: \( 4 \) at \( x = 0 \) and \( x = 3 \)
+- Global minimum: \( 0 \) at \( x = 2 \)
+
+---
+
+### **Example 2: Discarding Stationary Points**
+Let  
+\[
+f(x) = \sqrt{x}, \quad \text{on } [-1, 4]
+\]
+
+**Step 1**:  
+The function is only defined on \( [0, 4] \). So we **discard** \( x < 0 \).
+
+**Step 2**:  
+\( f(x) = \sqrt{x} \Rightarrow f'(x) = \frac{1}{2\sqrt{x}} \)
+
+There are **no stationary points** in \( (0, 4) \) since \( f'(x) \ne 0 \).
+
+**Step 3**:  
+Check endpoints:
+- \( f(0) = 0 \)
+- \( f(4) = 2 \)
+
+**Conclusion**:  
+- Global min: \( 0 \) at \( x = 0 \)
+- Global max: \( 2 \) at \( x = 4 \)
+
+The critical point \( x = 0 \) isn't stationary, but it's an endpoint and thus must be evaluated.
+
+---
+
+### 🔑 Summary
+
+| Step                          | Purpose                                          |
+|-------------------------------|--------------------------------------------------|
+| Derivative                    | Locate critical (stationary) points              |
+| Solve \( f'(x) = 0 \)         | Identify possible local/global extrema           |
+| Evaluate at critical points   | These may be extrema if within interval          |
+| Evaluate at endpoints         | Extremum may occur at boundaries                 |
+| Compare all values            | Choose global min and max                        |
+| Discard invalid points        | Exclude points outside interval or undefined     |
+
+This method ensures you never miss a global extremum on a closed interval.
+
+
+
+
+
+
+
+
+
+## **Integrating Rational Functions with Irreducible Quadratic Factors:**
+
+---
+
+### **Overview**
+
+When integrating a rational function of the form:
+
+\[
+\int \frac{P(x)}{Q(x)}\, dx
+\]
+
+where \( P(x) \) and \( Q(x) \) are polynomials and \( \deg(P) < \deg(Q) \), we use **partial fraction decomposition** to simplify the integral—especially when \( Q(x) \) contains **irreducible quadratic factors**, i.e., quadratics that **cannot be factored further** over the reals.
+
+---
+
+### **Form of Partial Fraction Decomposition**
+
+Suppose:
+
+\[
+\frac{P(x)}{(x - a)(x^2 + bx + c)}
+\]
+
+Here, \( x^2 + bx + c \) is **irreducible** over the reals if its discriminant \( b^2 - 4ac < 0 \).
+
+The partial fraction form becomes:
+
+\[
+\frac{P(x)}{(x - a)(x^2 + bx + c)} = \frac{A}{x - a} + \frac{Bx + C}{x^2 + bx + c}
+\]
+
+Where \( A, B, C \) are constants to be determined.
+
+---
+
+### **Integration Strategy**
+
+Each part is handled separately:
+
+1. **Linear Denominator:**
+   \[
+   \int \frac{A}{x - a} \, dx = A \ln|x - a| + C
+   \]
+
+2. **Irreducible Quadratic Denominator:**
+   \[
+   \int \frac{Bx + C}{x^2 + bx + c} \, dx
+   \]
+
+This can be split further:
+- Break into two parts:
+  - One part leads to a **logarithmic form**
+  - The other to an **arctangent form**
+
+---
+
+### **Key Identities**
+
+For irreducible quadratics of the form \( ax^2 + bx + c \) (with \( b^2 - 4ac < 0 \)):
+
+1. Complete the square:  
+   \[
+   x^2 + bx + c = \left(x + \frac{b}{2}\right)^2 + \left(c - \frac{b^2}{4}\right)
+   \]
+
+2. General integrals to remember:
+   - \[
+     \int \frac{1}{x^2 + a^2} \, dx = \frac{1}{a} \arctan\left(\frac{x}{a}\right) + C
+     \]
+   - \[
+     \int \frac{x}{x^2 + a^2} \, dx = \frac{1}{2} \ln(x^2 + a^2) + C
+     \]
+
+---
+
+### **Example 1:**
+\[
+\int \frac{1}{x^2 + 4x + 5} \, dx
+\]
+
+Complete the square:
+\[
+x^2 + 4x + 5 = (x + 2)^2 + 1
+\]
+
+Now:
+\[
+\int \frac{1}{(x + 2)^2 + 1} \, dx = \arctan(x + 2) + C
+\]
+
+---
+
+### **Example 2:**
+\[
+\int \frac{2x + 3}{x^2 + 4x + 5} \, dx
+\]
+
+Again complete the square:
+\[
+x^2 + 4x + 5 = (x + 2)^2 + 1
+\]
+
+Split the integral:
+- Let \( u = x + 2 \Rightarrow x = u - 2 \)
+- Then \( 2x + 3 = 2(u - 2) + 3 = 2u - 1 \)
+
+So:
+\[
+\int \frac{2x + 3}{x^2 + 4x + 5} \, dx = \int \frac{2u - 1}{u^2 + 1} \, du
+= 2 \int \frac{u}{u^2 + 1} \, du - \int \frac{1}{u^2 + 1} \, du
+\]
+
+Solving:
+\[
+2 \cdot \frac{1}{2} \ln(u^2 + 1) - \arctan(u) + C = \ln(u^2 + 1) - \arctan(u) + C
+\]
+
+Substitute back \( u = x + 2 \):
+
+\[
+\boxed{
+\int \frac{2x + 3}{x^2 + 4x + 5} \, dx = \ln\left((x + 2)^2 + 1\right) - \arctan(x + 2) + C
+}
+\]
+
+---
+
+### **Summary**
+
+| Form of Denominator            | Integral Technique                               |
+|-------------------------------|--------------------------------------------------|
+| \( x - a \)                   | \( \ln|x - a| \)                                 |
+| \( x^2 + a^2 \)               | \( \arctan(x/a) \)                               |
+| \( \frac{x}{x^2 + a^2} \)     | \( \frac{1}{2} \ln(x^2 + a^2) \)                 |
+| \( \frac{Ax + B}{x^2 + bx + c} \) | Split into logarithmic and arctangent parts |
+
+Using partial fractions and the proper substitution/completion of square techniques allows easy handling of irreducible quadratic factors in integration.
+
+
+
+
+
+
+
+
+
+
+## **Euler's Method: Calculating One Step**
+
+---
+
+### **Overview**
+
+Euler's Method is a **numerical technique** used to approximate solutions to first-order differential equations of the form:
+
+\[
+\frac{dy}{dx} = f(x, y), \quad y(x_0) = y_0
+\]
+
+It provides a step-by-step estimate of the function's value at future points, starting from an initial value.
+
+---
+
+### **Formula for One Euler Step**
+
+\[
+y_{n+1} = y_n + h f(x_n, y_n)
+\]
+
+Where:
+- \( (x_n, y_n) \) is the current point,
+- \( h \) is the step size,
+- \( f(x_n, y_n) \) is the derivative \( \frac{dy}{dx} \) evaluated at the current point,
+- \( y_{n+1} \) is the estimated value of \( y \) at \( x_{n+1} = x_n + h \).
+
+---
+
+### **Steps to Calculate One Euler Step**
+
+1. **Start with the initial condition**: \( x_0, y_0 \)
+2. **Choose a step size** \( h \)
+3. **Compute the slope** \( f(x_0, y_0) \)
+4. **Apply Euler's formula**:  
+   \[
+   y_1 = y_0 + h \cdot f(x_0, y_0)
+   \]
+5. **Update x**:  
+   \[
+   x_1 = x_0 + h
+   \]
+
+---
+
+### **Example 1:**
+
+Given:
+\[
+\frac{dy}{dx} = x + y, \quad y(0) = 1
+\]
+
+Use **Euler’s Method** to estimate \( y(0.1) \) using step size \( h = 0.1 \)
+
+1. \( x_0 = 0 \), \( y_0 = 1 \)
+2. Compute slope:  
+   \[
+   f(x_0, y_0) = x_0 + y_0 = 0 + 1 = 1
+   \]
+3. Apply Euler’s formula:
+   \[
+   y_1 = y_0 + h \cdot f(x_0, y_0) = 1 + 0.1 \cdot 1 = 1.1
+   \]
+4. New point:  
+   \[
+   (x_1, y_1) = (0.1, 1.1)
+   \]
+
+So, the estimate for \( y(0.1) \) is **1.1**
+
+---
+
+### **Example 2:**
+
+\[
+\frac{dy}{dx} = 3y - 2x, \quad y(1) = 2
+\]  
+Use Euler’s method with \( h = 0.2 \)
+
+1. \( x_0 = 1 \), \( y_0 = 2 \)
+2. Compute slope:  
+   \[
+   f(x_0, y_0) = 3(2) - 2(1) = 6 - 2 = 4
+   \]
+3. Apply Euler’s formula:
+   \[
+   y_1 = 2 + 0.2 \cdot 4 = 2 + 0.8 = 2.8
+   \]
+4. New point:  
+   \[
+   (x_1, y_1) = (1.2, 2.8)
+   \]
+
+---
+
+### **Interpretation**
+
+Euler’s method is like **walking forward in small steps** using the current slope. It's a **first-order method**, meaning its error is proportional to the step size \( h \). Smaller \( h \) → better accuracy, but more steps.
+
+---
+
+### **Summary Table**
+
+| Step | \( x_n \) | \( y_n \) | \( f(x_n, y_n) \) | \( y_{n+1} = y_n + h f(x_n, y_n) \) |
+|------|-----------|-----------|-------------------|-------------------------------------|
+| 0    | 0         | 1         | 1                 | 1.1                                 |
+| 1    | 0.1       | 1.1       | 1.2               | ...                                 |
+
+Euler’s Method provides an easy entry point into the world of solving differential equations when 
+analytic solutions are difficult or impossible to find.
+
+
+
+
+
+
+
+
+
+
+
+
+## **The Second Fundamental Theorem of Calculus**
+
+---
+
+### **Overview**
+
+The Second Fundamental Theorem of Calculus (FTC2) connects **differentiation and definite integration**. 
+It shows how a function defined as a definite integral with a variable upper limit is **differentiable**, 
+and how its derivative relates directly to the integrand.
+
+---
+
+### **Formal Statement**
+
+Let \( f \) be a continuous function on an interval \( [a, b] \), and define a function:
+
+\[
+F(x) = \int_a^x f(t)\,dt
+\]
+
+Then:
+
+\[
+\frac{d}{dx} \left( \int_a^x f(t)\,dt \right) = f(x)
+\]
+
+---
+
+### **Interpretation**
+
+- If you define a new function \( F(x) \) by integrating \( f(t) \) from \( a \) to \( x \), the **derivative of \( F \)** is simply the original function \( f(x) \).
+- It tells us: **differentiation "undoes" integration**, under the condition that the integrand is continuous.
+
+---
+
+### **General Form (with Variable Upper or Lower Limits)**
+
+1. **If the upper limit is a function of \( x \)**:
+   \[
+   \frac{d}{dx} \left( \int_a^{g(x)} f(t)\,dt \right) = f(g(x)) \cdot g'(x)
+   \]
+
+2. **If the lower limit is a function of \( x \)**:
+   \[
+   \frac{d}{dx} \left( \int_{g(x)}^a f(t)\,dt \right) = -f(g(x)) \cdot g'(x)
+   \]
+
+3. **If both limits are functions of \( x \)**:
+   Use Leibniz's Rule:
+   \[
+   \frac{d}{dx} \left( \int_{u(x)}^{v(x)} f(t)\,dt \right) = f(v(x))v'(x) - f(u(x))u'(x)
+   \]
+
+---
+
+### **Examples**
+
+#### **1. Basic FTC2 Application**
+\[
+F(x) = \int_0^x \cos(t) \, dt
+\]
+\[
+F'(x) = \cos(x)
+\]
+
+#### **2. Variable Upper Limit**
+\[
+F(x) = \int_0^{x^2} \sin(t) \, dt
+\]
+Let \( g(x) = x^2 \), then:
+\[
+F'(x) = \sin(x^2) \cdot 2x
+\]
+
+#### **3. Variable Lower Limit**
+\[
+F(x) = \int_{\ln x}^1 e^{-t^2} \, dt
+\]
+\[
+F'(x) = -e^{-(\ln x)^2} \cdot \frac{1}{x}
+\]
+
+---
+
+### **Key Applications**
+
+- Solving **differentiation of integrals with variable limits**.
+- Simplifying problems in physics, economics, or engineering that model accumulation.
+- Used in **defining antiderivatives** and solving **initial value problems** in differential equations.
+
+
+
+
+
+
+
+
+
+
+
+## **Finding the First Term of an Arithmetic Series**
+
+---
+
+### **Overview**
+
+In an arithmetic series, each term increases or decreases by a fixed number called the **common difference** \( d \). 
+If you know certain values — such as the total sum \( S_n \), number of terms \( n \), and the last term \( a_n \) — you can work backwards to find the **first term** \( a_1 \).
+
+---
+
+### **Key Formulas**
+
+1. **General Term (nth Term):**
+\[
+a_n = a_1 + (n - 1)d
+\]
+
+2. **Sum of the First \( n \) Terms:**
+\[
+S_n = \frac{n}{2} (a_1 + a_n)
+\quad \text{or} \quad 
+S_n = \frac{n}{2} \left[2a_1 + (n - 1)d\right]
+\]
+
+---
+
+### **Goal**  
+**Find** the first term \( a_1 \)
+
+---
+
+### **Cases and Rearranged Formulas**
+
+#### **Case 1: You know \( S_n, n, \text{and } d \)**
+
+From:
+\[
+S_n = \frac{n}{2} [2a_1 + (n - 1)d]
+\]
+
+Solve for \( a_1 \):
+\[
+a_1 = \frac{2S_n}{n} - \frac{(n - 1)d}{2}
+\]
+
+---
+
+#### **Case 2: You know \( S_n, n, a_n \)**
+
+From:
+\[
+S_n = \frac{n}{2} (a_1 + a_n)
+\]
+
+Solve for \( a_1 \):
+\[
+a_1 = \frac{2S_n}{n} - a_n
+\]
+
+---
+
+#### **Case 3: You know \( a_n, n, d \)**
+
+From:
+\[
+a_n = a_1 + (n - 1)d
+\]
+
+Solve for \( a_1 \):
+\[
+a_1 = a_n - (n - 1)d
+\]
+
+---
+
+### **Examples**
+
+#### **Example 1: Find \( a_1 \) when \( S_5 = 100 \), \( d = 4 \), \( n = 5 \)**
+
+\[
+a_1 = \frac{2(100)}{5} - \frac{(5 - 1)(4)}{2} = 40 - 8 = 32
+\]
+
+---
+
+#### **Example 2: Given \( a_n = 20 \), \( n = 6 \), \( d = 3 \)**
+
+\[
+a_1 = a_n - (n - 1)d = 20 - (5)(3) = 5
+\]
+
+---
+
+#### **Example 3: Given \( S_4 = 50 \), \( a_4 = 17 \), \( n = 4 \)**
+
+\[
+a_1 = \frac{2(50)}{4} - 17 = 25 - 17 = 8
+\]
+
+---
+
+### **Conclusion**
+
+To find the first term:
+- Use the formula that matches your known values.
+- Simplify step-by-step to isolate \( a_1 \).
+- Arithmetic series problems are linear — the structure is consistent and predictable once the right formula is chosen.
+
+
+
+
+
+
+
+
+
+
+
+## **Percentage Points of the Standard Normal Distribution**
+
+---
+
+### **Overview**
+The percentage points of the **standard normal distribution** (also known as **z-scores**) are cutoff values along the horizontal 
+axis of the **standard normal curve**. These values correspond to specific cumulative probabilities and are essential in **confidence intervals**, 
+**hypothesis testing**, and **probability estimation**.
+
+---
+
+### **1. The Standard Normal Distribution Recap**
+
+- A **standard normal distribution** is a special normal distribution with:
+  - Mean \( \mu = 0 \)
+  - Standard deviation \( \sigma = 1 \)
+
+The probability density function (pdf) is:
+
+\[
+f(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2}
+\]
+
+---
+
+### **2. Definition: Percentage Points**
+
+A **percentage point** (or critical value) \( z_p \) is the value such that:
+
+\[
+P(Z \leq z_p) = p
+\]
+
+Where:
+- \( Z \sim \mathcal{N}(0, 1) \)
+- \( p \in (0, 1) \) is the cumulative probability
+
+---
+
+### **3. Common Percentage Points (Z-values)**
+
+| **Cumulative Probability (p)** | **Z-value (zₚ)** |
+|-------------------------------|------------------|
+| 0.5000                        | 0.000            |
+| 0.8413                        | 1.000            |
+| 0.9772                        | 2.000            |
+| 0.9987                        | 3.000            |
+| 0.0250                        | -1.960           |
+| 0.9750                        | 1.960            |
+| 0.9950                        | 2.576            |
+| 0.0050                        | -2.576           |
+
+These values are typically found using a **Z-table** or statistical software.
+
+---
+
+### **4. Using the Percentage Points**
+
+- **Confidence Intervals**:  
+  A 95% confidence interval uses \( z_{0.975} = 1.96 \) as the critical value for margin of error.
+
+- **Hypothesis Testing**:  
+  In a two-tailed test at significance level \( \alpha = 0.05 \), the critical z-values are \( \pm 1.96 \).
+
+---
+
+### **5. Visualization**
+
+The standard normal curve is symmetric about 0. Percentage points divide the area under the curve into regions corresponding to specific probabilities. 
+These values mark the boundaries of tails or confidence levels.
+
+---
+
+### **6. Summary of Confidence Levels and Z-values**
+
+| Confidence Level | Z-value        |
+|------------------|----------------|
+| 68%              | \( \pm 1 \)    |
+| 90%              | \( \pm 1.645 \)|
+| 95%              | \( \pm 1.96 \) |
+| 99%              | \( \pm 2.576 \)|
+
+Understanding these percentage points is foundational for many statistical applications involving the standard normal distribution.
+
+
+
+
+
+
+
+
+
+
+
+
+## **Modeling With the Normal Distribution**
+
+---
+
+### **1. Introduction to the Normal Distribution**
+
+The **normal distribution** (or Gaussian distribution) is a foundational concept in statistics, 
+describing how data values are distributed in many natural and social phenomena. It is defined by 
+its **mean** \( \mu \) and **standard deviation** \( \sigma \), and its probability density function (PDF) is:
+
+\[
+f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{- \frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^2}
+\]
+
+---
+
+### **2. Key Properties**
+
+- **Symmetry**: Centered around the mean \( \mu \), with left and right sides mirroring each other.
+- **Bell shape**: The classic bell curve where most of the data cluster around the mean.
+- **Mean = Median = Mode**: For a perfectly normal distribution.
+- **Total area under the curve = 1**.
+
+---
+
+### **3. Empirical Rule (68-95-99.7 Rule)**
+
+- ~68% of data lies within \( \mu \pm 1\sigma \)
+- ~95% within \( \mu \pm 2\sigma \)
+- ~99.7% within \( \mu \pm 3\sigma \)
+
+This rule helps quickly estimate probabilities and understand spread.
+
+---
+
+### **4. Standard Normal Distribution (Z-distribution)**
+
+A normalized version of the normal distribution where:
+- \( \mu = 0 \)
+- \( \sigma = 1 \)
+
+To convert any normal variable \( X \) to a **z-score**:
+
+\[
+Z = \frac{X - \mu}{\sigma}
+\]
+
+Z-scores represent the number of standard deviations a data point is from the mean.
+
+---
+
+### **5. Modeling Real-World Phenomena**
+
+Many real-world variables follow or approximate a normal distribution:
+- Heights, test scores, measurement errors
+- Stock returns (in some models)
+- IQ scores
+
+---
+
+### **6. Applications**
+
+- **Statistical inference**: Confidence intervals, hypothesis testing
+- **Anomaly detection**: Points outside 2 or 3 standard deviations are considered outliers
+- **Data normalization**: Z-scores standardize datasets for comparison
+- **Predictive modeling**: Assumptions in linear regression and other models often include normality
+
+---
+
+### **7. Central Limit Theorem (CLT)**
+
+Even if a dataset isn't normally distributed, the **sampling distribution of the sample mean** will approximate a normal distribution as the sample size increases:
+
+\[
+\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)
+\]
+
+This justifies using normal-based inference for many problems.
+
+---
+
+### **8. Limitations**
+
+- Not all data is normally distributed: income, counts, durations may follow skewed or other distributions.
+- Sensitive to outliers: Extreme values can distort mean and standard deviation.
+
+---
+
+### **9. Visual Tools**
+
+- **Histogram**: See the data's shape
+- **Q-Q Plot**: Quantile-quantile plot for normality check
+- **Boxplot**: Helps detect skewness and outliers
+
+---
+
+### **10. Summary**
+
+Modeling with the normal distribution allows:
+- Simplified analysis of data variability
+- Probabilistic forecasting
+- Hypothesis testing with known properties
+- Standardization for comparability
+
+
+
+
+
+
+
+
+
+
+
+## **Topic: Calculating Tangent and Normal Lines with Parametric Equations**
+
+---
+
+### **1. Overview**
+
+For parametric equations:
+
+\[
+x = x(t), \quad y = y(t)
+\]
+
+the **tangent** and **normal** lines at a point corresponding to parameter \( t = t_0 \) describe the direction and perpendicular direction of the curve at that point.
+
+---
+
+### **2. Tangent Line: Core Concept**
+
+The slope of the tangent line is:
+
+\[
+\frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}}, \quad \text{provided } \frac{dx}{dt} \ne 0
+\]
+
+Let:
+- \( x_0 = x(t_0) \)
+- \( y_0 = y(t_0) \)
+
+Then the **tangent line equation** at \( t = t_0 \) is:
+
+\[
+y - y_0 = m_{\text{tan}}(x - x_0), \quad \text{where } m_{\text{tan}} = \frac{dy/dt}{dx/dt}
+\]
+
+---
+
+### **3. Normal Line: Perpendicular to Tangent**
+
+The slope of the **normal line** is the negative reciprocal of the tangent slope:
+
+\[
+m_{\text{norm}} = -\frac{dx/dt}{dy/dt}, \quad \text{(provided } \frac{dy}{dt} \ne 0)
+\]
+
+So the **normal line equation** is:
+
+\[
+y - y_0 = m_{\text{norm}}(x - x_0)
+\]
+
+---
+
+### **4. Special Cases**
+
+- If \( \frac{dx}{dt} = 0 \): vertical tangent ⇒ tangent line is vertical \( x = x_0 \)
+- If \( \frac{dy}{dt} = 0 \): horizontal tangent ⇒ tangent line is horizontal \( y = y_0 \)
+
+---
+
+### **5. Example**
+
+Let:
+
+\[
+x(t) = t^2, \quad y(t) = t^3
+\]
+
+**Step 1: Derivatives**
+
+\[
+\frac{dx}{dt} = 2t, \quad \frac{dy}{dt} = 3t^2
+\]
+
+**Step 2: Tangent slope**
+
+\[
+\frac{dy}{dx} = \frac{3t^2}{2t} = \frac{3t}{2} \quad \text{for } t \ne 0
+\]
+
+**At \( t = 1 \):**
+
+- \( x = 1^2 = 1 \)
+- \( y = 1^3 = 1 \)
+- Slope = \( \frac{3(1)}{2} = \frac{3}{2} \)
+
+**Tangent Line:**
+
+\[
+y - 1 = \frac{3}{2}(x - 1)
+\]
+
+**Normal Line:**
+
+Slope = \( -\frac{2}{3} \)
+
+\[
+y - 1 = -\frac{2}{3}(x - 1)
+\]
+
+---
+
+### **6. Summary**
+
+| Element        | Formula |
+|----------------|---------|
+| \( \frac{dy}{dx} \) | \( \frac{dy/dt}{dx/dt} \) |
+| Tangent Line   | \( y - y_0 = \frac{dy/dt}{dx/dt}(x - x_0) \) |
+| Normal Line    | \( y - y_0 = -\frac{dx/dt}{dy/dt}(x - x_0) \) |
+
+
+
+
+
+
+
+
+
+
+
+## **Calculating the Number of Terms in an Arithmetic Series**
+
+---
+
+### 🔹 **What is an Arithmetic Series?**
+
+An arithmetic series is the sum of terms in an arithmetic sequence — a sequence where each term increases 
+(or decreases) by a constant difference, called the **common difference** \( d \).
+
+If the first term is \( a \), the \( n \)th term is:
+
+\[
+a_n = a + (n - 1)d
+\]
+
+The **sum of the first \( n \) terms**, denoted \( S_n \), is:
+
+\[
+S_n = \frac{n}{2} \left[2a + (n - 1)d \right]
+\quad \text{or} \quad
+S_n = \frac{n}{2} (a + a_n)
+\]
+
+---
+
+### 🔹 **Goal: Find the Number of Terms \( n \)**
+
+Given:
+- \( a \): first term
+- \( d \): common difference
+- \( S_n \): total sum
+
+We rearrange the sum formula to solve for \( n \):
+
+\[
+S_n = \frac{n}{2} \left[2a + (n - 1)d \right]
+\Rightarrow
+2S_n = n(2a + (n - 1)d)
+\Rightarrow
+0 = n(2a + (n - 1)d) - 2S_n
+\]
+
+This is a **quadratic equation** in \( n \), which can be solved using the **quadratic formula**:
+
+\[
+n = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+
+---
+
+### 🔹 **Example Problem:**
+
+**Find the number of terms** if:
+
+- \( a = 1 \)
+- \( d = \frac{1}{2} \)
+- \( S_n = 52 \)
+
+Start with:
+
+\[
+S_n = \frac{n}{2} \left[2(1) + (n - 1)\cdot \frac{1}{2} \right]
+= \frac{n}{2} \left[2 + \frac{n - 1}{2} \right]
+= \frac{n}{2} \cdot \frac{n + 3}{2}
+= \frac{n(n + 3)}{4}
+\]
+
+So,
+
+\[
+\frac{n(n + 3)}{4} = 52 \Rightarrow n(n + 3) = 208
+\Rightarrow n^2 + 3n - 208 = 0
+\]
+
+Solve:
+
+\[
+n = \frac{-3 \pm \sqrt{3^2 + 4 \cdot 208}}{2}
+= \frac{-3 \pm \sqrt{841}}{2}
+= \frac{-3 \pm 29}{2}
+\]
+
+Only positive solution:
+
+\[
+n = \frac{26}{2} = 13
+\]
+
+---
+
+### **Conclusion:**
+
+To find the number of terms \( n \) in an arithmetic series given the sum \( S_n \), use the sum formula and solve the resulting quadratic equation.
+
+This method applies to **any arithmetic series** where you know:
+- First term \( a \)
+- Common difference \( d \)
+- Total sum \( S_n \)
+
+
+
+
+
+
+
+
+
+
+## **The Sum of the First \( N \) Terms of a Geometric Series**
+
+---
+
+###  **What is a Geometric Series?**
+
+A **geometric series** is the sum of the terms in a **geometric sequence**, where each term is obtained 
+by multiplying the previous one by a fixed constant called the **common ratio** \( r \).
+
+A geometric sequence looks like:
+\[
+a, ar, ar^2, ar^3, \ldots
+\]
+
+Where:
+- \( a \) = first term
+- \( r \) = common ratio
+- \( n \) = number of terms
+
+---
+
+###  **Formula for the Sum of the First \( n \) Terms**
+
+There are **two cases** depending on the value of \( r \):
+
+#### Case 1: \( r \neq 1 \)
+
+\[
+S_n = a \cdot \frac{1 - r^n}{1 - r}, \quad \text{if } r < 1 \text{ or } r > 1
+\]
+
+This formula is derived by subtracting the scaled version of the series from the original series.
+
+#### Case 2: \( r = 1 \)
+
+\[
+S_n = a \cdot n
+\]
+
+Because every term is the same: \( a + a + a + \ldots = a \cdot n \)
+
+---
+
+###  **How the Formula Works**
+
+Let’s derive the formula for \( r \neq 1 \):
+
+Start with:
+
+\[
+S_n = a + ar + ar^2 + \ldots + ar^{n-1}
+\]
+
+Multiply both sides by \( r \):
+
+\[
+rS_n = ar + ar^2 + ar^3 + \ldots + ar^n
+\]
+
+Now subtract:
+
+\[
+S_n - rS_n = a - ar^n
+\Rightarrow S_n(1 - r) = a(1 - r^n)
+\Rightarrow S_n = a \cdot \frac{1 - r^n}{1 - r}
+\]
+
+---
+
+###  **Example:**
+
+Let’s compute the sum of the first 5 terms of a geometric series with:
+- \( a = 3 \)
+- \( r = 2 \)
+- \( n = 5 \)
+
+\[
+S_5 = 3 \cdot \frac{1 - 2^5}{1 - 2} = 3 \cdot \frac{1 - 32}{-1} = 3 \cdot 31 = 93
+\]
+
+---
+
+###  **What if the Common Ratio is a Fraction?**
+
+Let \( a = 8, r = \frac{1}{2}, n = 4 \):
+
+\[
+S_4 = 8 \cdot \frac{1 - \left(\frac{1}{2}\right)^4}{1 - \frac{1}{2}} = 8 \cdot \frac{1 - \frac{1}{16}}{\frac{1}{2}} = 8 \cdot \frac{\frac{15}{16}}{\frac{1}{2}} = 8 \cdot \frac{15}{8} = 15
+\]
+
+---
+
+###  **Infinite Geometric Series**
+
+If \( |r| < 1 \), the sum of the infinite geometric series is:
+
+\[
+S_{\infty} = \frac{a}{1 - r}
+\]
+
+This converges because \( r^n \to 0 \) as \( n \to \infty \).
+
+---
+
+### **Conclusion**
+
+To find the sum of the first \( n \) terms of a geometric series:
+
+- Use \( S_n = a \cdot \frac{1 - r^n}{1 - r} \) when \( r \ne 1 \)
+- Use \( S_n = a \cdot n \) when \( r = 1 \)
+- For infinite sums, use \( S_\infty = \frac{a}{1 - r} \), only if \( |r| < 1 \)
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Higher-Degree Taylor Polynomials**
+
+#### **1. What is a Taylor Polynomial?**
+A **Taylor polynomial** approximates a function \( f(x) \) near a point \( x = a \) using a polynomial 
+constructed from the function's derivatives at \( a \). The \( n \)-th degree Taylor polynomial is:
+
+\[
+P_n(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \cdots + \frac{f^{(n)}(a)}{n!}(x-a)^n
+\]
+
+- **Key Idea:** The more terms (higher degree) we include, the better the approximation.
+
+---
+
+#### **2. Why Use Higher-Degree Polynomials?**
+- **Better Accuracy:** Higher-degree polynomials capture more nuances of \( f(x) \), reducing error.
+- **Example:**  
+  - \( \sin(x) \) near \( x = 0 \):
+    - \( P_1(x) = x \) (linear approximation).
+    - \( P_3(x) = x - \frac{x^3}{6} \) (cubic, matches curvature).
+    - \( P_5(x) = x - \frac{x^3}{6} + \frac{x^5}{120} \) (even closer to true \( \sin(x) \)).
+
+---
+
+#### **3. How to Compute Higher-Degree Terms**
+1. **Compute Derivatives:** Find \( f'(a), f''(a), \dots, f^{(n)}(a) \).
+2. **Plug into Formula:**  
+   \[
+   P_n(x) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k
+   \]
+3. **Example:**  
+   For \( f(x) = e^x \) at \( a = 0 \):
+   - All derivatives \( f^{(k)}(0) = 1 \).
+   - \( P_4(x) = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} \).
+
+---
+
+#### **4. Error Analysis (Taylor's Remainder Theorem)**
+The error \( R_n(x) = f(x) - P_n(x) \) is bounded by:
+\[
+|R_n(x)| \leq \frac{M}{(n+1)!}|x-a|^{n+1}
+\]
+where \( M \) is the maximum of \( |f^{(n+1)}(z)| \) between \( a \) and \( x \).
+
+- **Implication:** Higher \( n \) reduces error (if \( M \) grows slowly).
+
+---
+
+#### **5. Practical Applications**
+1. **Physics:** Approximating motion equations (e.g., pendulum dynamics).
+2. **Engineering:** Signal processing (filter design).
+3. **Computer Science:** Numerical algorithms (e.g., `sin(x)` in calculators).
+
+---
+
+#### **6. Common Mistakes to Avoid**
+- **Incorrect Derivatives:** Double-check \( f^{(k)}(a) \).
+- **Ignoring Convergence:** Not all functions have Taylor series converging to \( f(x) \) (e.g., \( f(x) = e^{-1/x^2} \) at \( x=0 \)).
+- **Overfitting:** Higher-degree isn’t always better (e.g., Runge’s phenomenon).
+
+---
+
+#### **7. Advanced: Multivariable Taylor Series**
+For \( f(x,y) \), the 2nd-degree approximation is:
+\[
+f(a,b) + f_x(a,b)(x-a) + f_y(a,b)(y-b) + \frac{1}{2!}\left( f_{xx}(a,b)(x-a)^2 + 2f_{xy}(a,b)(x-a)(y-b) + f_{yy}(a,b)(y-b)^2 \right)
+\]
+
+---
+
+#### **8. Key Takeaways**
+- Higher-degree = Sharper approximations.
+- Always verify convergence/error bounds.
+- Practice with classic functions (\( e^x \), \( \sin(x) \), \( \ln(1+x) \)).
+
+---
+
+**Exercise:** Compute \( P_3(x) \) for \( f(x) = \ln(1+x) \) at \( a = 0 \).  
+**Answer:**  
+\[
+P_3(x) = x - \frac{x^2}{2} + \frac{x^3}{3}
+\]  
+
+
+
+
+
+
+
+
+
+
+
+## **Maclaurin Series**
+
+---
+
+### **Definition**
+
+The **Maclaurin series** is a special case of the **Taylor series** centered at \( x = 0 \). It expresses a function \( f(x) \) as an infinite sum of its derivatives at 0:
+
+\[
+f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n
+\]
+
+Where:
+- \( f^{(n)}(0) \) is the \( n \)-th derivative of \( f \) evaluated at 0
+- \( n! \) is the factorial of \( n \)
+- \( x^n \) is the power of \( x \)
+
+---
+
+### **Derivation Steps**
+
+To build a Maclaurin series for a function:
+1. Compute successive derivatives: \( f(0), f'(0), f''(0), \ldots \)
+2. Plug them into the formula:
+   \[
+   f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x^2 + \frac{f^{(3)}(0)}{3!}x^3 + \cdots
+   \]
+
+---
+
+### **Common Examples**
+
+1. **\( e^x \):**
+   \[
+   e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!}
+   \]
+
+2. **\( \sin(x) \):**
+   \[
+   \sin(x) = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!}
+   \]
+
+3. **\( \cos(x) \):**
+   \[
+   \cos(x) = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n)!}
+   \]
+
+4. **\( \ln(1+x) \)** (valid for \( -1 < x \leq 1 \)):
+   \[
+   \ln(1+x) = \sum_{n=1}^{\infty} (-1)^{n+1} \frac{x^n}{n}
+   \]
+
+5. **\( \frac{1}{1 - x} \)** (valid for \( |x| < 1 \)):
+   \[
+   \frac{1}{1 - x} = \sum_{n=0}^{\infty} x^n
+   \]
+
+---
+
+### **Applications**
+
+- **Approximating functions** for small \( x \)
+- **Solving differential equations**
+- **Evaluating limits**
+- **Computing integrals** that don’t have elementary antiderivatives
+- **Physics and engineering** for modeling nonlinear systems
+
+---
+
+### **Radius and Interval of Convergence**
+
+To determine where the Maclaurin series converges, use:
+- **Ratio Test** for convergence
+- The **interval** where the series converges is called the **interval of convergence**
+
+---
+
+
+
+
+
+
+
+
+## **Maclaurin Series**
+
+---
+
+#### **1. What is a Maclaurin Series?**
+A **Maclaurin series** is a special case of the Taylor series, expanded around \( x = 0 \). It represents a function \( f(x) \) as an infinite sum of 
+terms calculated from its derivatives at zero:
+
+\[
+f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 + \cdots
+\]
+
+**Key Idea:**  
+- Approximates \( f(x) \) near \( x = 0 \) using polynomials.
+- Exact representation if the series converges to \( f(x) \) (e.g., for \( e^x \), \( \sin x \), \( \cos x \)).
+
+---
+
+#### **2. Common Maclaurin Series (Memorize These!)**
+| Function       | Series Expansion                     | Convergence |
+|----------------|--------------------------------------|-------------|
+| \( e^x \)      | \( \sum_{n=0}^{\infty} \frac{x^n}{n!} \) | All \( x \) |
+| \( \sin x \)   | \( \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} \) | All \( x \) |
+| \( \cos x \)   | \( \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} \) | All \( x \) |
+| \( \ln(1+x) \) | \( \sum_{n=1}^{\infty} \frac{(-1)^{n-1} x^n}{n} \) | \( -1 < x \leq 1 \) |
+| \( (1+x)^k \)  | \( \sum_{n=0}^{\infty} \binom{k}{n} x^n \) | \( |x| < 1 \) |
+
+---
+
+#### **3. How to Derive a Maclaurin Series**
+1. **Compute Derivatives:** Find \( f^{(n)}(0) \) for \( n = 0, 1, 2, \dots \).
+2. **Plug into Formula:**  
+   \[
+   f(x) \approx \sum_{n=0}^{N} \frac{f^{(n)}(0)}{n!} x^n
+   \]
+3. **Example:**  
+   For \( f(x) = \sin x \):
+   - \( f(0) = 0 \), \( f'(0) = 1 \), \( f''(0) = 0 \), \( f'''(0) = -1 \), etc.
+   - Result: \( \sin x = x - \frac{x^3}{6} + \frac{x^5}{120} - \cdots \).
+
+---
+
+#### **4. Convergence and Error Analysis**
+- **Radius of Convergence (R):** Determined by the ratio test.  
+  Example: For \( \ln(1+x) \), \( R = 1 \).
+- **Lagrange Remainder:**  
+  \[
+  R_N(x) = \frac{f^{(N+1)}(c)}{(N+1)!} x^{N+1} \quad \text{(for some \( c \) between \( 0 \) and \( x \))}
+  \]
+  - **Practical Tip:** Use \( R_N(x) \) to estimate the error in approximations.
+
+---
+
+#### **5. Applications**
+1. **Approximating Functions:**  
+   - \( e^{0.1} \approx 1 + 0.1 + \frac{0.1^2}{2} = 1.105 \).
+2. **Solving Differential Equations:**  
+   - Assume a power series solution \( y = \sum a_n x^n \).
+3. **Physics/Engineering:**  
+   - Linearizing equations (e.g., \( \sin \theta \approx \theta \) for small angles).
+
+---
+
+#### **6. Pitfalls and Tricks**
+- **Avoid Divergence:** Ensure \( |x| < R \) (e.g., \( \ln(1+x) \) diverges at \( x = -1 \)).
+- **Even/Odd Functions:**  
+  - \( \sin x \) (odd) has only odd powers.
+  - \( \cos x \) (even) has only even powers.
+- **Substitution Method:**  
+  - To find \( e^{-x^2} \), replace \( x \) with \( -x^2 \) in \( e^x \)'s series.
+
+
+**Key Takeaways:**  
+- Maclaurin series are powerful for approximations and analysis.
+- Always check convergence.
+- Master the standard series to save time!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
