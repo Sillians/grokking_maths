@@ -28906,6 +28906,4228 @@ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n = f(0) + f'(0)x + \frac{f''
 
 
 
+## **Dilations and Reflections as Linear Transformations**
+
+---
+
+### **1. What Are Linear Transformations?**
+
+A **linear transformation** is a function \( T: \mathbb{R}^n \rightarrow \mathbb{R}^m \) that satisfies:
+
+- **Additivity**: \( T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v}) \)
+- **Homogeneity**: \( T(c\mathbf{v}) = cT(\mathbf{v}) \)
+
+In 2D or 3D, these transformations are often represented by **matrices**. Applying a linear transformation is equivalent to multiplying a vector by a matrix.
+
+---
+
+## **2. Dilation as a Linear Transformation**
+
+A **dilation** scales vectors from the origin.
+
+- Scaling by a factor \( k \):  
+  \[
+  T(\mathbf{x}) = k \mathbf{x}
+  \]
+  Or, as a matrix:
+  \[
+  T = kI = \begin{bmatrix}
+  k & 0 \\
+  0 & k
+  \end{bmatrix}
+  \]
+
+**Example**:  
+Scaling \( \begin{bmatrix} x \\ y \end{bmatrix} \) by 2:
+\[
+T\left(\begin{bmatrix} x \\ y \end{bmatrix}\right) = 
+\begin{bmatrix}
+2 & 0 \\
+0 & 2
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+2x \\ 2y
+\end{bmatrix}
+\]
+
+It **preserves direction** (except for scaling the magnitude).
+
+---
+
+## **3. Reflections as Linear Transformations**
+
+Reflections flip points across a line or plane through the origin. Each reflection can be defined using a specific **matrix**.
+
+### Common 2D Reflections:
+
+| Line/Axis | Matrix |
+|-----------|--------|
+| Across x-axis | \( \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \) |
+| Across y-axis | \( \begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix} \) |
+| Across \( y = x \) | \( \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \) |
+| Across \( y = -x \) | \( \begin{bmatrix} 0 & -1 \\ -1 & 0 \end{bmatrix} \) |
+
+**Example**: Reflect over x-axis:
+\[
+T\left(\begin{bmatrix} x \\ y \end{bmatrix}\right) = 
+\begin{bmatrix}
+1 & 0 \\
+0 & -1
+\end{bmatrix}
+\begin{bmatrix}
+x \\ y
+\end{bmatrix}
+=
+\begin{bmatrix}
+x \\ -y
+\end{bmatrix}
+\]
+
+---
+
+## **4. Visual Interpretation**
+
+- **Dilations** stretch/shrink the plane.
+- **Reflections** flip the plane across a line.
+- Both preserve **linear structure**: lines remain lines, the origin stays fixed.
+
+---
+
+## **5. Composition of Transformations**
+
+You can **combine** dilations and reflections using matrix multiplication.
+
+**Example**: Dilation by 2 and reflection over x-axis:
+\[
+T = \begin{bmatrix} 2 & 0 \\ 0 & -2 \end{bmatrix}
+\]
+
+Apply to \( \mathbf{v} = \begin{bmatrix} x \\ y \end{bmatrix} \Rightarrow \begin{bmatrix} 2x \\ -2y \end{bmatrix} \)
+
+---
+
+## **6. Key Properties**
+
+| Transformation | Preserves Angles | Preserves Length | Orientation |
+|----------------|------------------|------------------|-------------|
+| Dilation       | ✅               | ❌ (scales)       | ✅          |
+| Reflection     | ✅               | ✅                | ❌ (reverses) |
+
+---
+
+## Summary
+
+- **Dilations** multiply all coordinates by a constant \( k \).
+- **Reflections** flip across a line using specific matrices.
+- Both are linear transformations represented as **matrices**.
+- They **transform geometry** while preserving fundamental structure (lines, parallelism).
+
+
+
+
+
+
+
+
+
+
+
+
+## **Finding the Center and Axes of Ellipses by Completing the Square**
+
+---
+
+### **1. General Form of an Ellipse**
+
+An ellipse in general quadratic form looks like:
+
+\[
+Ax^2 + By^2 + Dx + Ey + F = 0
+\]
+
+- For a standard ellipse: \( A > 0, B > 0 \)
+- No \( xy \) term ⇒ axes are aligned with x and y axes.
+
+---
+
+### **2. Goal**
+
+Transform the general quadratic equation into **standard form** of an ellipse:
+
+\[
+\frac{(x - h)^2}{a^2} + \frac{(y - k)^2}{b^2} = 1
+\]
+
+Where:
+- \( (h, k) \) is the **center**
+- \( a \) = semi-major axis length
+- \( b \) = semi-minor axis length
+
+---
+
+### **3. Completing the Square — Step-by-Step**
+
+Let’s work through a general example:
+
+#### 🔸 Given:
+
+\[
+4x^2 + 9y^2 - 40x + 36y - 284 = 0
+\]
+
+#### Step 1: Group x’s and y’s
+
+\[
+(4x^2 - 40x) + (9y^2 + 36y) = 284
+\]
+
+#### Step 2: Factor out coefficients of squared terms
+
+\[
+4(x^2 - 10x) + 9(y^2 + 4y) = 284
+\]
+
+#### Step 3: Complete the square inside each group
+
+- \( x^2 - 10x \) → add and subtract \( 25 \)
+- \( y^2 + 4y \) → add and subtract \( 4 \)
+
+\[
+4[(x^2 - 10x + 25) - 25] + 9[(y^2 + 4y + 4) - 4] = 284
+\]
+
+\[
+4(x - 5)^2 - 100 + 9(y + 2)^2 - 36 = 284
+\]
+
+#### Step 4: Simplify and move constants to the right
+
+\[
+4(x - 5)^2 + 9(y + 2)^2 = 284 + 100 + 36 = 420
+\]
+
+#### Step 5: Divide through by 420
+
+\[
+\frac{4(x - 5)^2}{420} + \frac{9(y + 2)^2}{420} = 1
+\Rightarrow
+\frac{(x - 5)^2}{105} + \frac{(y + 2)^2}{46.67} = 1
+\]
+
+---
+
+### **4. Interpretation**
+
+From the standard form:
+
+- **Center**: \( (5, -2) \)
+- **Semi-major axis**: \( \max(\sqrt{105}, \sqrt{46.67}) = \sqrt{105} \)
+- **Semi-minor axis**: \( \sqrt{46.67} \)
+- **Major axis direction**: **x-axis** (since denominator under \( x \) is larger)
+
+---
+
+###  **5. Summary of Key Steps**
+
+| Step | Action |
+|------|--------|
+| 1 | Group x and y terms |
+| 2 | Factor coefficients of \( x^2 \), \( y^2 \) |
+| 3 | Complete the square |
+| 4 | Simplify and isolate the conic on one side |
+| 5 | Divide to get RHS = 1 |
+
+---
+
+### **6. Notes**
+
+- If \( A \neq B \) and both positive → ellipse.
+- If \( A = B \) and both positive → **circle** (special ellipse).
+- Axis-aligned ellipses have no \( xy \) term.
+
+
+
+
+
+
+
+
+
+
+
+## **Intersections of Circles with Lines**
+
+---
+
+### **1. General Setup**
+
+A **circle** has the standard form:
+
+\[
+(x - a)^2 + (y - b)^2 = r^2
+\]
+
+A **line** has the form:
+
+\[
+y = mx + c \quad \text{or} \quad Ax + By + C = 0
+\]
+
+To find their **points of intersection**, substitute the linear equation into the circle’s equation and solve for the points \((x, y)\) that satisfy both.
+
+---
+
+### **2. Step-by-Step Example**
+
+#### **Circle**:
+\[
+(x - 2)^2 + (y + 1)^2 = 25
+\]
+
+#### **Line**:
+\[
+y = 3x - 4
+\]
+
+---
+
+### Step 1: Substitute the line into the circle
+
+Substitute \( y = 3x - 4 \) into the circle’s equation:
+
+\[
+(x - 2)^2 + (3x - 4 + 1)^2 = 25
+\Rightarrow (x - 2)^2 + (3x - 3)^2 = 25
+\]
+
+---
+
+### Step 2: Expand
+
+\[
+(x - 2)^2 = x^2 - 4x + 4
+\]
+\[
+(3x - 3)^2 = 9x^2 - 18x + 9
+\]
+
+Add:
+
+\[
+x^2 - 4x + 4 + 9x^2 - 18x + 9 = 25
+\Rightarrow 10x^2 - 22x + 13 = 25
+\]
+
+---
+
+### Step 3: Rearrange into quadratic form
+
+\[
+10x^2 - 22x + 13 - 25 = 0
+\Rightarrow 10x^2 - 22x - 12 = 0
+\]
+
+---
+
+### Step 4: Solve the quadratic
+
+Use the quadratic formula:
+
+\[
+x = \frac{-(-22) \pm \sqrt{(-22)^2 - 4(10)(-12)}}{2(10)}
+= \frac{22 \pm \sqrt{484 + 480}}{20}
+= \frac{22 \pm \sqrt{964}}{20}
+\]
+
+Simplify:
+\[
+x = \frac{22 \pm 2\sqrt{241}}{20}
+= \frac{11 \pm \sqrt{241}}{10}
+\]
+
+---
+
+### Step 5: Plug back into the line to get \( y \)
+
+\[
+y = 3x - 4 = 3\left(\frac{11 \pm \sqrt{241}}{10}\right) - 4
+= \frac{33 \pm 3\sqrt{241}}{10} - \frac{40}{10}
+= \frac{-7 \pm 3\sqrt{241}}{10}
+\]
+
+---
+
+### **3. Final Answer: Points of Intersection**
+
+\[
+\left( \frac{11 \pm \sqrt{241}}{10}, \, \frac{-7 \pm 3\sqrt{241}}{10} \right)
+\]
+
+---
+
+### **4. Possible Outcomes**
+
+- **Two points**: If discriminant \( > 0 \)
+- **One point (tangent)**: If discriminant \( = 0 \)
+- **No point**: If discriminant \( < 0 \)
+
+---
+
+### **5. Applications**
+
+- Geometry problems
+- Ray-circle intersection (graphics)
+- Robotics and path planning
+- Collision detection
+
+
+
+
+
+
+
+
+
+
+
+
+## **The Fundamental Theorem of Algebra with Quartic Equations**
+
+---
+
+### **1. The Fundamental Theorem of Algebra (FTA)**
+
+**Statement:**  
+Every non-zero, single-variable polynomial of degree \( n \) with complex coefficients has exactly \( n \) 
+complex roots (counting multiplicities).
+
+---
+
+### **2. What It Means for Quartic Equations**
+
+A **quartic polynomial** is a polynomial of degree 4. The general form is:
+
+\[
+f(x) = ax^4 + bx^3 + cx^2 + dx + e, \quad \text{where } a \ne 0
+\]
+
+According to FTA:
+- It will have exactly **4 complex roots**.
+- Roots can be **real or complex**, but complex roots **must occur in conjugate pairs** if the polynomial has **real coefficients**.
+
+---
+
+### **3. Types of Roots in Quartic Polynomials**
+
+Let’s explore possible root combinations:
+
+| Real Roots | Complex Roots (Conjugate Pairs) | Example                           |
+|------------|----------------------------------|------------------------------------|
+| 4 real     | 0                                | \( (x - 1)(x - 2)(x - 3)(x - 4) \) |
+| 2 real     | 1 pair                           | \( (x - 1)(x - 2)(x - (1+i))(x - (1-i)) \) |
+| 0 real     | 2 pairs                          | \( (x - (1+i))(x - (1-i))(x - (2+i))(x - (2-i)) \) |
+
+---
+
+### **4. Construction of a Quartic Polynomial from Roots**
+
+If you’re given the roots:  
+\( r_1, r_2, r_3, r_4 \)
+
+Then the polynomial is:
+
+\[
+f(x) = a(x - r_1)(x - r_2)(x - r_3)(x - r_4)
+\]
+
+If \( a = 1 \), the polynomial is monic (leading coefficient = 1).
+
+📝 **Note**: If any of the \( r_i \) are complex and the coefficients must be real, their conjugates must also be among the roots.
+
+---
+
+### **5. Example: Using FTA on Quartic Roots in the Argand Diagram**
+
+Suppose the roots are:  
+\( 1 + i, 1 - i, 2 + i, 2 - i \)
+
+By FTA and complex conjugate root theorem, this gives:
+
+\[
+f(x) = (x - (1+i))(x - (1-i))(x - (2+i))(x - (2-i))
+\]
+
+Simplify each conjugate pair:
+
+- \( (x - (1+i))(x - (1-i)) = (x - 1)^2 + 1 \)
+- \( (x - (2+i))(x - (2-i)) = (x - 2)^2 + 1 \)
+
+Then:
+\[
+f(x) = [(x - 1)^2 + 1][(x - 2)^2 + 1]
+\]
+
+Expand to get the full polynomial. This result **must** be a degree-4 polynomial, confirming FTA.
+
+---
+
+### **6. Implications and Significance**
+
+- FTA ensures **solvability** of polynomial equations over the complex field.
+- It tells us **how many roots** to expect (useful in factorization, synthetic division, etc.).
+- In **numerical methods**, root-finding algorithms (like Newton-Raphson) rely on FTA for completeness.
+- In **control theory, signal processing, and physics**, understanding the nature and position of polynomial roots (real/complex) is critical.
+
+---
+
+### **7. Summary**
+
+- **FTA guarantees** that a quartic polynomial has **4 complex roots** (counting multiplicity).
+- If coefficients are real, complex roots occur in **conjugate pairs**.
+- The **roots can be used to construct** the polynomial explicitly.
+- FTA applies not just to quartic polynomials, but to **all degrees**.
+
+\[
+\boxed{\text{Degree } n \Rightarrow \text{Exactly } n \text{ complex roots}}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Asymptotes of Hyperbolas Centered at the Origin**
+
+---
+
+### **1. What is a Hyperbola?**
+
+A **hyperbola** is a conic section defined as the set of all points where the **difference** of distances 
+from two fixed points (foci) is constant.
+
+For hyperbolas **centered at the origin**, the standard forms are:
+
+- **Horizontal transverse axis**:  
+  \[
+  \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+  \]
+
+- **Vertical transverse axis**:  
+  \[
+  \frac{y^2}{a^2} - \frac{x^2}{b^2} = 1
+  \]
+
+---
+
+### **2. What Are Asymptotes?**
+
+**Asymptotes** are lines that the hyperbola approaches but never touches as \( x \to \infty \) or \( y \to \infty \).
+
+They provide a **framework or boundary** for the shape of the hyperbola.
+
+---
+
+### **3. Asymptotes of a Hyperbola Centered at the Origin**
+
+Asymptotes can be derived by setting the right-hand side of the hyperbola equation to **zero** (i.e., remove the "1").
+
+#### **Case 1: Horizontal Hyperbola**
+\[
+\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+\Rightarrow \frac{x^2}{a^2} - \frac{y^2}{b^2} = 0
+\Rightarrow \frac{x^2}{a^2} = \frac{y^2}{b^2}
+\]
+
+Solving gives:
+\[
+y = \pm \frac{b}{a}x
+\]
+
+#### **Case 2: Vertical Hyperbola**
+\[
+\frac{y^2}{a^2} - \frac{x^2}{b^2} = 1
+\Rightarrow \frac{y^2}{a^2} - \frac{x^2}{b^2} = 0
+\Rightarrow \frac{y^2}{a^2} = \frac{x^2}{b^2}
+\]
+
+Solving gives:
+\[
+y = \pm \frac{a}{b}x
+\]
+
+---
+
+### **4. Geometric Interpretation**
+
+In both cases, the asymptotes are **diagonal lines** that intersect at the **center of the hyperbola** (the origin), and they guide the branches of the hyperbola.
+
+They form the **diagonals of a rectangle** that helps sketch the hyperbola:
+- Width: \( 2a \)
+- Height: \( 2b \)
+
+---
+
+### **5. Summary Table**
+
+| Type of Hyperbola | Standard Equation | Asymptotes             |
+|-------------------|-------------------|-------------------------|
+| Horizontal         | \( \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 \) | \( y = \pm \frac{b}{a}x \) |
+| Vertical           | \( \frac{y^2}{a^2} - \frac{x^2}{b^2} = 1 \) | \( y = \pm \frac{a}{b}x \) |
+
+---
+
+### **6. Why Are Asymptotes Important?**
+
+- **Graphing**: They give a skeleton to accurately draw the hyperbola.
+- **Limits**: Help in analyzing end behavior as \( x \to \pm\infty \).
+- **Modeling**: Used in optics, astronomy, and navigation systems where hyperbolic paths occur.
+
+---
+
+### **7. Visual Summary**
+
+Think of asymptotes as **guiding rails**—the arms of the hyperbola get closer to them but never intersect them. The **steepness** of the asymptotes depends on the ratio \( \frac{b}{a} \) or \( \frac{a}{b} \).
+
+
+
+
+
+
+
+
+
+
+
+
+## **Representing Functions as Power Series**
+
+---
+
+### **1. What is a Power Series?**
+
+A **power series** is an infinite series of the form:
+
+\[
+\sum_{n=0}^{\infty} a_n (x - c)^n = a_0 + a_1(x - c) + a_2(x - c)^2 + a_3(x - c)^3 + \cdots
+\]
+
+- \( a_n \): Coefficients of the series  
+- \( c \): Center of the series (usually 0 for Maclaurin series)  
+- \( x \): Variable
+
+If \( c = 0 \), it becomes a **Maclaurin series**.
+
+---
+
+### **2. Why Represent Functions as Power Series?**
+
+Power series provide a way to express functions:
+- As infinite polynomials (useful for approximation)
+- For operations like differentiation, integration, and limit evaluation
+- To study behavior near a point (especially for transcendental functions)
+
+---
+
+### **3. Common Maclaurin Series (Centered at \( x = 0 \))**
+
+Here are some foundational expansions:
+
+| Function                    | Power Series                                           | Interval of Convergence |
+|-----------------------------|--------------------------------------------------------|--------------------------|
+| \( e^x \)                   | \( \sum_{n=0}^{\infty} \frac{x^n}{n!} \)              | All \( x \)             |
+| \( \sin x \)                | \( \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!} \) | All \( x \)             |
+| \( \cos x \)                | \( \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n)!} \)   | All \( x \)             |
+| \( \ln(1 + x) \)            | \( \sum_{n=1}^{\infty} (-1)^{n+1} \frac{x^n}{n} \)     | \( |x| < 1 \)           |
+| \( \frac{1}{1 - x} \)       | \( \sum_{n=0}^{\infty} x^n \)                         | \( |x| < 1 \)           |
+
+---
+
+### **4. Constructing a Power Series: General Approach**
+
+To represent a function \( f(x) \) as a power series:
+
+#### Step 1: Compute derivatives  
+Find \( f(0), f'(0), f''(0), \ldots \)
+
+#### Step 2: Use the formula for the Maclaurin series:
+\[
+f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n
+\]
+
+---
+
+### **5. Examples**
+
+#### a. Power Series for \( \cos(\sqrt{x}) \)
+
+\[
+\cos(\sqrt{x}) = \sum_{n=0}^{\infty} (-1)^n \frac{x^n}{(2n)!}
+\]
+
+This works because:
+\[
+\cos(\sqrt{x}) = 1 - \frac{x}{2!} + \frac{x^2}{4!} - \frac{x^3}{6!} + \cdots
+\]
+
+#### b. Combining Functions: \( e^{\sqrt{x}} + e^{-\sqrt{x}} \)
+
+As shown earlier:
+
+\[
+e^{\sqrt{x}} + e^{-\sqrt{x}} = 2 + x + \frac{x^2}{12} + \cdots
+\]
+
+---
+
+### **6. Operations on Power Series**
+
+If \( f(x) = \sum a_n x^n \), then:
+
+- **Derivative**:
+\[
+f'(x) = \sum_{n=1}^{\infty} n a_n x^{n-1}
+\]
+
+- **Integral**:
+\[
+\int f(x)\,dx = \sum_{n=0}^{\infty} \frac{a_n}{n+1} x^{n+1} + C
+\]
+
+- **Multiplication**:
+Power series can be multiplied like polynomials using convolution of coefficients.
+
+---
+
+### **7. Radius and Interval of Convergence**
+
+The **radius of convergence** \( R \) defines the interval where the series converges:
+
+Use the **Ratio Test**:
+\[
+\lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| = L \Rightarrow R = \frac{1}{L}
+\]
+
+---
+
+### **8. Use in Approximation (Taylor Polynomials)**
+
+Finite partial sums of a power series:
+\[
+P_n(x) = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n
+\]
+
+These approximate \( f(x) \) near the center \( c \), with increasing accuracy as \( n \) grows.
+
+---
+
+### **Summary**
+
+Power series are powerful tools in analysis and approximation, offering a way to write functions as 
+infinite polynomials with well-understood behavior. Understanding how to represent functions with 
+series opens the door to deeper mathematical insight and practical numerical methods.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Rotations as Linear Transformations**
+
+---
+
+### **1. Understanding Rotation Matrices**
+
+A **rotation** in the plane is a linear transformation that turns every point around the origin by 
+a fixed angle \( \theta \). This transformation is described by the matrix:
+
+\[
+R(\theta) = 
+\begin{bmatrix}
+\cos(\theta) & -\sin(\theta) \\
+\sin(\theta) & \cos(\theta)
+\end{bmatrix}
+\]
+
+This matrix rotates a vector **counterclockwise** by angle \( \theta \) around the origin.
+
+---
+
+### **2. Why It’s Linear**
+
+Rotations preserve:
+- **Origin**: \( R(\theta) \cdot \vec{0} = \vec{0} \)
+- **Vector addition**: \( R(\theta)(\vec{u} + \vec{v}) = R(\theta)\vec{u} + R(\theta)\vec{v} \)
+- **Scalar multiplication**: \( R(\theta)(c \cdot \vec{v}) = c \cdot R(\theta)\vec{v} \)
+
+Therefore, a rotation is a **linear transformation**.
+
+---
+
+### **3. Geometric Interpretation**
+
+When a vector \( \vec{v} = \begin{bmatrix} x \\ y \end{bmatrix} \) is multiplied by \( R(\theta) \), the result is a **new vector** that has been rotated counterclockwise by \( \theta \) radians:
+
+\[
+\begin{bmatrix}
+\cos(\theta) & -\sin(\theta) \\
+\sin(\theta) & \cos(\theta)
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+x\cos(\theta) - y\sin(\theta) \\
+x\sin(\theta) + y\cos(\theta)
+\end{bmatrix}
+\]
+
+---
+
+### **4. Clockwise Rotation**
+
+To rotate **clockwise**, use \( -\theta \):
+
+\[
+R(-\theta) =
+\begin{bmatrix}
+\cos(\theta) & \sin(\theta) \\
+-\sin(\theta) & \cos(\theta)
+\end{bmatrix}
+\]
+
+---
+
+### **5. Properties**
+
+- **Determinant**: \( \det(R(\theta)) = 1 \), so rotation matrices are **orthogonal** and **invertible**.
+- **Inverse**: \( R(\theta)^{-1} = R(-\theta) \)
+- **Composition**: Two rotations compose additively: \( R(\theta_1)R(\theta_2) = R(\theta_1 + \theta_2) \)
+
+---
+
+### **6. Applications**
+
+- Computer graphics and animation
+- Robotics and kinematics
+- Signal/image processing
+- Coordinate transformation in physics
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Recognizing Standard Maclaurin Series**
+
+---
+
+### **Definition Recap**
+A **Maclaurin series** is a Taylor series expansion of a function \( f(x) \) about \( x = 0 \):
+
+\[
+f(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \frac{f^{(3)}(0)}{3!}x^3 + \cdots
+\]
+
+Or more compactly:
+
+\[
+f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n
+\]
+
+---
+
+### **Common Standard Maclaurin Series**
+
+| Function          | Maclaurin Series                                                                                                                                     | Interval of Convergence           |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| \( e^x \)         | \( \sum_{n=0}^{\infty} \frac{x^n}{n!} \)                                                                                                              | \( (-\infty, \infty) \)           |
+| \( \sin x \)      | \( \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} \)                                                                                             | \( (-\infty, \infty) \)           |
+| \( \cos x \)      | \( \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} \)                                                                                                 | \( (-\infty, \infty) \)           |
+| \( \frac{1}{1 - x} \) | \( \sum_{n=0}^{\infty} x^n \)                                                                                                                         | \( |x| < 1 \)                     |
+| \( \ln(1 + x) \)  | \( \sum_{n=1}^{\infty} \frac{(-1)^{n+1} x^n}{n} \)                                                                                                    | \( -1 < x \leq 1 \)               |
+| \( \frac{1}{1 + x} \) | \( \sum_{n=0}^{\infty} (-1)^n x^n \)                                                                                                                  | \( |x| < 1 \)                     |
+| \( \arctan x \)   | \( \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{2n + 1} \)                                                                                              | \( |x| \leq 1 \)                  |
+
+---
+
+### **Strategy for Recognition**
+
+1. **Compare Term-by-Term**: Look at the powers and factorials.
+2. **Sign Pattern**: Alternate signs indicate sine, cosine, ln, or arctan.
+3. **Exponent Pattern**:
+   - Odd powers: likely \( \sin x \) or \( \arctan x \)
+   - Even powers: likely \( \cos x \)
+4. **Denominator Growth**:
+   - Factorials: indicates exponential, sine, or cosine
+   - Linear: points to \( \ln(1 + x) \) or \( \arctan x \)
+5. **Shifted Series**: Watch for \( x^n \to (x - a)^n \)
+
+---
+
+### **Example**
+
+**Given series:**
+\[
+1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots
+\]
+
+**Pattern:**
+- Even powers only
+- Alternating signs
+- Factorials in the denominator
+
+**Recognized as:**
+\[
+\boxed{\cos x}
+\]
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## **Parametric Equations of Horizontal Hyperbolas – (Using Secant and Tangent)**
+
+---
+
+### **1. Standard Equation of a Horizontal Hyperbola**
+
+The standard **Cartesian** equation for a horizontal hyperbola centered at the origin is:
+
+\[
+\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+\]
+
+This describes:
+- A **hyperbola** opening **left and right**.
+- With transverse axis along the **x-axis**.
+
+---
+
+### **2. Parametric Equations Using Trigonometric Functions**
+
+We can parameterize the hyperbola using:
+
+\[
+\begin{cases}
+x = a \sec(t) \\
+y = b \tan(t)
+\end{cases}
+\quad \text{where } t \in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right) \setminus \left\{0\right\}
+\]
+
+✅ This works because of the identity:
+
+\[
+\sec^2(t) - \tan^2(t) = 1
+\]
+
+**Substituting into the Cartesian form:**
+
+\[
+\frac{x^2}{a^2} - \frac{y^2}{b^2}
+= \sec^2(t) - \tan^2(t) = 1
+\]
+
+So the parametric equations satisfy the hyperbola equation.
+
+---
+
+### **3. Domain Restrictions**
+
+- \( \sec(t) \) and \( \tan(t) \) are **undefined** at \( t = \pm \frac{\pi}{2} \).
+- This matches the nature of the hyperbola: there's a vertical asymptote (lines that the graph approaches but never touches).
+
+---
+
+### **4. Geometry & Motion**
+
+As \( t \to 0 \):
+- \( \sec(t) \to 1 \Rightarrow x \to a \)
+- \( \tan(t) \to 0 \Rightarrow y \to 0 \)
+
+As \( t \to \pm \frac{\pi}{2} \):
+- \( \tan(t) \to \pm \infty \)
+- \( \sec(t) \to \infty \Rightarrow x \to \infty \)
+
+This traces each **branch of the hyperbola** as \( t \) varies over its domain.
+
+---
+
+### **5. Shifted Hyperbola (Center at \( (h, k) \))**
+
+If the hyperbola is centered at \( (h, k) \), then:
+
+\[
+\begin{cases}
+x = h + a \sec(t) \\
+y = k + b \tan(t)
+\end{cases}
+\]
+
+---
+
+### **6. Comparison to Hyperbolic Parametrization**
+
+The **hyperbolic function** version uses:
+
+\[
+\begin{cases}
+x = a \cosh(u) \\
+y = b \sinh(u)
+\end{cases}
+\]
+
+Which works well for real-valued curves since \( \cosh(u), \sinh(u) \) are defined for all real \( u \). 
+In contrast, the **trig function** approach using \( \sec(t), \tan(t) \) has domain restrictions.
+
+---
+
+
+
+
+
+
+
+
+
+## **De Moivre’s Theorem**
+
+---
+
+### **1. Statement of De Moivre’s Theorem**
+
+For any real number \( \theta \) and integer \( n \), **De Moivre’s Theorem** states:
+
+\[
+(\cos \theta + i \sin \theta)^n = \cos(n\theta) + i \sin(n\theta)
+\]
+
+This applies when working with **complex numbers in polar form**.
+
+---
+
+### **2. Polar Form of a Complex Number**
+
+Any non-zero complex number \( z = x + iy \) can be expressed in **polar form** as:
+
+\[
+z = r(\cos \theta + i \sin \theta)
+\]
+
+Where:
+- \( r = |z| = \sqrt{x^2 + y^2} \) is the modulus (magnitude),
+- \( \theta = \arg(z) \) is the argument (angle made with the positive real axis).
+
+---
+
+### **3. Applying De Moivre’s Theorem**
+
+To compute powers of complex numbers:
+
+If \( z = r(\cos \theta + i \sin \theta) \), then:
+
+\[
+z^n = r^n (\cos(n\theta) + i \sin(n\theta))
+\]
+
+✅ This gives the result in polar form.
+
+---
+
+### **4. Example**
+
+Let \( z = 2(\cos \frac{\pi}{3} + i \sin \frac{\pi}{3}) \). Find \( z^3 \):
+
+Using De Moivre’s:
+
+\[
+z^3 = 2^3 \left( \cos\left(3 \cdot \frac{\pi}{3}\right) + i \sin\left(3 \cdot \frac{\pi}{3}\right) \right)
+= 8(\cos \pi + i \sin \pi)
+= 8(-1 + i \cdot 0) = -8
+\]
+
+---
+
+### **5. Roots Using De Moivre’s Theorem**
+
+To compute **nth roots** of a complex number \( z = r (\cos \theta + i \sin \theta) \), we use:
+
+\[
+z^{1/n} = r^{1/n} \left( \cos\left(\frac{\theta + 2k\pi}{n} \right) + i \sin\left(\frac{\theta + 2k\pi}{n} \right) \right)
+\quad \text{for } k = 0, 1, ..., n-1
+\]
+
+This gives all **n distinct complex roots**.
+
+---
+
+### **6. Euler’s Form**
+
+Using Euler's formula:  
+\[
+e^{i\theta} = \cos \theta + i \sin \theta
+\]
+
+De Moivre’s Theorem becomes:
+
+\[
+(e^{i\theta})^n = e^{in\theta}
+\Rightarrow \cos(n\theta) + i \sin(n\theta)
+\]
+
+---
+
+### **7. Applications**
+
+- Efficient computation of complex powers and roots.
+- Root-finding in polynomial equations with complex coefficients.
+- Rotation and scaling in the complex plane.
+- Used in Fourier transforms and signal processing.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## **Estimating Derivatives Using a Forward Difference Quotient**
+
+---
+
+### **1. Overview**
+
+The **forward difference quotient** is a numerical method used to estimate the derivative of a function at a given point. 
+It’s particularly useful when the function is **not easily differentiable symbolically** or when only **discrete data points** are available.
+
+---
+
+### **2. Formula: Forward Difference Quotient**
+
+For a function \( f(x) \), the forward difference approximation of the derivative at point \( x \) is:
+
+\[
+f'(x) \approx \frac{f(x + h) - f(x)}{h}
+\]
+
+Where:
+- \( h \) is a **small positive number** (step size),
+- \( f(x + h) \) is the function evaluated at a small increment beyond \( x \).
+
+---
+
+### **3. Intuition Behind the Formula**
+
+It’s a slope between two nearby points on the function:
+
+- Point 1: \( (x, f(x)) \)
+- Point 2: \( (x + h, f(x + h)) \)
+
+The slope of the **secant line** between these two points approximates the **tangent line**, i.e., the derivative.
+
+---
+
+### **4. Graphical Insight**
+
+On a graph:
+- The forward difference is a **secant line** from \( x \) to \( x + h \).
+- As \( h \to 0 \), this line approaches the **true tangent line**, representing the actual derivative.
+
+---
+
+### **5. Example**
+
+Estimate \( f'(1) \) for \( f(x) = x^2 \), using \( h = 0.01 \):
+
+\[
+f'(1) \approx \frac{f(1 + 0.01) - f(1)}{0.01}
+= \frac{(1.01)^2 - 1^2}{0.01}
+= \frac{1.0201 - 1}{0.01}
+= \frac{0.0201}{0.01} = 2.01
+\]
+
+The **exact derivative** at \( x = 1 \) is \( f'(x) = 2x = 2 \).  
+This estimate (2.01) is very close.
+
+---
+
+### **6. Error Considerations**
+
+The **error** in the forward difference method is approximately proportional to \( h \):
+
+\[
+\text{Error} \sim \mathcal{O}(h)
+\]
+
+- Smaller \( h \): Better approximation (to a limit), but can suffer from **numerical instability** due to machine precision.
+- Choosing \( h \) too small may lead to **round-off errors**.
+
+---
+
+### **7. Applications**
+
+- **Numerical differentiation** when only data values are known (e.g., experimental data).
+- **Finite difference methods** for solving differential equations.
+- Approximating derivatives in **simulation** and **modeling** software.
+
+---
+
+### **8. Related Concepts**
+
+- **Backward Difference Quotient:**  
+  \[
+  f'(x) \approx \frac{f(x) - f(x - h)}{h}
+  \]
+- **Central Difference Quotient (More Accurate):**  
+  \[
+  f'(x) \approx \frac{f(x + h) - f(x - h)}{2h}
+  \]
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## **Differentiating Curves Given in Polar Form**
+
+In polar coordinates, a curve is described using the form:
+
+\[
+r = f(\theta)
+\]
+
+To find the slope (derivative) of the tangent line at a point on the polar curve, we need to convert it into parametric form and then compute \(\frac{dy}{dx}\).
+
+---
+
+### **1. Parametric Representation of Polar Curves**
+
+Given:
+\[
+r = f(\theta)
+\]
+
+Convert to Cartesian coordinates:
+- \( x = r \cos\theta = f(\theta)\cos\theta \)
+- \( y = r \sin\theta = f(\theta)\sin\theta \)
+
+Now treat \(x\) and \(y\) as functions of \(\theta\).
+
+---
+
+### **2. Derivative \(\frac{dy}{dx}\)**
+
+We use the chain rule:
+\[
+\frac{dy}{dx} = \frac{\frac{dy}{d\theta}}{\frac{dx}{d\theta}}
+\]
+
+Compute:
+- \( \frac{dx}{d\theta} = f'(\theta)\cos\theta - f(\theta)\sin\theta \)
+- \( \frac{dy}{d\theta} = f'(\theta)\sin\theta + f(\theta)\cos\theta \)
+
+Thus,
+\[
+\frac{dy}{dx} = \frac{f'(\theta)\sin\theta + f(\theta)\cos\theta}{f'(\theta)\cos\theta - f(\theta)\sin\theta}
+\]
+
+---
+
+### **3. Tangents and Slopes**
+
+- **Horizontal Tangents** occur when \( \frac{dy}{d\theta} = 0 \) and \( \frac{dx}{d\theta} \neq 0 \)
+- **Vertical Tangents** occur when \( \frac{dx}{d\theta} = 0 \) and \( \frac{dy}{d\theta} \neq 0 \)
+
+---
+
+### **Example**
+
+Let \( r = 1 + \cos\theta \)
+
+Then:
+- \( x = (1 + \cos\theta)\cos\theta \)
+- \( y = (1 + \cos\theta)\sin\theta \)
+
+Differentiate and apply the formula above to find \(\frac{dy}{dx}\) for any given \(\theta\).
+
+---
+
+
+
+
+
+
+
+
+
+## **Solving Trigonometric Equations Using the Sin-Cos-Tan Identity**
+
+Solving trigonometric equations often involves expressing all terms in one trigonometric function using fundamental identities. 
+The **sin-cos-tan identity** is a powerful tool for this:
+
+\[
+\tan\theta = \frac{\sin\theta}{\cos\theta}
+\]
+
+This identity, along with the Pythagorean identities:
+
+- \(\sin^2\theta + \cos^2\theta = 1\)
+- \(1 + \tan^2\theta = \sec^2\theta\)
+- \(1 + \cot^2\theta = \csc^2\theta\)
+
+can simplify and help solve equations involving multiple trig functions.
+
+---
+
+### **1. Strategy to Solve Trig Equations**
+1. **Convert** all functions to sine or cosine.
+2. **Use identities** to reduce the equation to one trig function.
+3. **Solve** the resulting basic equation.
+4. **Find all general solutions** (include all quadrants if necessary).
+5. **Check for extraneous solutions** if required by the original equation.
+
+---
+
+### **2. Example 1:**
+Solve  
+\[
+\sin\theta = \cos\theta
+\]
+
+**Divide both sides by \(\cos\theta\)** (assuming \(\cos\theta \ne 0\)):
+\[
+\frac{\sin\theta}{\cos\theta} = 1 \Rightarrow \tan\theta = 1
+\]
+
+\[
+\theta = \frac{\pi}{4} + n\pi, \quad n \in \mathbb{Z}
+\]
+
+---
+
+### **3. Example 2:**
+Solve  
+\[
+\tan^2\theta - 3\tan\theta + 2 = 0
+\]
+
+Let \(x = \tan\theta\):
+\[
+x^2 - 3x + 2 = 0 \Rightarrow (x - 1)(x - 2) = 0
+\Rightarrow \tan\theta = 1 \text{ or } \tan\theta = 2
+\]
+
+\[
+\theta = \tan^{-1}(1) + n\pi = \frac{\pi}{4} + n\pi \\
+\theta = \tan^{-1}(2) + n\pi
+\]
+
+---
+
+### **4. Example 3 (Mixed Functions):**
+Solve  
+\[
+2\sin\theta - \tan\theta = 0
+\]
+
+Use \(\tan\theta = \frac{\sin\theta}{\cos\theta}\):
+
+\[
+2\sin\theta - \frac{\sin\theta}{\cos\theta} = 0
+\Rightarrow \sin\theta\left(2 - \frac{1}{\cos\theta}\right) = 0
+\]
+
+Now solve:
+- \(\sin\theta = 0 \Rightarrow \theta = n\pi\)
+- \(2 - \frac{1}{\cos\theta} = 0 \Rightarrow \cos\theta = \frac{1}{2} \Rightarrow \theta = \pm \frac{\pi}{3} + 2n\pi\)
+
+---
+
+### **5. Summary of Common Identities Used**
+- \(\tan\theta = \frac{\sin\theta}{\cos\theta}\)
+- \(\sin^2\theta + \cos^2\theta = 1\)
+- \(\tan^2\theta + 1 = \sec^2\theta\)
+- Use unit circle for finding general solutions.
+
+---
+
+
+
+
+
+
+
+
+
+
+## **Solving Inequalities Involving Geometric Sequences**
+
+---
+
+### **1. Understanding the Geometric Sequence**
+
+A geometric sequence is a sequence of numbers where each term after the first is found by multiplying the 
+previous one by a constant ratio \( r \).  
+
+General form:
+\[
+T_n = a \cdot r^{n-1}
+\]
+Where:
+- \( T_n \): the \(n\)th term  
+- \( a \): the first term  
+- \( r \): the common ratio  
+- \( n \): the term number  
+
+---
+
+### **2. The Inequality Setup**
+
+We often want to find the smallest integer \( n \) such that:
+\[
+T_n = a \cdot r^{n-1} < k \quad \text{or} \quad T_n > k
+\]
+Depending on whether the sequence is **decaying** \((0 < r < 1)\) or **growing** \((r > 1)\), the inequality will behave differently.
+
+---
+
+### **3. Solving the Inequality**
+
+Start with the inequality:
+\[
+a \cdot r^{n-1} < k
+\]
+Divide both sides by \( a \) (assuming \( a > 0 \)):
+\[
+r^{n-1} < \frac{k}{a}
+\]
+
+Now apply the **logarithm** to both sides to isolate \( n \):
+\[
+(n - 1) \cdot \ln(r) < \ln\left(\frac{k}{a}\right)
+\]
+
+Solve for \( n \):
+\[
+n - 1 < \frac{\ln\left(\frac{k}{a}\right)}{\ln(r)} \quad \Rightarrow \quad n < \frac{\ln(k/a)}{\ln(r)} + 1
+\]
+
+> ⚠️ Note: When \( r < 1 \), \( \ln(r) \) is negative, which **reverses** the inequality when dividing.
+
+---
+
+### **4. Example Problem**
+
+**Question**: What is the first term of the sequence  
+\[
+64, 48, 36, 27, \dots
+\]  
+that is **less than 0.001**?
+
+**Step 1: Identify Parameters**  
+- \( a = 64 \),  
+- \( r = \frac{3}{4} = 0.75 \),  
+- Need to solve:  
+\[
+64 \cdot 0.75^{n-1} < 0.001
+\]
+
+**Step 2: Divide by 64**  
+\[
+0.75^{n-1} < \frac{0.001}{64} \approx 1.5625 \times 10^{-5}
+\]
+
+**Step 3: Apply Logarithms**  
+\[
+(n - 1) \cdot \ln(0.75) < \ln(1.5625 \times 10^{-5})
+\Rightarrow n - 1 > \frac{-11.07}{-0.28768} \approx 38.5
+\Rightarrow n = 40
+\]
+
+---
+
+### **5. Key Concepts Recap**
+
+| Concept | Description |
+|--------|-------------|
+| **Logarithmic Properties** | Used to isolate the exponent when solving inequalities |
+| **Inequality Direction** | Flip the sign when dividing by a negative log value |
+| **Growth vs Decay** | \( r > 1 \): exponential growth; \( 0 < r < 1 \): exponential decay |
+| **Precision** | Logarithmic estimation helps approximate where thresholds are crossed |
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## **Estimating Derivatives Using a Backward Difference Quotient**
+
+---
+
+### **1. Conceptual Overview**
+
+In numerical analysis, the **backward difference quotient** is a method to approximate the **derivative** (or instantaneous rate of change) of a 
+function at a certain point using values from earlier (past) points. It's especially useful when future values are unavailable or in data-driven models 
+where values are discrete.
+
+---
+
+### **2. Formula**
+
+For a function \( f(t) \), the **backward difference approximation** of its derivative at point \( t \) is:
+
+\[
+f'(t) \approx \frac{f(t) - f(t - h)}{h}
+\]
+
+- \( h \): step size (distance between time points)
+- \( f(t) \): function value at current time
+- \( f(t - h) \): function value at previous time
+
+---
+
+### **3. When and Why to Use**
+
+- **When**:
+  - Data is sampled at discrete time intervals
+  - Real-time estimation is needed (no future data)
+  - Smoother or less volatile data (less noise-sensitive than central difference)
+
+- **Why**:
+  - Simpler to compute
+  - More practical in real-time systems
+  - Only requires present and past values
+
+---
+
+### **4. Example: Population Growth**
+
+Given:
+
+| Year \( t \) | Population \( p(t) \) (thousands) |
+|-------------|-----------------------------------|
+| 1985        | 10.8                              |
+| 1990        | 11.8                              |
+
+To estimate growth rate at **1990** using backward difference:
+
+\[
+p'(1990) \approx \frac{11.8 - 10.8}{1990 - 1985} = \frac{1.0}{5} = 0.2 \, \text{(thousand/year)}
+\]
+
+Convert to people/year:
+
+\[
+0.2 \times 1000 = 200 \text{ people per year}
+\]
+
+---
+
+### **5. Graphical Intuition**
+
+On a graph, the backward difference gives the **slope of the secant line** connecting the point at \( t \) and \( t - h \), 
+representing the average rate of change over that interval, approximating the **tangent (instantaneous rate)** at \( t \).
+
+---
+
+### **6. Comparison with Other Finite Differences**
+
+| Method             | Formula                                  | Accuracy     | Requires     |
+|--------------------|-------------------------------------------|--------------|--------------|
+| Forward Difference | \( \frac{f(t+h) - f(t)}{h} \)             | First order  | Future value |
+| Backward Difference| \( \frac{f(t) - f(t-h)}{h} \)             | First order  | Past value   |
+| Central Difference | \( \frac{f(t+h) - f(t-h)}{2h} \)          | Second order | Both sides   |
+
+---
+
+### **7. Accuracy and Limitations**
+
+- **Order of accuracy**: \( \mathcal{O}(h) \)
+- **Error**: Proportional to the step size \( h \); smaller \( h \) gives more accurate approximations.
+- **Limitations**:
+  - Less accurate than central difference.
+  - Sensitive to data noise and rounding errors if values are imprecise.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Asymptotes of Hyperbolas Centered at a General Point**
+
+---
+
+### **1. Overview**
+
+A **hyperbola** is a type of conic section defined as the set of points where the **difference of distances** from two fixed points (foci) is constant. 
+Unlike circles or ellipses, hyperbolas have **asymptotes**—lines that the curve approaches but never touches.
+
+When a hyperbola is **centered at a general point** \( (h, k) \), rather than the origin, the formulas for the asymptotes must be adjusted accordingly.
+
+---
+
+### **2. Standard Form of a Hyperbola**
+
+There are two standard forms of a hyperbola depending on its **opening direction**:
+
+- **Horizontal opening** (left and right):
+
+  \[
+  \frac{(x - h)^2}{a^2} - \frac{(y - k)^2}{b^2} = 1
+  \]
+
+- **Vertical opening** (up and down):
+
+  \[
+  \frac{(y - k)^2}{a^2} - \frac{(x - h)^2}{b^2} = 1
+  \]
+
+Here:
+- \( (h, k) \): center of the hyperbola
+- \( a \): distance from center to vertices
+- \( b \): determines the slope of the asymptotes (related to the conjugate axis)
+
+---
+
+### **3. Asymptotes of a Hyperbola**
+
+Asymptotes are straight lines that a hyperbola approaches but never intersects. They help define the hyperbola’s “frame” and determine its slant and spread.
+
+#### **Horizontal Hyperbola**
+
+From:
+
+\[
+\frac{(x - h)^2}{a^2} - \frac{(y - k)^2}{b^2} = 1
+\]
+
+The **asymptotes** are:
+
+\[
+y - k = \pm \frac{b}{a}(x - h)
+\]
+
+#### **Vertical Hyperbola**
+
+From:
+
+\[
+\frac{(y - k)^2}{a^2} - \frac{(x - h)^2}{b^2} = 1
+\]
+
+The **asymptotes** are:
+
+\[
+y - k = \pm \frac{a}{b}(x - h)
+\]
+
+These equations are **linear** and pass through the center \( (h, k) \), representing the diagonals of the rectangle that guides the hyperbola’s shape.
+
+---
+
+### **4. Derivation Intuition**
+
+To derive the asymptotes:
+
+- Start by setting the equation of the hyperbola to **0** (ignore the \( \pm 1 \) on the right).
+- You get a homogeneous equation:
+
+  - Horizontal:  
+    \[
+    \frac{(x - h)^2}{a^2} - \frac{(y - k)^2}{b^2} = 0
+    \Rightarrow \frac{(x - h)^2}{a^2} = \frac{(y - k)^2}{b^2}
+    \Rightarrow \frac{y - k}{x - h} = \pm \frac{b}{a}
+    \]
+
+  - Solve for \( y \):  
+    \[
+    y - k = \pm \frac{b}{a}(x - h)
+    \]
+
+---
+
+### **5. Graphical Interpretation**
+
+- Asymptotes define the **slanted boundaries** of the hyperbola’s arms.
+- The **slopes** of these lines are \( \pm \frac{b}{a} \) or \( \pm \frac{a}{b} \), depending on orientation.
+- The **center \( (h, k) \)** is the point where the asymptotes intersect.
+- The **hyperbola’s branches** will get closer and closer to the asymptotes as \( x \to \infty \) or \( x \to -\infty \).
+
+---
+
+### **6. Applications and Relevance**
+
+- In **physics**, hyperbolas describe trajectories under certain force fields (e.g., in orbital mechanics).
+- In **navigation and radio systems**, hyperbolic curves model distances between transmitters.
+- Asymptotes give essential information about the **behavior at infinity**, useful in **graphing** and **approximation**.
+
+---
+
+
+
+
+
+## **Sums of Infinite Geometric Series Given in Sigma Notation**
+
+---
+
+### **1. What Is a Geometric Series?**
+
+A **geometric series** is a sum of terms that have a constant ratio between consecutive terms. It takes the form:
+
+\[
+\sum_{n=0}^{\infty} ar^n = a + ar + ar^2 + ar^3 + \cdots
+\]
+
+- \( a \): first term
+- \( r \): common ratio
+- \( n \): index (starts at 0 unless otherwise specified)
+
+---
+
+### **2. Convergence of an Infinite Geometric Series**
+
+The series **converges** (i.e., has a finite sum) **only if** the absolute value of the common ratio is **less than 1**:
+
+\[
+|r| < 1
+\]
+
+If \( |r| \geq 1 \), the series **diverges** (the sum does not exist or is infinite).
+
+---
+
+### **3. Formula for the Sum**
+
+When \( |r| < 1 \), the sum of the infinite geometric series is:
+
+\[
+\sum_{n=0}^{\infty} ar^n = \frac{a}{1 - r}
+\]
+
+This formula assumes the index \( n \) starts at 0. If it starts at a higher value \( n = k \), adjust accordingly.
+
+---
+
+### **4. Sigma Notation Interpretation**
+
+**Sigma notation** is a compact way of writing sums:
+
+\[
+\sum_{n=k}^{\infty} ar^n
+\]
+
+- Identify:
+  - \( a = \text{value of the term when } n = k \)
+  - Common ratio \( r \): obtained by checking how each term multiplies forward
+
+> **Example:**
+>
+> \[
+> \sum_{n=2}^{\infty} 3 \cdot (0.5)^n
+> \]
+>
+> Rewrite it in standard form:
+> \[
+> = \sum_{n=0}^{\infty} 3 \cdot (0.5)^{n+2} = \sum_{n=0}^{\infty} 3 \cdot (0.5)^2 \cdot (0.5)^n = \sum_{n=0}^{\infty} \frac{3}{4} \cdot (0.5)^n
+> \]
+>
+> So \( a = \frac{3}{4} \), \( r = 0.5 \)
+>
+> \[
+> \text{Sum} = \frac{3/4}{1 - 0.5} = \frac{3/4}{0.5} = \frac{3}{2}
+> \]
+
+---
+
+### **5. Common Pitfalls**
+
+- **Wrong starting index**: Adjust the formula if the series doesn't start at \( n = 0 \).
+- **Misidentifying \( a \) and \( r \)**: Always simplify the general term to identify constants and the exponential ratio clearly.
+- **Overlooking convergence condition**: Always verify \( |r| < 1 \) before applying the sum formula.
+
+---
+
+### **6. Real-World Applications**
+
+- **Finance**: Infinite geometric series appear in perpetuities (infinite cash flows).
+- **Physics/Engineering**: Used in analyzing systems that involve damping, signals, and feedback.
+- **Computer Science**: Performance analysis and recursive algorithm cost estimates.
+
+---
+
+### **7. Visual Intuition**
+
+Graphically, each term in the series contributes less and less to the total sum. The curve of partial sums approaches a horizontal asymptote—the sum.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## **Estimating Derivatives Using a Central Difference Quotient**
+
+---
+
+### **1. Overview**
+
+The **Central Difference Quotient** is a numerical method used to estimate the derivative of a function at a point. 
+It is more accurate than forward or backward difference approximations because it uses information from both sides of the point of interest.
+
+---
+
+### **2. Central Difference Formula**
+
+Given a function \( f(x) \), the central difference approximation for the derivative at a point \( x \) is:
+
+\[
+f'(x) \approx \frac{f(x + h) - f(x - h)}{2h}
+\]
+
+- \( h \) is a small step size.
+- The smaller the \( h \), the better the approximation, but very small values can introduce rounding errors in numerical computation.
+
+---
+
+### **3. Why It Works**
+
+The central difference takes the average rate of change from both directions:
+- Forward: \( \frac{f(x+h) - f(x)}{h} \)
+- Backward: \( \frac{f(x) - f(x-h)}{h} \)
+
+By averaging the two, error terms tend to cancel out, improving accuracy. It has **second-order accuracy**, meaning error decreases proportionally to \( h^2 \).
+
+---
+
+### **4. Step-by-Step Example**
+
+Let \( f(x) = \ln(x) \), estimate \( f'(2) \) using \( h = 0.1 \):
+
+\[
+f'(2) \approx \frac{\ln(2.1) - \ln(1.9)}{2 \cdot 0.1}
+\]
+
+\[
+\approx \frac{0.7419 - 0.6419}{0.2} = \frac{0.1}{0.2} = 0.5
+\]
+
+The actual derivative \( f'(x) = \frac{1}{x} \), so \( f'(2) = 0.5 \) — the estimate is exact in this case due to symmetry and smoothness.
+
+---
+
+### **5. When to Use Central Difference**
+
+- When function values around a point are known or can be computed.
+- When a balance between accuracy and computational simplicity is needed.
+- In **numerical differentiation**, **finite difference methods**, and **approximation of PDEs**.
+
+---
+
+### **6. Application in Tables & Discrete Data**
+
+If data is only available at discrete points, the central difference is the best choice for interior points:
+
+Given:
+- \( f(x - h) = f_1 \)
+- \( f(x + h) = f_2 \)
+
+Then:
+\[
+f'(x) \approx \frac{f_2 - f_1}{2h}
+\]
+
+---
+
+
+
+
+
+
+
+
+
+## **Integrating Vector-Valued Functions**
+
+---
+
+### **Overview**
+
+A **vector-valued function** is a function that outputs vectors rather than scalar values. These functions are commonly used to describe curves in space and are typically of the form:
+
+\[
+\vec{r}(t) = \langle f(t), g(t), h(t) \rangle
+\]
+
+where \( f(t), g(t), h(t) \) are real-valued component functions of the parameter \( t \).
+
+---
+
+### **Definition: Integration of Vector-Valued Functions**
+
+To integrate a vector-valued function:
+
+\[
+\int \vec{r}(t) \, dt = \int \langle f(t), g(t), h(t) \rangle \, dt
+= \left\langle \int f(t) \, dt, \int g(t) \, dt, \int h(t) \, dt \right\rangle + \vec{C}
+\]
+
+where \( \vec{C} \) is a **constant vector of integration** (typically \( \langle C_1, C_2, C_3 \rangle \)).
+
+---
+
+### **Example**
+
+Given:
+
+\[
+\vec{r}(t) = \langle t^2, \sin t, e^t \rangle
+\]
+
+Then:
+
+\[
+\int \vec{r}(t) \, dt = \left\langle \int t^2 dt, \int \sin t dt, \int e^t dt \right\rangle
+= \left\langle \frac{t^3}{3}, -\cos t, e^t \right\rangle + \vec{C}
+\]
+
+---
+
+### **Geometric Interpretation**
+
+- The integral of a vector-valued function **represents a new curve** that accumulates displacement vectors.
+- If \( \vec{r}'(t) \) is the **velocity vector**, then \( \int \vec{r}'(t) \, dt = \vec{r}(t) \) gives the **position vector**.
+
+---
+
+### **Applications**
+
+- **Physics:** Position from velocity, velocity from acceleration.
+- **Engineering:** Path modeling, control systems.
+- **Computer Graphics:** Animating motion along a curve.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## **Introduction to Related Rates**
+
+---
+
+### **What Are Related Rates?**
+
+In calculus, **related rates** problems involve finding the rate at which one quantity changes by relating it to another quantity whose rate of change is known. 
+These problems typically describe a situation where **two or more variables change over time**, and they are linked by some geometric or physical relationship.
+
+---
+
+### **Core Idea**
+
+If \( x \) and \( y \) are variables that both change with respect to time \( t \), and they are related by an equation, then we can use **implicit differentiation** with respect to time to find how one rate affects the other:
+
+\[
+\frac{d}{dt}[f(x, y)] = \text{apply chain rule to all terms}
+\]
+
+---
+
+### **Steps for Solving Related Rates Problems**
+
+1. **Draw a diagram** – Sketch the situation and label all variables.
+2. **Assign variables** – Use symbols to represent quantities that change over time.
+3. **Write an equation** – Relate the variables using a known formula (e.g., Pythagoras, area, volume).
+4. **Differentiate with respect to time** – Use the chain rule.
+5. **Substitute known values** – Plug in known values and solve for the desired rate.
+6. **Include units** – Always include proper units in the final answer.
+
+---
+
+### **Common Formulas in Related Rates**
+
+- Pythagorean Theorem: \( a^2 + b^2 = c^2 \)
+- Volume of a sphere: \( V = \frac{4}{3}\pi r^3 \)
+- Volume of a cone: \( V = \frac{1}{3}\pi r^2 h \)
+- Area of a circle: \( A = \pi r^2 \)
+- Trigonometric relations (for rotating or moving angles)
+
+---
+
+### **Example Problem**
+
+**A ladder 10 ft long is leaning against a wall. If the bottom is sliding away at 2 ft/s, how fast is the top sliding down when the bottom is 6 ft from the wall?**
+
+1. Equation: \( x^2 + y^2 = 10^2 \)
+2. Differentiate: \( 2x \frac{dx}{dt} + 2y \frac{dy}{dt} = 0 \)
+3. Simplify: \( x \frac{dx}{dt} + y \frac{dy}{dt} = 0 \)
+4. Plug in values:
+   - \( x = 6 \)
+   - \( dx/dt = 2 \)
+   - \( y = \sqrt{100 - 36} = 8 \)
+5. Solve:
+   \[
+   6(2) + 8\frac{dy}{dt} = 0 \Rightarrow \frac{dy}{dt} = -\frac{12}{8} = -1.5 \text{ ft/s}
+   \]
+
+**Interpretation:** The top is sliding down at **1.5 ft/s**.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## **Integration by Parts in Cyclic Cases**
+
+---
+
+**Overview:**
+
+Sometimes, when applying **integration by parts**, the original integral reappears on the right-hand side. These are called **cyclic integrals**. 
+To solve them, set up an equation with the original integral on both sides and solve algebraically.
+
+The general **Integration by Parts** formula is:
+
+\[
+\int u \, dv = uv - \int v \, du
+\]
+
+**Cyclic cases** occur especially when both \( u \) and \( dv \) are functions that, after differentiation and integration, eventually reproduce the original integral.
+
+---
+
+**Step-by-Step for Cyclic Cases:**
+
+1. **Identify \( u \) and \( dv \)** strategically (usually pick \( u \) to simplify after differentiation).
+   
+2. **Apply integration by parts** once:
+
+   \[
+   \int u \, dv = uv - \int v \, du
+   \]
+
+3. **Notice**: If the resulting integral is the original one (or closely related), **label** it, for example, \( I \).
+
+4. **Form an equation** with \( I \) on both sides.
+
+5. **Solve for \( I \)** algebraically.
+
+---
+
+**Example:**
+
+Compute:
+
+\[
+I = \int e^x \sin(x) \, dx
+\]
+
+- Let \( u = \sin(x) \), \( dv = e^x dx \)
+- Then, \( du = \cos(x) dx \), \( v = e^x \)
+
+Using integration by parts:
+
+\[
+I = e^x \sin(x) - \int e^x \cos(x) \, dx
+\]
+
+Now, for the new integral \( \int e^x \cos(x) \, dx \), apply integration by parts again:
+
+- Let \( u = \cos(x) \), \( dv = e^x dx \)
+- Then, \( du = -\sin(x) dx \), \( v = e^x \)
+
+Thus:
+
+\[
+\int e^x \cos(x) \, dx = e^x \cos(x) + \int e^x \sin(x) \, dx
+\]
+
+Substitute back:
+
+\[
+I = e^x \sin(x) - \left( e^x \cos(x) + \int e^x \sin(x) \, dx \right)
+\]
+
+Expand:
+
+\[
+I = e^x \sin(x) - e^x \cos(x) - \int e^x \sin(x) \, dx
+\]
+
+Notice \( \int e^x \sin(x) \, dx = I \) appears again!
+
+Thus:
+
+\[
+I + I = e^x (\sin(x) - \cos(x))
+\]
+
+\[
+2I = e^x (\sin(x) - \cos(x))
+\]
+
+Finally:
+
+\[
+I = \frac{e^x (\sin(x) - \cos(x))}{2} + C
+\]
+
+where \( C \) is the constant of integration.
+
+---
+
+**Key Tip:**  
+Cyclic cases often happen when integrating products like \( e^x \sin(x) \), \( e^x \cos(x) \), \( e^{ax} \sin(bx) \), 
+or polynomials times trigonometric/exponential functions.
+
+
+
+
+
+
+
+
+
+
+
+## **Approximating Values Using the Binomial Theorem**
+
+---
+
+**1. Overview:**
+The **Binomial Theorem** provides a way to expand expressions of the form \((1 + x)^n\) for any real number \(n\).  
+When \(x\) is **small** (i.e., \(|x| \ll 1\)), the first few terms of the expansion give an excellent **approximation** of \((1 + x)^n\), 
+allowing quick estimation without needing exact computation.
+
+---
+
+**2. Binomial Expansion for Any Real Exponent:**
+For \(|x| < 1\),
+\[
+(1 + x)^n = 1 + nx + \frac{n(n-1)}{2!}x^2 + \frac{n(n-1)(n-2)}{3!}x^3 + \cdots
+\]
+- \(n\) can be any real number (positive, negative, or fractional).
+- The expansion is **infinite** if \(n\) is not a non-negative integer.
+- Truncating after a few terms gives an **approximate value**.
+
+---
+
+**3. How It Works for Approximation:**
+- If \(x\) is small, then \(x^2, x^3, \dots\) are **even smaller**, so higher-order terms contribute very little.
+- Keeping only the first **two or three terms** gives a good estimate.
+
+**Example pattern:**
+- 1st term: \(1\)
+- 2nd term: \(nx\)
+- 3rd term: \(\frac{n(n-1)}{2}x^2\)
+- (Optional) 4th term: \(\frac{n(n-1)(n-2)}{6}x^3\)
+
+---
+
+**4. Practical Approximation Examples:**
+
+**Example 1:** Approximate \((1.02)^5\)
+
+- Here, \(x = 0.02\), \(n = 5\).
+- Using the first three terms:
+\[
+(1 + 0.02)^5 \approx 1 + 5(0.02) + \frac{5(4)}{2}(0.02)^2
+\]
+\[
+= 1 + 0.1 + \frac{20}{2}(0.0004)
+\]
+\[
+= 1 + 0.1 + 10(0.0004)
+\]
+\[
+= 1 + 0.1 + 0.004
+\]
+\[
+= 1.104
+\]
+
+**(Exact value is about 1.10408 — so this is very close.)**
+
+---
+
+**Example 2:** Approximate \((0.98)^4\)
+
+- Rewrite as \((1 - 0.02)^4\).
+- \(x = -0.02\), \(n = 4\).
+\[
+(1 - 0.02)^4 \approx 1 + 4(-0.02) + \frac{4(3)}{2}(-0.02)^2
+\]
+\[
+= 1 - 0.08 + \frac{12}{2}(0.0004)
+\]
+\[
+= 1 - 0.08 + 6(0.0004)
+\]
+\[
+= 1 - 0.08 + 0.0024
+\]
+\[
+= 0.9224
+\]
+
+**(Exact value is about 0.922368 — again very close.)**
+
+---
+
+**5. Special Use Cases:**
+- **Square roots**: \(\sqrt{1+x} = (1+x)^{1/2}\)
+- **Reciprocals**: \(\frac{1}{1+x} = (1+x)^{-1}\)
+- **Cube roots**: \((1+x)^{1/3}\)
+
+**Example:** Approximate \(\sqrt{1.01}\)
+
+- \(n = \frac{1}{2}\), \(x = 0.01\).
+- First two terms:
+\[
+(1 + 0.01)^{1/2} \approx 1 + \frac{1}{2}(0.01)
+\]
+\[
+= 1 + 0.005
+\]
+\[
+= 1.005
+\]
+**(Actual value is about 1.00499.)**
+
+---
+
+**6. Why It Works:**
+The binomial expansion relies on Taylor Series principles — functions like \((1+x)^n\) are **smooth** and **well-behaved** around \(x=0\), so small \(x\) values make higher powers of \(x\) increasingly negligible.
+
+Thus, the more terms used, the better the approximation — but even **two or three terms** are often good enough for **engineering or quick estimates**.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## **The Average Value of a Function**
+
+---
+
+**1. Concept Overview:**
+The **average value** of a function \( f(x) \) over a closed interval \([a, b]\) gives a single number 
+representing the "mean height" of the function across that interval.
+
+The formula is:
+\[
+\text{Average value of } f(x) = \frac{1}{b - a} \int_a^b f(x)\,dx
+\]
+
+- \(\int_a^b f(x)\,dx\) measures the **total area** under the curve between \(a\) and \(b\).
+- Dividing by \(b - a\) **spreads** that total area **evenly** across the width of the interval.
+
+---
+
+**2. Intuitive Interpretation:**
+Imagine the graph of \(f(x)\) between \(a\) and \(b\).  
+The **average value** is the height at which a rectangle spanning from \(a\) to \(b\) would have the **same area** as the region under the curve.
+
+- Think: "flatten the area" into a rectangle with constant height.
+
+---
+
+**3. Step-by-Step Process to Find the Average Value:**
+
+**Step 1:** Set up the integral:
+\[
+\int_a^b f(x)\,dx
+\]
+
+**Step 2:** Compute the integral.
+
+**Step 3:** Divide the result by \(b - a\):
+\[
+\text{Average} = \frac{1}{b-a} \times (\text{Result of integral})
+\]
+
+---
+
+**4. Key Examples:**
+
+**Example 1:** Find the average value of \( f(x) = x^2 \) on \([0, 2]\).
+
+- Step 1: Compute \(\int_0^2 x^2\,dx\).
+
+\[
+\int_0^2 x^2\,dx = \left[\frac{x^3}{3}\right]_0^2 = \frac{8}{3} - 0 = \frac{8}{3}
+\]
+
+- Step 2: Divide by \(2 - 0 = 2\).
+
+\[
+\text{Average} = \frac{1}{2}\times \frac{8}{3} = \frac{4}{3}
+\]
+
+Thus, the average value is \(\boxed{\frac{4}{3}}\).
+
+---
+
+**Example 2:** Find the average value of \( f(x) = \sin(x) \) over \([0, \pi]\).
+
+- Step 1: Compute \(\int_0^\pi \sin(x)\,dx\).
+
+\[
+\int_0^\pi \sin(x)\,dx = \left[-\cos(x)\right]_0^\pi = -\cos(\pi) + \cos(0) = -(-1) + 1 = 2
+\]
+
+- Step 2: Divide by \(\pi - 0 = \pi\).
+
+\[
+\text{Average} = \frac{2}{\pi}
+\]
+
+Thus, the average value is \(\boxed{\frac{2}{\pi}}\).
+
+---
+
+**5. Special Cases:**
+- If the function is **constant** (say \(f(x) = c\)), its average value is simply \(c\).
+- If the function is **symmetric** about the x-axis over the interval (e.g., sine over \([-\pi, \pi]\)), the average might be **zero**.
+
+---
+
+**6. Visual Understanding:**
+- Picture the graph.
+- The average value is the **horizontal line** that **balances** the area under the curve.
+- If a graph is above and below the x-axis, areas below count as **negative** in the integral.
+
+---
+
+**7. Connection to Applications:**
+- **Physics**: Average velocity, average force.
+- **Economics**: Average cost or revenue over time.
+- **Engineering**: Average current or stress over an interval.
+
+---
+
+
+
+
+
+
+
+
+
+## **Solving Optimization Problems Using Derivatives**
+
+---
+
+**1. Overview of Optimization Problems**
+
+Optimization problems involve finding the **maximum** or **minimum** value of a function under certain constraints. 
+These are critical in fields like economics, engineering, and physics.
+
+Typical steps:
+- Identify what needs to be **maximized** or **minimized** (objective).
+- Write the **objective function**.
+- Express the function in **one variable** (using constraints).
+- **Differentiate** the function.
+- **Find critical points** by setting the derivative equal to zero.
+- Use **second derivative test** (optional) or problem context to confirm maximum or minimum.
+- **Answer the original question**.
+
+---
+
+**2. General Steps for Solving**
+
+**Step 1:** **Draw a diagram** (if helpful) and label variables.
+
+**Step 2:** **Define the objective function** \( f(x) \) to be optimized (maximized or minimized).
+
+**Step 3:** **Use constraints** to express \( f(x) \) in terms of a single variable.
+
+**Step 4:** **Find critical points**:
+- Differentiate \( f(x) \) to find \( f'(x) \).
+- Solve \( f'(x) = 0 \) to find critical values.
+
+**Step 5:** **Determine if each critical point is a maximum or minimum**:
+- Use the **second derivative test**:
+  - If \( f''(x) > 0 \), it is a minimum.
+  - If \( f''(x) < 0 \), it is a maximum.
+- Or analyze the **context** (especially for physical problems).
+
+**Step 6:** **Answer the specific question** (e.g., find the dimensions, the maximum volume, the minimum cost, etc.).
+
+---
+
+**3. Key Example Structures**
+
+| Problem Type                          | Objective Function | Constraint (if needed) |
+|----------------------------------------|---------------------|-------------------------|
+| Rectangle optimization (area, perimeter) | \( A = lw \), \( P = 2l + 2w \) or similar | \( lw = \text{given area} \) |
+| Volume problems (boxes, cylinders)     | \( V = \text{volume formula} \) | Relate surface area or other conditions |
+| Cost minimization                      | \( C = \text{sum of costs} \) | Relate dimensions via area, volume |
+| Profit maximization                    | \( \text{Profit} = \text{Revenue} - \text{Cost} \) | Express revenue/cost via price, demand |
+
+---
+
+**4. Example Walkthrough:**
+
+*"Find the dimensions of a rectangle with maximum area given a fixed perimeter \(P\)."*
+
+- Let \( x \) = width, \( y \) = length.
+- Perimeter constraint: \( 2x + 2y = P \Rightarrow y = \frac{P}{2} - x \)
+- Area: \( A = xy \)
+- Substitute: \( A(x) = x\left( \frac{P}{2} - x \right) \)
+- Simplify: \( A(x) = \frac{P}{2}x - x^2 \)
+- Differentiate: \( A'(x) = \frac{P}{2} - 2x \)
+- Set derivative to 0: \( \frac{P}{2} - 2x = 0 \Rightarrow x = \frac{P}{4} \)
+- Find \( y \): \( y = \frac{P}{2} - \frac{P}{4} = \frac{P}{4} \)
+- **Thus, the rectangle must be a square.**
+
+---
+
+**5. Important Tips**
+
+- Always **check if endpoints** need to be considered (for closed intervals).
+- Watch out for **practical constraints** (e.g., dimensions cannot be negative).
+- If maximizing or minimizing **areas or volumes**, symmetry often plays a key role.
+- **Units matter**: ensure final answers match the units in the problem.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## **Optimizing Distances Using Derivatives**
+
+---
+
+### **Introduction**
+
+Optimization problems involving distance ask:  
+*"What point (or points) minimize (or maximize) the distance to another point, line, curve, or surface?"*
+
+**Derivatives** allow solving these problems by finding critical points where the distance function reaches minimum or maximum values.
+
+---
+
+### **General Framework**
+
+**Step 1: Model the distance.**  
+- Use the distance formula between two points:
+\[
+d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+\]
+- If minimizing, usually work with \( d^2 \) instead of \( d \) to simplify calculations (squares avoid square roots).
+
+---
+
+**Step 2: Substitute constraints.**  
+- If a point lies on a curve (e.g., \( y = f(x) \)), express \( y \) in terms of \( x \) to get a function of a single variable.
+
+---
+
+**Step 3: Differentiate.**  
+- Differentiate the distance-squared function with respect to the independent variable.
+
+---
+
+**Step 4: Find critical points.**  
+- Set the derivative equal to zero and solve for the variable.
+- Critical points are candidates for minimum (or maximum) distance.
+
+---
+
+**Step 5: Analyze and conclude.**  
+- Check critical points and possibly boundary values if the domain is restricted.
+- Choose the point that gives the minimum (or maximum) distance.
+
+---
+
+### **Key Concepts**
+
+- **Minimizing \( d(x) \)** is equivalent to minimizing \( d(x)^2 \) when \( d(x) > 0 \).
+- **Critical points** occur where the derivative is zero or undefined.
+- **Symmetry** often helps in problems involving two points or a line.
+
+---
+
+### **Example Problem Walkthrough**
+
+**Problem:**  
+Find the point on the parabola \( y = x^2 \) closest to \( (0, 1) \).
+
+---
+
+**Solution Outline:**
+
+1. **Set up the distance:**
+\[
+d = \sqrt{(x - 0)^2 + (x^2 - 1)^2}
+\]
+Work with \( d^2 \):
+\[
+d^2 = x^2 + (x^2 - 1)^2 = x^2 + x^4 - 2x^2 + 1 = x^4 - x^2 + 1
+\]
+
+---
+
+2. **Differentiate \( d^2 \) with respect to \( x \):**
+\[
+\frac{d}{dx}(d^2) = 4x^3 - 2x
+\]
+
+---
+
+3. **Find critical points:**
+Set derivative equal to zero:
+\[
+4x^3 - 2x = 0
+\]
+\[
+2x(2x^2 - 1) = 0
+\]
+Thus, \( x = 0 \) or \( x = \pm \frac{1}{\sqrt{2}} \).
+
+---
+
+4. **Find corresponding \( y \)-values:**  
+- At \( x = 0 \), \( y = 0 \).
+- At \( x = \pm \frac{1}{\sqrt{2}} \), \( y = \left( \pm \frac{1}{\sqrt{2}} \right)^2 = \frac{1}{2} \).
+
+---
+
+5. **Evaluate distances:**
+\[
+\text{Distance to } (0,1) \text{ from } (0,0): \sqrt{(0-0)^2 + (0-1)^2} = 1
+\]
+\[
+\text{Distance to } (0,1) \text{ from } \left( \frac{1}{\sqrt{2}}, \frac{1}{2} \right): \sqrt{ \left( \frac{1}{\sqrt{2}} \right)^2 + \left( \frac{1}{2} - 1 \right)^2 } = \sqrt{ \frac{1}{2} + \frac{1}{4} } = \sqrt{\frac{3}{4}} = \frac{\sqrt{3}}{2}
+\]
+\[
+\approx 0.866
+\]
+
+Thus, the closest point is at \( \left( \frac{1}{\sqrt{2}}, \frac{1}{2} \right) \).
+
+---
+
+### **Summary**
+
+| Step | Action |
+|:----|:------|
+| Model | Use the distance formula. |
+| Simplify | Express distance as a function of one variable. |
+| Differentiate | Find the first derivative. |
+| Critical Points | Solve for where derivative is zero. |
+| Conclusion | Test points to find minimum/maximum distance. |
+
+---
+
+### **Common Applications**
+- Shortest distance between a point and a curve.
+- Shortest distance from a point to a line.
+- Shortest distance between two curves.
+- Points equidistant from two fixed points.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Shear and Stretch as Linear Transformations**
+
+---
+
+### **1. Linear Transformations Overview**
+
+A **linear transformation** \( T: \mathbb{R}^n \to \mathbb{R}^n \) satisfies:
+- \( T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v}) \)
+- \( T(c\mathbf{u}) = cT(\mathbf{u}) \) for any scalar \( c \).
+
+Linear transformations can be represented by **matrices**:  
+\[
+T(\mathbf{x}) = A\mathbf{x}
+\]
+where \( A \) is a matrix and \( \mathbf{x} \) is a vector.
+
+---
+
+### **2. Stretch Transformations**
+
+A **stretch** changes the size along one or more axes but keeps directions aligned with the coordinate axes.
+
+#### Example: Stretch along the \( x \)-axis
+- Transformation matrix:
+\[
+A = \begin{bmatrix} k & 0 \\ 0 & 1 \end{bmatrix}
+\]
+where \( k \) is the stretch factor.
+
+- Action on a point \( (x, y) \):
+\[
+T(x, y) = (kx, y)
+\]
+
+- If \( k > 1 \), it **stretches** horizontally;  
+- If \( 0 < k < 1 \), it **compresses** horizontally.
+
+**Similarly** for vertical stretch:
+\[
+A = \begin{bmatrix} 1 & 0 \\ 0 & k \end{bmatrix}
+\]
+affecting the \( y \)-axis.
+
+---
+
+### **3. Shear Transformations**
+
+A **shear** shifts one coordinate in proportion to the other, slanting shapes without altering areas (in some cases).
+
+#### Example: Shear parallel to the \( x \)-axis
+- Transformation matrix:
+\[
+A = \begin{bmatrix} 1 & k \\ 0 & 1 \end{bmatrix}
+\]
+
+- Action on a point \( (x, y) \):
+\[
+T(x, y) = (x + ky, y)
+\]
+
+- \( k \) controls the **shear factor**:
+  - \( k > 0 \) shears to the right.
+  - \( k < 0 \) shears to the left.
+
+#### Shear parallel to the \( y \)-axis:
+\[
+A = \begin{bmatrix} 1 & 0 \\ k & 1 \end{bmatrix}
+\]
+giving:
+\[
+T(x, y) = (x, y + kx)
+\]
+
+---
+
+### **4. Geometric Interpretation**
+
+| Transformation | Effect on a Square | Area |
+|:---|:---|:---|
+| Stretch (horizontal) | Stretches into a rectangle | Area changes proportionally to stretch factor |
+| Stretch (vertical) | Stretches vertically into a rectangle | Area changes proportionally to stretch factor |
+| Shear | Turns a square into a parallelogram | Area preserved if determinant is 1 |
+
+---
+   
+### **5. Determinants and Linear Transformations**
+
+The **determinant** of a matrix tells how a linear transformation scales areas or volumes:
+- Stretch: \( \det(A) = \text{product of stretch factors} \)
+- Shear: \( \det(A) = 1 \) if it preserves area.
+
+For example:
+- For stretch matrix \( \begin{bmatrix} 3 & 0 \\ 0 & 1 \end{bmatrix} \), determinant = \( 3 \).
+- For shear matrix \( \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix} \), determinant = \( 1 \).
+
+---
+
+### **6. Examples**
+
+#### Example 1: Stretch along \( x \)-axis by 2
+Matrix:
+\[
+A = \begin{bmatrix} 2 & 0 \\ 0 & 1 \end{bmatrix}
+\]
+Transforming \( (1, 3) \):
+\[
+T(1, 3) = (2 \times 1, 3) = (2, 3)
+\]
+
+#### Example 2: Shear parallel to \( x \)-axis with \( k = 1 \)
+Matrix:
+\[
+A = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}
+\]
+Transforming \( (1, 3) \):
+\[
+T(1, 3) = (1 + 3, 3) = (4, 3)
+\]
+
+---
+
+### **7. Summary Table**
+
+| Type | Matrix Form | Effect |
+|:---|:---|:---|
+| Horizontal Stretch | \( \begin{bmatrix} k & 0 \\ 0 & 1 \end{bmatrix} \) | Stretches/compresses horizontally |
+| Vertical Stretch | \( \begin{bmatrix} 1 & 0 \\ 0 & k \end{bmatrix} \) | Stretches/compresses vertically |
+| Shear (x-axis) | \( \begin{bmatrix} 1 & k \\ 0 & 1 \end{bmatrix} \) | Slants horizontally |
+| Shear (y-axis) | \( \begin{bmatrix} 1 & 0 \\ k & 1 \end{bmatrix} \) | Slants vertically |
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Combining Linear Transformations Using 2x2 Matrices**
+
+---
+
+When working with **linear transformations** in 2D (like rotations, reflections, scalings, or shears), each transformation can be represented as a **2×2 matrix**. 
+
+If two (or more) transformations are applied one after the other, their **combined effect** 
+can be found by **multiplying** their matrices together — but **order matters** (matrix multiplication is not commutative).
+
+---
+
+### 1. **Basics of 2×2 Matrices for Transformations**
+
+Common transformations:
+
+| Transformation | Matrix |
+|:---|:---|
+| Rotation by \( \theta \) | \( \begin{bmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{bmatrix} \) |
+| Scaling by \( a \) in \( x \)-axis, \( b \) in \( y \)-axis | \( \begin{bmatrix} a & 0 \\ 0 & b \end{bmatrix} \) |
+| Shear horizontally by \( k \) | \( \begin{bmatrix} 1 & k \\ 0 & 1 \end{bmatrix} \) |
+| Shear vertically by \( k \) | \( \begin{bmatrix} 1 & 0 \\ k & 1 \end{bmatrix} \) |
+| Reflection across \( x \)-axis | \( \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} \) |
+| Reflection across \( y \)-axis | \( \begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix} \) |
+
+---
+
+### 2. **Combining Transformations**
+
+Suppose:
+- \( A \) represents the **first** transformation,
+- \( B \) represents the **second** transformation.
+
+Then the combined transformation is given by:
+\[
+\text{Combined Matrix} = B \times A
+\]
+**(apply \( A \) first, then \( B \))**
+
+✅ **Matrix multiplication rule** applies:
+\[
+(AB)_{ij} = \sum_{k=1}^{2} A_{ik} B_{kj}
+\]
+
+---
+
+### 3. **Example: Shear then Scale**
+
+Suppose:
+- Shear horizontally by \( k=2 \): \( S = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix} \)
+- Then scale \( x \) by 3 and \( y \) by 5: \( D = \begin{bmatrix} 3 & 0 \\ 0 & 5 \end{bmatrix} \)
+
+**Combined matrix**:
+\[
+\text{Combined} = D \times S = \begin{bmatrix} 3 & 0 \\ 0 & 5 \end{bmatrix} \times \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}
+\]
+
+Multiplying:
+\[
+= \begin{bmatrix}
+(3)(1) + (0)(0) & (3)(2) + (0)(1) \\
+(0)(1) + (5)(0) & (0)(2) + (5)(1)
+\end{bmatrix}
+= \begin{bmatrix}
+3 & 6 \\
+0 & 5
+\end{bmatrix}
+\]
+
+Thus, a single matrix \( \begin{bmatrix} 3 & 6 \\ 0 & 5 \end{bmatrix} \) represents *both* shear and scaling together.
+
+---
+
+### 4. **Important Notes**
+
+- **Order matters:** In general, \( AB \neq BA \).
+- **Matrix multiplication corresponds to composition of transformations.**
+- **Associative property holds:** \( (AB)C = A(BC) \).
+
+---
+
+**Summary:**  
+To combine multiple 2×2 linear transformations, represent each as a matrix and multiply in the reverse order they are applied (last matrix first). The result is a new matrix describing the overall transformation compactly.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Limits Involving the Exponential Function**
+
+Exponential functions like \( e^x \) or \( a^x \) (with \( a > 0 \)) behave predictably under limits and are 
+crucial in calculus and analysis. Here's a structured deep dive:
+
+---
+
+### 1. **Basic Limit Properties of \( e^x \) and \( a^x \)**
+
+- As \( x \to +\infty \):
+  \[
+  \lim_{x \to +\infty} e^x = +\infty, \quad \lim_{x \to +\infty} a^x = +\infty \quad (a > 1)
+  \]
+  Exponential functions grow **faster than any polynomial**.
+
+- As \( x \to -\infty \):
+  \[
+  \lim_{x \to -\infty} e^x = 0^+, \quad \lim_{x \to -\infty} a^x = 0^+
+  \]
+  Exponential functions **approach zero** but **never become negative**.
+
+- Special case for \( 0 < a < 1 \):
+  \[
+  \lim_{x \to +\infty} a^x = 0, \quad \lim_{x \to -\infty} a^x = +\infty
+  \]
+  The graph **decreases** for \( 0 < a < 1 \).
+
+---
+
+### 2. **Key Indeterminate Forms Involving Exponentials**
+
+When dealing with limits, indeterminate forms such as \( 0 \times \infty \), \( \infty - \infty \), and \( 1^\infty \) arise.
+
+- Important limit:
+  \[
+  \lim_{x \to 0} \frac{e^x - 1}{x} = 1
+  \]
+  (Foundational in defining the derivative of \( e^x \)).
+
+- Limits involving \( e^{f(x)} \):
+  If \( f(x) \to L \), then:
+  \[
+  \lim_{x \to a} e^{f(x)} = e^L
+  \]
+  
+- Example involving \( 1^\infty \) form:
+  \[
+  \lim_{x \to 0} \left( 1 + x \right)^{\frac{1}{x}} = e
+  \]
+  This is fundamental in the definition of \( e \).
+
+---
+
+### 3. **Using L'Hospital's Rule**
+
+In problems involving exponential limits with indeterminate forms, L'Hospital's Rule is often used:
+
+- Example:
+  \[
+  \lim_{x \to \infty} \frac{x}{e^x}
+  \]
+  Apply L'Hospital's Rule:
+  \[
+  = \lim_{x \to \infty} \frac{1}{e^x} = 0
+  \]
+  So \( e^x \) grows **much faster** than any polynomial.
+
+---
+
+### 4. **Growth Comparison**
+
+Order of growth as \( x \to +\infty \):
+\[
+\text{polynomials} \ll \text{exponentials} \ll \text{factorials} \ll \text{exponentials of exponentials}
+\]
+
+Meaning \( e^x \) dominates \( x^n \) for any positive integer \( n \) as \( x \to +\infty \).
+
+---
+
+### 5. **Practical Examples**
+
+- Find \( \lim_{x \to \infty} \left( 5x + e^x \right) \):
+  \[
+  \text{Since } e^x \text{ dominates } 5x, \quad \lim_{x \to \infty} (5x + e^x) = +\infty
+  \]
+
+- Find \( \lim_{x \to -\infty} e^{x+5} \):
+  \[
+  x + 5 \to -\infty \quad \Rightarrow \quad e^{x+5} \to 0
+  \]
+
+---
+
+**Summary**:  
+Exponential functions are **extremely powerful** in limits — they **grow faster** than polynomials 
+and **approach zero** faster than reciprocals as \( x \to -\infty \). Mastery of their behavior is 
+essential in calculus, especially for L'Hospital’s Rule, Taylor expansions, and solving growth-related problems.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## **Calculating the Vertex of a Parabola by Completing the Square**
+
+---
+
+### 1. **Understanding the Goal**
+
+A parabola given by a quadratic function:
+\[
+y = ax^2 + bx + c
+\]
+has a **vertex** — the highest or lowest point — which can be easily found by **completing the square** to rewrite the equation into **vertex form**:
+\[
+y = a(x - h)^2 + k
+\]
+where \( (h, k) \) is the vertex.
+
+---
+
+### 2. **Steps to Complete the Square**
+
+Given \( y = ax^2 + bx + c \):
+
+**Step 1**: Factor out \( a \) from the first two terms:
+\[
+y = a\left(x^2 + \frac{b}{a}x\right) + c
+\]
+
+**Step 2**: Complete the square inside the parentheses:
+- Take half of \( \frac{b}{a} \), square it, and add and subtract it inside the parentheses.
+- Half of \( \frac{b}{a} \) is \( \frac{b}{2a} \).
+- Square it: \( \left(\frac{b}{2a}\right)^2 = \frac{b^2}{4a^2} \).
+
+Thus:
+\[
+y = a\left( x^2 + \frac{b}{a}x + \frac{b^2}{4a^2} - \frac{b^2}{4a^2} \right) + c
+\]
+
+**Step 3**: Group the perfect square trinomial:
+\[
+= a\left( \left( x + \frac{b}{2a} \right)^2 - \frac{b^2}{4a^2} \right) + c
+\]
+
+**Step 4**: Distribute \( a \) back:
+\[
+= a\left( x + \frac{b}{2a} \right)^2 - \frac{b^2}{4a} + c
+\]
+
+**Step 5**: Simplify constants:
+\[
+= a\left( x + \frac{b}{2a} \right)^2 + \left( c - \frac{b^2}{4a} \right)
+\]
+
+Thus, the **vertex** is:
+\[
+\left( -\frac{b}{2a}, \, c - \frac{b^2}{4a} \right)
+\]
+
+---
+
+### 3. **Quick Formula for the Vertex**
+
+- \( h = -\frac{b}{2a} \)
+- \( k = f\left( -\frac{b}{2a} \right) \)
+
+where \( f(x) = ax^2 + bx + c \).
+
+---
+
+### 4. **Example**
+
+Find the vertex of:
+\[
+y = 2x^2 + 8x + 5
+\]
+
+**Solution**:
+
+- Factor out \( 2 \) from the first two terms:
+  \[
+  y = 2(x^2 + 4x) + 5
+  \]
+- Half of \( 4 \) is \( 2 \), square it: \( 4 \).
+- Add and subtract \( 4 \) inside:
+  \[
+  y = 2\left( (x+2)^2 - 4 \right) + 5
+  \]
+- Expand:
+  \[
+  y = 2(x+2)^2 - 8 + 5
+  \]
+- Simplify:
+  \[
+  y = 2(x+2)^2 - 3
+  \]
+
+Thus, the vertex is:
+\[
+(-2, -3)
+\]
+
+---
+
+### 5. **Why Completing the Square Matters**
+
+- Makes finding the vertex straightforward.
+- Helps solve quadratic equations.
+- Essential in deriving conic sections and transformations.
+- Used in optimization problems.
+
+---
+
+**Summary**:  
+Completing the square rewrites a quadratic into **vertex form**, allowing the vertex \( (h, k) \) to be read directly. The process involves factoring, adding/subtracting the square of half the linear coefficient, and simplifying carefully.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## **Evaluating Definite Integrals Using Symmetry**
+
+---
+
+Symmetry is a powerful tool in calculus for evaluating definite integrals, especially when dealing with integrals over symmetric intervals like \([-a, a]\). 
+Here's a breakdown of how symmetry simplifies integration:
+
+---
+
+### **1. Understanding Even and Odd Functions**
+
+- **Even function**:  
+  \( f(-x) = f(x) \)  
+  Graph is symmetric about the **y-axis**.  
+  Examples: \( \cos x \), \( x^2 \), \( |x| \)
+
+- **Odd function**:  
+  \( f(-x) = -f(x) \)  
+  Graph is symmetric about the **origin**.  
+  Examples: \( \sin x \), \( x \), \( x^3 \)
+
+---
+
+### **2. Symmetry Rules for Integrals**
+
+Let \(f(x)\) be integrable on \([-a, a]\):
+
+- **If \(f(x)\) is even**, then:
+  \[
+  \int_{-a}^{a} f(x) \, dx = 2 \int_{0}^{a} f(x) \, dx
+  \]
+
+- **If \(f(x)\) is odd**, then:
+  \[
+  \int_{-a}^{a} f(x) \, dx = 0
+  \]
+
+---
+
+### **3. Examples**
+
+#### Example 1: Odd Function  
+Evaluate \( \int_{-2}^{2} x^3 \, dx \)
+
+- \(x^3\) is odd: \(f(-x) = -x^3 = -f(x)\)
+- Hence:
+  \[
+  \int_{-2}^{2} x^3 \, dx = 0
+  \]
+
+---
+
+#### Example 2: Even Function  
+Evaluate \( \int_{-3}^{3} x^2 \, dx \)
+
+- \(x^2\) is even: \(f(-x) = x^2 = f(x)\)
+- So:
+  \[
+  \int_{-3}^{3} x^2 \, dx = 2 \int_{0}^{3} x^2 \, dx = 2 \cdot \left[ \frac{x^3}{3} \right]_0^3 = 2 \cdot \left( \frac{27}{3} \right) = 18
+  \]
+
+---
+
+#### Example 3: Mixed Symmetry  
+Evaluate \( \int_{-2}^{2} x^2 \sin x \, dx \)
+
+- \(x^2\): even; \(\sin x\): odd → product is **odd**
+- So:
+  \[
+  \int_{-2}^{2} x^2 \sin x \, dx = 0
+  \]
+
+---
+
+### **4. General Strategy**
+
+1. **Identify the limits**: Are they symmetric about 0?
+2. **Classify the integrand**:
+   - Is it even? Use doubling rule.
+   - Is it odd? It evaluates to zero.
+   - Neither? Use standard integration.
+
+3. **Break the function** into even and odd parts (if needed):
+   - \(f(x) = \text{even part} + \text{odd part}\)
+   - Integrate each separately.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Calculating Slopes of Circles, Ellipses, and Parabolas**
+
+---
+
+Slopes of curves represent the derivative of \( y \) with respect to \( x \) at a point. For conic sections 
+like **circles**, **ellipses**, and **parabolas**, we often use **implicit differentiation** to 
+find these slopes since the equations aren’t always solved explicitly for \( y \).
+
+---
+
+### **1. Circles**
+
+**Standard form**:  
+\[
+x^2 + y^2 = r^2
+\]
+
+#### **Find the slope (dy/dx):**
+
+Differentiate both sides implicitly:
+\[
+2x + 2y \frac{dy}{dx} = 0
+\Rightarrow \frac{dy}{dx} = -\frac{x}{y}
+\]
+
+✅ **Interpretation**: The slope at any point \((x, y)\) on a circle is the **negative reciprocal of the radius’s slope**, meaning the tangent is perpendicular to the radius.
+
+---
+
+### **2. Ellipses**
+
+**Standard form**:  
+\[
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+\]
+
+#### **Differentiate implicitly:**
+
+\[
+\frac{2x}{a^2} + \frac{2y}{b^2} \frac{dy}{dx} = 0
+\Rightarrow \frac{dy}{dx} = -\frac{b^2 x}{a^2 y}
+\]
+
+✅ **Interpretation**: The slope of the tangent at \((x, y)\) depends on the ellipse’s dimensions (via \(a\) and \(b\)) and position.
+
+---
+
+### **3. Parabolas**
+
+Let’s look at **two forms**:
+
+#### **(a) Standard parabola**:  
+\[
+y = ax^2 + bx + c
+\Rightarrow \frac{dy}{dx} = 2ax + b
+\]
+
+✅ This gives the slope directly, since it's already solved for \(y\).
+
+---
+
+#### **(b) Sideways parabola**:  
+\[
+x = ay^2 + by + c
+\Rightarrow \frac{dx}{dy} = 2ay + b
+\Rightarrow \frac{dy}{dx} = \frac{1}{2ay + b}
+\]
+
+---
+
+### **Tangent Lines to Curves**
+
+For any of these conics, once the slope \( m = \frac{dy}{dx} \) at a point \( (x_0, y_0) \) is found, the **tangent line** is:
+\[
+y - y_0 = m(x - x_0)
+\]
+
+---
+
+### **Summary Table**
+
+| Curve       | Equation                        | Slope \( \frac{dy}{dx} \) |
+|-------------|----------------------------------|----------------------------|
+| Circle      | \( x^2 + y^2 = r^2 \)           | \( -\frac{x}{y} \)         |
+| Ellipse     | \( \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \) | \( -\frac{b^2x}{a^2y} \)    |
+| Parabola    | \( y = ax^2 + bx + c \)         | \( 2ax + b \)              |
+| Sideways Parabola | \( x = ay^2 + by + c \) | \( \frac{1}{2ay + b} \)    |
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Determining Characteristics of Moving Objects Using Integration**
+
+---
+
+Integration is a powerful tool in physics and calculus to analyze **motion**. When an object moves along a line, 
+key quantities—**position**, **velocity**, and **acceleration**—are interrelated through **derivatives** and **integrals**:
+
+### **1. Relationship Between Motion Quantities**
+
+\[
+\text{Acceleration } a(t) = \frac{dv}{dt}, \quad \text{Velocity } v(t) = \frac{dx}{dt}, \quad \text{Position } x(t)
+\]
+
+By **integrating**, we can move *backward* from acceleration to velocity, and from velocity to position.
+
+---
+
+### **2. From Acceleration to Velocity**
+
+If given \( a(t) \), the velocity is:
+\[
+v(t) = \int a(t) \, dt + C
+\]
+where \( C \) is the **initial velocity**, \( v(0) \) or \( v(t_0) \).
+
+---
+
+### **3. From Velocity to Position**
+
+If given \( v(t) \), the position is:
+\[
+x(t) = \int v(t) \, dt + C
+\]
+where \( C \) is the **initial position**, \( x(0) \) or \( x(t_0) \).
+
+---
+
+### **4. Displacement vs. Distance**
+
+- **Displacement** over \([a, b]\) is the net change in position:
+  \[
+  \Delta x = \int_a^b v(t) \, dt
+  \]
+
+- **Total distance traveled** considers absolute movement:
+  \[
+  \text{Distance} = \int_a^b |v(t)| \, dt
+  \]
+
+>  Use this distinction when motion changes direction (i.e., when \( v(t) \) changes sign).
+
+---
+
+### **5. Example**
+
+Suppose \( v(t) = 3t^2 - 6t \), find:
+
+#### a) Displacement on \( [0, 3] \):
+\[
+\int_0^3 (3t^2 - 6t) dt = [t^3 - 3t^2]_0^3 = (27 - 27) - (0) = 0
+\]
+
+Displacement = **0 units**
+
+#### b) Distance traveled:
+Find where \( v(t) = 0 \):
+\[
+3t^2 - 6t = 3t(t - 2) = 0 \Rightarrow t = 0, 2
+\]
+
+Split integral at turning point:
+\[
+\int_0^2 |3t^2 - 6t| dt + \int_2^3 |3t^2 - 6t| dt
+= -\int_0^2 (3t^2 - 6t) dt + \int_2^3 (3t^2 - 6t) dt
+\]
+
+Evaluate:
+- First integral: \([t^3 - 3t^2]_0^2 = (8 - 12) = -4 \rightarrow +4\)
+- Second integral: \([t^3 - 3t^2]_2^3 = (27 - 27) - (8 - 12) = 0 + 4 = 4\)
+
+Total distance = **4 + 4 = 8 units**
+
+---
+
+### **6. Area Under Curves**
+
+In motion problems:
+- Area under \( v(t) \) gives **displacement**
+- Area under \( |v(t)| \) gives **distance**
+- Area under \( a(t) \) gives **change in velocity**
+
+---
+
+### **Summary Table**
+
+| Given | Integrate to find | Meaning |
+|-------|-------------------|---------|
+| \( a(t) \) | \( v(t) = \int a(t)\,dt \) | Velocity |
+| \( v(t) \) | \( x(t) = \int v(t)\,dt \) | Position |
+| \( v(t) \) | \( \int_a^b v(t)\,dt \) | Displacement |
+| \( v(t) \) | \( \int_a^b |v(t)|\,dt \) | Total Distance |
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## **Finding Velocity Vectors in Two Dimensions Using Integration**
+
+---
+
+### **1. Overview**
+In two-dimensional motion, velocity is a **vector function** that represents both the speed and direction of a moving object. 
+If the **acceleration vector** \( \mathbf{a}(t) \) is known, the **velocity vector** \( \mathbf{v}(t) \) can be determined using **integration**.
+
+---
+
+### **2. Relationship Between Acceleration and Velocity**
+Acceleration is the derivative of velocity:
+\[
+\mathbf{a}(t) = \frac{d\mathbf{v}(t)}{dt}
+\Rightarrow \mathbf{v}(t) = \int \mathbf{a}(t) \, dt
+\]
+
+If:
+\[
+\mathbf{a}(t) = \langle a_x(t), a_y(t) \rangle
+\]
+
+Then:
+\[
+\mathbf{v}(t) = \left\langle \int a_x(t) dt, \int a_y(t) dt \right\rangle + \mathbf{C}
+\]
+
+Where \( \mathbf{C} = \langle C_1, C_2 \rangle \) is the **constant of integration**, determined using initial conditions (typically initial velocity).
+
+---
+
+### **3. Step-by-Step Procedure**
+
+**Step 1: Integrate Each Component of Acceleration**
+Given:
+\[
+\mathbf{a}(t) = \langle a_x(t), a_y(t) \rangle
+\]
+
+Integrate:
+\[
+v_x(t) = \int a_x(t) dt + C_1,\quad
+v_y(t) = \int a_y(t) dt + C_2
+\]
+
+---
+
+**Step 2: Apply Initial Conditions**
+If initial velocity is known at time \( t_0 \):  
+\[
+\mathbf{v}(t_0) = \langle v_x(t_0), v_y(t_0) \rangle
+\]
+
+Use this to solve for \( C_1 \) and \( C_2 \).
+
+---
+
+**Step 3: Assemble the Velocity Vector**
+\[
+\mathbf{v}(t) = \langle v_x(t), v_y(t) \rangle
+\]
+
+---
+
+### **4. Example**
+
+**Given:**
+\[
+\mathbf{a}(t) = \langle 4e^{-2t}, 3e^{3t} \rangle,\quad
+\mathbf{v}(0) = \langle 2, 0 \rangle
+\]
+
+**Integrate:**
+
+- \( v_x(t) = \int 4e^{-2t} dt = -2e^{-2t} + C_1 \)
+- \( v_y(t) = \int 3e^{3t} dt = e^{3t} + C_2 \)
+
+Apply \( \mathbf{v}(0) = \langle 2, 0 \rangle \):
+- \( -2(1) + C_1 = 2 \Rightarrow C_1 = 4 \)
+- \( 1 + C_2 = 0 \Rightarrow C_2 = -1 \)
+
+Final velocity vector:
+\[
+\mathbf{v}(t) = \langle -2e^{-2t} + 4, e^{3t} - 1 \rangle
+\]
+
+---
+
+### **5. When is the Particle Stationary?**
+Set \( \mathbf{v}(t) = \langle 0, 0 \rangle \), solve for \( t \):
+- \( -2e^{-2t} + 4 = 0 \Rightarrow t = -\frac{\ln(2)}{2} \)
+- \( e^{3t} - 1 = 0 \Rightarrow t = 0 \)
+
+**Intersection (common solution):** only when both components are zero.
+
+---
+
+### **6. Summary**
+- Integrate acceleration to get velocity.
+- Include a constant vector for initial conditions.
+- Use initial velocity to solve for constants.
+- Final velocity vector gives insight into motion, direction, and when the object is stationary.
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Finding Displacement Vectors in Two Dimensions Using Integration**
+
+To find **displacement vectors** in two dimensions, we integrate the **velocity vector function** over a given time interval. 
+Here's a structured breakdown:
+
+---
+
+### 1. **Concept Overview**
+If a particle moves in the \(xy\)-plane and its **velocity vector** is given by  
+\[
+\vec{v}(t) = \langle v_x(t), v_y(t) \rangle
+\]
+then its **displacement vector** from time \(t = a\) to \(t = b\) is:
+
+\[
+\vec{d} = \int_a^b \vec{v}(t) \, dt = \left\langle \int_a^b v_x(t) \, dt, \int_a^b v_y(t) \, dt \right\rangle
+\]
+
+---
+
+### 2. **Physical Meaning**
+The **displacement vector** gives:
+- The straight-line vector from the starting position to the ending position of the particle.
+- Unlike distance traveled, displacement considers **direction**.
+
+---
+
+### 3. **Step-by-Step Example**
+
+**Given:**
+\[
+\vec{v}(t) = \langle 3t^2, \sin(t) \rangle,\quad \text{from } t = 0 \text{ to } t = \pi
+\]
+
+**Displacement:**
+\[
+\vec{d} = \left\langle \int_0^\pi 3t^2 \, dt,\ \int_0^\pi \sin(t) \, dt \right\rangle
+\]
+
+**Compute:**
+- \( \int_0^\pi 3t^2 \, dt = 3 \cdot \left[\frac{t^3}{3}\right]_0^\pi = \pi^3 \)
+- \( \int_0^\pi \sin(t) \, dt = [-\cos(t)]_0^\pi = -\cos(\pi) + \cos(0) = -(-1) + 1 = 2 \)
+
+**Result:**
+\[
+\vec{d} = \langle \pi^3, 2 \rangle
+\]
+
+---
+
+### 4. **Connection to Position**
+If you also want **position**, and you're given initial position \(\vec{r}(a)\), then:
+
+\[
+\vec{r}(b) = \vec{r}(a) + \vec{d}
+\]
+
+---
+
+
+
+
+
+
+
+
+
+
+
+## **Solving Cubic Equations with Complex Roots**
+
+Solving a **cubic equation** (degree 3 polynomial) like  
+\[
+ax^3 + bx^2 + cx + d = 0
+\]
+can result in real or complex roots. A **deep understanding** involves factorization, the discriminant, 
+and sometimes the **Cubic Formula** or **De Moivre’s Theorem** for complex numbers.
+
+---
+
+### **1. General Nature of Roots in Cubics**
+By the **Fundamental Theorem of Algebra**, a cubic has exactly **three roots** (real or complex, possibly repeated).
+
+- **One real + two complex conjugates** (if discriminant < 0)
+- **Three real roots** (distinct or repeated, if discriminant ≥ 0)
+
+---
+
+### **2. Discriminant of a Cubic**
+The discriminant \( \Delta \) determines the nature of the roots:
+
+\[
+\Delta = 18abcd - 4b^3d + b^2c^2 - 4ac^3 - 27a^2d^2
+\]
+
+- \( \Delta > 0 \): 3 distinct real roots
+- \( \Delta = 0 \): multiple real roots (at least two equal)
+- \( \Delta < 0 \): 1 real root, 2 complex conjugates
+
+---
+
+### **3. Solving Strategy**
+
+#### **(a) Try Rational Root Theorem**
+Check if rational roots exist by testing factors of \( d \) over \( a \). If found:
+- Factor out \( (x - r) \)
+- Reduce to a quadratic and solve
+
+#### **(b) Use Cardano’s Formula** (for depressed cubic)
+Convert to **depressed cubic** form:
+\[
+t^3 + pt + q = 0
+\]
+via substitution: \( x = t - \frac{b}{3a} \)
+
+Then use:
+\[
+t = \sqrt[3]{ -\frac{q}{2} + \sqrt{ \left(\frac{q}{2}\right)^2 + \left(\frac{p}{3}\right)^3 }} + \sqrt[3]{ -\frac{q}{2} - \sqrt{ \left(\frac{q}{2}\right)^2 + \left(\frac{p}{3}\right)^3 }}
+\]
+
+If the expression under the square root is negative → **complex roots** arise.
+
+---
+
+### **4. Example**
+
+Solve \( x^3 - 3x^2 + 4x - 12 = 0 \)
+
+Try rational roots: \( \pm1, \pm2, \pm3, \pm4, \pm6, \pm12 \)
+
+Try \( x = 2 \):
+\[
+2^3 - 3(2)^2 + 4(2) - 12 = 8 - 12 + 8 - 12 = -8 \ne 0
+\]
+
+Try \( x = 3 \):
+\[
+27 - 27 + 12 - 12 = 0 \Rightarrow x = 3 \text{ is a root}
+\]
+
+Factor: \( (x - 3)(x^2 + ax + b) = x^3 - 3x^2 + 4x - 12 \)
+
+Using polynomial division:  
+\[
+x^3 - 3x^2 + 4x - 12 = (x - 3)(x^2 + 4)
+\Rightarrow \text{roots: } x = 3, x = 2i, x = -2i
+\]
+
+---
+
+### **5. Summary**
+
+To solve cubics with complex roots:
+- Check rational roots
+- Use Cardano’s method or factorization
+- Use the discriminant to anticipate complex solutions
+- Complex roots **always come in conjugate pairs**
+
+
+
+
+
+
+
+
+
+
+
+## **Parametric Equations of Vertical Hyperbolas**
+
+---
+
+### **1. Standard Form of a Vertical Hyperbola**
+
+A **vertical hyperbola** centered at the origin has the standard form:
+
+\[
+\frac{y^2}{a^2} - \frac{x^2}{b^2} = 1
+\]
+
+This differs from a horizontal hyperbola:
+\[
+\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+\]
+
+Here:
+- The transverse axis is **vertical** (along the y-axis),
+- The hyperbola opens **up and down**,
+- Asymptotes are given by:  
+  \[
+  y = \pm \frac{a}{b}x
+  \]
+
+---
+
+### **2. Parametric Representation**
+
+The hyperbola  
+\[
+\frac{y^2}{a^2} - \frac{x^2}{b^2} = 1
+\]  
+can be parameterized using hyperbolic functions:
+
+\[
+\begin{aligned}
+x(t) &= b \sinh(t) \\
+y(t) &= a \cosh(t)
+\end{aligned}
+\]
+
+Why it works:
+- From hyperbolic identity:  
+  \[
+  \cosh^2(t) - \sinh^2(t) = 1
+  \]  
+  which matches the structure of the vertical hyperbola.
+
+This parametrization describes the **right branch** for \( t \in \mathbb{R} \). To get the full hyperbola (both branches), allow \( t \) to vary freely over ℝ.
+
+---
+
+### **3. Shifted (Translated) Hyperbola**
+
+For a vertical hyperbola centered at \( (h, k) \):
+
+\[
+\frac{(y - k)^2}{a^2} - \frac{(x - h)^2}{b^2} = 1
+\]
+
+Parametric equations become:
+
+\[
+\begin{aligned}
+x(t) &= h + b \sinh(t) \\
+y(t) &= k + a \cosh(t)
+\end{aligned}
+\]
+
+---
+
+### **4. Geometric Meaning of Parameters**
+
+- **\( t \)**: controls the "position" on the hyperbola
+- **\( a \)**: distance from center to vertices on the **y-axis**
+- **\( b \)**: determines the shape of the hyperbola and relates to the asymptotes
+- **Asymptotes** guide the approach of branches as \( t \to \pm\infty \)
+
+---
+
+### **5. Example**
+
+Given:  
+\[
+\frac{y^2}{9} - \frac{x^2}{4} = 1
+\]
+
+Parametric form is:
+\[
+\begin{aligned}
+x(t) &= 2 \sinh(t) \\
+y(t) &= 3 \cosh(t)
+\end{aligned}
+\]
+
+---
+
+### **6. Why Use Parametric Form?**
+
+- Describes motion along the curve
+- Useful in physics and engineering (e.g., ray tracing, conic sections in optics)
+- Makes plotting and calculus operations (like arc length) easier
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Parametric Equations of Vertical Hyperbolas**
+
+---
+
+### **1. Standard Form of a Vertical Hyperbola**
+
+A **vertical hyperbola** centered at the origin has the standard form:
+
+\[
+\frac{y^2}{a^2} - \frac{x^2}{b^2} = 1
+\]
+
+This differs from a horizontal hyperbola:
+\[
+\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+\]
+
+Here:
+- The transverse axis is **vertical** (along the y-axis),
+- The hyperbola opens **up and down**,
+- Asymptotes are given by:  
+  \[
+  y = \pm \frac{a}{b}x
+  \]
+
+---
+
+### **2. Parametric Representation**
+
+The hyperbola  
+\[
+\frac{y^2}{a^2} - \frac{x^2}{b^2} = 1
+\]  
+can be parameterized using hyperbolic functions:
+
+\[
+\begin{aligned}
+x(t) &= b \sinh(t) \\
+y(t) &= a \cosh(t)
+\end{aligned}
+\]
+
+Why it works:
+- From hyperbolic identity:  
+  \[
+  \cosh^2(t) - \sinh^2(t) = 1
+  \]  
+  which matches the structure of the vertical hyperbola.
+
+This parametrization describes the **right branch** for \( t \in \mathbb{R} \). To get the full hyperbola (both branches), allow \( t \) to vary freely over ℝ.
+
+---
+
+### **3. Shifted (Translated) Hyperbola**
+
+For a vertical hyperbola centered at \( (h, k) \):
+
+\[
+\frac{(y - k)^2}{a^2} - \frac{(x - h)^2}{b^2} = 1
+\]
+
+Parametric equations become:
+
+\[
+\begin{aligned}
+x(t) &= h + b \sinh(t) \\
+y(t) &= k + a \cosh(t)
+\end{aligned}
+\]
+
+---
+
+### **4. Geometric Meaning of Parameters**
+
+- **\( t \)**: controls the "position" on the hyperbola
+- **\( a \)**: distance from center to vertices on the **y-axis**
+- **\( b \)**: determines the shape of the hyperbola and relates to the asymptotes
+- **Asymptotes** guide the approach of branches as \( t \to \pm\infty \)
+
+---
+
+### **5. Example**
+
+Given:  
+\[
+\frac{y^2}{9} - \frac{x^2}{4} = 1
+\]
+
+Parametric form is:
+\[
+\begin{aligned}
+x(t) &= 2 \sinh(t) \\
+y(t) &= 3 \cosh(t)
+\end{aligned}
+\]
+
+---
+
+### **6. Why Use Parametric Form?**
+
+- Describes motion along the curve
+- Useful in physics and engineering (e.g., ray tracing, conic sections in optics)
+- Makes plotting and calculus operations (like arc length) easier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## **Solving Quartic Equations With Complex Roots**
+
+---
+
+### **1. What Is a Quartic Equation?**
+
+A **quartic equation** is a polynomial of degree 4, generally expressed as:
+
+\[
+ax^4 + bx^3 + cx^2 + dx + e = 0
+\]
+
+It may have:
+- 4 real roots,
+- 2 real and 2 complex roots, or
+- 4 complex roots (including conjugate pairs).
+
+---
+
+### **2. Fundamental Theorem of Algebra**
+
+Every degree-4 polynomial has **exactly four roots** (real or complex), possibly repeated. If the polynomial has **real coefficients**, complex roots occur in **conjugate pairs**:  
+If \( z = a + bi \) is a root, then \( \bar{z} = a - bi \) is also a root.
+
+---
+
+### **3. Techniques for Solving Quartics**
+
+#### **A. Factoring by Quadratics**
+
+If the quartic can be written as a product of two quadratics:
+\[
+(x^2 + px + q)(x^2 + rx + s) = 0
+\]
+
+Multiply out and match coefficients with the original equation:
+- Solve the resulting system to find \( p, q, r, s \)
+- Then solve each quadratic using the quadratic formula
+
+---
+
+#### **B. Using Substitution (Ferrari's Method)**
+
+Ferrari’s method is a general solution for quartics:
+
+Given:
+\[
+x^4 + bx^3 + cx^2 + dx + e = 0
+\]
+
+1. **Depress the quartic** (eliminate the \( x^3 \) term) via substitution:
+   \[
+   x = y - \frac{b}{4}
+   \]
+2. The resulting depressed quartic:
+   \[
+   y^4 + py^2 + qy + r = 0
+   \]
+3. Use **Ferrari’s technique**:  
+   Introduce an auxiliary variable \( z \) and solve a related resolvent cubic to factor the quartic into two quadratics.
+
+---
+
+#### **C. Special Forms**
+
+1. **Biquadratic Form**:  
+   If no odd powers exist:  
+   \[
+   ax^4 + bx^2 + c = 0
+   \]  
+   Let \( u = x^2 \), solve the quadratic in \( u \), then take square roots.
+
+2. **Perfect Square**:  
+   Sometimes quartics can be recognized as perfect squares:
+   \[
+   (x^2 + a)^2 = x^4 + 2a x^2 + a^2
+   \]
+
+---
+
+### **4. Example With Complex Roots**
+
+Solve:  
+\[
+x^4 + 2x^2 + 5 = 0
+\]
+
+Let \( u = x^2 \):
+\[
+u^2 + 2u + 5 = 0
+\Rightarrow u = \frac{-2 \pm \sqrt{4 - 20}}{2} = -1 \pm 2i
+\]
+
+Now solve \( x^2 = -1 \pm 2i \)  
+Use complex square root techniques to solve each.
+
+---
+
+### **5. Solving \( x^2 = a + bi \)**
+
+Let \( x = p + iq \). Then:
+
+\[
+x^2 = (p + iq)^2 = p^2 - q^2 + 2ipq
+\]
+
+Match real and imaginary parts:
+\[
+\begin{cases}
+p^2 - q^2 = a \\
+2pq = b
+\end{cases}
+\]
+
+Solve the system for \( p \) and \( q \).
+
+---
+
+### **6. Summary of Steps**
+
+1. **Try substitution or factoring**
+2. If quadratic in form, reduce to quadratic
+3. For general quartics, depress and use Ferrari’s method
+4. Use quadratic formula and complex algebra to solve
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+## **Euler’s Method: Calculating Multiple Steps**
+
+---
+
+### **1. Overview**
+
+**Euler’s Method** is a **numerical technique** for approximating solutions to first-order ordinary differential 
+equations (ODEs) of the form:
+
+\[
+\frac{dy}{dx} = f(x, y), \quad y(x_0) = y_0
+\]
+
+It uses a stepwise tangent-line approximation to estimate the value of the function at points beyond the initial condition.
+
+---
+
+### **2. The Euler Formula**
+
+Given:
+- Initial point: \( (x_0, y_0) \)
+- Derivative: \( \frac{dy}{dx} = f(x, y) \)
+- Step size: \( h \)
+
+Then the **update rule** is:
+\[
+y_{n+1} = y_n + h \cdot f(x_n, y_n)
+\]
+\[
+x_{n+1} = x_n + h
+\]
+
+Repeat this process iteratively to compute multiple steps.
+
+---
+
+### **3. Step-by-Step Example**
+
+**Problem:**  
+\[
+\frac{dy}{dx} = x + y, \quad y(0) = 1, \quad h = 0.1, \text{ calculate 4 steps}
+\]
+
+---
+
+**Step 0: Initial condition**
+
+\[
+x_0 = 0,\quad y_0 = 1
+\]
+
+---
+
+**Step 1:**
+
+\[
+f(x_0, y_0) = 0 + 1 = 1
+\]
+\[
+y_1 = 1 + 0.1 \cdot 1 = 1.1
+\]
+\[
+x_1 = 0 + 0.1 = 0.1
+\]
+
+---
+
+**Step 2:**
+
+\[
+f(x_1, y_1) = 0.1 + 1.1 = 1.2
+\]
+\[
+y_2 = 1.1 + 0.1 \cdot 1.2 = 1.22
+\]
+\[
+x_2 = 0.2
+\]
+
+---
+
+**Step 3:**
+
+\[
+f(x_2, y_2) = 0.2 + 1.22 = 1.42
+\]
+\[
+y_3 = 1.22 + 0.1 \cdot 1.42 = 1.362
+\]
+\[
+x_3 = 0.3
+\]
+
+---
+
+**Step 4:**
+
+\[
+f(x_3, y_3) = 0.3 + 1.362 = 1.662
+\]
+\[
+y_4 = 1.362 + 0.1 \cdot 1.662 = 1.5282
+\]
+\[
+x_4 = 0.4
+\]
+
+---
+
+### **4. Tabulated Summary**
+
+| Step \(n\) | \(x_n\) | \(y_n\) (approx) |
+|------------|--------|------------------|
+| 0          | 0.0    | 1.0000           |
+| 1          | 0.1    | 1.1000           |
+| 2          | 0.2    | 1.2200           |
+| 3          | 0.3    | 1.3620           |
+| 4          | 0.4    | 1.5282           |
+
+---
+
+### **5. Accuracy and Limitations**
+
+- Euler’s Method is **first-order accurate**: global error is proportional to \( h \).
+- Smaller step sizes improve accuracy but increase computation.
+- It may diverge if \( h \) is too large or if \( f(x, y) \) behaves non-linearly or steeply.
+
+---
+
+### **6. When to Use**
+
+- When the exact solution is unknown or hard to compute
+- As a starting point for more advanced methods (e.g., Runge-Kutta)
+- To visualize or simulate differential equations numerically
+
+---
 
 
 
@@ -28923,6 +33145,68 @@ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n = f(0) + f'(0)x + \frac{f''
 
 
 
+## **Related Rates with Implicit Functions**
+
+**Overview:**
+Related rates problems involve determining how the rates of change of two or more related variables evolve over time. 
+When these variables are tied together by an implicit equation (rather than an explicit formula like $y = f(x)$), 
+implicit differentiation is used with respect to time to relate their rates of change.
+
+---
+
+### **Key Concepts**
+
+1. **Implicit Function**: A relation where $x$ and $y$ (or other variables) are connected in an equation but not isolated. Example: $x^2 + y^2 = r^2$.
+
+2. **Time Dependency**: Even if not explicitly stated, variables like $x$, $y$, etc., are functions of time $t$, so derivatives are taken using the chain rule:
+
+   $$
+   \frac{d}{dt}[x^2] = 2x \frac{dx}{dt}, \quad \frac{d}{dt}[xy] = x \frac{dy}{dt} + y \frac{dx}{dt}
+   $$
+
+3. **Steps to Solve Related Rates (Implicit Case):**
+
+   * **Step 1**: Identify all variables and note which rates are known and which are to be found.
+   * **Step 2**: Write down the relation (equation) connecting the variables.
+   * **Step 3**: Differentiate both sides of the equation implicitly with respect to $t$.
+   * **Step 4**: Plug in known values and solve for the desired rate.
+
+---
+
+### **Example Problem**
+
+**Problem**: A balloon is rising vertically as a person walks away from it. Let $y$ be the height of the balloon and $x$ the horizontal distance from the person to the balloon. 
+At a certain moment, $x = 40$ m, $y = 30$ m, and the person's walking speed is $\frac{dx}{dt} = 1.5$ m/s. 
+Find how fast the distance $s$ between them is changing.
+
+**Solution:**
+
+* Relation: $s^2 = x^2 + y^2$
+* Differentiate:
+
+  $$
+  2s \frac{ds}{dt} = 2x \frac{dx}{dt} + 2y \frac{dy}{dt}
+  $$
+* Plug known values. Assume $\frac{dy}{dt} = 2$ m/s (balloon's speed).
+* First find $s = \sqrt{40^2 + 30^2} = 50$
+* Now solve:
+
+  $$
+  2(50) \frac{ds}{dt} = 2(40)(1.5) + 2(30)(2)
+  $$
+
+  $$
+  100 \frac{ds}{dt} = 120 + 120 = 240
+  \Rightarrow \frac{ds}{dt} = 2.4 \text{ m/s}
+  $$
+
+---
+
+### **Tips:**
+
+* Always sketch the scenario if possible.
+* Keep track of units.
+* Ensure all variables differentiated with respect to $t$ include chain rule terms.
 
 
 
@@ -28938,6 +33222,76 @@ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n = f(0) + f'(0)x + \frac{f''
 
 
 
+## **Calculating Related Rates With Circles and Spheres**
+
+When dealing with **related rates**, we analyze how different quantities that are related by a function change with respect to time. 
+For **circles** and **spheres**, we often explore how radius, area, volume, and surface area change over time.
+
+---
+
+### 🔵 **1. Circles – Related Rates**
+
+For a **circle**:
+
+* **Area:** $A = \pi r^2$
+* **Circumference:** $C = 2\pi r$
+
+If $r = r(t)$ (radius is changing with time), then:
+
+#### 📌 **Differentiating Area:**
+
+$$
+\frac{dA}{dt} = \frac{d}{dt}(\pi r^2) = 2\pi r \cdot \frac{dr}{dt}
+$$
+
+#### 📌 **Differentiating Circumference:**
+
+$$
+\frac{dC}{dt} = \frac{d}{dt}(2\pi r) = 2\pi \cdot \frac{dr}{dt}
+$$
+
+🟡 **Interpretation**: If the radius increases over time, both area and circumference increase, and we quantify the rate of that change with these formulas.
+
+---
+
+### ⚪ **2. Spheres – Related Rates**
+
+For a **sphere**:
+
+* **Volume:** $V = \frac{4}{3}\pi r^3$
+* **Surface Area:** $S = 4\pi r^2$
+
+Assuming $r = r(t)$, we find:
+
+#### 📌 **Differentiating Volume:**
+
+$$
+\frac{dV}{dt} = \frac{d}{dt} \left( \frac{4}{3} \pi r^3 \right) = 4\pi r^2 \cdot \frac{dr}{dt}
+$$
+
+#### 📌 **Differentiating Surface Area:**
+
+$$
+\frac{dS}{dt} = \frac{d}{dt}(4\pi r^2) = 8\pi r \cdot \frac{dr}{dt}
+$$
+
+---
+
+### ✅ **Example Problem: Sphere**
+
+**Given**: Radius of a balloon increases at $\frac{dr}{dt} = 2 \text{ cm/s}$. Find the rate of change of volume when $r = 5 \text{ cm}$.
+
+Use:
+
+$$
+\frac{dV}{dt} = 4\pi r^2 \cdot \frac{dr}{dt}
+$$
+
+$$
+\frac{dV}{dt} = 4\pi (5)^2 \cdot 2 = 4\pi \cdot 25 \cdot 2 = 200\pi \text{ cm}^3/\text{s}
+$$
+
+---
 
 
 
@@ -28949,13 +33303,103 @@ f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^n = f(0) + f'(0)x + \frac{f''
 
 
 
+## **Calculating Related Rates Using the Pythagorean Theorem**
 
+Related rates problems involve finding the rate at which one quantity changes by relating it to other 
+quantities whose rates of change are known. When the relationship involves distances in a right triangle, the **Pythagorean Theorem** becomes central:
 
+$$
+x^2 + y^2 = z^2
+$$
 
+where:
 
+* $x$, $y$: legs of a right triangle
+* $z$: hypotenuse
+* All three variables may change with time $t$
 
+---
 
+### **1. Differentiating the Pythagorean Theorem**
 
+To find related rates, **differentiate both sides with respect to time $t$**:
+
+$$
+\frac{d}{dt}(x^2 + y^2) = \frac{d}{dt}(z^2)
+$$
+
+Using the **Chain Rule**:
+
+$$
+2x \frac{dx}{dt} + 2y \frac{dy}{dt} = 2z \frac{dz}{dt}
+$$
+
+Simplify:
+
+$$
+x \frac{dx}{dt} + y \frac{dy}{dt} = z \frac{dz}{dt}
+$$
+
+---
+
+### **2. Example Problem**
+
+**Problem:** A 3-meter ladder is leaning against a vertical wall. The bottom of the ladder slides away from the wall at 0.5 m/s. How fast is the top sliding down the wall when the bottom is 2 meters from the wall?
+
+---
+
+#### **Step-by-Step Solution**
+
+Let:
+
+* $x(t)$: distance from wall to ladder base
+* $y(t)$: height of the top of the ladder on the wall
+* $z = 3$: ladder length (constant)
+* $\frac{dx}{dt} = 0.5$ m/s (positive, because the base moves away)
+* Find $\frac{dy}{dt}$ when $x = 2$
+
+From the Pythagorean theorem:
+
+$$
+x^2 + y^2 = 9
+\Rightarrow 2x \frac{dx}{dt} + 2y \frac{dy}{dt} = 0 \quad \text{(since } z = 3 \text{ is constant)}
+$$
+
+Simplify:
+
+$$
+x \frac{dx}{dt} + y \frac{dy}{dt} = 0
+\Rightarrow \frac{dy}{dt} = -\frac{x}{y} \frac{dx}{dt}
+$$
+
+Find $y$ when $x = 2$:
+
+$$
+x^2 + y^2 = 9 \Rightarrow 4 + y^2 = 9 \Rightarrow y = \sqrt{5}
+$$
+
+Now:
+
+$$
+\frac{dy}{dt} = -\frac{2}{\sqrt{5}} \cdot 0.5 = -\frac{1}{\sqrt{5}} \approx -0.447 \, \text{m/s}
+$$
+
+---
+
+### **3. Interpretation**
+
+* The top of the ladder slides **downward** at approximately **0.447 m/s** when the base is 2 m from the wall.
+* The negative sign indicates decreasing height.
+
+---
+
+### **4. General Strategy for Related Rates (Pythagorean Context)**
+
+1. **Draw a diagram** with labeled variables.
+2. **Write an equation** (often $x^2 + y^2 = z^2$ or variations).
+3. **Differentiate** with respect to $t$ using the Chain Rule.
+4. **Substitute known values** (variables and rates).
+5. **Solve for the unknown rate**.
 
 
 
